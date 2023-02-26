@@ -1,0 +1,5 @@
+Script started on 2022-10-19 15:43:01+0800
+(base) ]0;poweruser@s-113-1-1: ~/junda.feng/ixinfer/TransformerInfer/build[01;32mpoweruser@s-113-1-1[00m:[01;34m~/junda.feng/ixinfer/TransformerInfer/build[00m$ exit
+exit
+
+Script done on 2022-10-19 15:43:06+0800

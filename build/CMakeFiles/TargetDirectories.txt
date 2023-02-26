@@ -1,0 +1,3 @@
+/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/TransfomrerInfer.dir
+/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/edit_cache.dir
+/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/rebuild_cache.dir

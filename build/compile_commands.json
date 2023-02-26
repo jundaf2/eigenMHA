@@ -1,0 +1,177 @@
+[
+{
+  "directory": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/build",
+  "command": "/usr/bin/c++ -DDEBUG_RESULT_ATTENTION -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/SYSTEM -I/home/poweruser/junda.feng/ixinfer/TransformerInfer -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/fmha -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/include -I/usr/local/hdf5/include -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/build -isystem /usr/local/cuda/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -std=c++11 -o CMakeFiles/TransfomrerInfer.dir/transformer_example.cc.o -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/transformer_example.cc",
+  "file": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/transformer_example.cc"
+},
+{
+  "directory": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/build",
+  "command": "/usr/bin/c++ -DDEBUG_RESULT_ATTENTION -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/SYSTEM -I/home/poweruser/junda.feng/ixinfer/TransformerInfer -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/fmha -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/include -I/usr/local/hdf5/include -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/build -isystem /usr/local/cuda/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -std=c++11 -o CMakeFiles/TransfomrerInfer.dir/src/bias_act_dropout.cpp.o -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/src/bias_act_dropout.cpp",
+  "file": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/src/bias_act_dropout.cpp"
+},
+{
+  "directory": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/build",
+  "command": "/usr/bin/c++ -DDEBUG_RESULT_ATTENTION -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/SYSTEM -I/home/poweruser/junda.feng/ixinfer/TransformerInfer -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/fmha -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/include -I/usr/local/hdf5/include -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/build -isystem /usr/local/cuda/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -std=c++11 -o CMakeFiles/TransfomrerInfer.dir/src/bias_add_transform_20314.cpp.o -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/src/bias_add_transform_20314.cpp",
+  "file": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/src/bias_add_transform_20314.cpp"
+},
+{
+  "directory": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/build",
+  "command": "/usr/bin/c++ -DDEBUG_RESULT_ATTENTION -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/SYSTEM -I/home/poweruser/junda.feng/ixinfer/TransformerInfer -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/fmha -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/include -I/usr/local/hdf5/include -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/build -isystem /usr/local/cuda/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -std=c++11 -o CMakeFiles/TransfomrerInfer.dir/src/bias_dropout_residual.cpp.o -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/src/bias_dropout_residual.cpp",
+  "file": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/src/bias_dropout_residual.cpp"
+},
+{
+  "directory": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/build",
+  "command": "/usr/bin/c++ -DDEBUG_RESULT_ATTENTION -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/SYSTEM -I/home/poweruser/junda.feng/ixinfer/TransformerInfer -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/fmha -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/include -I/usr/local/hdf5/include -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/build -isystem /usr/local/cuda/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -std=c++11 -o CMakeFiles/TransfomrerInfer.dir/src/context.cpp.o -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/src/context.cpp",
+  "file": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/src/context.cpp"
+},
+{
+  "directory": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/build",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler -DDEBUG_RESULT_ATTENTION -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/SYSTEM -I/home/poweruser/junda.feng/ixinfer/TransformerInfer -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/fmha -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/include -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/build -isystem=/usr/local/cuda/include -ccbin=/usr/bin/c++ -gencode code=sm_86,arch=compute_86 --expt-extended-lambda --expt-relaxed-constexpr --compiler-options -fPIC -g -G -Xcompiler -Wall --generate-code=arch=compute_86,code=[compute_86,sm_86] -Xcompiler=-fPIE -Wno-unknown-pragmas -std=c++14 -x cu -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/src/cross_entropy.cu -o CMakeFiles/TransfomrerInfer.dir/src/cross_entropy.cu.o",
+  "file": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/src/cross_entropy.cu"
+},
+{
+  "directory": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/build",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler -DDEBUG_RESULT_ATTENTION -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/SYSTEM -I/home/poweruser/junda.feng/ixinfer/TransformerInfer -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/fmha -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/include -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/build -isystem=/usr/local/cuda/include -ccbin=/usr/bin/c++ -gencode code=sm_86,arch=compute_86 --expt-extended-lambda --expt-relaxed-constexpr --compiler-options -fPIC -g -G -Xcompiler -Wall --generate-code=arch=compute_86,code=[compute_86,sm_86] -Xcompiler=-fPIE -Wno-unknown-pragmas -std=c++14 -x cu -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/src/cublas_wrappers.cu -o CMakeFiles/TransfomrerInfer.dir/src/cublas_wrappers.cu.o",
+  "file": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/src/cublas_wrappers.cu"
+},
+{
+  "directory": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/build",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler -DDEBUG_RESULT_ATTENTION -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/SYSTEM -I/home/poweruser/junda.feng/ixinfer/TransformerInfer -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/fmha -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/include -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/build -isystem=/usr/local/cuda/include -ccbin=/usr/bin/c++ -gencode code=sm_86,arch=compute_86 --expt-extended-lambda --expt-relaxed-constexpr --compiler-options -fPIC -g -G -Xcompiler -Wall --generate-code=arch=compute_86,code=[compute_86,sm_86] -Xcompiler=-fPIE -Wno-unknown-pragmas -std=c++14 -x cu -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/src/cuda_util.cu -o CMakeFiles/TransfomrerInfer.dir/src/cuda_util.cu.o",
+  "file": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/src/cuda_util.cu"
+},
+{
+  "directory": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/build",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler -DDEBUG_RESULT_ATTENTION -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/SYSTEM -I/home/poweruser/junda.feng/ixinfer/TransformerInfer -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/fmha -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/include -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/build -isystem=/usr/local/cuda/include -ccbin=/usr/bin/c++ -gencode code=sm_86,arch=compute_86 --expt-extended-lambda --expt-relaxed-constexpr --compiler-options -fPIC -g -G -Xcompiler -Wall --generate-code=arch=compute_86,code=[compute_86,sm_86] -Xcompiler=-fPIE -Wno-unknown-pragmas -std=c++14 -x cu -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/src/decoder.cc.cu -o CMakeFiles/TransfomrerInfer.dir/src/decoder.cc.cu.o",
+  "file": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/src/decoder.cc.cu"
+},
+{
+  "directory": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/build",
+  "command": "/usr/bin/c++ -DDEBUG_RESULT_ATTENTION -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/SYSTEM -I/home/poweruser/junda.feng/ixinfer/TransformerInfer -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/fmha -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/include -I/usr/local/hdf5/include -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/build -isystem /usr/local/cuda/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -std=c++11 -o CMakeFiles/TransfomrerInfer.dir/src/dropout.cpp.o -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/src/dropout.cpp",
+  "file": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/src/dropout.cpp"
+},
+{
+  "directory": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/build",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler -DDEBUG_RESULT_ATTENTION -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/SYSTEM -I/home/poweruser/junda.feng/ixinfer/TransformerInfer -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/fmha -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/include -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/build -isystem=/usr/local/cuda/include -ccbin=/usr/bin/c++ -gencode code=sm_86,arch=compute_86 --expt-extended-lambda --expt-relaxed-constexpr --compiler-options -fPIC -g -G -Xcompiler -Wall --generate-code=arch=compute_86,code=[compute_86,sm_86] -Xcompiler=-fPIE -Wno-unknown-pragmas -std=c++14 -x cu -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/src/dropout_kernels.cu -o CMakeFiles/TransfomrerInfer.dir/src/dropout_kernels.cu.o",
+  "file": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/src/dropout_kernels.cu"
+},
+{
+  "directory": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/build",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler -DDEBUG_RESULT_ATTENTION -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/SYSTEM -I/home/poweruser/junda.feng/ixinfer/TransformerInfer -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/fmha -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/include -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/build -isystem=/usr/local/cuda/include -ccbin=/usr/bin/c++ -gencode code=sm_86,arch=compute_86 --expt-extended-lambda --expt-relaxed-constexpr --compiler-options -fPIC -g -G -Xcompiler -Wall --generate-code=arch=compute_86,code=[compute_86,sm_86] -Xcompiler=-fPIE -Wno-unknown-pragmas -std=c++14 -x cu -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/src/embedding_kernels.cu -o CMakeFiles/TransfomrerInfer.dir/src/embedding_kernels.cu.o",
+  "file": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/src/embedding_kernels.cu"
+},
+{
+  "directory": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/build",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler -DDEBUG_RESULT_ATTENTION -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/SYSTEM -I/home/poweruser/junda.feng/ixinfer/TransformerInfer -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/fmha -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/include -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/build -isystem=/usr/local/cuda/include -ccbin=/usr/bin/c++ -gencode code=sm_86,arch=compute_86 --expt-extended-lambda --expt-relaxed-constexpr --compiler-options -fPIC -g -G -Xcompiler -Wall --generate-code=arch=compute_86,code=[compute_86,sm_86] -Xcompiler=-fPIE -Wno-unknown-pragmas -std=c++14 -x cu -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/src/embKernels.cc.cu -o CMakeFiles/TransfomrerInfer.dir/src/embKernels.cc.cu.o",
+  "file": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/src/embKernels.cc.cu"
+},
+{
+  "directory": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/build",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler -DDEBUG_RESULT_ATTENTION -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/SYSTEM -I/home/poweruser/junda.feng/ixinfer/TransformerInfer -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/fmha -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/include -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/build -isystem=/usr/local/cuda/include -ccbin=/usr/bin/c++ -gencode code=sm_86,arch=compute_86 --expt-extended-lambda --expt-relaxed-constexpr --compiler-options -fPIC -g -G -Xcompiler -Wall --generate-code=arch=compute_86,code=[compute_86,sm_86] -Xcompiler=-fPIE -Wno-unknown-pragmas -std=c++14 -x cu -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/src/encoder.cc.cu -o CMakeFiles/TransfomrerInfer.dir/src/encoder.cc.cu.o",
+  "file": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/src/encoder.cc.cu"
+},
+{
+  "directory": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/build",
+  "command": "/usr/bin/c++ -DDEBUG_RESULT_ATTENTION -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/SYSTEM -I/home/poweruser/junda.feng/ixinfer/TransformerInfer -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/fmha -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/include -I/usr/local/hdf5/include -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/build -isystem /usr/local/cuda/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -std=c++11 -o CMakeFiles/TransfomrerInfer.dir/src/feed_forward_layer.cpp.o -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/src/feed_forward_layer.cpp",
+  "file": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/src/feed_forward_layer.cpp"
+},
+{
+  "directory": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/build",
+  "command": "/usr/bin/c++ -DDEBUG_RESULT_ATTENTION -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/SYSTEM -I/home/poweruser/junda.feng/ixinfer/TransformerInfer -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/fmha -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/include -I/usr/local/hdf5/include -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/build -isystem /usr/local/cuda/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -std=c++11 -o CMakeFiles/TransfomrerInfer.dir/src/feed_forward.cpp.o -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/src/feed_forward.cpp",
+  "file": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/src/feed_forward.cpp"
+},
+{
+  "directory": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/build",
+  "command": "/usr/bin/c++ -DDEBUG_RESULT_ATTENTION -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/SYSTEM -I/home/poweruser/junda.feng/ixinfer/TransformerInfer -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/fmha -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/include -I/usr/local/hdf5/include -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/build -isystem /usr/local/cuda/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -std=c++11 -o CMakeFiles/TransfomrerInfer.dir/src/layer.cpp.o -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/src/layer.cpp",
+  "file": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/src/layer.cpp"
+},
+{
+  "directory": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/build",
+  "command": "/usr/bin/c++ -DDEBUG_RESULT_ATTENTION -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/SYSTEM -I/home/poweruser/junda.feng/ixinfer/TransformerInfer -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/fmha -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/include -I/usr/local/hdf5/include -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/build -isystem /usr/local/cuda/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -std=c++11 -o CMakeFiles/TransfomrerInfer.dir/src/layer_normalize.cpp.o -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/src/layer_normalize.cpp",
+  "file": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/src/layer_normalize.cpp"
+},
+{
+  "directory": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/build",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler -DDEBUG_RESULT_ATTENTION -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/SYSTEM -I/home/poweruser/junda.feng/ixinfer/TransformerInfer -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/fmha -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/include -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/build -isystem=/usr/local/cuda/include -ccbin=/usr/bin/c++ -gencode code=sm_86,arch=compute_86 --expt-extended-lambda --expt-relaxed-constexpr --compiler-options -fPIC -g -G -Xcompiler -Wall --generate-code=arch=compute_86,code=[compute_86,sm_86] -Xcompiler=-fPIE -Wno-unknown-pragmas -std=c++14 -x cu -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/src/general_kernels.cu -o CMakeFiles/TransfomrerInfer.dir/src/general_kernels.cu.o",
+  "file": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/src/general_kernels.cu"
+},
+{
+  "directory": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/build",
+  "command": "/usr/bin/c++ -DDEBUG_RESULT_ATTENTION -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/SYSTEM -I/home/poweruser/junda.feng/ixinfer/TransformerInfer -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/fmha -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/include -I/usr/local/hdf5/include -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/build -isystem /usr/local/cuda/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -std=c++11 -o CMakeFiles/TransfomrerInfer.dir/src/manager.cpp.o -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/src/manager.cpp",
+  "file": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/src/manager.cpp"
+},
+{
+  "directory": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/build",
+  "command": "/usr/bin/c++ -DDEBUG_RESULT_ATTENTION -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/SYSTEM -I/home/poweruser/junda.feng/ixinfer/TransformerInfer -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/fmha -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/include -I/usr/local/hdf5/include -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/build -isystem /usr/local/cuda/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -std=c++11 -o CMakeFiles/TransfomrerInfer.dir/src/multihead_attention_layer.cpp.o -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/src/multihead_attention_layer.cpp",
+  "file": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/src/multihead_attention_layer.cpp"
+},
+{
+  "directory": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/build",
+  "command": "/usr/bin/c++ -DDEBUG_RESULT_ATTENTION -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/SYSTEM -I/home/poweruser/junda.feng/ixinfer/TransformerInfer -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/fmha -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/include -I/usr/local/hdf5/include -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/build -isystem /usr/local/cuda/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -std=c++11 -o CMakeFiles/TransfomrerInfer.dir/src/node.cpp.o -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/src/node.cpp",
+  "file": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/src/node.cpp"
+},
+{
+  "directory": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/build",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler -DDEBUG_RESULT_ATTENTION -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/SYSTEM -I/home/poweruser/junda.feng/ixinfer/TransformerInfer -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/fmha -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/include -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/build -isystem=/usr/local/cuda/include -ccbin=/usr/bin/c++ -gencode code=sm_86,arch=compute_86 --expt-extended-lambda --expt-relaxed-constexpr --compiler-options -fPIC -g -G -Xcompiler -Wall --generate-code=arch=compute_86,code=[compute_86,sm_86] -Xcompiler=-fPIE -Wno-unknown-pragmas -std=c++14 -x cu -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/src/normalize_kernels.cu -o CMakeFiles/TransfomrerInfer.dir/src/normalize_kernels.cu.o",
+  "file": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/src/normalize_kernels.cu"
+},
+{
+  "directory": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/build",
+  "command": "/usr/bin/c++ -DDEBUG_RESULT_ATTENTION -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/SYSTEM -I/home/poweruser/junda.feng/ixinfer/TransformerInfer -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/fmha -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/include -I/usr/local/hdf5/include -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/build -isystem /usr/local/cuda/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -std=c++11 -o CMakeFiles/TransfomrerInfer.dir/src/softmax.cpp.o -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/src/softmax.cpp",
+  "file": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/src/softmax.cpp"
+},
+{
+  "directory": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/build",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler -DDEBUG_RESULT_ATTENTION -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/SYSTEM -I/home/poweruser/junda.feng/ixinfer/TransformerInfer -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/fmha -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/include -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/build -isystem=/usr/local/cuda/include -ccbin=/usr/bin/c++ -gencode code=sm_86,arch=compute_86 --expt-extended-lambda --expt-relaxed-constexpr --compiler-options -fPIC -g -G -Xcompiler -Wall --generate-code=arch=compute_86,code=[compute_86,sm_86] -Xcompiler=-fPIE -Wno-unknown-pragmas -std=c++14 -x cu -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/src/softmax_kernels.cu -o CMakeFiles/TransfomrerInfer.dir/src/softmax_kernels.cu.o",
+  "file": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/src/softmax_kernels.cu"
+},
+{
+  "directory": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/build",
+  "command": "/usr/bin/c++ -DDEBUG_RESULT_ATTENTION -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/SYSTEM -I/home/poweruser/junda.feng/ixinfer/TransformerInfer -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/fmha -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/include -I/usr/local/hdf5/include -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/build -isystem /usr/local/cuda/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -std=c++11 -o CMakeFiles/TransfomrerInfer.dir/src/strided_batch_gemm.cpp.o -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/src/strided_batch_gemm.cpp",
+  "file": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/src/strided_batch_gemm.cpp"
+},
+{
+  "directory": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/build",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler -DDEBUG_RESULT_ATTENTION -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/SYSTEM -I/home/poweruser/junda.feng/ixinfer/TransformerInfer -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/fmha -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/include -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/build -isystem=/usr/local/cuda/include -ccbin=/usr/bin/c++ -gencode code=sm_86,arch=compute_86 --expt-extended-lambda --expt-relaxed-constexpr --compiler-options -fPIC -g -G -Xcompiler -Wall --generate-code=arch=compute_86,code=[compute_86,sm_86] -Xcompiler=-fPIE -Wno-unknown-pragmas -std=c++14 -x cu -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/src/transform_kernels.cu -o CMakeFiles/TransfomrerInfer.dir/src/transform_kernels.cu.o",
+  "file": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/src/transform_kernels.cu"
+},
+{
+  "directory": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/build",
+  "command": "/usr/bin/c++ -DDEBUG_RESULT_ATTENTION -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/SYSTEM -I/home/poweruser/junda.feng/ixinfer/TransformerInfer -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/fmha -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/include -I/usr/local/hdf5/include -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/build -isystem /usr/local/cuda/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -std=c++11 -o CMakeFiles/TransfomrerInfer.dir/src/transformer_encoder_layer.cpp.o -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/src/transformer_encoder_layer.cpp",
+  "file": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/src/transformer_encoder_layer.cpp"
+},
+{
+  "directory": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/build",
+  "command": "/usr/bin/c++ -DDEBUG_RESULT_ATTENTION -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/SYSTEM -I/home/poweruser/junda.feng/ixinfer/TransformerInfer -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/fmha -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/include -I/usr/local/hdf5/include -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/build -isystem /usr/local/cuda/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -std=c++11 -o CMakeFiles/TransfomrerInfer.dir/src/transformer_weight.cc.o -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/src/transformer_weight.cc",
+  "file": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/src/transformer_weight.cc"
+},
+{
+  "directory": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/build",
+  "command": "/usr/bin/c++ -DDEBUG_RESULT_ATTENTION -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/SYSTEM -I/home/poweruser/junda.feng/ixinfer/TransformerInfer -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/fmha -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/include -I/usr/local/hdf5/include -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/build -isystem /usr/local/cuda/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -std=c++11 -o CMakeFiles/TransfomrerInfer.dir/src/transformer.cc.o -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/src/transformer.cc",
+  "file": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/src/transformer.cc"
+},
+{
+  "directory": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/build",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler -DDEBUG_RESULT_ATTENTION -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/SYSTEM -I/home/poweruser/junda.feng/ixinfer/TransformerInfer -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/fmha -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/include -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/build -isystem=/usr/local/cuda/include -ccbin=/usr/bin/c++ -gencode code=sm_86,arch=compute_86 --expt-extended-lambda --expt-relaxed-constexpr --compiler-options -fPIC -g -G -Xcompiler -Wall --generate-code=arch=compute_86,code=[compute_86,sm_86] -Xcompiler=-fPIE -Wno-unknown-pragmas -std=c++14 -x cu -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/src/transformerKernels.cc.cu -o CMakeFiles/TransfomrerInfer.dir/src/transformerKernels.cc.cu.o",
+  "file": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/src/transformerKernels.cc.cu"
+},
+{
+  "directory": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/build",
+  "command": "/usr/bin/c++ -DDEBUG_RESULT_ATTENTION -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/SYSTEM -I/home/poweruser/junda.feng/ixinfer/TransformerInfer -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/fmha -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/include -I/usr/local/hdf5/include -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/build -isystem /usr/local/cuda/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -std=c++11 -o CMakeFiles/TransfomrerInfer.dir/src/tensor.cpp.o -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/src/tensor.cpp",
+  "file": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/src/tensor.cpp"
+},
+{
+  "directory": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/build",
+  "command": "/usr/bin/c++ -DDEBUG_RESULT_ATTENTION -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/SYSTEM -I/home/poweruser/junda.feng/ixinfer/TransformerInfer -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/fmha -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/include -I/usr/local/hdf5/include -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/build -isystem /usr/local/cuda/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -std=c++11 -o CMakeFiles/TransfomrerInfer.dir/src/transform_0213.cpp.o -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/src/transform_0213.cpp",
+  "file": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/src/transform_0213.cpp"
+},
+{
+  "directory": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/build",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler -DDEBUG_RESULT_ATTENTION -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/SYSTEM -I/home/poweruser/junda.feng/ixinfer/TransformerInfer -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/fmha -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/include -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/build -isystem=/usr/local/cuda/include -ccbin=/usr/bin/c++ -gencode code=sm_86,arch=compute_86 --expt-extended-lambda --expt-relaxed-constexpr --compiler-options -fPIC -g -G -Xcompiler -Wall --generate-code=arch=compute_86,code=[compute_86,sm_86] -Xcompiler=-fPIE -Wno-unknown-pragmas -std=c++14 -x cu -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/src/util.cc.cu -o CMakeFiles/TransfomrerInfer.dir/src/util.cc.cu.o",
+  "file": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/src/util.cc.cu"
+},
+{
+  "directory": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/build",
+  "command": "/usr/bin/c++ -DDEBUG_RESULT_ATTENTION -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/SYSTEM -I/home/poweruser/junda.feng/ixinfer/TransformerInfer -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/fmha -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/include -I/usr/local/hdf5/include -I/home/poweruser/junda.feng/ixinfer/TransformerInfer/build -isystem /usr/local/cuda/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -std=c++11 -o CMakeFiles/TransfomrerInfer.dir/transformer.pb.cc.o -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/build/transformer.pb.cc",
+  "file": "/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/transformer.pb.cc"
+}
+]

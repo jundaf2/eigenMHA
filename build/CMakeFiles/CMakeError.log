@@ -1,0 +1,910 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_24e6c/fast && /usr/bin/make  -f CMakeFiles/cmTC_24e6c.dir/build.make CMakeFiles/cmTC_24e6c.dir/build
+make[1]: Entering directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_24e6c.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_24e6c.dir/src.c.o -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_24e6c
+/home/poweruser/cmake-3.24.0-rc1-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_24e6c.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  CMakeFiles/cmTC_24e6c.dir/src.c.o -o cmTC_24e6c 
+CMakeFiles/cmTC_24e6c.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_24e6c.dir/build.make:98: recipe for target 'cmTC_24e6c' failed
+make[1]: *** [cmTC_24e6c] Error 1
+make[1]: Leaving directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_24e6c/fast' failed
+make: *** [cmTC_24e6c/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_d5247/fast && /usr/bin/make  -f CMakeFiles/cmTC_d5247.dir/build.make CMakeFiles/cmTC_d5247.dir/build
+make[1]: Entering directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d5247.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_d5247.dir/CheckFunctionExists.c.o -c /home/poweruser/cmake-3.24.0-rc1-linux-x86_64/share/cmake-3.24/Modules/CheckFunctionExists.c
+Linking C executable cmTC_d5247
+/home/poweruser/cmake-3.24.0-rc1-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d5247.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_d5247.dir/CheckFunctionExists.c.o -o cmTC_d5247  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_d5247.dir/build.make:98: recipe for target 'cmTC_d5247' failed
+make[1]: *** [cmTC_d5247] Error 1
+make[1]: Leaving directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_d5247/fast' failed
+make: *** [cmTC_d5247/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_7d27b/fast && /usr/bin/make  -f CMakeFiles/cmTC_7d27b.dir/build.make CMakeFiles/cmTC_7d27b.dir/build
+make[1]: Entering directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7d27b.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_7d27b.dir/src.c.o -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_7d27b
+/home/poweruser/cmake-3.24.0-rc1-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7d27b.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  CMakeFiles/cmTC_7d27b.dir/src.c.o -o cmTC_7d27b 
+CMakeFiles/cmTC_7d27b.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_7d27b.dir/build.make:98: recipe for target 'cmTC_7d27b' failed
+make[1]: *** [cmTC_7d27b] Error 1
+make[1]: Leaving directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_7d27b/fast' failed
+make: *** [cmTC_7d27b/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_6d876/fast && /usr/bin/make  -f CMakeFiles/cmTC_6d876.dir/build.make CMakeFiles/cmTC_6d876.dir/build
+make[1]: Entering directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6d876.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_6d876.dir/CheckFunctionExists.c.o -c /home/poweruser/cmake-3.24.0-rc1-linux-x86_64/share/cmake-3.24/Modules/CheckFunctionExists.c
+Linking C executable cmTC_6d876
+/home/poweruser/cmake-3.24.0-rc1-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6d876.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_6d876.dir/CheckFunctionExists.c.o -o cmTC_6d876  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_6d876.dir/build.make:98: recipe for target 'cmTC_6d876' failed
+make[1]: *** [cmTC_6d876] Error 1
+make[1]: Leaving directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_6d876/fast' failed
+make: *** [cmTC_6d876/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_3f63d/fast && /usr/bin/make  -f CMakeFiles/cmTC_3f63d.dir/build.make CMakeFiles/cmTC_3f63d.dir/build
+make[1]: Entering directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3f63d.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_3f63d.dir/src.c.o -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_3f63d
+/home/poweruser/cmake-3.24.0-rc1-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3f63d.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  CMakeFiles/cmTC_3f63d.dir/src.c.o -o cmTC_3f63d 
+CMakeFiles/cmTC_3f63d.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_3f63d.dir/build.make:98: recipe for target 'cmTC_3f63d' failed
+make[1]: *** [cmTC_3f63d] Error 1
+make[1]: Leaving directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_3f63d/fast' failed
+make: *** [cmTC_3f63d/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_d985c/fast && /usr/bin/make  -f CMakeFiles/cmTC_d985c.dir/build.make CMakeFiles/cmTC_d985c.dir/build
+make[1]: Entering directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d985c.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_d985c.dir/CheckFunctionExists.c.o -c /home/poweruser/cmake-3.24.0-rc1-linux-x86_64/share/cmake-3.24/Modules/CheckFunctionExists.c
+Linking C executable cmTC_d985c
+/home/poweruser/cmake-3.24.0-rc1-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d985c.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_d985c.dir/CheckFunctionExists.c.o -o cmTC_d985c  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_d985c.dir/build.make:98: recipe for target 'cmTC_d985c' failed
+make[1]: *** [cmTC_d985c] Error 1
+make[1]: Leaving directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_d985c/fast' failed
+make: *** [cmTC_d985c/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_a66ab/fast && /usr/bin/make  -f CMakeFiles/cmTC_a66ab.dir/build.make CMakeFiles/cmTC_a66ab.dir/build
+make[1]: Entering directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a66ab.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_a66ab.dir/src.c.o -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_a66ab
+/home/poweruser/cmake-3.24.0-rc1-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a66ab.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  CMakeFiles/cmTC_a66ab.dir/src.c.o -o cmTC_a66ab 
+CMakeFiles/cmTC_a66ab.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_a66ab.dir/build.make:98: recipe for target 'cmTC_a66ab' failed
+make[1]: *** [cmTC_a66ab] Error 1
+make[1]: Leaving directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_a66ab/fast' failed
+make: *** [cmTC_a66ab/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_80f3f/fast && /usr/bin/make  -f CMakeFiles/cmTC_80f3f.dir/build.make CMakeFiles/cmTC_80f3f.dir/build
+make[1]: Entering directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_80f3f.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_80f3f.dir/CheckFunctionExists.c.o -c /home/poweruser/cmake-3.24.0-rc1-linux-x86_64/share/cmake-3.24/Modules/CheckFunctionExists.c
+Linking C executable cmTC_80f3f
+/home/poweruser/cmake-3.24.0-rc1-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_80f3f.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_80f3f.dir/CheckFunctionExists.c.o -o cmTC_80f3f  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_80f3f.dir/build.make:98: recipe for target 'cmTC_80f3f' failed
+make[1]: *** [cmTC_80f3f] Error 1
+make[1]: Leaving directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_80f3f/fast' failed
+make: *** [cmTC_80f3f/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_69e10/fast && /usr/bin/make  -f CMakeFiles/cmTC_69e10.dir/build.make CMakeFiles/cmTC_69e10.dir/build
+make[1]: Entering directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_69e10.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_69e10.dir/src.c.o -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_69e10
+/home/poweruser/cmake-3.24.0-rc1-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_69e10.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  CMakeFiles/cmTC_69e10.dir/src.c.o -o cmTC_69e10 
+CMakeFiles/cmTC_69e10.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_69e10.dir/build.make:98: recipe for target 'cmTC_69e10' failed
+make[1]: *** [cmTC_69e10] Error 1
+make[1]: Leaving directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_69e10/fast' failed
+make: *** [cmTC_69e10/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_62992/fast && /usr/bin/make  -f CMakeFiles/cmTC_62992.dir/build.make CMakeFiles/cmTC_62992.dir/build
+make[1]: Entering directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_62992.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_62992.dir/CheckFunctionExists.c.o -c /home/poweruser/cmake-3.24.0-rc1-linux-x86_64/share/cmake-3.24/Modules/CheckFunctionExists.c
+Linking C executable cmTC_62992
+/home/poweruser/cmake-3.24.0-rc1-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_62992.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_62992.dir/CheckFunctionExists.c.o -o cmTC_62992  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_62992.dir/build.make:98: recipe for target 'cmTC_62992' failed
+make[1]: *** [cmTC_62992] Error 1
+make[1]: Leaving directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_62992/fast' failed
+make: *** [cmTC_62992/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_9fc26/fast && /usr/bin/make  -f CMakeFiles/cmTC_9fc26.dir/build.make CMakeFiles/cmTC_9fc26.dir/build
+make[1]: Entering directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9fc26.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_9fc26.dir/src.c.o -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_9fc26
+/home/poweruser/cmake-3.24.0-rc1-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9fc26.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  CMakeFiles/cmTC_9fc26.dir/src.c.o -o cmTC_9fc26 
+CMakeFiles/cmTC_9fc26.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_9fc26.dir/build.make:98: recipe for target 'cmTC_9fc26' failed
+make[1]: *** [cmTC_9fc26] Error 1
+make[1]: Leaving directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_9fc26/fast' failed
+make: *** [cmTC_9fc26/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_ebb88/fast && /usr/bin/make  -f CMakeFiles/cmTC_ebb88.dir/build.make CMakeFiles/cmTC_ebb88.dir/build
+make[1]: Entering directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ebb88.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_ebb88.dir/CheckFunctionExists.c.o -c /home/poweruser/cmake-3.24.0-rc1-linux-x86_64/share/cmake-3.24/Modules/CheckFunctionExists.c
+Linking C executable cmTC_ebb88
+/home/poweruser/cmake-3.24.0-rc1-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ebb88.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_ebb88.dir/CheckFunctionExists.c.o -o cmTC_ebb88  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_ebb88.dir/build.make:98: recipe for target 'cmTC_ebb88' failed
+make[1]: *** [cmTC_ebb88] Error 1
+make[1]: Leaving directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_ebb88/fast' failed
+make: *** [cmTC_ebb88/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_b631b/fast && /usr/bin/make  -f CMakeFiles/cmTC_b631b.dir/build.make CMakeFiles/cmTC_b631b.dir/build
+make[1]: Entering directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b631b.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_b631b.dir/src.c.o -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_b631b
+/home/poweruser/cmake-3.24.0-rc1-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b631b.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  CMakeFiles/cmTC_b631b.dir/src.c.o -o cmTC_b631b 
+CMakeFiles/cmTC_b631b.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_b631b.dir/build.make:98: recipe for target 'cmTC_b631b' failed
+make[1]: *** [cmTC_b631b] Error 1
+make[1]: Leaving directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_b631b/fast' failed
+make: *** [cmTC_b631b/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_9ccea/fast && /usr/bin/make  -f CMakeFiles/cmTC_9ccea.dir/build.make CMakeFiles/cmTC_9ccea.dir/build
+make[1]: Entering directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9ccea.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_9ccea.dir/CheckFunctionExists.c.o -c /home/poweruser/cmake-3.24.0-rc1-linux-x86_64/share/cmake-3.24/Modules/CheckFunctionExists.c
+Linking C executable cmTC_9ccea
+/home/poweruser/cmake-3.24.0-rc1-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9ccea.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_9ccea.dir/CheckFunctionExists.c.o -o cmTC_9ccea  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_9ccea.dir/build.make:98: recipe for target 'cmTC_9ccea' failed
+make[1]: *** [cmTC_9ccea] Error 1
+make[1]: Leaving directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_9ccea/fast' failed
+make: *** [cmTC_9ccea/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_ff873/fast && /usr/bin/make  -f CMakeFiles/cmTC_ff873.dir/build.make CMakeFiles/cmTC_ff873.dir/build
+make[1]: Entering directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ff873.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_ff873.dir/src.c.o -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_ff873
+/home/poweruser/cmake-3.24.0-rc1-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ff873.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  CMakeFiles/cmTC_ff873.dir/src.c.o -o cmTC_ff873 
+CMakeFiles/cmTC_ff873.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_ff873.dir/build.make:98: recipe for target 'cmTC_ff873' failed
+make[1]: *** [cmTC_ff873] Error 1
+make[1]: Leaving directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_ff873/fast' failed
+make: *** [cmTC_ff873/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_1844b/fast && /usr/bin/make  -f CMakeFiles/cmTC_1844b.dir/build.make CMakeFiles/cmTC_1844b.dir/build
+make[1]: Entering directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1844b.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_1844b.dir/CheckFunctionExists.c.o -c /home/poweruser/cmake-3.24.0-rc1-linux-x86_64/share/cmake-3.24/Modules/CheckFunctionExists.c
+Linking C executable cmTC_1844b
+/home/poweruser/cmake-3.24.0-rc1-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1844b.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_1844b.dir/CheckFunctionExists.c.o -o cmTC_1844b  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_1844b.dir/build.make:98: recipe for target 'cmTC_1844b' failed
+make[1]: *** [cmTC_1844b] Error 1
+make[1]: Leaving directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_1844b/fast' failed
+make: *** [cmTC_1844b/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_88428/fast && /usr/bin/make  -f CMakeFiles/cmTC_88428.dir/build.make CMakeFiles/cmTC_88428.dir/build
+make[1]: Entering directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_88428.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_88428.dir/src.c.o -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_88428
+/home/poweruser/cmake-3.24.0-rc1-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_88428.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  CMakeFiles/cmTC_88428.dir/src.c.o -o cmTC_88428 
+CMakeFiles/cmTC_88428.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_88428.dir/build.make:98: recipe for target 'cmTC_88428' failed
+make[1]: *** [cmTC_88428] Error 1
+make[1]: Leaving directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_88428/fast' failed
+make: *** [cmTC_88428/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_de1f7/fast && /usr/bin/make  -f CMakeFiles/cmTC_de1f7.dir/build.make CMakeFiles/cmTC_de1f7.dir/build
+make[1]: Entering directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_de1f7.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_de1f7.dir/CheckFunctionExists.c.o -c /home/poweruser/cmake-3.24.0-rc1-linux-x86_64/share/cmake-3.24/Modules/CheckFunctionExists.c
+Linking C executable cmTC_de1f7
+/home/poweruser/cmake-3.24.0-rc1-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_de1f7.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_de1f7.dir/CheckFunctionExists.c.o -o cmTC_de1f7  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_de1f7.dir/build.make:98: recipe for target 'cmTC_de1f7' failed
+make[1]: *** [cmTC_de1f7] Error 1
+make[1]: Leaving directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_de1f7/fast' failed
+make: *** [cmTC_de1f7/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_cfa2d/fast && /usr/bin/make  -f CMakeFiles/cmTC_cfa2d.dir/build.make CMakeFiles/cmTC_cfa2d.dir/build
+make[1]: Entering directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cfa2d.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_cfa2d.dir/src.c.o -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_cfa2d
+/home/poweruser/cmake-3.24.0-rc1-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cfa2d.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  CMakeFiles/cmTC_cfa2d.dir/src.c.o -o cmTC_cfa2d 
+CMakeFiles/cmTC_cfa2d.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_cfa2d.dir/build.make:98: recipe for target 'cmTC_cfa2d' failed
+make[1]: *** [cmTC_cfa2d] Error 1
+make[1]: Leaving directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_cfa2d/fast' failed
+make: *** [cmTC_cfa2d/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_7743b/fast && /usr/bin/make  -f CMakeFiles/cmTC_7743b.dir/build.make CMakeFiles/cmTC_7743b.dir/build
+make[1]: Entering directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7743b.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_7743b.dir/CheckFunctionExists.c.o -c /home/poweruser/cmake-3.24.0-rc1-linux-x86_64/share/cmake-3.24/Modules/CheckFunctionExists.c
+Linking C executable cmTC_7743b
+/home/poweruser/cmake-3.24.0-rc1-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7743b.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_7743b.dir/CheckFunctionExists.c.o -o cmTC_7743b  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_7743b.dir/build.make:98: recipe for target 'cmTC_7743b' failed
+make[1]: *** [cmTC_7743b] Error 1
+make[1]: Leaving directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_7743b/fast' failed
+make: *** [cmTC_7743b/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_7819f/fast && /usr/bin/make  -f CMakeFiles/cmTC_7819f.dir/build.make CMakeFiles/cmTC_7819f.dir/build
+make[1]: Entering directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7819f.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_7819f.dir/src.c.o -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_7819f
+/home/poweruser/cmake-3.24.0-rc1-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7819f.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  CMakeFiles/cmTC_7819f.dir/src.c.o -o cmTC_7819f 
+CMakeFiles/cmTC_7819f.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_7819f.dir/build.make:98: recipe for target 'cmTC_7819f' failed
+make[1]: *** [cmTC_7819f] Error 1
+make[1]: Leaving directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_7819f/fast' failed
+make: *** [cmTC_7819f/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_9bb37/fast && /usr/bin/make  -f CMakeFiles/cmTC_9bb37.dir/build.make CMakeFiles/cmTC_9bb37.dir/build
+make[1]: Entering directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9bb37.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_9bb37.dir/CheckFunctionExists.c.o -c /home/poweruser/cmake-3.24.0-rc1-linux-x86_64/share/cmake-3.24/Modules/CheckFunctionExists.c
+Linking C executable cmTC_9bb37
+/home/poweruser/cmake-3.24.0-rc1-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9bb37.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_9bb37.dir/CheckFunctionExists.c.o -o cmTC_9bb37  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_9bb37.dir/build.make:98: recipe for target 'cmTC_9bb37' failed
+make[1]: *** [cmTC_9bb37] Error 1
+make[1]: Leaving directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_9bb37/fast' failed
+make: *** [cmTC_9bb37/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_8e020/fast && /usr/bin/make  -f CMakeFiles/cmTC_8e020.dir/build.make CMakeFiles/cmTC_8e020.dir/build
+make[1]: Entering directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8e020.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_8e020.dir/src.c.o -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_8e020
+/home/poweruser/cmake-3.24.0-rc1-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8e020.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  CMakeFiles/cmTC_8e020.dir/src.c.o -o cmTC_8e020 
+CMakeFiles/cmTC_8e020.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_8e020.dir/build.make:98: recipe for target 'cmTC_8e020' failed
+make[1]: *** [cmTC_8e020] Error 1
+make[1]: Leaving directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_8e020/fast' failed
+make: *** [cmTC_8e020/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_0f981/fast && /usr/bin/make  -f CMakeFiles/cmTC_0f981.dir/build.make CMakeFiles/cmTC_0f981.dir/build
+make[1]: Entering directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0f981.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_0f981.dir/CheckFunctionExists.c.o -c /home/poweruser/cmake-3.24.0-rc1-linux-x86_64/share/cmake-3.24/Modules/CheckFunctionExists.c
+Linking C executable cmTC_0f981
+/home/poweruser/cmake-3.24.0-rc1-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0f981.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_0f981.dir/CheckFunctionExists.c.o -o cmTC_0f981  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_0f981.dir/build.make:98: recipe for target 'cmTC_0f981' failed
+make[1]: *** [cmTC_0f981] Error 1
+make[1]: Leaving directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_0f981/fast' failed
+make: *** [cmTC_0f981/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_d0fd8/fast && /usr/bin/make  -f CMakeFiles/cmTC_d0fd8.dir/build.make CMakeFiles/cmTC_d0fd8.dir/build
+make[1]: Entering directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d0fd8.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_d0fd8.dir/src.c.o -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_d0fd8
+/home/poweruser/cmake-3.24.0-rc1-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d0fd8.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  CMakeFiles/cmTC_d0fd8.dir/src.c.o -o cmTC_d0fd8 
+CMakeFiles/cmTC_d0fd8.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_d0fd8.dir/build.make:98: recipe for target 'cmTC_d0fd8' failed
+make[1]: *** [cmTC_d0fd8] Error 1
+make[1]: Leaving directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_d0fd8/fast' failed
+make: *** [cmTC_d0fd8/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_b1ee2/fast && /usr/bin/make  -f CMakeFiles/cmTC_b1ee2.dir/build.make CMakeFiles/cmTC_b1ee2.dir/build
+make[1]: Entering directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b1ee2.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_b1ee2.dir/CheckFunctionExists.c.o -c /home/poweruser/cmake-3.24.0-rc1-linux-x86_64/share/cmake-3.24/Modules/CheckFunctionExists.c
+Linking C executable cmTC_b1ee2
+/home/poweruser/cmake-3.24.0-rc1-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b1ee2.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_b1ee2.dir/CheckFunctionExists.c.o -o cmTC_b1ee2  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_b1ee2.dir/build.make:98: recipe for target 'cmTC_b1ee2' failed
+make[1]: *** [cmTC_b1ee2] Error 1
+make[1]: Leaving directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_b1ee2/fast' failed
+make: *** [cmTC_b1ee2/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_96646/fast && /usr/bin/make  -f CMakeFiles/cmTC_96646.dir/build.make CMakeFiles/cmTC_96646.dir/build
+make[1]: Entering directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_96646.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_96646.dir/src.c.o -c /home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_96646
+/home/poweruser/cmake-3.24.0-rc1-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_96646.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  CMakeFiles/cmTC_96646.dir/src.c.o -o cmTC_96646 
+CMakeFiles/cmTC_96646.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_96646.dir/build.make:98: recipe for target 'cmTC_96646' failed
+make[1]: *** [cmTC_96646] Error 1
+make[1]: Leaving directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_96646/fast' failed
+make: *** [cmTC_96646/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_a4415/fast && /usr/bin/make  -f CMakeFiles/cmTC_a4415.dir/build.make CMakeFiles/cmTC_a4415.dir/build
+make[1]: Entering directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a4415.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_a4415.dir/CheckFunctionExists.c.o -c /home/poweruser/cmake-3.24.0-rc1-linux-x86_64/share/cmake-3.24/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a4415
+/home/poweruser/cmake-3.24.0-rc1-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a4415.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_a4415.dir/CheckFunctionExists.c.o -o cmTC_a4415  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_a4415.dir/build.make:98: recipe for target 'cmTC_a4415' failed
+make[1]: *** [cmTC_a4415] Error 1
+make[1]: Leaving directory '/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_a4415/fast' failed
+make: *** [cmTC_a4415/fast] Error 2
+
+
+
