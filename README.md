@@ -1,4 +1,4 @@
-# Flash-LightSeq
+# TransTorch -- A Toy Pytorch Reimplementation for Transformer Deep Learning Models.
 ## Plans
 * Use LightSeq with Flash-Attention to train and inference Transformer models.
   * with your own AutoGrad
