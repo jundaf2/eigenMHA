@@ -4,3 +4,4 @@
   * with your own AutoGrad
   * with an application in time-series-prediction
   * using both CPU and GPU
+  * with Roofline analysis
