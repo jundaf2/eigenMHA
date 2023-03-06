@@ -5,7 +5,7 @@
   * using both CPU and GPU
   * with Roofline analysis
 
-<center><img src="./figures/our_focus.png" ...></center>
+<center><img src="./figures/MHA.png" ...></center>
 <center>Which part will we implement in the transformer model.</center>
 
 ## Notes
