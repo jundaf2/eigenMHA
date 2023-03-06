@@ -4,7 +4,15 @@
   * with an application in time-series-prediction
   * using both CPU and GPU
   * with Roofline analysis
+
+<center><img src="./figures/our_focus.png" ...></center>
+<center>Which part will we implement in the transformer model.</center>
+
 ## Notes
+### Linear
+
+### Layer-Norm
+
 ### Softmax
 * [cudnnSoftmaxForward()](https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnSoftmaxForward)
 * [cudnnSoftmaxBackward()](https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnSoftmaxBackward)
@@ -32,4 +40,3 @@
 * [cudnnMultiHeadAttnBackwardData()]()
 * [cudnnMultiHeadAttnBackwardWeights()]()
 
-### 
