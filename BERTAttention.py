@@ -25,12 +25,10 @@ class BERTAttention(nn.Module):
         Q = self.q_w(embeddings).view(batch_size, seq_len, n_heads, head_size).permute(0, 2, 1, 3)
         K = self.k_w(embeddings).view(batch_size, seq_len, n_heads, head_size).permute(0, 2, 1, 3)
         V = self.v_w(embeddings).view(batch_size, seq_len, n_heads, head_size).permute(0, 2, 1, 3)
-        
-        print(Q)
-        print(K)
-        print(V)
         S = torch.matmul(Q, K.permute(0, 1, 3, 2)) / torch.sqrt(torch.tensor(head_size)) + mask
+        print(S.requires_grad)
         P = F.softmax(S, dim=-1)
+        print(P.requires_grad)
         P = self.dropout(P)
         O = torch.matmul(P, V).permute(0, 2, 1, 3).contiguous().view(batch_size, seq_len, -1)
         return O
@@ -51,7 +49,7 @@ output = BERT_Attention(embeddings, mask)
 #         print(name, param.data)
 
 # Loss
-criterion = nn.MSELoss()
+criterion = nn.L1Loss(reduction='sum')
 loss = criterion(output, torch.zeros(output.shape,dtype=torch.float32, requires_grad=False))
 loss.backward()
 

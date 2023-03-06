@@ -11,8 +11,6 @@
 ## Notes
 ### Linear
 
-### Layer-Norm
-
 ### Softmax
 * [cudnnSoftmaxForward()](https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnSoftmaxForward)
 * [cudnnSoftmaxBackward()](https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnSoftmaxBackward)
