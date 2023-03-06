@@ -6,5 +6,30 @@
   * with Roofline analysis
 ## Notes
 ### Softmax
-* https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnSoftmaxForward
-* https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnSoftmaxBackward
+* [cudnnSoftmaxForward()](https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnSoftmaxForward)
+* [cudnnSoftmaxBackward()](https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnSoftmaxBackward)
+
+### Dropout
+* [cudnnCreateDropoutDescriptor()]()
+* [cudnnDestroyDropoutDescriptor()]()
+* [cudnnDropoutGetStatesSize()]()
+* [cudnnDropoutGetReserveSpaceSize()]()
+* [cudnnDropoutForward()]()
+* [cudnnGetDropoutDescriptor()]()
+* [cudnnRestoreDropoutDescriptor()]()
+* [cudnnSetDropoutDescriptor()]()
+* [cudnnDropoutBackward()]()
+
+### Multi-head Attention
+* [cudnnCreateAttnDescriptor()]()
+* [cudnnSetAttnDescriptor()]()
+* [cudnnGetAttnDescriptor()]()
+* [cudnnSetAttnDescriptor()]()
+* [cudnnDestroyAttnDescriptor()]()
+* [cudnnGetMultiHeadAttnBuffers()]()
+* [cudnnGetMultiHeadAttnWeights()]()
+* [cudnnMultiHeadAttnForward()]()
+* [cudnnMultiHeadAttnBackwardData()]()
+* [cudnnMultiHeadAttnBackwardWeights()]()
+
+### 
