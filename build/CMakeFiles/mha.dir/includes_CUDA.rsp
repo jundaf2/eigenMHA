@@ -1,0 +1,1 @@
+-I/home/poweruser/junda.feng/cuTransDNN/SYSTEM -I/home/poweruser/junda.feng/cuTransDNN -I/home/poweruser/junda.feng/cuTransDNN/fmha -I/home/poweruser/junda.feng/cuTransDNN/include -I/home/poweruser/junda.feng/cuTransDNN/eigen3 -isystem /home/poweruser/junda.feng/anaconda3/include

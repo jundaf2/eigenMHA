@@ -1,4 +1,4 @@
-# Install script for directory: /home/poweruser/junda.feng/ixinfer/TransformerInfer
+# Install script for directory: /home/poweruser/junda.feng/cuTransDNN
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/poweruser/junda.feng/ixinfer/TransformerInfer/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/poweruser/junda.feng/cuTransDNN/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

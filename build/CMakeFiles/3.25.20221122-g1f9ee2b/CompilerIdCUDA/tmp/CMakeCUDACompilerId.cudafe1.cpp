@@ -20,11 +20,11 @@ static char __nv_inited_managed_rt = 0; static void **__nv_fatbinhandle_for_mana
 #endif
 
 # 1
-# 61 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 61 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 #pragma GCC diagnostic push
 # 64
 #pragma GCC diagnostic ignored "-Wunused-function"
-# 68 "/usr/local/cuda/bin/../targets/x86_64-linux/include/device_types.h"
+# 68 "/home/poweruser/junda.feng/anaconda3/bin/../include/device_types.h"
 #if 0
 # 68
 enum cudaRoundMode { 
@@ -39,7 +39,7 @@ cudaRoundMinInf
 # 74
 }; 
 #endif
-# 100 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 100 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 100
 struct char1 { 
@@ -48,7 +48,7 @@ signed char x;
 # 103
 }; 
 #endif
-# 105 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 105 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 105
 struct uchar1 { 
@@ -57,7 +57,7 @@ unsigned char x;
 # 108
 }; 
 #endif
-# 111 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 111 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 111
 struct __attribute((aligned(2))) char2 { 
@@ -66,7 +66,7 @@ signed char x, y;
 # 114
 }; 
 #endif
-# 116 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 116 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 116
 struct __attribute((aligned(2))) uchar2 { 
@@ -75,7 +75,7 @@ unsigned char x, y;
 # 119
 }; 
 #endif
-# 121 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 121 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 121
 struct char3 { 
@@ -84,7 +84,7 @@ signed char x, y, z;
 # 124
 }; 
 #endif
-# 126 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 126 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 126
 struct uchar3 { 
@@ -93,7 +93,7 @@ unsigned char x, y, z;
 # 129
 }; 
 #endif
-# 131 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 131 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 131
 struct __attribute((aligned(4))) char4 { 
@@ -102,7 +102,7 @@ signed char x, y, z, w;
 # 134
 }; 
 #endif
-# 136 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 136 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 136
 struct __attribute((aligned(4))) uchar4 { 
@@ -111,7 +111,7 @@ unsigned char x, y, z, w;
 # 139
 }; 
 #endif
-# 141 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 141 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 141
 struct short1 { 
@@ -120,7 +120,7 @@ short x;
 # 144
 }; 
 #endif
-# 146 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 146 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 146
 struct ushort1 { 
@@ -129,7 +129,7 @@ unsigned short x;
 # 149
 }; 
 #endif
-# 151 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 151 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 151
 struct __attribute((aligned(4))) short2 { 
@@ -138,7 +138,7 @@ short x, y;
 # 154
 }; 
 #endif
-# 156 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 156 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 156
 struct __attribute((aligned(4))) ushort2 { 
@@ -147,7 +147,7 @@ unsigned short x, y;
 # 159
 }; 
 #endif
-# 161 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 161 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 161
 struct short3 { 
@@ -156,7 +156,7 @@ short x, y, z;
 # 164
 }; 
 #endif
-# 166 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 166 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 166
 struct ushort3 { 
@@ -165,17 +165,17 @@ unsigned short x, y, z;
 # 169
 }; 
 #endif
-# 171 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 171 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 171
 struct __attribute((aligned(8))) short4 { short x; short y; short z; short w; }; 
 #endif
-# 172 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 172 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 172
 struct __attribute((aligned(8))) ushort4 { unsigned short x; unsigned short y; unsigned short z; unsigned short w; }; 
 #endif
-# 174 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 174 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 174
 struct int1 { 
@@ -184,7 +184,7 @@ int x;
 # 177
 }; 
 #endif
-# 179 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 179 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 179
 struct uint1 { 
@@ -193,17 +193,17 @@ unsigned x;
 # 182
 }; 
 #endif
-# 184 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 184 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 184
 struct __attribute((aligned(8))) int2 { int x; int y; }; 
 #endif
-# 185 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 185 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 185
 struct __attribute((aligned(8))) uint2 { unsigned x; unsigned y; }; 
 #endif
-# 187 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 187 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 187
 struct int3 { 
@@ -212,7 +212,7 @@ int x, y, z;
 # 190
 }; 
 #endif
-# 192 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 192 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 192
 struct uint3 { 
@@ -221,7 +221,7 @@ unsigned x, y, z;
 # 195
 }; 
 #endif
-# 197 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 197 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 197
 struct __attribute((aligned(16))) int4 { 
@@ -230,7 +230,7 @@ int x, y, z, w;
 # 200
 }; 
 #endif
-# 202 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 202 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 202
 struct __attribute((aligned(16))) uint4 { 
@@ -239,7 +239,7 @@ unsigned x, y, z, w;
 # 205
 }; 
 #endif
-# 207 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 207 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 207
 struct long1 { 
@@ -248,7 +248,7 @@ long x;
 # 210
 }; 
 #endif
-# 212 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 212 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 212
 struct ulong1 { 
@@ -257,7 +257,7 @@ unsigned long x;
 # 215
 }; 
 #endif
-# 222 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 222 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 222
 struct __attribute((aligned((2) * sizeof(long)))) long2 { 
@@ -266,7 +266,7 @@ long x, y;
 # 225
 }; 
 #endif
-# 227 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 227 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 227
 struct __attribute((aligned((2) * sizeof(unsigned long)))) ulong2 { 
@@ -275,7 +275,7 @@ unsigned long x, y;
 # 230
 }; 
 #endif
-# 234 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 234 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 234
 struct long3 { 
@@ -284,7 +284,7 @@ long x, y, z;
 # 237
 }; 
 #endif
-# 239 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 239 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 239
 struct ulong3 { 
@@ -293,7 +293,7 @@ unsigned long x, y, z;
 # 242
 }; 
 #endif
-# 244 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 244 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 244
 struct __attribute((aligned(16))) long4 { 
@@ -302,7 +302,7 @@ long x, y, z, w;
 # 247
 }; 
 #endif
-# 249 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 249 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 249
 struct __attribute((aligned(16))) ulong4 { 
@@ -311,7 +311,7 @@ unsigned long x, y, z, w;
 # 252
 }; 
 #endif
-# 254 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 254 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 254
 struct float1 { 
@@ -320,12 +320,12 @@ float x;
 # 257
 }; 
 #endif
-# 276 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 276 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 276
 struct __attribute((aligned(8))) float2 { float x; float y; }; 
 #endif
-# 281 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 281 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 281
 struct float3 { 
@@ -334,7 +334,7 @@ float x, y, z;
 # 284
 }; 
 #endif
-# 286 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 286 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 286
 struct __attribute((aligned(16))) float4 { 
@@ -343,7 +343,7 @@ float x, y, z, w;
 # 289
 }; 
 #endif
-# 291 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 291 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 291
 struct longlong1 { 
@@ -352,7 +352,7 @@ long long x;
 # 294
 }; 
 #endif
-# 296 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 296 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 296
 struct ulonglong1 { 
@@ -361,7 +361,7 @@ unsigned long long x;
 # 299
 }; 
 #endif
-# 301 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 301 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 301
 struct __attribute((aligned(16))) longlong2 { 
@@ -370,7 +370,7 @@ long long x, y;
 # 304
 }; 
 #endif
-# 306 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 306 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 306
 struct __attribute((aligned(16))) ulonglong2 { 
@@ -379,7 +379,7 @@ unsigned long long x, y;
 # 309
 }; 
 #endif
-# 311 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 311 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 311
 struct longlong3 { 
@@ -388,7 +388,7 @@ long long x, y, z;
 # 314
 }; 
 #endif
-# 316 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 316 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 316
 struct ulonglong3 { 
@@ -397,7 +397,7 @@ unsigned long long x, y, z;
 # 319
 }; 
 #endif
-# 321 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 321 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 321
 struct __attribute((aligned(16))) longlong4 { 
@@ -406,7 +406,7 @@ long long x, y, z, w;
 # 324
 }; 
 #endif
-# 326 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 326 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 326
 struct __attribute((aligned(16))) ulonglong4 { 
@@ -415,7 +415,7 @@ unsigned long long x, y, z, w;
 # 329
 }; 
 #endif
-# 331 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 331 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 331
 struct double1 { 
@@ -424,7 +424,7 @@ double x;
 # 334
 }; 
 #endif
-# 336 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 336 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 336
 struct __attribute((aligned(16))) double2 { 
@@ -433,7 +433,7 @@ double x, y;
 # 339
 }; 
 #endif
-# 341 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 341 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 341
 struct double3 { 
@@ -442,7 +442,7 @@ double x, y, z;
 # 344
 }; 
 #endif
-# 346 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 346 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 346
 struct __attribute((aligned(16))) double4 { 
@@ -451,295 +451,295 @@ double x, y, z, w;
 # 349
 }; 
 #endif
-# 363 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 363 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef char1 
 # 363
 char1; 
 #endif
-# 364 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 364 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef uchar1 
 # 364
 uchar1; 
 #endif
-# 365 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 365 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef char2 
 # 365
 char2; 
 #endif
-# 366 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 366 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef uchar2 
 # 366
 uchar2; 
 #endif
-# 367 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 367 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef char3 
 # 367
 char3; 
 #endif
-# 368 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 368 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef uchar3 
 # 368
 uchar3; 
 #endif
-# 369 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 369 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef char4 
 # 369
 char4; 
 #endif
-# 370 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 370 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef uchar4 
 # 370
 uchar4; 
 #endif
-# 371 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 371 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef short1 
 # 371
 short1; 
 #endif
-# 372 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 372 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef ushort1 
 # 372
 ushort1; 
 #endif
-# 373 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 373 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef short2 
 # 373
 short2; 
 #endif
-# 374 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 374 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef ushort2 
 # 374
 ushort2; 
 #endif
-# 375 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 375 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef short3 
 # 375
 short3; 
 #endif
-# 376 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 376 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef ushort3 
 # 376
 ushort3; 
 #endif
-# 377 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 377 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef short4 
 # 377
 short4; 
 #endif
-# 378 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 378 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef ushort4 
 # 378
 ushort4; 
 #endif
-# 379 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 379 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef int1 
 # 379
 int1; 
 #endif
-# 380 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 380 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef uint1 
 # 380
 uint1; 
 #endif
-# 381 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 381 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef int2 
 # 381
 int2; 
 #endif
-# 382 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 382 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef uint2 
 # 382
 uint2; 
 #endif
-# 383 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 383 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef int3 
 # 383
 int3; 
 #endif
-# 384 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 384 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef uint3 
 # 384
 uint3; 
 #endif
-# 385 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 385 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef int4 
 # 385
 int4; 
 #endif
-# 386 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 386 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef uint4 
 # 386
 uint4; 
 #endif
-# 387 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 387 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef long1 
 # 387
 long1; 
 #endif
-# 388 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 388 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef ulong1 
 # 388
 ulong1; 
 #endif
-# 389 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 389 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef long2 
 # 389
 long2; 
 #endif
-# 390 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 390 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef ulong2 
 # 390
 ulong2; 
 #endif
-# 391 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 391 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef long3 
 # 391
 long3; 
 #endif
-# 392 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 392 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef ulong3 
 # 392
 ulong3; 
 #endif
-# 393 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 393 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef long4 
 # 393
 long4; 
 #endif
-# 394 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 394 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef ulong4 
 # 394
 ulong4; 
 #endif
-# 395 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 395 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef float1 
 # 395
 float1; 
 #endif
-# 396 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 396 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef float2 
 # 396
 float2; 
 #endif
-# 397 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 397 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef float3 
 # 397
 float3; 
 #endif
-# 398 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 398 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef float4 
 # 398
 float4; 
 #endif
-# 399 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 399 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef longlong1 
 # 399
 longlong1; 
 #endif
-# 400 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 400 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef ulonglong1 
 # 400
 ulonglong1; 
 #endif
-# 401 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 401 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef longlong2 
 # 401
 longlong2; 
 #endif
-# 402 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 402 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef ulonglong2 
 # 402
 ulonglong2; 
 #endif
-# 403 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 403 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef longlong3 
 # 403
 longlong3; 
 #endif
-# 404 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 404 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef ulonglong3 
 # 404
 ulonglong3; 
 #endif
-# 405 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 405 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef longlong4 
 # 405
 longlong4; 
 #endif
-# 406 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 406 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef ulonglong4 
 # 406
 ulonglong4; 
 #endif
-# 407 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 407 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef double1 
 # 407
 double1; 
 #endif
-# 408 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 408 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef double2 
 # 408
 double2; 
 #endif
-# 409 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 409 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef double3 
 # 409
 double3; 
 #endif
-# 410 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 410 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef double4 
 # 410
 double4; 
 #endif
-# 418 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 418 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 # 418
 struct dim3 { 
@@ -748,7 +748,7 @@ unsigned x, y, z;
 # 432
 }; 
 #endif
-# 434 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
+# 434 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_types.h"
 #if 0
 typedef dim3 
 # 434
@@ -774,7 +774,7 @@ long double __max_align_ld __attribute((__aligned__(__alignof__(long double))));
 } max_align_t; 
 # 444
 typedef __decltype((nullptr)) nullptr_t; 
-# 204 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 204 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 204
 enum cudaError { 
@@ -796,7 +796,7 @@ cudaErrorProfilerNotInitialized,
 cudaErrorProfilerAlreadyStarted, 
 # 265
 cudaErrorProfilerAlreadyStopped, 
-# 274 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 274 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 cudaErrorInvalidConfiguration, 
 # 280
 cudaErrorInvalidPitchValue = 12, 
@@ -814,13 +814,13 @@ cudaErrorInvalidTextureBinding,
 cudaErrorInvalidChannelDescriptor, 
 # 327
 cudaErrorInvalidMemcpyDirection, 
-# 337 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 337 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 cudaErrorAddressOfConstant, 
-# 346 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 346 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 cudaErrorTextureFetchFailed, 
-# 355 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 355 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 cudaErrorTextureNotBound, 
-# 364 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 364 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 cudaErrorSynchronizationError, 
 # 370
 cudaErrorInvalidFilterSetting, 
@@ -830,7 +830,7 @@ cudaErrorInvalidNormSetting,
 cudaErrorMixedDeviceExecution, 
 # 392
 cudaErrorNotYetImplemented = 31, 
-# 401 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 401 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 cudaErrorMemoryValueTooLarge, 
 # 408
 cudaErrorStubLibrary = 34, 
@@ -846,13 +846,13 @@ cudaErrorDuplicateVariableName = 43,
 cudaErrorDuplicateTextureName, 
 # 446
 cudaErrorDuplicateSurfaceName, 
-# 456 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 456 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 cudaErrorDevicesUnavailable, 
-# 469 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 469 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 cudaErrorIncompatibleDriverContext = 49, 
 # 475
 cudaErrorMissingConfiguration = 52, 
-# 484 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 484 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 cudaErrorPriorLaunchFailure, 
 # 491
 cudaErrorLaunchMaxDepthExceeded = 65, 
@@ -860,9 +860,9 @@ cudaErrorLaunchMaxDepthExceeded = 65,
 cudaErrorLaunchFileScopedTex, 
 # 507
 cudaErrorLaunchFileScopedSurf, 
-# 522 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 522 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 cudaErrorSyncDepthExceeded, 
-# 534 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 534 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 cudaErrorLaunchPendingCountExceeded, 
 # 540
 cudaErrorInvalidDeviceFunction = 98, 
@@ -872,13 +872,13 @@ cudaErrorNoDevice = 100,
 cudaErrorInvalidDevice, 
 # 558
 cudaErrorDeviceNotLicensed, 
-# 567 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 567 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 cudaErrorSoftwareValidityNotEstablished, 
 # 572
 cudaErrorStartupFailure = 127, 
 # 577
 cudaErrorInvalidKernelImage = 200, 
-# 587 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 587 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 cudaErrorDeviceUninitialized, 
 # 592
 cudaErrorMapBufferObjectFailed = 205, 
@@ -940,9 +940,9 @@ cudaErrorSymbolNotFound = 500,
 cudaErrorNotReady = 600, 
 # 766
 cudaErrorIllegalAddress = 700, 
-# 775 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 775 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 cudaErrorLaunchOutOfResources, 
-# 786 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 786 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 cudaErrorLaunchTimeout, 
 # 792
 cudaErrorLaunchIncompatibleTexturing, 
@@ -950,7 +950,7 @@ cudaErrorLaunchIncompatibleTexturing,
 cudaErrorPeerAccessAlreadyEnabled, 
 # 806
 cudaErrorPeerAccessNotEnabled, 
-# 819 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 819 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 cudaErrorSetOnActiveProcess = 708, 
 # 826
 cudaErrorContextIsDestroyed, 
@@ -962,29 +962,29 @@ cudaErrorTooManyPeers,
 cudaErrorHostMemoryAlreadyRegistered, 
 # 852
 cudaErrorHostMemoryNotRegistered, 
-# 861 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 861 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 cudaErrorHardwareStackError, 
 # 869
 cudaErrorIllegalInstruction, 
-# 878 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 878 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 cudaErrorMisalignedAddress, 
-# 889 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 889 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 cudaErrorInvalidAddressSpace, 
 # 897
 cudaErrorInvalidPc, 
-# 908 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 908 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 cudaErrorLaunchFailure, 
-# 917 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 917 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 cudaErrorCooperativeLaunchTooLarge, 
 # 922
 cudaErrorNotPermitted = 800, 
 # 928
 cudaErrorNotSupported, 
-# 937 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 937 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 cudaErrorSystemNotReady, 
 # 944
 cudaErrorSystemDriverMismatch, 
-# 953 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 953 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 cudaErrorCompatNotSupportedOnDevice, 
 # 958
 cudaErrorMpsConnectionFailed, 
@@ -1018,16 +1018,16 @@ cudaErrorStreamCaptureWrongThread,
 cudaErrorTimeout, 
 # 1044
 cudaErrorGraphExecUpdateFailure, 
-# 1054 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1054 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 cudaErrorExternalDevice, 
-# 1067 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1067 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 cudaErrorUnknown = 999, 
 # 1075
 cudaErrorApiFailureBase = 10000
 # 1076
 }; 
 #endif
-# 1081 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1081 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1081
 enum cudaChannelFormatKind { 
@@ -1096,7 +1096,7 @@ cudaChannelFormatKindUnsignedBlockCompressed7SRGB
 # 1114
 }; 
 #endif
-# 1119 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1119 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1119
 struct cudaChannelFormatDesc { 
@@ -1113,7 +1113,7 @@ cudaChannelFormatKind f;
 # 1126
 }; 
 #endif
-# 1131 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1131 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 typedef struct cudaArray *cudaArray_t; 
 # 1136
 typedef const cudaArray *cudaArray_const_t; 
@@ -1125,7 +1125,7 @@ typedef struct cudaMipmappedArray *cudaMipmappedArray_t;
 typedef const cudaMipmappedArray *cudaMipmappedArray_const_t; 
 # 1150
 struct cudaMipmappedArray; 
-# 1160 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1160 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1160
 struct cudaArraySparseProperties { 
@@ -1150,7 +1150,7 @@ unsigned reserved[4];
 # 1170
 }; 
 #endif
-# 1176 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1176 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1176
 struct cudaArrayMemoryRequirements { 
@@ -1163,7 +1163,7 @@ unsigned reserved[4];
 # 1180
 }; 
 #endif
-# 1186 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1186 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1186
 enum cudaMemoryType { 
@@ -1178,7 +1178,7 @@ cudaMemoryTypeManaged
 # 1192
 }; 
 #endif
-# 1197 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1197 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1197
 enum cudaMemcpyKind { 
@@ -1195,7 +1195,7 @@ cudaMemcpyDefault
 # 1204
 }; 
 #endif
-# 1211 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1211 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1211
 struct cudaPitchedPtr { 
@@ -1210,7 +1210,7 @@ size_t ysize;
 # 1217
 }; 
 #endif
-# 1224 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1224 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1224
 struct cudaExtent { 
@@ -1223,7 +1223,7 @@ size_t depth;
 # 1229
 }; 
 #endif
-# 1236 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1236 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1236
 struct cudaPos { 
@@ -1236,7 +1236,7 @@ size_t z;
 # 1241
 }; 
 #endif
-# 1246 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1246 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1246
 struct cudaMemcpy3DParms { 
@@ -1259,7 +1259,7 @@ cudaMemcpyKind kind; __pad__(volatile char:8;)__pad__(volatile char:8;)__pad__(v
 # 1258
 }; 
 #endif
-# 1263 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1263 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1263
 struct cudaMemcpy3DPeerParms { 
@@ -1284,7 +1284,7 @@ cudaExtent extent;
 # 1276
 }; 
 #endif
-# 1281 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1281 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1281
 struct cudaMemsetParams { 
@@ -1303,7 +1303,7 @@ size_t height;
 # 1288
 }; 
 #endif
-# 1293 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1293 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1293
 enum cudaAccessProperty { 
@@ -1316,7 +1316,7 @@ cudaAccessPropertyPersisting
 # 1297
 }; 
 #endif
-# 1310 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1310 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1310
 struct cudaAccessPolicyWindow { 
@@ -1333,7 +1333,7 @@ cudaAccessProperty missProp; __pad__(volatile char:8;)__pad__(volatile char:8;)_
 # 1316
 }; 
 #endif
-# 1328 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1328 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 typedef void (*cudaHostFn_t)(void * userData); 
 # 1333
 #if 0
@@ -1346,7 +1346,7 @@ void *userData;
 # 1336
 }; 
 #endif
-# 1341 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1341 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1341
 enum cudaStreamCaptureStatus { 
@@ -1359,7 +1359,7 @@ cudaStreamCaptureStatusInvalidated
 # 1346
 }; 
 #endif
-# 1352 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1352 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1352
 enum cudaStreamCaptureMode { 
@@ -1372,7 +1372,7 @@ cudaStreamCaptureModeRelaxed
 # 1356
 }; 
 #endif
-# 1358 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1358 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1358
 enum cudaSynchronizationPolicy { 
@@ -1387,7 +1387,7 @@ cudaSyncPolicyBlockingSync
 # 1363
 }; 
 #endif
-# 1368 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1368 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1368
 enum cudaStreamAttrID { 
@@ -1398,7 +1398,7 @@ cudaStreamAttributeSynchronizationPolicy = 3
 # 1371
 }; 
 #endif
-# 1376 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1376 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1376
 union cudaStreamAttrValue { 
@@ -1409,7 +1409,7 @@ cudaSynchronizationPolicy syncPolicy; __pad__(volatile char:8;)__pad__(volatile 
 # 1379
 }; 
 #endif
-# 1384 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1384 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1384
 enum cudaStreamUpdateCaptureDependenciesFlags { 
@@ -1420,7 +1420,7 @@ cudaStreamSetCaptureDependencies
 # 1387
 }; 
 #endif
-# 1392 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1392 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1392
 enum cudaUserObjectFlags { 
@@ -1429,7 +1429,7 @@ cudaUserObjectNoDestructorSync = 1
 # 1394
 }; 
 #endif
-# 1399 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1399 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1399
 enum cudaUserObjectRetainFlags { 
@@ -1438,7 +1438,7 @@ cudaGraphUserObjectMove = 1
 # 1401
 }; 
 #endif
-# 1406 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1406 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 struct cudaGraphicsResource; 
 # 1411
 #if 0
@@ -1457,7 +1457,7 @@ cudaGraphicsRegisterFlagsTextureGather = 8
 # 1418
 }; 
 #endif
-# 1423 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1423 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1423
 enum cudaGraphicsMapFlags { 
@@ -1470,7 +1470,7 @@ cudaGraphicsMapFlagsWriteDiscard
 # 1428
 }; 
 #endif
-# 1433 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1433 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1433
 enum cudaGraphicsCubeFace { 
@@ -1489,7 +1489,7 @@ cudaGraphicsCubeFaceNegativeZ
 # 1441
 }; 
 #endif
-# 1446 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1446 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1446
 enum cudaKernelNodeAttrID { 
@@ -1500,7 +1500,7 @@ cudaKernelNodeAttributeCooperative
 # 1449
 }; 
 #endif
-# 1454 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1454 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1454
 union cudaKernelNodeAttrValue { 
@@ -1511,7 +1511,7 @@ int cooperative; __pad__(volatile char:8;)__pad__(volatile char:8;)__pad__(volat
 # 1457
 }; 
 #endif
-# 1462 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1462 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1462
 enum cudaResourceType { 
@@ -1526,7 +1526,7 @@ cudaResourceTypePitch2D
 # 1468
 }; 
 #endif
-# 1473 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1473 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1473
 enum cudaResourceViewFormat { 
@@ -1603,7 +1603,7 @@ cudaResViewFormatUnsignedBlockCompressed7
 # 1510
 }; 
 #endif
-# 1515 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1515 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1515
 struct cudaResourceDesc { 
@@ -1652,7 +1652,7 @@ size_t pitchInBytes;
 # 1538
 }; 
 #endif
-# 1543 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1543 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1543
 struct cudaResourceViewDesc { 
@@ -1675,22 +1675,22 @@ unsigned lastLayer;
 # 1553
 }; 
 #endif
-# 1558 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1558 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1558
 struct cudaPointerAttributes { 
 # 1564
 cudaMemoryType type; 
-# 1575 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1575 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 int device; 
 # 1581
 void *devicePointer; 
-# 1590 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1590 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 void *hostPointer; 
 # 1591
 }; 
 #endif
-# 1596 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1596 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1596
 struct cudaFuncAttributes { 
@@ -1712,12 +1712,12 @@ int binaryVersion;
 int cacheModeCA; 
 # 1653
 int maxDynamicSharedSizeBytes; 
-# 1662 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1662 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 int preferredShmemCarveout; 
-# 1712 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1712 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 }; 
 #endif
-# 1717 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1717 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1717
 enum cudaFuncAttribute { 
@@ -1725,12 +1725,12 @@ enum cudaFuncAttribute {
 cudaFuncAttributeMaxDynamicSharedMemorySize = 8, 
 # 1720
 cudaFuncAttributePreferredSharedMemoryCarveout, 
-# 1729 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1729 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 cudaFuncAttributeMax
 # 1730
 }; 
 #endif
-# 1735 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1735 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1735
 enum cudaFuncCache { 
@@ -1745,7 +1745,7 @@ cudaFuncCachePreferEqual
 # 1741
 }; 
 #endif
-# 1747 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1747 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1747
 enum cudaSharedMemConfig { 
@@ -1758,7 +1758,7 @@ cudaSharedMemBankSizeEightByte
 # 1752
 }; 
 #endif
-# 1757 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1757 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1757
 enum cudaSharedCarveout { 
@@ -1771,7 +1771,7 @@ cudaSharedmemCarveoutMaxL1 = 0
 # 1761
 }; 
 #endif
-# 1777 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1777 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1777
 enum cudaComputeMode { 
@@ -1786,7 +1786,7 @@ cudaComputeModeExclusiveProcess
 # 1783
 }; 
 #endif
-# 1788 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1788 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1788
 enum cudaLimit { 
@@ -1807,7 +1807,7 @@ cudaLimitPersistingL2CacheSize
 # 1797
 }; 
 #endif
-# 1802 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1802 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1802
 enum cudaMemoryAdvise { 
@@ -1826,7 +1826,7 @@ cudaMemAdviseUnsetAccessedBy
 # 1810
 }; 
 #endif
-# 1815 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1815 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1815
 enum cudaMemRangeAttribute { 
@@ -1841,7 +1841,7 @@ cudaMemRangeAttributeLastPrefetchLocation
 # 1821
 }; 
 #endif
-# 1826 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1826 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1826
 enum cudaOutputMode { 
@@ -1852,7 +1852,7 @@ cudaCSV
 # 1830
 }; 
 #endif
-# 1835 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1835 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1835
 enum cudaFlushGPUDirectRDMAWritesOptions { 
@@ -1863,7 +1863,7 @@ cudaFlushGPUDirectRDMAWritesOptionMemOps
 # 1838
 }; 
 #endif
-# 1843 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1843 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1843
 enum cudaGPUDirectRDMAWritesOrdering { 
@@ -1876,7 +1876,7 @@ cudaGPUDirectRDMAWritesOrderingAllDevices = 200
 # 1847
 }; 
 #endif
-# 1852 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1852 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1852
 enum cudaFlushGPUDirectRDMAWritesScope { 
@@ -1887,7 +1887,7 @@ cudaFlushGPUDirectRDMAWritesToAllDevices = 200
 # 1855
 }; 
 #endif
-# 1860 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1860 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1860
 enum cudaFlushGPUDirectRDMAWritesTarget { 
@@ -1896,7 +1896,7 @@ cudaFlushGPUDirectRDMAWritesTargetCurrentDevice
 # 1862
 }; 
 #endif
-# 1868 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1868 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1868
 enum cudaDeviceAttr { 
@@ -2133,17 +2133,17 @@ cudaDevAttrMax
 # 1990
 }; 
 #endif
-# 1995 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 1995 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 1995
 enum cudaMemPoolAttr { 
-# 2005 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2005 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 cudaMemPoolReuseFollowEventDependencies = 1, 
 # 2012
 cudaMemPoolReuseAllowOpportunistic, 
 # 2020
 cudaMemPoolReuseAllowInternalDependencies, 
-# 2031 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2031 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 cudaMemPoolAttrReleaseThreshold, 
 # 2037
 cudaMemPoolAttrReservedMemCurrent, 
@@ -2156,7 +2156,7 @@ cudaMemPoolAttrUsedMemHigh
 # 2058
 }; 
 #endif
-# 2063 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2063 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 2063
 enum cudaMemLocationType { 
@@ -2167,7 +2167,7 @@ cudaMemLocationTypeDevice
 # 2066
 }; 
 #endif
-# 2073 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2073 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 2073
 struct cudaMemLocation { 
@@ -2178,7 +2178,7 @@ int id;
 # 2076
 }; 
 #endif
-# 2081 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2081 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 2081
 enum cudaMemAccessFlags { 
@@ -2191,7 +2191,7 @@ cudaMemAccessFlagsProtReadWrite = 3
 # 2085
 }; 
 #endif
-# 2090 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2090 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 2090
 struct cudaMemAccessDesc { 
@@ -2202,7 +2202,7 @@ cudaMemAccessFlags flags;
 # 2093
 }; 
 #endif
-# 2098 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2098 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 2098
 enum cudaMemAllocationType { 
@@ -2215,7 +2215,7 @@ cudaMemAllocationTypeMax = 2147483647
 # 2105
 }; 
 #endif
-# 2110 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2110 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 2110
 enum cudaMemAllocationHandleType { 
@@ -2230,7 +2230,7 @@ cudaMemHandleTypeWin32Kmt = 4
 # 2115
 }; 
 #endif
-# 2120 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2120 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 2120
 struct cudaMemPoolProps { 
@@ -2247,7 +2247,7 @@ unsigned char reserved[64];
 # 2132
 }; 
 #endif
-# 2137 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2137 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 2137
 struct cudaMemPoolPtrExportData { 
@@ -2256,7 +2256,7 @@ unsigned char reserved[64];
 # 2139
 }; 
 #endif
-# 2144 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2144 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 2144
 struct cudaMemAllocNodeParams { 
@@ -2273,7 +2273,7 @@ void *dptr;
 # 2154
 }; 
 #endif
-# 2159 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2159 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 2159
 enum cudaGraphMemAttributeType { 
@@ -2288,7 +2288,7 @@ cudaGraphMemAttrReservedMemHigh
 # 2186
 }; 
 #endif
-# 2192 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2192 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 2192
 enum cudaDeviceP2PAttr { 
@@ -2303,7 +2303,7 @@ cudaDevP2PAttrCudaArrayAccessSupported
 # 2197
 }; 
 #endif
-# 2204 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2204 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 2204
 struct CUuuid_st { 
@@ -2312,19 +2312,19 @@ char bytes[16];
 # 2206
 }; 
 #endif
-# 2207 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2207 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 typedef CUuuid_st 
 # 2207
 CUuuid; 
 #endif
-# 2209 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2209 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 typedef CUuuid_st 
 # 2209
 cudaUUID_t; 
 #endif
-# 2214 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2214 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 2214
 struct cudaDeviceProp { 
@@ -2491,7 +2491,7 @@ size_t reservedSharedMemPerBlock;
 # 2296
 }; 
 #endif
-# 2397 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2397 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 typedef 
 # 2394
@@ -2501,7 +2501,7 @@ char reserved[64];
 # 2397
 } cudaIpcEventHandle_t; 
 #endif
-# 2405 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2405 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 typedef 
 # 2402
@@ -2511,7 +2511,7 @@ char reserved[64];
 # 2405
 } cudaIpcMemHandle_t; 
 #endif
-# 2410 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2410 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 2410
 enum cudaExternalMemoryHandleType { 
@@ -2534,7 +2534,7 @@ cudaExternalMemoryHandleTypeNvSciBuf
 # 2443
 }; 
 #endif
-# 2485 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2485 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 2485
 struct cudaExternalMemoryHandleDesc { 
@@ -2544,7 +2544,7 @@ cudaExternalMemoryHandleType type;
 union { 
 # 2496
 int fd; 
-# 2512 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2512 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 struct { 
 # 2516
 void *handle; 
@@ -2563,7 +2563,7 @@ unsigned flags; __pad__(volatile char:8;)__pad__(volatile char:8;)__pad__(volati
 # 2537
 }; 
 #endif
-# 2542 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2542 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 2542
 struct cudaExternalMemoryBufferDesc { 
@@ -2576,7 +2576,7 @@ unsigned flags;
 # 2555
 }; 
 #endif
-# 2560 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2560 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 2560
 struct cudaExternalMemoryMipmappedArrayDesc { 
@@ -2593,7 +2593,7 @@ unsigned numLevels;
 # 2583
 }; 
 #endif
-# 2588 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2588 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 2588
 enum cudaExternalSemaphoreHandleType { 
@@ -2620,7 +2620,7 @@ cudaExternalSemaphoreHandleTypeTimelineSemaphoreWin32
 # 2629
 }; 
 #endif
-# 2634 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2634 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 2634
 struct cudaExternalSemaphoreHandleDesc { 
@@ -2630,7 +2630,7 @@ cudaExternalSemaphoreHandleType type;
 union { 
 # 2646
 int fd; 
-# 2662 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2662 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 struct { 
 # 2666
 void *handle; 
@@ -2647,7 +2647,7 @@ unsigned flags; __pad__(volatile char:8;)__pad__(volatile char:8;)__pad__(volati
 # 2682
 }; 
 #endif
-# 2687 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2687 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 2687
 struct cudaExternalSemaphoreSignalParams_v1 { 
@@ -2675,12 +2675,12 @@ unsigned long long key;
 } keyedMutex; 
 # 2715
 } params; 
-# 2726 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2726 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 unsigned flags; 
 # 2727
 }; 
 #endif
-# 2732 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2732 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 2732
 struct cudaExternalSemaphoreWaitParams_v1 { 
@@ -2710,12 +2710,12 @@ unsigned timeoutMs;
 } keyedMutex; 
 # 2764
 } params; 
-# 2775 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2775 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 unsigned flags; 
 # 2776
 }; 
 #endif
-# 2781 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2781 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 2781
 struct cudaExternalSemaphoreSignalParams { 
@@ -2745,14 +2745,14 @@ unsigned long long key;
 unsigned reserved[12]; 
 # 2810
 } params; 
-# 2821 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2821 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 unsigned flags; 
 # 2822
 unsigned reserved[16]; 
 # 2823
 }; 
 #endif
-# 2828 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2828 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 2828
 struct cudaExternalSemaphoreWaitParams { 
@@ -2784,86 +2784,86 @@ unsigned timeoutMs;
 unsigned reserved[10]; 
 # 2861
 } params; 
-# 2872 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2872 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 unsigned flags; 
 # 2873
 unsigned reserved[16]; 
 # 2874
 }; 
 #endif
-# 2886 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2886 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 typedef cudaError 
 # 2886
 cudaError_t; 
 #endif
-# 2891 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2891 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 typedef struct CUstream_st *
 # 2891
 cudaStream_t; 
 #endif
-# 2896 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2896 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 typedef struct CUevent_st *
 # 2896
 cudaEvent_t; 
 #endif
-# 2901 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2901 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 typedef cudaGraphicsResource *
 # 2901
 cudaGraphicsResource_t; 
 #endif
-# 2906 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2906 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 typedef cudaOutputMode 
 # 2906
 cudaOutputMode_t; 
 #endif
-# 2911 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2911 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 typedef struct CUexternalMemory_st *
 # 2911
 cudaExternalMemory_t; 
 #endif
-# 2916 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2916 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 typedef struct CUexternalSemaphore_st *
 # 2916
 cudaExternalSemaphore_t; 
 #endif
-# 2921 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2921 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 typedef struct CUgraph_st *
 # 2921
 cudaGraph_t; 
 #endif
-# 2926 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2926 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 typedef struct CUgraphNode_st *
 # 2926
 cudaGraphNode_t; 
 #endif
-# 2931 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2931 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 typedef struct CUuserObject_st *
 # 2931
 cudaUserObject_t; 
 #endif
-# 2936 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2936 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 typedef struct CUfunc_st *
 # 2936
 cudaFunction_t; 
 #endif
-# 2941 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2941 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 typedef struct CUmemPoolHandle_st *
 # 2941
 cudaMemPool_t; 
 #endif
-# 2946 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2946 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 2946
 enum cudaCGScope { 
@@ -2876,7 +2876,7 @@ cudaCGScopeMultiGrid
 # 2950
 }; 
 #endif
-# 2955 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2955 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 2955
 struct cudaLaunchParams { 
@@ -2895,7 +2895,7 @@ cudaStream_t stream;
 # 2963
 }; 
 #endif
-# 2968 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2968 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 2968
 struct cudaKernelNodeParams { 
@@ -2914,7 +2914,7 @@ void **extra;
 # 2975
 }; 
 #endif
-# 2980 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2980 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 2980
 struct cudaExternalSemaphoreSignalNodeParams { 
@@ -2927,7 +2927,7 @@ unsigned numExtSems;
 # 2984
 }; 
 #endif
-# 2989 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2989 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 2989
 struct cudaExternalSemaphoreWaitNodeParams { 
@@ -2940,7 +2940,7 @@ unsigned numExtSems;
 # 2993
 }; 
 #endif
-# 2998 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 2998 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 2998
 enum cudaGraphNodeType { 
@@ -2973,7 +2973,7 @@ cudaGraphNodeTypeCount
 # 3012
 }; 
 #endif
-# 3017 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 3017 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 typedef struct CUgraphExec_st *cudaGraphExec_t; 
 # 3022
 #if 0
@@ -3000,7 +3000,7 @@ cudaGraphExecUpdateErrorAttributesChanged
 # 3032
 }; 
 #endif
-# 3038 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 3038 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 3038
 enum cudaGetDriverEntryPointFlags { 
@@ -3013,7 +3013,7 @@ cudaEnablePerThreadDefaultStream
 # 3042
 }; 
 #endif
-# 3047 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 3047 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 3047
 enum cudaGraphDebugDotFlags { 
@@ -3040,7 +3040,7 @@ cudaGraphDebugDotFlagsHandles = (1 << 10)
 # 3058
 }; 
 #endif
-# 3063 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_types.h"
+# 3063 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_types.h"
 #if 0
 # 3063
 enum cudaGraphInstantiateFlags { 
@@ -3049,7 +3049,7 @@ cudaGraphInstantiateFlagAutoFreeOnLaunch = 1
 # 3065
 }; 
 #endif
-# 84 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_types.h"
+# 84 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_types.h"
 #if 0
 # 84
 enum cudaSurfaceBoundaryMode { 
@@ -3062,7 +3062,7 @@ cudaBoundaryModeTrap
 # 89
 }; 
 #endif
-# 94 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_types.h"
+# 94 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_types.h"
 #if 0
 # 94
 enum cudaSurfaceFormatMode { 
@@ -3073,7 +3073,7 @@ cudaFormatModeAuto
 # 98
 }; 
 #endif
-# 103 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_types.h"
+# 103 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_types.h"
 #if 0
 # 103
 struct surfaceReference { 
@@ -3082,13 +3082,13 @@ cudaChannelFormatDesc channelDesc;
 # 109
 }; 
 #endif
-# 114 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_types.h"
+# 114 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_types.h"
 #if 0
 typedef unsigned long long 
 # 114
 cudaSurfaceObject_t; 
 #endif
-# 84 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_types.h"
+# 84 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_types.h"
 #if 0
 # 84
 enum cudaTextureAddressMode { 
@@ -3103,7 +3103,7 @@ cudaAddressModeBorder
 # 90
 }; 
 #endif
-# 95 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_types.h"
+# 95 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_types.h"
 #if 0
 # 95
 enum cudaTextureFilterMode { 
@@ -3114,7 +3114,7 @@ cudaFilterModeLinear
 # 99
 }; 
 #endif
-# 104 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_types.h"
+# 104 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_types.h"
 #if 0
 # 104
 enum cudaTextureReadMode { 
@@ -3125,7 +3125,7 @@ cudaReadModeNormalizedFloat
 # 108
 }; 
 #endif
-# 113 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_types.h"
+# 113 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_types.h"
 #if 0
 # 113
 struct textureReference { 
@@ -3156,7 +3156,7 @@ int __cudaReserved[14];
 # 160
 }; 
 #endif
-# 165 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_types.h"
+# 165 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_types.h"
 #if 0
 # 165
 struct cudaTextureDesc { 
@@ -3189,13 +3189,13 @@ int seamlessCubemap;
 # 219
 }; 
 #endif
-# 224 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_types.h"
+# 224 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_types.h"
 #if 0
 typedef unsigned long long 
 # 224
 cudaTextureObject_t; 
 #endif
-# 84 "/usr/local/cuda/bin/../targets/x86_64-linux/include/library_types.h"
+# 84 "/home/poweruser/junda.feng/anaconda3/bin/../include/library_types.h"
 typedef 
 # 54
 enum cudaDataType_t { 
@@ -3269,7 +3269,7 @@ MINOR_VERSION,
 PATCH_LEVEL
 # 92
 } libraryPropertyType; 
-# 131 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+# 131 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_device_runtime_api.h"
 extern "C" {
 # 133
 extern cudaError_t cudaDeviceGetAttribute(int * value, cudaDeviceAttr attr, int device); 
@@ -3347,15 +3347,15 @@ extern cudaError_t cudaMemset3DAsync(cudaPitchedPtr pitchedDevPtr, int value, cu
 __attribute__((unused)) extern cudaError_t cudaMemset3DAsync_ptsz(cudaPitchedPtr pitchedDevPtr, int value, cudaExtent extent, cudaStream_t stream); 
 # 170
 extern cudaError_t cudaRuntimeGetVersion(int * runtimeVersion); 
-# 191 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+# 191 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_device_runtime_api.h"
 __attribute__((unused)) extern void *cudaGetParameterBuffer(size_t alignment, size_t size); 
-# 219 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+# 219 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_device_runtime_api.h"
 __attribute__((unused)) extern void *cudaGetParameterBufferV2(void * func, dim3 gridDimension, dim3 blockDimension, unsigned sharedMemSize); 
 # 220
 __attribute__((unused)) extern cudaError_t cudaLaunchDevice_ptsz(void * func, void * parameterBuffer, dim3 gridDimension, dim3 blockDimension, unsigned sharedMemSize, cudaStream_t stream); 
 # 221
 __attribute__((unused)) extern cudaError_t cudaLaunchDeviceV2_ptsz(void * parameterBuffer, cudaStream_t stream); 
-# 239 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+# 239 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_device_runtime_api.h"
 __attribute__((unused)) extern cudaError_t cudaLaunchDevice(void * func, void * parameterBuffer, dim3 gridDimension, dim3 blockDimension, unsigned sharedMemSize, cudaStream_t stream); 
 # 240
 __attribute__((unused)) extern cudaError_t cudaLaunchDeviceV2(void * parameterBuffer, cudaStream_t stream); 
@@ -3383,583 +3383,583 @@ template< class T> static inline cudaError_t cudaFuncGetAttributes(cudaFuncAttri
 template< class T> static inline cudaError_t cudaOccupancyMaxActiveBlocksPerMultiprocessor(int * numBlocks, T func, int blockSize, size_t dynamicSmemSize); 
 # 256
 template< class T> static inline cudaError_t cudaOccupancyMaxActiveBlocksPerMultiprocessorWithFlags(int * numBlocks, T func, int blockSize, size_t dynamicSmemSize, unsigned flags); 
-# 266 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 266 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern "C" {
-# 306 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 306 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaDeviceReset(); 
-# 328 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 328 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaDeviceSynchronize(); 
-# 415 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 415 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaDeviceSetLimit(cudaLimit limit, size_t value); 
-# 450 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 450 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaDeviceGetLimit(size_t * pValue, cudaLimit limit); 
-# 473 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 473 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaDeviceGetTexture1DLinearMaxWidth(size_t * maxWidthInElements, const cudaChannelFormatDesc * fmtDesc, int device); 
-# 507 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 507 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaDeviceGetCacheConfig(cudaFuncCache * pCacheConfig); 
-# 544 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 544 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaDeviceGetStreamPriorityRange(int * leastPriority, int * greatestPriority); 
-# 588 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 588 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaDeviceSetCacheConfig(cudaFuncCache cacheConfig); 
-# 619 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 619 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaDeviceGetSharedMemConfig(cudaSharedMemConfig * pConfig); 
-# 663 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 663 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaDeviceSetSharedMemConfig(cudaSharedMemConfig config); 
-# 690 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 690 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaDeviceGetByPCIBusId(int * device, const char * pciBusId); 
-# 720 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 720 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaDeviceGetPCIBusId(char * pciBusId, int len, int device); 
-# 768 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 768 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaIpcGetEventHandle(cudaIpcEventHandle_t * handle, cudaEvent_t event); 
-# 809 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 809 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaIpcOpenEventHandle(cudaEvent_t * event, cudaIpcEventHandle_t handle); 
-# 852 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 852 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaIpcGetMemHandle(cudaIpcMemHandle_t * handle, void * devPtr); 
-# 916 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 916 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaIpcOpenMemHandle(void ** devPtr, cudaIpcMemHandle_t handle, unsigned flags); 
-# 952 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 952 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaIpcCloseMemHandle(void * devPtr); 
-# 984 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 984 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaDeviceFlushGPUDirectRDMAWrites(cudaFlushGPUDirectRDMAWritesTarget target, cudaFlushGPUDirectRDMAWritesScope scope); 
-# 1028 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 1028 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 __attribute((deprecated)) extern cudaError_t cudaThreadExit(); 
-# 1054 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 1054 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 __attribute((deprecated)) extern cudaError_t cudaThreadSynchronize(); 
-# 1103 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 1103 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 __attribute((deprecated)) extern cudaError_t cudaThreadSetLimit(cudaLimit limit, size_t value); 
-# 1136 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 1136 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 __attribute((deprecated)) extern cudaError_t cudaThreadGetLimit(size_t * pValue, cudaLimit limit); 
-# 1172 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 1172 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 __attribute((deprecated)) extern cudaError_t cudaThreadGetCacheConfig(cudaFuncCache * pCacheConfig); 
-# 1219 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 1219 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 __attribute((deprecated)) extern cudaError_t cudaThreadSetCacheConfig(cudaFuncCache cacheConfig); 
-# 1282 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 1282 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGetLastError(); 
-# 1330 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 1330 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaPeekAtLastError(); 
-# 1346 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 1346 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern const char *cudaGetErrorName(cudaError_t error); 
-# 1362 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 1362 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern const char *cudaGetErrorString(cudaError_t error); 
-# 1390 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 1390 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGetDeviceCount(int * count); 
-# 1668 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 1668 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGetDeviceProperties(cudaDeviceProp * prop, int device); 
-# 1872 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 1872 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaDeviceGetAttribute(int * value, cudaDeviceAttr attr, int device); 
-# 1890 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 1890 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaDeviceGetDefaultMemPool(cudaMemPool_t * memPool, int device); 
-# 1914 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 1914 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaDeviceSetMemPool(int device, cudaMemPool_t memPool); 
-# 1934 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 1934 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaDeviceGetMemPool(cudaMemPool_t * memPool, int device); 
-# 1982 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 1982 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaDeviceGetNvSciSyncAttributes(void * nvSciSyncAttrList, int device, int flags); 
-# 2022 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 2022 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaDeviceGetP2PAttribute(int * value, cudaDeviceP2PAttr attr, int srcDevice, int dstDevice); 
-# 2043 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 2043 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaChooseDevice(int * device, const cudaDeviceProp * prop); 
-# 2084 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 2084 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaSetDevice(int device); 
-# 2105 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 2105 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGetDevice(int * device); 
-# 2136 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 2136 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaSetValidDevices(int * device_arr, int len); 
-# 2201 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 2201 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaSetDeviceFlags(unsigned flags); 
-# 2245 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 2245 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGetDeviceFlags(unsigned * flags); 
-# 2285 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 2285 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaStreamCreate(cudaStream_t * pStream); 
-# 2317 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 2317 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaStreamCreateWithFlags(cudaStream_t * pStream, unsigned flags); 
-# 2363 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 2363 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaStreamCreateWithPriority(cudaStream_t * pStream, unsigned flags, int priority); 
-# 2390 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 2390 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaStreamGetPriority(cudaStream_t hStream, int * priority); 
-# 2415 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 2415 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaStreamGetFlags(cudaStream_t hStream, unsigned * flags); 
-# 2430 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 2430 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaCtxResetPersistingL2Cache(); 
-# 2450 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 2450 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaStreamCopyAttributes(cudaStream_t dst, cudaStream_t src); 
-# 2471 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 2471 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaStreamGetAttribute(cudaStream_t hStream, cudaStreamAttrID attr, cudaStreamAttrValue * value_out); 
-# 2495 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 2495 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaStreamSetAttribute(cudaStream_t hStream, cudaStreamAttrID attr, const cudaStreamAttrValue * value); 
-# 2529 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 2529 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaStreamDestroy(cudaStream_t stream); 
-# 2560 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 2560 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaStreamWaitEvent(cudaStream_t stream, cudaEvent_t event, unsigned flags = 0); 
 # 2568
 typedef void (*cudaStreamCallback_t)(cudaStream_t stream, cudaError_t status, void * userData); 
-# 2635 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 2635 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaStreamAddCallback(cudaStream_t stream, cudaStreamCallback_t callback, void * userData, unsigned flags); 
-# 2659 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 2659 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaStreamSynchronize(cudaStream_t stream); 
-# 2684 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 2684 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaStreamQuery(cudaStream_t stream); 
-# 2768 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 2768 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaStreamAttachMemAsync(cudaStream_t stream, void * devPtr, size_t length = 0, unsigned flags = 4); 
-# 2807 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 2807 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaStreamBeginCapture(cudaStream_t stream, cudaStreamCaptureMode mode); 
-# 2858 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 2858 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaThreadExchangeStreamCaptureMode(cudaStreamCaptureMode * mode); 
-# 2886 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 2886 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaStreamEndCapture(cudaStream_t stream, cudaGraph_t * pGraph); 
-# 2924 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 2924 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaStreamIsCapturing(cudaStream_t stream, cudaStreamCaptureStatus * pCaptureStatus); 
-# 2956 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 2956 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaStreamGetCaptureInfo(cudaStream_t stream, cudaStreamCaptureStatus * pCaptureStatus, unsigned long long * pId); 
-# 3011 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 3011 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaStreamGetCaptureInfo_v2(cudaStream_t stream, cudaStreamCaptureStatus * captureStatus_out, unsigned long long * id_out = 0, cudaGraph_t * graph_out = 0, const cudaGraphNode_t ** dependencies_out = 0, size_t * numDependencies_out = 0); 
-# 3044 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 3044 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaStreamUpdateCaptureDependencies(cudaStream_t stream, cudaGraphNode_t * dependencies, size_t numDependencies, unsigned flags = 0); 
-# 3081 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 3081 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaEventCreate(cudaEvent_t * event); 
-# 3118 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 3118 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaEventCreateWithFlags(cudaEvent_t * event, unsigned flags); 
-# 3158 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 3158 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaEventRecord(cudaEvent_t event, cudaStream_t stream = 0); 
-# 3205 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 3205 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaEventRecordWithFlags(cudaEvent_t event, cudaStream_t stream = 0, unsigned flags = 0); 
-# 3237 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 3237 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaEventQuery(cudaEvent_t event); 
-# 3267 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 3267 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaEventSynchronize(cudaEvent_t event); 
-# 3296 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 3296 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaEventDestroy(cudaEvent_t event); 
-# 3339 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 3339 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaEventElapsedTime(float * ms, cudaEvent_t start, cudaEvent_t end); 
-# 3519 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 3519 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaImportExternalMemory(cudaExternalMemory_t * extMem_out, const cudaExternalMemoryHandleDesc * memHandleDesc); 
-# 3574 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 3574 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaExternalMemoryGetMappedBuffer(void ** devPtr, cudaExternalMemory_t extMem, const cudaExternalMemoryBufferDesc * bufferDesc); 
-# 3634 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 3634 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaExternalMemoryGetMappedMipmappedArray(cudaMipmappedArray_t * mipmap, cudaExternalMemory_t extMem, const cudaExternalMemoryMipmappedArrayDesc * mipmapDesc); 
-# 3658 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 3658 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaDestroyExternalMemory(cudaExternalMemory_t extMem); 
-# 3811 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 3811 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaImportExternalSemaphore(cudaExternalSemaphore_t * extSem_out, const cudaExternalSemaphoreHandleDesc * semHandleDesc); 
-# 3878 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 3878 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaSignalExternalSemaphoresAsync_v2(const cudaExternalSemaphore_t * extSemArray, const cudaExternalSemaphoreSignalParams * paramsArray, unsigned numExtSems, cudaStream_t stream = 0); 
-# 3954 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 3954 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaWaitExternalSemaphoresAsync_v2(const cudaExternalSemaphore_t * extSemArray, const cudaExternalSemaphoreWaitParams * paramsArray, unsigned numExtSems, cudaStream_t stream = 0); 
-# 3977 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 3977 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaDestroyExternalSemaphore(cudaExternalSemaphore_t extSem); 
-# 4044 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 4044 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaLaunchKernel(const void * func, dim3 gridDim, dim3 blockDim, void ** args, size_t sharedMem, cudaStream_t stream); 
-# 4101 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 4101 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaLaunchCooperativeKernel(const void * func, dim3 gridDim, dim3 blockDim, void ** args, size_t sharedMem, cudaStream_t stream); 
-# 4202 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 4202 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 __attribute((deprecated)) extern cudaError_t cudaLaunchCooperativeKernelMultiDevice(cudaLaunchParams * launchParamsList, unsigned numDevices, unsigned flags = 0); 
-# 4249 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 4249 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaFuncSetCacheConfig(const void * func, cudaFuncCache cacheConfig); 
-# 4304 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 4304 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaFuncSetSharedMemConfig(const void * func, cudaSharedMemConfig config); 
-# 4337 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 4337 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaFuncGetAttributes(cudaFuncAttributes * attr, const void * func); 
-# 4374 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 4374 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaFuncSetAttribute(const void * func, cudaFuncAttribute attr, int value); 
-# 4400 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 4400 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 __attribute((deprecated)) extern cudaError_t cudaSetDoubleForDevice(double * d); 
-# 4424 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 4424 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 __attribute((deprecated)) extern cudaError_t cudaSetDoubleForHost(double * d); 
-# 4492 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 4492 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaLaunchHostFunc(cudaStream_t stream, cudaHostFn_t fn, void * userData); 
-# 4549 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 4549 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaOccupancyMaxActiveBlocksPerMultiprocessor(int * numBlocks, const void * func, int blockSize, size_t dynamicSMemSize); 
-# 4578 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 4578 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaOccupancyAvailableDynamicSMemPerBlock(size_t * dynamicSmemSize, const void * func, int numBlocks, int blockSize); 
-# 4623 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 4623 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaOccupancyMaxActiveBlocksPerMultiprocessorWithFlags(int * numBlocks, const void * func, int blockSize, size_t dynamicSMemSize, unsigned flags); 
-# 4744 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 4744 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMallocManaged(void ** devPtr, size_t size, unsigned flags = 1); 
-# 4777 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 4777 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMalloc(void ** devPtr, size_t size); 
-# 4810 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 4810 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMallocHost(void ** ptr, size_t size); 
-# 4853 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 4853 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMallocPitch(void ** devPtr, size_t * pitch, size_t width, size_t height); 
-# 4907 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 4907 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMallocArray(cudaArray_t * array, const cudaChannelFormatDesc * desc, size_t width, size_t height = 0, unsigned flags = 0); 
-# 4936 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 4936 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaFree(void * devPtr); 
-# 4959 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 4959 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaFreeHost(void * ptr); 
-# 4982 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 4982 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaFreeArray(cudaArray_t array); 
-# 5005 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 5005 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaFreeMipmappedArray(cudaMipmappedArray_t mipmappedArray); 
-# 5071 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 5071 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaHostAlloc(void ** pHost, size_t size, unsigned flags); 
-# 5164 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 5164 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaHostRegister(void * ptr, size_t size, unsigned flags); 
-# 5187 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 5187 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaHostUnregister(void * ptr); 
-# 5232 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 5232 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaHostGetDevicePointer(void ** pDevice, void * pHost, unsigned flags); 
-# 5254 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 5254 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaHostGetFlags(unsigned * pFlags, void * pHost); 
-# 5293 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 5293 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMalloc3D(cudaPitchedPtr * pitchedDevPtr, cudaExtent extent); 
-# 5440 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 5440 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMalloc3DArray(cudaArray_t * array, const cudaChannelFormatDesc * desc, cudaExtent extent, unsigned flags = 0); 
-# 5587 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 5587 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMallocMipmappedArray(cudaMipmappedArray_t * mipmappedArray, const cudaChannelFormatDesc * desc, cudaExtent extent, unsigned numLevels, unsigned flags = 0); 
-# 5620 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 5620 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGetMipmappedArrayLevel(cudaArray_t * levelArray, cudaMipmappedArray_const_t mipmappedArray, unsigned level); 
-# 5725 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 5725 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMemcpy3D(const cudaMemcpy3DParms * p); 
-# 5756 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 5756 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMemcpy3DPeer(const cudaMemcpy3DPeerParms * p); 
-# 5874 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 5874 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMemcpy3DAsync(const cudaMemcpy3DParms * p, cudaStream_t stream = 0); 
-# 5900 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 5900 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMemcpy3DPeerAsync(const cudaMemcpy3DPeerParms * p, cudaStream_t stream = 0); 
-# 5934 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 5934 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMemGetInfo(size_t * free, size_t * total); 
-# 5960 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 5960 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaArrayGetInfo(cudaChannelFormatDesc * desc, cudaExtent * extent, unsigned * flags, cudaArray_t array); 
-# 5989 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 5989 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaArrayGetPlane(cudaArray_t * pPlaneArray, cudaArray_t hArray, unsigned planeIdx); 
-# 6013 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 6013 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaArrayGetMemoryRequirements(cudaArrayMemoryRequirements * memoryRequirements, cudaArray_t array, int device); 
-# 6037 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 6037 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMipmappedArrayGetMemoryRequirements(cudaArrayMemoryRequirements * memoryRequirements, cudaMipmappedArray_t mipmap, int device); 
-# 6066 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 6066 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaArrayGetSparseProperties(cudaArraySparseProperties * sparseProperties, cudaArray_t array); 
-# 6096 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 6096 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMipmappedArrayGetSparseProperties(cudaArraySparseProperties * sparseProperties, cudaMipmappedArray_t mipmap); 
-# 6141 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 6141 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMemcpy(void * dst, const void * src, size_t count, cudaMemcpyKind kind); 
-# 6176 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 6176 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMemcpyPeer(void * dst, int dstDevice, const void * src, int srcDevice, size_t count); 
-# 6225 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 6225 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMemcpy2D(void * dst, size_t dpitch, const void * src, size_t spitch, size_t width, size_t height, cudaMemcpyKind kind); 
-# 6275 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 6275 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMemcpy2DToArray(cudaArray_t dst, size_t wOffset, size_t hOffset, const void * src, size_t spitch, size_t width, size_t height, cudaMemcpyKind kind); 
-# 6325 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 6325 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMemcpy2DFromArray(void * dst, size_t dpitch, cudaArray_const_t src, size_t wOffset, size_t hOffset, size_t width, size_t height, cudaMemcpyKind kind); 
-# 6372 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 6372 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMemcpy2DArrayToArray(cudaArray_t dst, size_t wOffsetDst, size_t hOffsetDst, cudaArray_const_t src, size_t wOffsetSrc, size_t hOffsetSrc, size_t width, size_t height, cudaMemcpyKind kind = cudaMemcpyDeviceToDevice); 
-# 6415 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 6415 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMemcpyToSymbol(const void * symbol, const void * src, size_t count, size_t offset = 0, cudaMemcpyKind kind = cudaMemcpyHostToDevice); 
-# 6458 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 6458 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMemcpyFromSymbol(void * dst, const void * symbol, size_t count, size_t offset = 0, cudaMemcpyKind kind = cudaMemcpyDeviceToHost); 
-# 6515 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 6515 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMemcpyAsync(void * dst, const void * src, size_t count, cudaMemcpyKind kind, cudaStream_t stream = 0); 
-# 6550 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 6550 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMemcpyPeerAsync(void * dst, int dstDevice, const void * src, int srcDevice, size_t count, cudaStream_t stream = 0); 
-# 6613 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 6613 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMemcpy2DAsync(void * dst, size_t dpitch, const void * src, size_t spitch, size_t width, size_t height, cudaMemcpyKind kind, cudaStream_t stream = 0); 
-# 6671 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 6671 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMemcpy2DToArrayAsync(cudaArray_t dst, size_t wOffset, size_t hOffset, const void * src, size_t spitch, size_t width, size_t height, cudaMemcpyKind kind, cudaStream_t stream = 0); 
-# 6728 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 6728 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMemcpy2DFromArrayAsync(void * dst, size_t dpitch, cudaArray_const_t src, size_t wOffset, size_t hOffset, size_t width, size_t height, cudaMemcpyKind kind, cudaStream_t stream = 0); 
-# 6779 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 6779 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMemcpyToSymbolAsync(const void * symbol, const void * src, size_t count, size_t offset, cudaMemcpyKind kind, cudaStream_t stream = 0); 
-# 6830 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 6830 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMemcpyFromSymbolAsync(void * dst, const void * symbol, size_t count, size_t offset, cudaMemcpyKind kind, cudaStream_t stream = 0); 
-# 6859 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 6859 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMemset(void * devPtr, int value, size_t count); 
-# 6893 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 6893 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMemset2D(void * devPtr, size_t pitch, int value, size_t width, size_t height); 
-# 6939 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 6939 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMemset3D(cudaPitchedPtr pitchedDevPtr, int value, cudaExtent extent); 
-# 6975 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 6975 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMemsetAsync(void * devPtr, int value, size_t count, cudaStream_t stream = 0); 
-# 7016 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 7016 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMemset2DAsync(void * devPtr, size_t pitch, int value, size_t width, size_t height, cudaStream_t stream = 0); 
-# 7069 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 7069 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMemset3DAsync(cudaPitchedPtr pitchedDevPtr, int value, cudaExtent extent, cudaStream_t stream = 0); 
-# 7097 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 7097 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGetSymbolAddress(void ** devPtr, const void * symbol); 
-# 7124 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 7124 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGetSymbolSize(size_t * size, const void * symbol); 
-# 7194 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 7194 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMemPrefetchAsync(const void * devPtr, size_t count, int dstDevice, cudaStream_t stream = 0); 
-# 7310 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 7310 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMemAdvise(const void * devPtr, size_t count, cudaMemoryAdvise advice, int device); 
-# 7369 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 7369 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMemRangeGetAttribute(void * data, size_t dataSize, cudaMemRangeAttribute attribute, const void * devPtr, size_t count); 
-# 7408 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 7408 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMemRangeGetAttributes(void ** data, size_t * dataSizes, cudaMemRangeAttribute * attributes, size_t numAttributes, const void * devPtr, size_t count); 
-# 7468 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 7468 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 __attribute((deprecated)) extern cudaError_t cudaMemcpyToArray(cudaArray_t dst, size_t wOffset, size_t hOffset, const void * src, size_t count, cudaMemcpyKind kind); 
-# 7510 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 7510 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 __attribute((deprecated)) extern cudaError_t cudaMemcpyFromArray(void * dst, cudaArray_const_t src, size_t wOffset, size_t hOffset, size_t count, cudaMemcpyKind kind); 
-# 7553 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 7553 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 __attribute((deprecated)) extern cudaError_t cudaMemcpyArrayToArray(cudaArray_t dst, size_t wOffsetDst, size_t hOffsetDst, cudaArray_const_t src, size_t wOffsetSrc, size_t hOffsetSrc, size_t count, cudaMemcpyKind kind = cudaMemcpyDeviceToDevice); 
-# 7604 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 7604 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 __attribute((deprecated)) extern cudaError_t cudaMemcpyToArrayAsync(cudaArray_t dst, size_t wOffset, size_t hOffset, const void * src, size_t count, cudaMemcpyKind kind, cudaStream_t stream = 0); 
-# 7654 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 7654 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 __attribute((deprecated)) extern cudaError_t cudaMemcpyFromArrayAsync(void * dst, cudaArray_const_t src, size_t wOffset, size_t hOffset, size_t count, cudaMemcpyKind kind, cudaStream_t stream = 0); 
-# 7723 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 7723 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMallocAsync(void ** devPtr, size_t size, cudaStream_t hStream); 
-# 7749 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 7749 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaFreeAsync(void * devPtr, cudaStream_t hStream); 
-# 7774 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 7774 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMemPoolTrimTo(cudaMemPool_t memPool, size_t minBytesToKeep); 
-# 7818 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 7818 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMemPoolSetAttribute(cudaMemPool_t memPool, cudaMemPoolAttr attr, void * value); 
-# 7866 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 7866 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMemPoolGetAttribute(cudaMemPool_t memPool, cudaMemPoolAttr attr, void * value); 
-# 7881 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 7881 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMemPoolSetAccess(cudaMemPool_t memPool, const cudaMemAccessDesc * descList, size_t count); 
-# 7894 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 7894 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMemPoolGetAccess(cudaMemAccessFlags * flags, cudaMemPool_t memPool, cudaMemLocation * location); 
-# 7914 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 7914 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMemPoolCreate(cudaMemPool_t * memPool, const cudaMemPoolProps * poolProps); 
-# 7936 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 7936 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMemPoolDestroy(cudaMemPool_t memPool); 
-# 7972 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 7972 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMallocFromPoolAsync(void ** ptr, size_t size, cudaMemPool_t memPool, cudaStream_t stream); 
-# 7997 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 7997 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMemPoolExportToShareableHandle(void * shareableHandle, cudaMemPool_t memPool, cudaMemAllocationHandleType handleType, unsigned flags); 
-# 8024 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 8024 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMemPoolImportFromShareableHandle(cudaMemPool_t * memPool, void * shareableHandle, cudaMemAllocationHandleType handleType, unsigned flags); 
-# 8047 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 8047 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMemPoolExportPointer(cudaMemPoolPtrExportData * exportData, void * ptr); 
-# 8076 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 8076 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaMemPoolImportPointer(void ** ptr, cudaMemPool_t memPool, cudaMemPoolPtrExportData * exportData); 
-# 8228 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 8228 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaPointerGetAttributes(cudaPointerAttributes * attributes, const void * ptr); 
-# 8269 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 8269 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaDeviceCanAccessPeer(int * canAccessPeer, int device, int peerDevice); 
-# 8311 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 8311 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaDeviceEnablePeerAccess(int peerDevice, unsigned flags); 
-# 8333 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 8333 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaDeviceDisablePeerAccess(int peerDevice); 
-# 8397 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 8397 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphicsUnregisterResource(cudaGraphicsResource_t resource); 
-# 8432 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 8432 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphicsResourceSetMapFlags(cudaGraphicsResource_t resource, unsigned flags); 
-# 8471 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 8471 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphicsMapResources(int count, cudaGraphicsResource_t * resources, cudaStream_t stream = 0); 
-# 8506 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 8506 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphicsUnmapResources(int count, cudaGraphicsResource_t * resources, cudaStream_t stream = 0); 
-# 8538 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 8538 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphicsResourceGetMappedPointer(void ** devPtr, size_t * size, cudaGraphicsResource_t resource); 
-# 8576 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 8576 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphicsSubResourceGetMappedArray(cudaArray_t * array, cudaGraphicsResource_t resource, unsigned arrayIndex, unsigned mipLevel); 
-# 8605 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 8605 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphicsResourceGetMappedMipmappedArray(cudaMipmappedArray_t * mipmappedArray, cudaGraphicsResource_t resource); 
-# 8676 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 8676 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 __attribute((deprecated)) extern cudaError_t cudaBindTexture(size_t * offset, const textureReference * texref, const void * devPtr, const cudaChannelFormatDesc * desc, size_t size = ((2147483647) * 2U) + 1U); 
-# 8735 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 8735 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 __attribute((deprecated)) extern cudaError_t cudaBindTexture2D(size_t * offset, const textureReference * texref, const void * devPtr, const cudaChannelFormatDesc * desc, size_t width, size_t height, size_t pitch); 
-# 8773 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 8773 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 __attribute((deprecated)) extern cudaError_t cudaBindTextureToArray(const textureReference * texref, cudaArray_const_t array, const cudaChannelFormatDesc * desc); 
-# 8813 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 8813 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 __attribute((deprecated)) extern cudaError_t cudaBindTextureToMipmappedArray(const textureReference * texref, cudaMipmappedArray_const_t mipmappedArray, const cudaChannelFormatDesc * desc); 
-# 8839 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 8839 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 __attribute((deprecated)) extern cudaError_t cudaUnbindTexture(const textureReference * texref); 
-# 8868 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 8868 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 __attribute((deprecated)) extern cudaError_t cudaGetTextureAlignmentOffset(size_t * offset, const textureReference * texref); 
-# 8898 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 8898 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 __attribute((deprecated)) extern cudaError_t cudaGetTextureReference(const textureReference ** texref, const void * symbol); 
-# 8943 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 8943 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 __attribute((deprecated)) extern cudaError_t cudaBindSurfaceToArray(const surfaceReference * surfref, cudaArray_const_t array, const cudaChannelFormatDesc * desc); 
-# 8968 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 8968 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 __attribute((deprecated)) extern cudaError_t cudaGetSurfaceReference(const surfaceReference ** surfref, const void * symbol); 
-# 9003 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 9003 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGetChannelDesc(cudaChannelFormatDesc * desc, cudaArray_const_t array); 
-# 9033 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 9033 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaChannelFormatDesc cudaCreateChannelDesc(int x, int y, int z, int w, cudaChannelFormatKind f); 
-# 9257 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 9257 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaCreateTextureObject(cudaTextureObject_t * pTexObject, const cudaResourceDesc * pResDesc, const cudaTextureDesc * pTexDesc, const cudaResourceViewDesc * pResViewDesc); 
-# 9277 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 9277 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaDestroyTextureObject(cudaTextureObject_t texObject); 
-# 9297 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 9297 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGetTextureObjectResourceDesc(cudaResourceDesc * pResDesc, cudaTextureObject_t texObject); 
-# 9317 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 9317 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGetTextureObjectTextureDesc(cudaTextureDesc * pTexDesc, cudaTextureObject_t texObject); 
-# 9338 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 9338 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGetTextureObjectResourceViewDesc(cudaResourceViewDesc * pResViewDesc, cudaTextureObject_t texObject); 
-# 9383 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 9383 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaCreateSurfaceObject(cudaSurfaceObject_t * pSurfObject, const cudaResourceDesc * pResDesc); 
-# 9403 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 9403 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaDestroySurfaceObject(cudaSurfaceObject_t surfObject); 
-# 9422 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 9422 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGetSurfaceObjectResourceDesc(cudaResourceDesc * pResDesc, cudaSurfaceObject_t surfObject); 
-# 9456 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 9456 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaDriverGetVersion(int * driverVersion); 
-# 9481 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 9481 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaRuntimeGetVersion(int * runtimeVersion); 
-# 9528 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 9528 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphCreate(cudaGraph_t * pGraph, unsigned flags); 
-# 9625 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 9625 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphAddKernelNode(cudaGraphNode_t * pGraphNode, cudaGraph_t graph, const cudaGraphNode_t * pDependencies, size_t numDependencies, const cudaKernelNodeParams * pNodeParams); 
-# 9658 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 9658 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphKernelNodeGetParams(cudaGraphNode_t node, cudaKernelNodeParams * pNodeParams); 
-# 9683 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 9683 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphKernelNodeSetParams(cudaGraphNode_t node, const cudaKernelNodeParams * pNodeParams); 
-# 9703 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 9703 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphKernelNodeCopyAttributes(cudaGraphNode_t hSrc, cudaGraphNode_t hDst); 
-# 9726 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 9726 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphKernelNodeGetAttribute(cudaGraphNode_t hNode, cudaKernelNodeAttrID attr, cudaKernelNodeAttrValue * value_out); 
-# 9750 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 9750 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphKernelNodeSetAttribute(cudaGraphNode_t hNode, cudaKernelNodeAttrID attr, const cudaKernelNodeAttrValue * value); 
-# 9800 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 9800 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphAddMemcpyNode(cudaGraphNode_t * pGraphNode, cudaGraph_t graph, const cudaGraphNode_t * pDependencies, size_t numDependencies, const cudaMemcpy3DParms * pCopyParams); 
-# 9859 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 9859 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphAddMemcpyNodeToSymbol(cudaGraphNode_t * pGraphNode, cudaGraph_t graph, const cudaGraphNode_t * pDependencies, size_t numDependencies, const void * symbol, const void * src, size_t count, size_t offset, cudaMemcpyKind kind); 
-# 9928 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 9928 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphAddMemcpyNodeFromSymbol(cudaGraphNode_t * pGraphNode, cudaGraph_t graph, const cudaGraphNode_t * pDependencies, size_t numDependencies, void * dst, const void * symbol, size_t count, size_t offset, cudaMemcpyKind kind); 
-# 9996 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 9996 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphAddMemcpyNode1D(cudaGraphNode_t * pGraphNode, cudaGraph_t graph, const cudaGraphNode_t * pDependencies, size_t numDependencies, void * dst, const void * src, size_t count, cudaMemcpyKind kind); 
-# 10028 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 10028 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphMemcpyNodeGetParams(cudaGraphNode_t node, cudaMemcpy3DParms * pNodeParams); 
-# 10054 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 10054 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphMemcpyNodeSetParams(cudaGraphNode_t node, const cudaMemcpy3DParms * pNodeParams); 
-# 10093 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 10093 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphMemcpyNodeSetParamsToSymbol(cudaGraphNode_t node, const void * symbol, const void * src, size_t count, size_t offset, cudaMemcpyKind kind); 
-# 10139 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 10139 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphMemcpyNodeSetParamsFromSymbol(cudaGraphNode_t node, void * dst, const void * symbol, size_t count, size_t offset, cudaMemcpyKind kind); 
-# 10185 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 10185 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphMemcpyNodeSetParams1D(cudaGraphNode_t node, void * dst, const void * src, size_t count, cudaMemcpyKind kind); 
-# 10232 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 10232 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphAddMemsetNode(cudaGraphNode_t * pGraphNode, cudaGraph_t graph, const cudaGraphNode_t * pDependencies, size_t numDependencies, const cudaMemsetParams * pMemsetParams); 
-# 10255 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 10255 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphMemsetNodeGetParams(cudaGraphNode_t node, cudaMemsetParams * pNodeParams); 
-# 10278 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 10278 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphMemsetNodeSetParams(cudaGraphNode_t node, const cudaMemsetParams * pNodeParams); 
-# 10319 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 10319 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphAddHostNode(cudaGraphNode_t * pGraphNode, cudaGraph_t graph, const cudaGraphNode_t * pDependencies, size_t numDependencies, const cudaHostNodeParams * pNodeParams); 
-# 10342 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 10342 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphHostNodeGetParams(cudaGraphNode_t node, cudaHostNodeParams * pNodeParams); 
-# 10365 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 10365 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphHostNodeSetParams(cudaGraphNode_t node, const cudaHostNodeParams * pNodeParams); 
-# 10405 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 10405 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphAddChildGraphNode(cudaGraphNode_t * pGraphNode, cudaGraph_t graph, const cudaGraphNode_t * pDependencies, size_t numDependencies, cudaGraph_t childGraph); 
-# 10432 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 10432 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphChildGraphNodeGetGraph(cudaGraphNode_t node, cudaGraph_t * pGraph); 
-# 10469 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 10469 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphAddEmptyNode(cudaGraphNode_t * pGraphNode, cudaGraph_t graph, const cudaGraphNode_t * pDependencies, size_t numDependencies); 
-# 10512 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 10512 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphAddEventRecordNode(cudaGraphNode_t * pGraphNode, cudaGraph_t graph, const cudaGraphNode_t * pDependencies, size_t numDependencies, cudaEvent_t event); 
-# 10539 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 10539 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphEventRecordNodeGetEvent(cudaGraphNode_t node, cudaEvent_t * event_out); 
-# 10566 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 10566 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphEventRecordNodeSetEvent(cudaGraphNode_t node, cudaEvent_t event); 
-# 10612 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 10612 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphAddEventWaitNode(cudaGraphNode_t * pGraphNode, cudaGraph_t graph, const cudaGraphNode_t * pDependencies, size_t numDependencies, cudaEvent_t event); 
-# 10639 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 10639 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphEventWaitNodeGetEvent(cudaGraphNode_t node, cudaEvent_t * event_out); 
-# 10666 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 10666 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphEventWaitNodeSetEvent(cudaGraphNode_t node, cudaEvent_t event); 
-# 10715 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 10715 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphAddExternalSemaphoresSignalNode(cudaGraphNode_t * pGraphNode, cudaGraph_t graph, const cudaGraphNode_t * pDependencies, size_t numDependencies, const cudaExternalSemaphoreSignalNodeParams * nodeParams); 
-# 10748 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 10748 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphExternalSemaphoresSignalNodeGetParams(cudaGraphNode_t hNode, cudaExternalSemaphoreSignalNodeParams * params_out); 
-# 10775 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 10775 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphExternalSemaphoresSignalNodeSetParams(cudaGraphNode_t hNode, const cudaExternalSemaphoreSignalNodeParams * nodeParams); 
-# 10824 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 10824 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphAddExternalSemaphoresWaitNode(cudaGraphNode_t * pGraphNode, cudaGraph_t graph, const cudaGraphNode_t * pDependencies, size_t numDependencies, const cudaExternalSemaphoreWaitNodeParams * nodeParams); 
-# 10857 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 10857 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphExternalSemaphoresWaitNodeGetParams(cudaGraphNode_t hNode, cudaExternalSemaphoreWaitNodeParams * params_out); 
-# 10884 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 10884 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphExternalSemaphoresWaitNodeSetParams(cudaGraphNode_t hNode, const cudaExternalSemaphoreWaitNodeParams * nodeParams); 
-# 10961 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 10961 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphAddMemAllocNode(cudaGraphNode_t * pGraphNode, cudaGraph_t graph, const cudaGraphNode_t * pDependencies, size_t numDependencies, cudaMemAllocNodeParams * nodeParams); 
-# 10988 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 10988 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphMemAllocNodeGetParams(cudaGraphNode_t node, cudaMemAllocNodeParams * params_out); 
-# 11048 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 11048 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphAddMemFreeNode(cudaGraphNode_t * pGraphNode, cudaGraph_t graph, const cudaGraphNode_t * pDependencies, size_t numDependencies, void * dptr); 
-# 11072 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 11072 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphMemFreeNodeGetParams(cudaGraphNode_t node, void * dptr_out); 
-# 11100 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 11100 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaDeviceGraphMemTrim(int device); 
-# 11137 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 11137 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaDeviceGetGraphMemAttribute(int device, cudaGraphMemAttributeType attr, void * value); 
-# 11171 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 11171 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaDeviceSetGraphMemAttribute(int device, cudaGraphMemAttributeType attr, void * value); 
-# 11199 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 11199 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphClone(cudaGraph_t * pGraphClone, cudaGraph_t originalGraph); 
-# 11227 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 11227 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphNodeFindInClone(cudaGraphNode_t * pNode, cudaGraphNode_t originalNode, cudaGraph_t clonedGraph); 
-# 11258 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 11258 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphNodeGetType(cudaGraphNode_t node, cudaGraphNodeType * pType); 
-# 11289 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 11289 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphGetNodes(cudaGraph_t graph, cudaGraphNode_t * nodes, size_t * numNodes); 
-# 11320 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 11320 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphGetRootNodes(cudaGraph_t graph, cudaGraphNode_t * pRootNodes, size_t * pNumRootNodes); 
-# 11354 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 11354 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphGetEdges(cudaGraph_t graph, cudaGraphNode_t * from, cudaGraphNode_t * to, size_t * numEdges); 
-# 11385 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 11385 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphNodeGetDependencies(cudaGraphNode_t node, cudaGraphNode_t * pDependencies, size_t * pNumDependencies); 
-# 11417 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 11417 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphNodeGetDependentNodes(cudaGraphNode_t node, cudaGraphNode_t * pDependentNodes, size_t * pNumDependentNodes); 
-# 11448 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 11448 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphAddDependencies(cudaGraph_t graph, const cudaGraphNode_t * from, const cudaGraphNode_t * to, size_t numDependencies); 
-# 11479 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 11479 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphRemoveDependencies(cudaGraph_t graph, const cudaGraphNode_t * from, const cudaGraphNode_t * to, size_t numDependencies); 
-# 11509 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 11509 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphDestroyNode(cudaGraphNode_t node); 
-# 11547 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 11547 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphInstantiate(cudaGraphExec_t * pGraphExec, cudaGraph_t graph, cudaGraphNode_t * pErrorNode, char * pLogBuffer, size_t bufferSize); 
-# 11590 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 11590 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphInstantiateWithFlags(cudaGraphExec_t * pGraphExec, cudaGraph_t graph, unsigned long long flags); 
-# 11634 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 11634 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphExecKernelNodeSetParams(cudaGraphExec_t hGraphExec, cudaGraphNode_t node, const cudaKernelNodeParams * pNodeParams); 
-# 11684 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 11684 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphExecMemcpyNodeSetParams(cudaGraphExec_t hGraphExec, cudaGraphNode_t node, const cudaMemcpy3DParms * pNodeParams); 
-# 11739 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 11739 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphExecMemcpyNodeSetParamsToSymbol(cudaGraphExec_t hGraphExec, cudaGraphNode_t node, const void * symbol, const void * src, size_t count, size_t offset, cudaMemcpyKind kind); 
-# 11802 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 11802 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphExecMemcpyNodeSetParamsFromSymbol(cudaGraphExec_t hGraphExec, cudaGraphNode_t node, void * dst, const void * symbol, size_t count, size_t offset, cudaMemcpyKind kind); 
-# 11863 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 11863 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphExecMemcpyNodeSetParams1D(cudaGraphExec_t hGraphExec, cudaGraphNode_t node, void * dst, const void * src, size_t count, cudaMemcpyKind kind); 
-# 11917 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 11917 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphExecMemsetNodeSetParams(cudaGraphExec_t hGraphExec, cudaGraphNode_t node, const cudaMemsetParams * pNodeParams); 
-# 11956 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 11956 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphExecHostNodeSetParams(cudaGraphExec_t hGraphExec, cudaGraphNode_t node, const cudaHostNodeParams * pNodeParams); 
-# 12002 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 12002 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphExecChildGraphNodeSetParams(cudaGraphExec_t hGraphExec, cudaGraphNode_t node, cudaGraph_t childGraph); 
-# 12046 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 12046 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphExecEventRecordNodeSetEvent(cudaGraphExec_t hGraphExec, cudaGraphNode_t hNode, cudaEvent_t event); 
-# 12090 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 12090 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphExecEventWaitNodeSetEvent(cudaGraphExec_t hGraphExec, cudaGraphNode_t hNode, cudaEvent_t event); 
-# 12137 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 12137 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphExecExternalSemaphoresSignalNodeSetParams(cudaGraphExec_t hGraphExec, cudaGraphNode_t hNode, const cudaExternalSemaphoreSignalNodeParams * nodeParams); 
-# 12184 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 12184 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphExecExternalSemaphoresWaitNodeSetParams(cudaGraphExec_t hGraphExec, cudaGraphNode_t hNode, const cudaExternalSemaphoreWaitNodeParams * nodeParams); 
-# 12224 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 12224 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphNodeSetEnabled(cudaGraphExec_t hGraphExec, cudaGraphNode_t hNode, unsigned isEnabled); 
-# 12258 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 12258 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphNodeGetEnabled(cudaGraphExec_t hGraphExec, cudaGraphNode_t hNode, unsigned * isEnabled); 
-# 12336 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 12336 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphExecUpdate(cudaGraphExec_t hGraphExec, cudaGraph_t hGraph, cudaGraphNode_t * hErrorNode_out, cudaGraphExecUpdateResult * updateResult_out); 
-# 12361 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 12361 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphUpload(cudaGraphExec_t graphExec, cudaStream_t stream); 
-# 12392 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 12392 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphLaunch(cudaGraphExec_t graphExec, cudaStream_t stream); 
-# 12415 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 12415 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphExecDestroy(cudaGraphExec_t graphExec); 
-# 12436 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 12436 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphDestroy(cudaGraph_t graph); 
-# 12455 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 12455 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphDebugDotPrint(cudaGraph_t graph, const char * path, unsigned flags); 
-# 12491 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 12491 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaUserObjectCreate(cudaUserObject_t * object_out, void * ptr, cudaHostFn_t destroy, unsigned initialRefcount, unsigned flags); 
-# 12515 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 12515 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaUserObjectRetain(cudaUserObject_t object, unsigned count = 1); 
-# 12543 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 12543 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaUserObjectRelease(cudaUserObject_t object, unsigned count = 1); 
-# 12571 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 12571 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphRetainUserObject(cudaGraph_t graph, cudaUserObject_t object, unsigned count = 1, unsigned flags = 0); 
-# 12596 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 12596 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGraphReleaseUserObject(cudaGraph_t graph, cudaUserObject_t object, unsigned count = 1); 
-# 12662 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 12662 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGetDriverEntryPoint(const char * symbol, void ** funcPtr, unsigned long long flags); 
 # 12667
 extern cudaError_t cudaGetExportTable(const void ** ppExportTable, const cudaUUID_t * pExportTableId); 
-# 12843 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 12843 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 extern cudaError_t cudaGetFuncBySymbol(cudaFunction_t * functionPtr, const void * symbolPtr); 
-# 12985 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
+# 12985 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime_api.h"
 }
-# 124 "/usr/local/cuda/bin/../targets/x86_64-linux/include/channel_descriptor.h"
+# 124 "/home/poweruser/junda.feng/anaconda3/bin/../include/channel_descriptor.h"
 template< class T> inline cudaChannelFormatDesc cudaCreateChannelDesc() 
 # 125
 { 
@@ -4257,7 +4257,7 @@ int e = (((int)sizeof(unsigned)) * 8);
 return cudaCreateChannelDesc(e, e, e, e, cudaChannelFormatKindUnsigned); 
 # 334
 } 
-# 396 "/usr/local/cuda/bin/../targets/x86_64-linux/include/channel_descriptor.h"
+# 396 "/home/poweruser/junda.feng/anaconda3/bin/../include/channel_descriptor.h"
 template<> inline cudaChannelFormatDesc cudaCreateChannelDesc< float> () 
 # 397
 { 
@@ -4531,7 +4531,7 @@ template<> inline cudaChannelFormatDesc cudaCreateChannelDesc< cudaChannelFormat
 return cudaCreateChannelDesc(8, 8, 8, 8, cudaChannelFormatKindUnsignedBlockCompressed7SRGB); 
 # 588
 } 
-# 79 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_functions.h"
+# 79 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_functions.h"
 static inline cudaPitchedPtr make_cudaPitchedPtr(void *d, size_t p, size_t xsz, size_t ysz) 
 # 80
 { 
@@ -4549,7 +4549,7 @@ cudaPitchedPtr s;
 return s; 
 # 89
 } 
-# 106 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_functions.h"
+# 106 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_functions.h"
 static inline cudaPos make_cudaPos(size_t x, size_t y, size_t z) 
 # 107
 { 
@@ -4565,7 +4565,7 @@ cudaPos p;
 return p; 
 # 115
 } 
-# 132 "/usr/local/cuda/bin/../targets/x86_64-linux/include/driver_functions.h"
+# 132 "/home/poweruser/junda.feng/anaconda3/bin/../include/driver_functions.h"
 static inline cudaExtent make_cudaExtent(size_t w, size_t h, size_t d) 
 # 133
 { 
@@ -4581,7 +4581,7 @@ cudaExtent e;
 return e; 
 # 141
 } 
-# 73 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_functions.h"
+# 73 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_functions.h"
 static inline char1 make_char1(signed char x); 
 # 75
 static inline uchar1 make_uchar1(unsigned char x); 
@@ -4677,7 +4677,7 @@ static inline double2 make_double2(double x, double y);
 static inline double3 make_double3(double x, double y, double z); 
 # 167
 static inline double4 make_double4(double x, double y, double z, double w); 
-# 73 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_functions.hpp"
+# 73 "/home/poweruser/junda.feng/anaconda3/bin/../include/vector_functions.hpp"
 static inline char1 make_char1(signed char x) 
 # 74
 { 
@@ -5709,29 +5709,29 @@ extern tm *getdate(const char * __string);
 extern int getdate_r(const char *__restrict__ __string, tm *__restrict__ __resbufp); 
 # 307
 }
-# 88 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/common_functions.h"
+# 88 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/common_functions.h"
 extern "C" {
 # 91
 extern clock_t clock() throw(); 
-# 96 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/common_functions.h"
+# 96 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/common_functions.h"
 extern void *memset(void *, int, size_t) throw(); 
-# 97 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/common_functions.h"
+# 97 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/common_functions.h"
 extern void *memcpy(void *, const void *, size_t) throw(); 
-# 99 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/common_functions.h"
+# 99 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/common_functions.h"
 }
-# 115 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 115 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern "C" {
-# 213 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 213 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern int abs(int a) throw(); 
-# 221 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 221 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern long labs(long a) throw(); 
-# 229 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 229 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern long long llabs(long long a) throw(); 
-# 279 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 279 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double fabs(double x) throw(); 
-# 320 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 320 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float fabsf(float x) throw(); 
-# 330 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 330 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern inline int min(const int a, const int b); 
 # 337
 extern inline unsigned umin(const unsigned a, const unsigned b); 
@@ -5739,11 +5739,11 @@ extern inline unsigned umin(const unsigned a, const unsigned b);
 extern inline long long llmin(const long long a, const long long b); 
 # 351
 extern inline unsigned long long ullmin(const unsigned long long a, const unsigned long long b); 
-# 372 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 372 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float fminf(float x, float y) throw(); 
-# 392 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 392 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double fmin(double x, double y) throw(); 
-# 405 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 405 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern inline int max(const int a, const int b); 
 # 413
 extern inline unsigned umax(const unsigned a, const unsigned b); 
@@ -5751,317 +5751,317 @@ extern inline unsigned umax(const unsigned a, const unsigned b);
 extern inline long long llmax(const long long a, const long long b); 
 # 427
 extern inline unsigned long long ullmax(const unsigned long long a, const unsigned long long b); 
-# 448 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 448 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float fmaxf(float x, float y) throw(); 
-# 468 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 468 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double fmax(double, double) throw(); 
-# 512 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 512 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double sin(double x) throw(); 
-# 545 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 545 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double cos(double x) throw(); 
-# 564 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 564 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern void sincos(double x, double * sptr, double * cptr) throw(); 
-# 580 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 580 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern void sincosf(float x, float * sptr, float * cptr) throw(); 
-# 625 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 625 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double tan(double x) throw(); 
-# 694 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 694 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double sqrt(double x) throw(); 
-# 766 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 766 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double rsqrt(double x); 
-# 836 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 836 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float rsqrtf(float x); 
-# 892 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 892 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double log2(double x) throw(); 
-# 917 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 917 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double exp2(double x) throw(); 
-# 942 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 942 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float exp2f(float x) throw(); 
-# 969 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 969 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double exp10(double x) throw(); 
-# 992 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 992 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float exp10f(float x) throw(); 
-# 1038 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 1038 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double expm1(double x) throw(); 
-# 1083 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 1083 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float expm1f(float x) throw(); 
-# 1139 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 1139 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float log2f(float x) throw(); 
-# 1193 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 1193 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double log10(double x) throw(); 
-# 1264 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 1264 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double log(double x) throw(); 
-# 1367 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 1367 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double log1p(double x) throw(); 
-# 1473 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 1473 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float log1pf(float x) throw(); 
-# 1537 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 1537 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double floor(double x) throw(); 
-# 1576 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 1576 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double exp(double x) throw(); 
-# 1607 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 1607 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double cosh(double x) throw(); 
-# 1657 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 1657 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double sinh(double x) throw(); 
-# 1687 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 1687 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double tanh(double x) throw(); 
-# 1722 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 1722 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double acosh(double x) throw(); 
-# 1760 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 1760 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float acoshf(float x) throw(); 
-# 1813 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 1813 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double asinh(double x) throw(); 
-# 1865 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 1865 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float asinhf(float x) throw(); 
-# 1919 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 1919 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double atanh(double x) throw(); 
-# 1973 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 1973 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float atanhf(float x) throw(); 
-# 2032 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 2032 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double ldexp(double x, int exp) throw(); 
-# 2088 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 2088 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float ldexpf(float x, int exp) throw(); 
-# 2140 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 2140 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double logb(double x) throw(); 
-# 2195 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 2195 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float logbf(float x) throw(); 
-# 2226 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 2226 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern int ilogb(double x) throw(); 
-# 2257 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 2257 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern int ilogbf(float x) throw(); 
-# 2333 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 2333 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double scalbn(double x, int n) throw(); 
-# 2409 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 2409 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float scalbnf(float x, int n) throw(); 
-# 2485 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 2485 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double scalbln(double x, long n) throw(); 
-# 2561 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 2561 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float scalblnf(float x, long n) throw(); 
-# 2639 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 2639 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double frexp(double x, int * nptr) throw(); 
-# 2714 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 2714 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float frexpf(float x, int * nptr) throw(); 
-# 2728 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 2728 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double round(double x) throw(); 
-# 2745 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 2745 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float roundf(float x) throw(); 
-# 2763 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 2763 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern long lround(double x) throw(); 
-# 2781 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 2781 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern long lroundf(float x) throw(); 
-# 2799 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 2799 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern long long llround(double x) throw(); 
-# 2817 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 2817 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern long long llroundf(float x) throw(); 
-# 2869 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 2869 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float rintf(float x) throw(); 
-# 2886 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 2886 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern long lrint(double x) throw(); 
-# 2903 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 2903 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern long lrintf(float x) throw(); 
-# 2920 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 2920 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern long long llrint(double x) throw(); 
-# 2937 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 2937 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern long long llrintf(float x) throw(); 
-# 2990 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 2990 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double nearbyint(double x) throw(); 
-# 3043 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 3043 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float nearbyintf(float x) throw(); 
-# 3105 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 3105 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double ceil(double x) throw(); 
-# 3117 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 3117 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double trunc(double x) throw(); 
-# 3132 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 3132 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float truncf(float x) throw(); 
-# 3158 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 3158 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double fdim(double x, double y) throw(); 
-# 3184 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 3184 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float fdimf(float x, float y) throw(); 
-# 3220 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 3220 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double atan2(double y, double x) throw(); 
-# 3251 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 3251 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double atan(double x) throw(); 
-# 3274 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 3274 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double acos(double x) throw(); 
-# 3306 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 3306 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double asin(double x) throw(); 
-# 3352 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 3352 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double hypot(double x, double y) throw(); 
-# 3450 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 3450 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float hypotf(float x, float y) throw(); 
-# 4182 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 4182 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double cbrt(double x) throw(); 
-# 4268 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 4268 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float cbrtf(float x) throw(); 
-# 4323 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 4323 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double rcbrt(double x); 
-# 4373 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 4373 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float rcbrtf(float x); 
-# 4433 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 4433 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double sinpi(double x); 
-# 4493 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 4493 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float sinpif(float x); 
-# 4545 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 4545 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double cospi(double x); 
-# 4597 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 4597 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float cospif(float x); 
-# 4627 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 4627 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern void sincospi(double x, double * sptr, double * cptr); 
-# 4657 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 4657 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern void sincospif(float x, float * sptr, float * cptr); 
-# 4990 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 4990 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double pow(double x, double y) throw(); 
-# 5046 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 5046 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double modf(double x, double * iptr) throw(); 
-# 5105 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 5105 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double fmod(double x, double y) throw(); 
-# 5191 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 5191 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double remainder(double x, double y) throw(); 
-# 5281 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 5281 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float remainderf(float x, float y) throw(); 
-# 5335 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 5335 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double remquo(double x, double y, int * quo) throw(); 
-# 5389 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 5389 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float remquof(float x, float y, int * quo) throw(); 
-# 5430 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 5430 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double j0(double x) throw(); 
-# 5472 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 5472 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float j0f(float x) throw(); 
-# 5541 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 5541 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double j1(double x) throw(); 
-# 5610 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 5610 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float j1f(float x) throw(); 
-# 5653 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 5653 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double jn(int n, double x) throw(); 
-# 5696 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 5696 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float jnf(int n, float x) throw(); 
-# 5748 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 5748 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double y0(double x) throw(); 
-# 5800 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 5800 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float y0f(float x) throw(); 
-# 5852 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 5852 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double y1(double x) throw(); 
-# 5904 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 5904 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float y1f(float x) throw(); 
-# 5957 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 5957 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double yn(int n, double x) throw(); 
-# 6010 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 6010 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float ynf(int n, float x) throw(); 
-# 6199 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 6199 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double erf(double x) throw(); 
-# 6281 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 6281 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float erff(float x) throw(); 
-# 6345 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 6345 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double erfinv(double y); 
-# 6402 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 6402 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float erfinvf(float y); 
-# 6441 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 6441 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double erfc(double x) throw(); 
-# 6479 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 6479 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float erfcf(float x) throw(); 
-# 6606 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 6606 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double lgamma(double x) throw(); 
-# 6669 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 6669 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double erfcinv(double y); 
-# 6725 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 6725 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float erfcinvf(float y); 
-# 6783 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 6783 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double normcdfinv(double y); 
-# 6841 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 6841 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float normcdfinvf(float y); 
-# 6884 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 6884 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double normcdf(double y); 
-# 6927 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 6927 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float normcdff(float y); 
-# 7002 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 7002 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double erfcx(double x); 
-# 7077 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 7077 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float erfcxf(float x); 
-# 7210 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 7210 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float lgammaf(float x) throw(); 
-# 7319 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 7319 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double tgamma(double x) throw(); 
-# 7428 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 7428 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float tgammaf(float x) throw(); 
-# 7441 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 7441 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double copysign(double x, double y) throw(); 
-# 7454 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 7454 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float copysignf(float x, float y) throw(); 
-# 7473 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 7473 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double nextafter(double x, double y) throw(); 
-# 7492 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 7492 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float nextafterf(float x, float y) throw(); 
-# 7508 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 7508 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double nan(const char * tagp) throw(); 
-# 7524 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 7524 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float nanf(const char * tagp) throw(); 
-# 7531 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 7531 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern int __isinff(float) throw(); 
-# 7532 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 7532 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern int __isnanf(float) throw(); 
-# 7542 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 7542 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern int __finite(double) throw(); 
-# 7543 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 7543 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern int __finitef(float) throw(); 
-# 7544 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 7544 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern int __signbit(double) throw(); 
-# 7545 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 7545 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern int __isnan(double) throw(); 
-# 7546 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 7546 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern int __isinf(double) throw(); 
-# 7549 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 7549 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern int __signbitf(float) throw(); 
-# 7708 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 7708 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern double fma(double x, double y, double z) throw(); 
-# 7866 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 7866 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float fmaf(float x, float y, float z) throw(); 
-# 7877 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 7877 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern int __signbitl(long double) throw(); 
-# 7883 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 7883 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern int __finitel(long double) throw(); 
-# 7884 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 7884 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern int __isinfl(long double) throw(); 
-# 7885 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 7885 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern int __isnanl(long double) throw(); 
-# 7935 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 7935 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float acosf(float x) throw(); 
-# 7975 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 7975 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float asinf(float x) throw(); 
-# 8015 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 8015 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float atanf(float x) throw(); 
-# 8048 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 8048 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float atan2f(float y, float x) throw(); 
-# 8072 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 8072 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float cosf(float x) throw(); 
-# 8114 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 8114 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float sinf(float x) throw(); 
-# 8156 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 8156 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float tanf(float x) throw(); 
-# 8187 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 8187 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float coshf(float x) throw(); 
-# 8237 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 8237 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float sinhf(float x) throw(); 
-# 8267 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 8267 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float tanhf(float x) throw(); 
-# 8319 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 8319 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float logf(float x) throw(); 
-# 8369 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 8369 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float expf(float x) throw(); 
-# 8421 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 8421 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float log10f(float x) throw(); 
-# 8476 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 8476 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float modff(float x, float * iptr) throw(); 
-# 8806 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 8806 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float powf(float x, float y) throw(); 
-# 8875 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 8875 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float sqrtf(float x) throw(); 
-# 8934 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 8934 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float ceilf(float x) throw(); 
-# 8995 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 8995 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float floorf(float x) throw(); 
-# 9053 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 9053 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern float fmodf(float x, float y) throw(); 
-# 9068 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 9068 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 }
 # 229 "/usr/include/x86_64-linux-gnu/c++/7/bits/c++config.h" 3
 namespace std { 
@@ -10663,7 +10663,7 @@ using std::system;
 using std::wcstombs;
 # 81
 using std::wctomb;
-# 9146 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 9146 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 namespace std { 
 # 9147
 constexpr bool signbit(float x); 
@@ -10691,7 +10691,7 @@ constexpr bool isinf(double x);
 constexpr bool isinf(long double x); 
 # 9169
 }
-# 9322 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 9322 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 namespace std { 
 # 9324
 template< class T> extern T __pow_helper(T, int); 
@@ -10745,11 +10745,11 @@ using std::atan2;
 using std::tan;
 # 9352
 using std::tanh;
-# 9723 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 9723 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 namespace std { 
-# 9732 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 9732 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern inline long long abs(long long); 
-# 9742 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 9742 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern inline long abs(long); 
 # 9743
 extern constexpr float abs(float); 
@@ -10801,9 +10801,9 @@ extern constexpr float atan2(float, float);
 extern constexpr float tan(float); 
 # 9780
 extern constexpr float tanh(float); 
-# 9859 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 9859 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 }
-# 9965 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 9965 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 namespace std { 
 # 9966
 constexpr float logb(float a); 
@@ -10873,7 +10873,7 @@ constexpr float fmax(float a, float b);
 constexpr float fmin(float a, float b); 
 # 9999
 }
-# 10104 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 10104 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 static inline float exp10(const float a); 
 # 10106
 static inline float rsqrt(const float a); 
@@ -10939,13 +10939,13 @@ static inline unsigned long long min(const unsigned long long a, const unsigned 
 static inline unsigned long long min(const long long a, const unsigned long long b); 
 # 10234
 static inline unsigned long long min(const unsigned long long a, const long long b); 
-# 10245 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 10245 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 static inline float min(const float a, const float b); 
-# 10256 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 10256 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 static inline double min(const double a, const double b); 
-# 10266 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 10266 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 static inline double min(const float a, const double b); 
-# 10276 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 10276 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 static inline double min(const double a, const float b); 
 # 10284
 static inline unsigned max(const unsigned a, const unsigned b); 
@@ -10969,15 +10969,15 @@ static inline unsigned long long max(const unsigned long long a, const unsigned 
 static inline unsigned long long max(const long long a, const unsigned long long b); 
 # 10364
 static inline unsigned long long max(const unsigned long long a, const long long b); 
-# 10375 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 10375 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 static inline float max(const float a, const float b); 
-# 10386 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 10386 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 static inline double max(const double a, const double b); 
-# 10396 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 10396 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 static inline double max(const float a, const double b); 
-# 10406 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 10406 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 static inline double max(const double a, const float b); 
-# 10417 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 10417 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 extern "C" {
 # 10418
 __attribute__((unused)) inline void *__nv_aligned_device_malloc(size_t size, size_t align) 
@@ -10995,9 +10995,9 @@ return __nv_aligned_device_malloc_impl(size, align);
 # 10422
 } 
 #endif
-# 10423 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.h"
+# 10423 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.h"
 }
-# 758 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.hpp"
+# 758 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.hpp"
 static inline float exp10(const float a) 
 # 759
 { 
@@ -11115,7 +11115,7 @@ return cyl_bessel_i0f(a);
 # 826
 } 
 #endif
-# 828 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.hpp"
+# 828 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.hpp"
 __attribute__((unused)) static inline float cyl_bessel_i1(const float a) 
 # 829
 {int volatile ___ = 1;(void)a;
@@ -11129,7 +11129,7 @@ return cyl_bessel_i1f(a);
 # 831
 } 
 #endif
-# 833 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.hpp"
+# 833 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.hpp"
 static inline float erfinv(const float a) 
 # 834
 { 
@@ -11521,7 +11521,7 @@ static inline double max(const double a, const float b)
 return fmax(a, static_cast< double>(b)); 
 # 1115
 } 
-# 1126 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/math_functions.hpp"
+# 1126 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/math_functions.hpp"
 inline int min(const int a, const int b) 
 # 1127
 { 
@@ -11589,7 +11589,7 @@ b)
 return (a > b) ? a : b; 
 # 1166
 } 
-# 74 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_surface_types.h"
+# 74 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_surface_types.h"
 template< class T, int dim = 1> 
 # 75
 struct surface : public surfaceReference { 
@@ -11625,7 +11625,7 @@ surface()
 } 
 # 99
 }; 
-# 74 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_texture_types.h"
+# 74 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_texture_types.h"
 template< class T, int texType = 1, cudaTextureReadMode mode = cudaReadModeElementType> 
 # 75
 struct texture : public textureReference { 
@@ -11681,11 +11681,11 @@ desc)
 } 
 # 105
 }; 
-# 89 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/device_functions.h"
+# 89 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/device_functions.h"
 extern "C" {
-# 3207 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/device_functions.h"
+# 3207 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/device_functions.h"
 }
-# 3229 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/device_functions.h"
+# 3229 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/device_functions.h"
 __attribute((deprecated("mulhi() is deprecated in favor of __mulhi() and may be removed in a future release (Use -Wno-deprecated-declarations to suppress" " this warning)."))) __attribute__((unused)) static inline int mulhi(const int a, const int b); 
 # 3231
 __attribute((deprecated("mulhi() is deprecated in favor of __mulhi() and may be removed in a future release (Use -Wno-deprecated-declarations to suppress" " this warning)."))) __attribute__((unused)) static inline unsigned mulhi(const unsigned a, const unsigned b); 
@@ -11723,7 +11723,7 @@ __attribute((deprecated("float2uint() is deprecated in favor of __float2uint_ru|
 __attribute((deprecated("int2float() is deprecated in favor of __int2float_ru|_rd|_rn|_rz() and may be removed in a future release (Use -Wno-deprecated-d" "eclarations to suppress this warning)."))) __attribute__((unused)) static inline float int2float(const int a, const cudaRoundMode mode = cudaRoundNearest); 
 # 3265
 __attribute((deprecated("uint2float() is deprecated in favor of __uint2float_ru|_rd|_rn|_rz() and may be removed in a future release (Use -Wno-deprecated" "-declarations to suppress this warning)."))) __attribute__((unused)) static inline float uint2float(const unsigned a, const cudaRoundMode mode = cudaRoundNearest); 
-# 90 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/device_functions.hpp"
+# 90 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/device_functions.hpp"
 __attribute__((unused)) static inline int mulhi(const int a, const int b) 
 # 91
 {int volatile ___ = 1;(void)a;(void)b;
@@ -11737,7 +11737,7 @@ return __mulhi(a, b);
 # 93
 } 
 #endif
-# 95 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/device_functions.hpp"
+# 95 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/device_functions.hpp"
 __attribute__((unused)) static inline unsigned mulhi(const unsigned a, const unsigned b) 
 # 96
 {int volatile ___ = 1;(void)a;(void)b;
@@ -11751,7 +11751,7 @@ return __umulhi(a, b);
 # 98
 } 
 #endif
-# 100 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/device_functions.hpp"
+# 100 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/device_functions.hpp"
 __attribute__((unused)) static inline unsigned mulhi(const int a, const unsigned b) 
 # 101
 {int volatile ___ = 1;(void)a;(void)b;
@@ -11765,7 +11765,7 @@ return __umulhi(static_cast< unsigned>(a), b);
 # 103
 } 
 #endif
-# 105 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/device_functions.hpp"
+# 105 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/device_functions.hpp"
 __attribute__((unused)) static inline unsigned mulhi(const unsigned a, const int b) 
 # 106
 {int volatile ___ = 1;(void)a;(void)b;
@@ -11779,7 +11779,7 @@ return __umulhi(a, static_cast< unsigned>(b));
 # 108
 } 
 #endif
-# 110 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/device_functions.hpp"
+# 110 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/device_functions.hpp"
 __attribute__((unused)) static inline long long mul64hi(const long long a, const long long b) 
 # 111
 {int volatile ___ = 1;(void)a;(void)b;
@@ -11793,7 +11793,7 @@ return __mul64hi(a, b);
 # 113
 } 
 #endif
-# 115 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/device_functions.hpp"
+# 115 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/device_functions.hpp"
 __attribute__((unused)) static inline unsigned long long mul64hi(const unsigned long long a, const unsigned long long b) 
 # 116
 {int volatile ___ = 1;(void)a;(void)b;
@@ -11807,7 +11807,7 @@ return __umul64hi(a, b);
 # 118
 } 
 #endif
-# 120 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/device_functions.hpp"
+# 120 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/device_functions.hpp"
 __attribute__((unused)) static inline unsigned long long mul64hi(const long long a, const unsigned long long b) 
 # 121
 {int volatile ___ = 1;(void)a;(void)b;
@@ -11821,7 +11821,7 @@ return __umul64hi(static_cast< unsigned long long>(a), b);
 # 123
 } 
 #endif
-# 125 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/device_functions.hpp"
+# 125 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/device_functions.hpp"
 __attribute__((unused)) static inline unsigned long long mul64hi(const unsigned long long a, const long long b) 
 # 126
 {int volatile ___ = 1;(void)a;(void)b;
@@ -11835,7 +11835,7 @@ return __umul64hi(a, static_cast< unsigned long long>(b));
 # 128
 } 
 #endif
-# 130 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/device_functions.hpp"
+# 130 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/device_functions.hpp"
 __attribute__((unused)) static inline int float_as_int(const float a) 
 # 131
 {int volatile ___ = 1;(void)a;
@@ -11849,7 +11849,7 @@ return __float_as_int(a);
 # 133
 } 
 #endif
-# 135 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/device_functions.hpp"
+# 135 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/device_functions.hpp"
 __attribute__((unused)) static inline float int_as_float(const int a) 
 # 136
 {int volatile ___ = 1;(void)a;
@@ -11863,7 +11863,7 @@ return __int_as_float(a);
 # 138
 } 
 #endif
-# 140 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/device_functions.hpp"
+# 140 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/device_functions.hpp"
 __attribute__((unused)) static inline unsigned float_as_uint(const float a) 
 # 141
 {int volatile ___ = 1;(void)a;
@@ -11877,7 +11877,7 @@ return __float_as_uint(a);
 # 143
 } 
 #endif
-# 145 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/device_functions.hpp"
+# 145 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/device_functions.hpp"
 __attribute__((unused)) static inline float uint_as_float(const unsigned a) 
 # 146
 {int volatile ___ = 1;(void)a;
@@ -11891,7 +11891,7 @@ return __uint_as_float(a);
 # 148
 } 
 #endif
-# 149 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/device_functions.hpp"
+# 149 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/device_functions.hpp"
 __attribute__((unused)) static inline float saturate(const float a) 
 # 150
 {int volatile ___ = 1;(void)a;
@@ -11905,7 +11905,7 @@ return __saturatef(a);
 # 152
 } 
 #endif
-# 154 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/device_functions.hpp"
+# 154 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/device_functions.hpp"
 __attribute__((unused)) static inline int mul24(const int a, const int b) 
 # 155
 {int volatile ___ = 1;(void)a;(void)b;
@@ -11919,7 +11919,7 @@ return __mul24(a, b);
 # 157
 } 
 #endif
-# 159 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/device_functions.hpp"
+# 159 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/device_functions.hpp"
 __attribute__((unused)) static inline unsigned umul24(const unsigned a, const unsigned b) 
 # 160
 {int volatile ___ = 1;(void)a;(void)b;
@@ -11933,7 +11933,7 @@ return __umul24(a, b);
 # 162
 } 
 #endif
-# 164 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/device_functions.hpp"
+# 164 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/device_functions.hpp"
 __attribute__((unused)) static inline int float2int(const float a, const cudaRoundMode mode) 
 # 165
 {int volatile ___ = 1;(void)a;(void)mode;
@@ -11947,7 +11947,7 @@ return (mode == (cudaRoundNearest)) ? __float2int_rn(a) : ((mode == (cudaRoundPo
 # 170
 } 
 #endif
-# 172 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/device_functions.hpp"
+# 172 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/device_functions.hpp"
 __attribute__((unused)) static inline unsigned float2uint(const float a, const cudaRoundMode mode) 
 # 173
 {int volatile ___ = 1;(void)a;(void)mode;
@@ -11961,7 +11961,7 @@ return (mode == (cudaRoundNearest)) ? __float2uint_rn(a) : ((mode == (cudaRoundP
 # 178
 } 
 #endif
-# 180 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/device_functions.hpp"
+# 180 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/device_functions.hpp"
 __attribute__((unused)) static inline float int2float(const int a, const cudaRoundMode mode) 
 # 181
 {int volatile ___ = 1;(void)a;(void)mode;
@@ -11975,7 +11975,7 @@ return (mode == (cudaRoundZero)) ? __int2float_rz(a) : ((mode == (cudaRoundPosIn
 # 186
 } 
 #endif
-# 188 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/device_functions.hpp"
+# 188 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/device_functions.hpp"
 __attribute__((unused)) static inline float uint2float(const unsigned a, const cudaRoundMode mode) 
 # 189
 {int volatile ___ = 1;(void)a;(void)mode;
@@ -11989,169 +11989,169 @@ return (mode == (cudaRoundZero)) ? __uint2float_rz(a) : ((mode == (cudaRoundPosI
 # 194
 } 
 #endif
-# 106 "/usr/local/cuda/bin/../targets/x86_64-linux/include/device_atomic_functions.h"
+# 106 "/home/poweruser/junda.feng/anaconda3/bin/../include/device_atomic_functions.h"
 __attribute__((unused)) static inline int atomicAdd(int *address, int val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 106
 { } 
 #endif
-# 108 "/usr/local/cuda/bin/../targets/x86_64-linux/include/device_atomic_functions.h"
+# 108 "/home/poweruser/junda.feng/anaconda3/bin/../include/device_atomic_functions.h"
 __attribute__((unused)) static inline unsigned atomicAdd(unsigned *address, unsigned val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 108
 { } 
 #endif
-# 110 "/usr/local/cuda/bin/../targets/x86_64-linux/include/device_atomic_functions.h"
+# 110 "/home/poweruser/junda.feng/anaconda3/bin/../include/device_atomic_functions.h"
 __attribute__((unused)) static inline int atomicSub(int *address, int val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 110
 { } 
 #endif
-# 112 "/usr/local/cuda/bin/../targets/x86_64-linux/include/device_atomic_functions.h"
+# 112 "/home/poweruser/junda.feng/anaconda3/bin/../include/device_atomic_functions.h"
 __attribute__((unused)) static inline unsigned atomicSub(unsigned *address, unsigned val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 112
 { } 
 #endif
-# 114 "/usr/local/cuda/bin/../targets/x86_64-linux/include/device_atomic_functions.h"
+# 114 "/home/poweruser/junda.feng/anaconda3/bin/../include/device_atomic_functions.h"
 __attribute__((unused)) static inline int atomicExch(int *address, int val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 114
 { } 
 #endif
-# 116 "/usr/local/cuda/bin/../targets/x86_64-linux/include/device_atomic_functions.h"
+# 116 "/home/poweruser/junda.feng/anaconda3/bin/../include/device_atomic_functions.h"
 __attribute__((unused)) static inline unsigned atomicExch(unsigned *address, unsigned val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 116
 { } 
 #endif
-# 118 "/usr/local/cuda/bin/../targets/x86_64-linux/include/device_atomic_functions.h"
+# 118 "/home/poweruser/junda.feng/anaconda3/bin/../include/device_atomic_functions.h"
 __attribute__((unused)) static inline float atomicExch(float *address, float val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 118
 { } 
 #endif
-# 120 "/usr/local/cuda/bin/../targets/x86_64-linux/include/device_atomic_functions.h"
+# 120 "/home/poweruser/junda.feng/anaconda3/bin/../include/device_atomic_functions.h"
 __attribute__((unused)) static inline int atomicMin(int *address, int val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 120
 { } 
 #endif
-# 122 "/usr/local/cuda/bin/../targets/x86_64-linux/include/device_atomic_functions.h"
+# 122 "/home/poweruser/junda.feng/anaconda3/bin/../include/device_atomic_functions.h"
 __attribute__((unused)) static inline unsigned atomicMin(unsigned *address, unsigned val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 122
 { } 
 #endif
-# 124 "/usr/local/cuda/bin/../targets/x86_64-linux/include/device_atomic_functions.h"
+# 124 "/home/poweruser/junda.feng/anaconda3/bin/../include/device_atomic_functions.h"
 __attribute__((unused)) static inline int atomicMax(int *address, int val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 124
 { } 
 #endif
-# 126 "/usr/local/cuda/bin/../targets/x86_64-linux/include/device_atomic_functions.h"
+# 126 "/home/poweruser/junda.feng/anaconda3/bin/../include/device_atomic_functions.h"
 __attribute__((unused)) static inline unsigned atomicMax(unsigned *address, unsigned val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 126
 { } 
 #endif
-# 128 "/usr/local/cuda/bin/../targets/x86_64-linux/include/device_atomic_functions.h"
+# 128 "/home/poweruser/junda.feng/anaconda3/bin/../include/device_atomic_functions.h"
 __attribute__((unused)) static inline unsigned atomicInc(unsigned *address, unsigned val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 128
 { } 
 #endif
-# 130 "/usr/local/cuda/bin/../targets/x86_64-linux/include/device_atomic_functions.h"
+# 130 "/home/poweruser/junda.feng/anaconda3/bin/../include/device_atomic_functions.h"
 __attribute__((unused)) static inline unsigned atomicDec(unsigned *address, unsigned val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 130
 { } 
 #endif
-# 132 "/usr/local/cuda/bin/../targets/x86_64-linux/include/device_atomic_functions.h"
+# 132 "/home/poweruser/junda.feng/anaconda3/bin/../include/device_atomic_functions.h"
 __attribute__((unused)) static inline int atomicAnd(int *address, int val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 132
 { } 
 #endif
-# 134 "/usr/local/cuda/bin/../targets/x86_64-linux/include/device_atomic_functions.h"
+# 134 "/home/poweruser/junda.feng/anaconda3/bin/../include/device_atomic_functions.h"
 __attribute__((unused)) static inline unsigned atomicAnd(unsigned *address, unsigned val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 134
 { } 
 #endif
-# 136 "/usr/local/cuda/bin/../targets/x86_64-linux/include/device_atomic_functions.h"
+# 136 "/home/poweruser/junda.feng/anaconda3/bin/../include/device_atomic_functions.h"
 __attribute__((unused)) static inline int atomicOr(int *address, int val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 136
 { } 
 #endif
-# 138 "/usr/local/cuda/bin/../targets/x86_64-linux/include/device_atomic_functions.h"
+# 138 "/home/poweruser/junda.feng/anaconda3/bin/../include/device_atomic_functions.h"
 __attribute__((unused)) static inline unsigned atomicOr(unsigned *address, unsigned val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 138
 { } 
 #endif
-# 140 "/usr/local/cuda/bin/../targets/x86_64-linux/include/device_atomic_functions.h"
+# 140 "/home/poweruser/junda.feng/anaconda3/bin/../include/device_atomic_functions.h"
 __attribute__((unused)) static inline int atomicXor(int *address, int val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 140
 { } 
 #endif
-# 142 "/usr/local/cuda/bin/../targets/x86_64-linux/include/device_atomic_functions.h"
+# 142 "/home/poweruser/junda.feng/anaconda3/bin/../include/device_atomic_functions.h"
 __attribute__((unused)) static inline unsigned atomicXor(unsigned *address, unsigned val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 142
 { } 
 #endif
-# 144 "/usr/local/cuda/bin/../targets/x86_64-linux/include/device_atomic_functions.h"
+# 144 "/home/poweruser/junda.feng/anaconda3/bin/../include/device_atomic_functions.h"
 __attribute__((unused)) static inline int atomicCAS(int *address, int compare, int val) {int volatile ___ = 1;(void)address;(void)compare;(void)val;::exit(___);}
 #if 0
 # 144
 { } 
 #endif
-# 146 "/usr/local/cuda/bin/../targets/x86_64-linux/include/device_atomic_functions.h"
+# 146 "/home/poweruser/junda.feng/anaconda3/bin/../include/device_atomic_functions.h"
 __attribute__((unused)) static inline unsigned atomicCAS(unsigned *address, unsigned compare, unsigned val) {int volatile ___ = 1;(void)address;(void)compare;(void)val;::exit(___);}
 #if 0
 # 146
 { } 
 #endif
-# 171 "/usr/local/cuda/bin/../targets/x86_64-linux/include/device_atomic_functions.h"
+# 171 "/home/poweruser/junda.feng/anaconda3/bin/../include/device_atomic_functions.h"
 extern "C" {
 # 180
 }
-# 189 "/usr/local/cuda/bin/../targets/x86_64-linux/include/device_atomic_functions.h"
+# 189 "/home/poweruser/junda.feng/anaconda3/bin/../include/device_atomic_functions.h"
 __attribute__((unused)) static inline unsigned long long atomicAdd(unsigned long long *address, unsigned long long val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 189
 { } 
 #endif
-# 191 "/usr/local/cuda/bin/../targets/x86_64-linux/include/device_atomic_functions.h"
+# 191 "/home/poweruser/junda.feng/anaconda3/bin/../include/device_atomic_functions.h"
 __attribute__((unused)) static inline unsigned long long atomicExch(unsigned long long *address, unsigned long long val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 191
 { } 
 #endif
-# 193 "/usr/local/cuda/bin/../targets/x86_64-linux/include/device_atomic_functions.h"
+# 193 "/home/poweruser/junda.feng/anaconda3/bin/../include/device_atomic_functions.h"
 __attribute__((unused)) static inline unsigned long long atomicCAS(unsigned long long *address, unsigned long long compare, unsigned long long val) {int volatile ___ = 1;(void)address;(void)compare;(void)val;::exit(___);}
 #if 0
 # 193
 { } 
 #endif
-# 195 "/usr/local/cuda/bin/../targets/x86_64-linux/include/device_atomic_functions.h"
+# 195 "/home/poweruser/junda.feng/anaconda3/bin/../include/device_atomic_functions.h"
 __attribute((deprecated("__any() is deprecated in favor of __any_sync() and may be removed in a future release (Use -Wno-deprecated-declarations to suppr" "ess this warning)."))) __attribute__((unused)) static inline bool any(bool cond) {int volatile ___ = 1;(void)cond;::exit(___);}
 #if 0
 # 195
 { } 
 #endif
-# 197 "/usr/local/cuda/bin/../targets/x86_64-linux/include/device_atomic_functions.h"
+# 197 "/home/poweruser/junda.feng/anaconda3/bin/../include/device_atomic_functions.h"
 __attribute((deprecated("__all() is deprecated in favor of __all_sync() and may be removed in a future release (Use -Wno-deprecated-declarations to suppr" "ess this warning)."))) __attribute__((unused)) static inline bool all(bool cond) {int volatile ___ = 1;(void)cond;::exit(___);}
 #if 0
 # 197
 { } 
 #endif
-# 87 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/device_double_functions.h"
+# 87 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/device_double_functions.h"
 extern "C" {
-# 1139 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/device_double_functions.h"
+# 1139 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/device_double_functions.h"
 }
 # 1147
 __attribute__((unused)) static inline double fma(double a, double b, double c, cudaRoundMode mode); 
@@ -12179,7 +12179,7 @@ __attribute__((unused)) static inline double int2double(int a, cudaRoundMode mod
 __attribute__((unused)) static inline double uint2double(unsigned a, cudaRoundMode mode = cudaRoundNearest); 
 # 1171
 __attribute__((unused)) static inline double float2double(float a, cudaRoundMode mode = cudaRoundNearest); 
-# 93 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/device_double_functions.hpp"
+# 93 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/device_double_functions.hpp"
 __attribute__((unused)) static inline double fma(double a, double b, double c, cudaRoundMode mode) 
 # 94
 {int volatile ___ = 1;(void)a;(void)b;(void)c;(void)mode;
@@ -12193,7 +12193,7 @@ return (mode == (cudaRoundZero)) ? __fma_rz(a, b, c) : ((mode == (cudaRoundPosIn
 # 99
 } 
 #endif
-# 101 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/device_double_functions.hpp"
+# 101 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/device_double_functions.hpp"
 __attribute__((unused)) static inline double dmul(double a, double b, cudaRoundMode mode) 
 # 102
 {int volatile ___ = 1;(void)a;(void)b;(void)mode;
@@ -12207,7 +12207,7 @@ return (mode == (cudaRoundZero)) ? __dmul_rz(a, b) : ((mode == (cudaRoundPosInf)
 # 107
 } 
 #endif
-# 109 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/device_double_functions.hpp"
+# 109 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/device_double_functions.hpp"
 __attribute__((unused)) static inline double dadd(double a, double b, cudaRoundMode mode) 
 # 110
 {int volatile ___ = 1;(void)a;(void)b;(void)mode;
@@ -12221,7 +12221,7 @@ return (mode == (cudaRoundZero)) ? __dadd_rz(a, b) : ((mode == (cudaRoundPosInf)
 # 115
 } 
 #endif
-# 117 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/device_double_functions.hpp"
+# 117 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/device_double_functions.hpp"
 __attribute__((unused)) static inline double dsub(double a, double b, cudaRoundMode mode) 
 # 118
 {int volatile ___ = 1;(void)a;(void)b;(void)mode;
@@ -12235,7 +12235,7 @@ return (mode == (cudaRoundZero)) ? __dsub_rz(a, b) : ((mode == (cudaRoundPosInf)
 # 123
 } 
 #endif
-# 125 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/device_double_functions.hpp"
+# 125 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/device_double_functions.hpp"
 __attribute__((unused)) static inline int double2int(double a, cudaRoundMode mode) 
 # 126
 {int volatile ___ = 1;(void)a;(void)mode;
@@ -12249,7 +12249,7 @@ return (mode == (cudaRoundNearest)) ? __double2int_rn(a) : ((mode == (cudaRoundP
 # 131
 } 
 #endif
-# 133 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/device_double_functions.hpp"
+# 133 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/device_double_functions.hpp"
 __attribute__((unused)) static inline unsigned double2uint(double a, cudaRoundMode mode) 
 # 134
 {int volatile ___ = 1;(void)a;(void)mode;
@@ -12263,7 +12263,7 @@ return (mode == (cudaRoundNearest)) ? __double2uint_rn(a) : ((mode == (cudaRound
 # 139
 } 
 #endif
-# 141 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/device_double_functions.hpp"
+# 141 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/device_double_functions.hpp"
 __attribute__((unused)) static inline long long double2ll(double a, cudaRoundMode mode) 
 # 142
 {int volatile ___ = 1;(void)a;(void)mode;
@@ -12277,7 +12277,7 @@ return (mode == (cudaRoundNearest)) ? __double2ll_rn(a) : ((mode == (cudaRoundPo
 # 147
 } 
 #endif
-# 149 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/device_double_functions.hpp"
+# 149 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/device_double_functions.hpp"
 __attribute__((unused)) static inline unsigned long long double2ull(double a, cudaRoundMode mode) 
 # 150
 {int volatile ___ = 1;(void)a;(void)mode;
@@ -12291,7 +12291,7 @@ return (mode == (cudaRoundNearest)) ? __double2ull_rn(a) : ((mode == (cudaRoundP
 # 155
 } 
 #endif
-# 157 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/device_double_functions.hpp"
+# 157 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/device_double_functions.hpp"
 __attribute__((unused)) static inline double ll2double(long long a, cudaRoundMode mode) 
 # 158
 {int volatile ___ = 1;(void)a;(void)mode;
@@ -12305,7 +12305,7 @@ return (mode == (cudaRoundZero)) ? __ll2double_rz(a) : ((mode == (cudaRoundPosIn
 # 163
 } 
 #endif
-# 165 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/device_double_functions.hpp"
+# 165 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/device_double_functions.hpp"
 __attribute__((unused)) static inline double ull2double(unsigned long long a, cudaRoundMode mode) 
 # 166
 {int volatile ___ = 1;(void)a;(void)mode;
@@ -12319,7 +12319,7 @@ return (mode == (cudaRoundZero)) ? __ull2double_rz(a) : ((mode == (cudaRoundPosI
 # 171
 } 
 #endif
-# 173 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/device_double_functions.hpp"
+# 173 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/device_double_functions.hpp"
 __attribute__((unused)) static inline double int2double(int a, cudaRoundMode mode) 
 # 174
 {int volatile ___ = 1;(void)a;(void)mode;
@@ -12333,7 +12333,7 @@ return (double)a;
 # 176
 } 
 #endif
-# 178 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/device_double_functions.hpp"
+# 178 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/device_double_functions.hpp"
 __attribute__((unused)) static inline double uint2double(unsigned a, cudaRoundMode mode) 
 # 179
 {int volatile ___ = 1;(void)a;(void)mode;
@@ -12347,7 +12347,7 @@ return (double)a;
 # 181
 } 
 #endif
-# 183 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/device_double_functions.hpp"
+# 183 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/device_double_functions.hpp"
 __attribute__((unused)) static inline double float2double(float a, cudaRoundMode mode) 
 # 184
 {int volatile ___ = 1;(void)a;(void)mode;
@@ -12361,343 +12361,343 @@ return (double)a;
 # 186
 } 
 #endif
-# 89 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_20_atomic_functions.h"
+# 89 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_20_atomic_functions.h"
 __attribute__((unused)) static inline float atomicAdd(float *address, float val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 89
 { } 
 #endif
-# 100 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_atomic_functions.h"
+# 100 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_atomic_functions.h"
 __attribute__((unused)) static inline long long atomicMin(long long *address, long long val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 100
 { } 
 #endif
-# 102 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_atomic_functions.h"
+# 102 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_atomic_functions.h"
 __attribute__((unused)) static inline long long atomicMax(long long *address, long long val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 102
 { } 
 #endif
-# 104 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_atomic_functions.h"
+# 104 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_atomic_functions.h"
 __attribute__((unused)) static inline long long atomicAnd(long long *address, long long val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 104
 { } 
 #endif
-# 106 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_atomic_functions.h"
+# 106 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_atomic_functions.h"
 __attribute__((unused)) static inline long long atomicOr(long long *address, long long val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 106
 { } 
 #endif
-# 108 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_atomic_functions.h"
+# 108 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_atomic_functions.h"
 __attribute__((unused)) static inline long long atomicXor(long long *address, long long val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 108
 { } 
 #endif
-# 110 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_atomic_functions.h"
+# 110 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_atomic_functions.h"
 __attribute__((unused)) static inline unsigned long long atomicMin(unsigned long long *address, unsigned long long val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 110
 { } 
 #endif
-# 112 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_atomic_functions.h"
+# 112 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_atomic_functions.h"
 __attribute__((unused)) static inline unsigned long long atomicMax(unsigned long long *address, unsigned long long val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 112
 { } 
 #endif
-# 114 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_atomic_functions.h"
+# 114 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_atomic_functions.h"
 __attribute__((unused)) static inline unsigned long long atomicAnd(unsigned long long *address, unsigned long long val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 114
 { } 
 #endif
-# 116 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_atomic_functions.h"
+# 116 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_atomic_functions.h"
 __attribute__((unused)) static inline unsigned long long atomicOr(unsigned long long *address, unsigned long long val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 116
 { } 
 #endif
-# 118 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_atomic_functions.h"
+# 118 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_atomic_functions.h"
 __attribute__((unused)) static inline unsigned long long atomicXor(unsigned long long *address, unsigned long long val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 118
 { } 
 #endif
-# 303 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 303 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline double atomicAdd(double *address, double val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 303
 { } 
 #endif
-# 306 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 306 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline int atomicAdd_block(int *address, int val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 306
 { } 
 #endif
-# 309 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 309 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline int atomicAdd_system(int *address, int val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 309
 { } 
 #endif
-# 312 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 312 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline unsigned atomicAdd_block(unsigned *address, unsigned val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 312
 { } 
 #endif
-# 315 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 315 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline unsigned atomicAdd_system(unsigned *address, unsigned val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 315
 { } 
 #endif
-# 318 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 318 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline unsigned long long atomicAdd_block(unsigned long long *address, unsigned long long val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 318
 { } 
 #endif
-# 321 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 321 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline unsigned long long atomicAdd_system(unsigned long long *address, unsigned long long val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 321
 { } 
 #endif
-# 324 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 324 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline float atomicAdd_block(float *address, float val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 324
 { } 
 #endif
-# 327 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 327 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline float atomicAdd_system(float *address, float val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 327
 { } 
 #endif
-# 330 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 330 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline double atomicAdd_block(double *address, double val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 330
 { } 
 #endif
-# 333 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 333 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline double atomicAdd_system(double *address, double val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 333
 { } 
 #endif
-# 336 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 336 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline int atomicSub_block(int *address, int val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 336
 { } 
 #endif
-# 339 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 339 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline int atomicSub_system(int *address, int val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 339
 { } 
 #endif
-# 342 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 342 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline unsigned atomicSub_block(unsigned *address, unsigned val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 342
 { } 
 #endif
-# 345 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 345 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline unsigned atomicSub_system(unsigned *address, unsigned val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 345
 { } 
 #endif
-# 348 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 348 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline int atomicExch_block(int *address, int val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 348
 { } 
 #endif
-# 351 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 351 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline int atomicExch_system(int *address, int val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 351
 { } 
 #endif
-# 354 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 354 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline unsigned atomicExch_block(unsigned *address, unsigned val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 354
 { } 
 #endif
-# 357 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 357 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline unsigned atomicExch_system(unsigned *address, unsigned val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 357
 { } 
 #endif
-# 360 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 360 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline unsigned long long atomicExch_block(unsigned long long *address, unsigned long long val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 360
 { } 
 #endif
-# 363 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 363 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline unsigned long long atomicExch_system(unsigned long long *address, unsigned long long val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 363
 { } 
 #endif
-# 366 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 366 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline float atomicExch_block(float *address, float val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 366
 { } 
 #endif
-# 369 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 369 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline float atomicExch_system(float *address, float val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 369
 { } 
 #endif
-# 372 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 372 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline int atomicMin_block(int *address, int val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 372
 { } 
 #endif
-# 375 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 375 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline int atomicMin_system(int *address, int val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 375
 { } 
 #endif
-# 378 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 378 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline long long atomicMin_block(long long *address, long long val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 378
 { } 
 #endif
-# 381 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 381 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline long long atomicMin_system(long long *address, long long val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 381
 { } 
 #endif
-# 384 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 384 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline unsigned atomicMin_block(unsigned *address, unsigned val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 384
 { } 
 #endif
-# 387 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 387 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline unsigned atomicMin_system(unsigned *address, unsigned val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 387
 { } 
 #endif
-# 390 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 390 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline unsigned long long atomicMin_block(unsigned long long *address, unsigned long long val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 390
 { } 
 #endif
-# 393 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 393 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline unsigned long long atomicMin_system(unsigned long long *address, unsigned long long val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 393
 { } 
 #endif
-# 396 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 396 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline int atomicMax_block(int *address, int val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 396
 { } 
 #endif
-# 399 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 399 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline int atomicMax_system(int *address, int val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 399
 { } 
 #endif
-# 402 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 402 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline long long atomicMax_block(long long *address, long long val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 402
 { } 
 #endif
-# 405 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 405 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline long long atomicMax_system(long long *address, long long val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 405
 { } 
 #endif
-# 408 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 408 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline unsigned atomicMax_block(unsigned *address, unsigned val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 408
 { } 
 #endif
-# 411 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 411 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline unsigned atomicMax_system(unsigned *address, unsigned val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 411
 { } 
 #endif
-# 414 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 414 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline unsigned long long atomicMax_block(unsigned long long *address, unsigned long long val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 414
 { } 
 #endif
-# 417 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 417 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline unsigned long long atomicMax_system(unsigned long long *address, unsigned long long val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 417
 { } 
 #endif
-# 420 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 420 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline unsigned atomicInc_block(unsigned *address, unsigned val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 420
 { } 
 #endif
-# 423 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 423 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline unsigned atomicInc_system(unsigned *address, unsigned val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 423
 { } 
 #endif
-# 426 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 426 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline unsigned atomicDec_block(unsigned *address, unsigned val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 426
 { } 
 #endif
-# 429 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 429 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline unsigned atomicDec_system(unsigned *address, unsigned val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 429
 { } 
 #endif
-# 432 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 432 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline int atomicCAS_block(int *address, int compare, int val) {int volatile ___ = 1;(void)address;(void)compare;(void)val;::exit(___);}
 #if 0
 # 432
 { } 
 #endif
-# 435 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 435 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline int atomicCAS_system(int *address, int compare, int val) {int volatile ___ = 1;(void)address;(void)compare;(void)val;::exit(___);}
 #if 0
 # 435
 { } 
 #endif
-# 438 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 438 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline unsigned atomicCAS_block(unsigned *address, unsigned compare, unsigned 
 # 439
 val) {int volatile ___ = 1;(void)address;(void)compare;(void)val;::exit(___);}
@@ -12705,7 +12705,7 @@ val) {int volatile ___ = 1;(void)address;(void)compare;(void)val;::exit(___);}
 # 439
 { } 
 #endif
-# 442 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 442 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline unsigned atomicCAS_system(unsigned *address, unsigned compare, unsigned 
 # 443
 val) {int volatile ___ = 1;(void)address;(void)compare;(void)val;::exit(___);}
@@ -12713,7 +12713,7 @@ val) {int volatile ___ = 1;(void)address;(void)compare;(void)val;::exit(___);}
 # 443
 { } 
 #endif
-# 446 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 446 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline unsigned long long atomicCAS_block(unsigned long long *address, unsigned long long 
 # 447
 compare, unsigned long long 
@@ -12723,7 +12723,7 @@ val) {int volatile ___ = 1;(void)address;(void)compare;(void)val;::exit(___);}
 # 448
 { } 
 #endif
-# 451 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 451 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline unsigned long long atomicCAS_system(unsigned long long *address, unsigned long long 
 # 452
 compare, unsigned long long 
@@ -12733,153 +12733,153 @@ val) {int volatile ___ = 1;(void)address;(void)compare;(void)val;::exit(___);}
 # 453
 { } 
 #endif
-# 456 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 456 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline int atomicAnd_block(int *address, int val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 456
 { } 
 #endif
-# 459 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 459 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline int atomicAnd_system(int *address, int val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 459
 { } 
 #endif
-# 462 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 462 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline long long atomicAnd_block(long long *address, long long val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 462
 { } 
 #endif
-# 465 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 465 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline long long atomicAnd_system(long long *address, long long val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 465
 { } 
 #endif
-# 468 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 468 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline unsigned atomicAnd_block(unsigned *address, unsigned val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 468
 { } 
 #endif
-# 471 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 471 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline unsigned atomicAnd_system(unsigned *address, unsigned val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 471
 { } 
 #endif
-# 474 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 474 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline unsigned long long atomicAnd_block(unsigned long long *address, unsigned long long val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 474
 { } 
 #endif
-# 477 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 477 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline unsigned long long atomicAnd_system(unsigned long long *address, unsigned long long val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 477
 { } 
 #endif
-# 480 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 480 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline int atomicOr_block(int *address, int val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 480
 { } 
 #endif
-# 483 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 483 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline int atomicOr_system(int *address, int val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 483
 { } 
 #endif
-# 486 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 486 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline long long atomicOr_block(long long *address, long long val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 486
 { } 
 #endif
-# 489 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 489 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline long long atomicOr_system(long long *address, long long val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 489
 { } 
 #endif
-# 492 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 492 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline unsigned atomicOr_block(unsigned *address, unsigned val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 492
 { } 
 #endif
-# 495 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 495 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline unsigned atomicOr_system(unsigned *address, unsigned val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 495
 { } 
 #endif
-# 498 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 498 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline unsigned long long atomicOr_block(unsigned long long *address, unsigned long long val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 498
 { } 
 #endif
-# 501 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 501 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline unsigned long long atomicOr_system(unsigned long long *address, unsigned long long val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 501
 { } 
 #endif
-# 504 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 504 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline int atomicXor_block(int *address, int val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 504
 { } 
 #endif
-# 507 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 507 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline int atomicXor_system(int *address, int val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 507
 { } 
 #endif
-# 510 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 510 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline long long atomicXor_block(long long *address, long long val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 510
 { } 
 #endif
-# 513 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 513 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline long long atomicXor_system(long long *address, long long val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 513
 { } 
 #endif
-# 516 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 516 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline unsigned atomicXor_block(unsigned *address, unsigned val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 516
 { } 
 #endif
-# 519 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 519 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline unsigned atomicXor_system(unsigned *address, unsigned val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 519
 { } 
 #endif
-# 522 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 522 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline unsigned long long atomicXor_block(unsigned long long *address, unsigned long long val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 522
 { } 
 #endif
-# 525 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_60_atomic_functions.h"
+# 525 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_60_atomic_functions.h"
 __attribute__((unused)) static inline unsigned long long atomicXor_system(unsigned long long *address, unsigned long long val) {int volatile ___ = 1;(void)address;(void)val;::exit(___);}
 #if 0
 # 525
 { } 
 #endif
-# 90 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_20_intrinsics.h"
+# 90 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_20_intrinsics.h"
 extern "C" {
-# 1503 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_20_intrinsics.h"
+# 1503 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_20_intrinsics.h"
 }
 # 1510
 __attribute((deprecated("__ballot() is deprecated in favor of __ballot_sync() and may be removed in a future release (Use -Wno-deprecated-declarations to" " suppress this warning)."))) __attribute__((unused)) static inline unsigned ballot(bool pred) {int volatile ___ = 1;(void)pred;::exit(___);}
@@ -12887,2593 +12887,2593 @@ __attribute((deprecated("__ballot() is deprecated in favor of __ballot_sync() an
 # 1510
 { } 
 #endif
-# 1512 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_20_intrinsics.h"
+# 1512 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_20_intrinsics.h"
 __attribute__((unused)) static inline int syncthreads_count(bool pred) {int volatile ___ = 1;(void)pred;::exit(___);}
 #if 0
 # 1512
 { } 
 #endif
-# 1514 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_20_intrinsics.h"
+# 1514 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_20_intrinsics.h"
 __attribute__((unused)) static inline bool syncthreads_and(bool pred) {int volatile ___ = 1;(void)pred;::exit(___);}
 #if 0
 # 1514
 { } 
 #endif
-# 1516 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_20_intrinsics.h"
+# 1516 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_20_intrinsics.h"
 __attribute__((unused)) static inline bool syncthreads_or(bool pred) {int volatile ___ = 1;(void)pred;::exit(___);}
 #if 0
 # 1516
 { } 
 #endif
-# 1521 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_20_intrinsics.h"
+# 1521 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_20_intrinsics.h"
 __attribute__((unused)) static inline unsigned __isGlobal(const void *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 1521
 { } 
 #endif
-# 1522 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_20_intrinsics.h"
+# 1522 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_20_intrinsics.h"
 __attribute__((unused)) static inline unsigned __isShared(const void *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 1522
 { } 
 #endif
-# 1523 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_20_intrinsics.h"
+# 1523 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_20_intrinsics.h"
 __attribute__((unused)) static inline unsigned __isConstant(const void *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 1523
 { } 
 #endif
-# 1524 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_20_intrinsics.h"
+# 1524 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_20_intrinsics.h"
 __attribute__((unused)) static inline unsigned __isLocal(const void *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 1524
 { } 
 #endif
-# 1526 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_20_intrinsics.h"
+# 1526 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_20_intrinsics.h"
 __attribute__((unused)) static inline size_t __cvta_generic_to_global(const void *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 1526
 { } 
 #endif
-# 1527 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_20_intrinsics.h"
+# 1527 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_20_intrinsics.h"
 __attribute__((unused)) static inline size_t __cvta_generic_to_shared(const void *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 1527
 { } 
 #endif
-# 1528 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_20_intrinsics.h"
+# 1528 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_20_intrinsics.h"
 __attribute__((unused)) static inline size_t __cvta_generic_to_constant(const void *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 1528
 { } 
 #endif
-# 1529 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_20_intrinsics.h"
+# 1529 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_20_intrinsics.h"
 __attribute__((unused)) static inline size_t __cvta_generic_to_local(const void *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 1529
 { } 
 #endif
-# 1531 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_20_intrinsics.h"
+# 1531 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_20_intrinsics.h"
 __attribute__((unused)) static inline void *__cvta_global_to_generic(size_t rawbits) {int volatile ___ = 1;(void)rawbits;::exit(___);}
 #if 0
 # 1531
 { } 
 #endif
-# 1532 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_20_intrinsics.h"
+# 1532 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_20_intrinsics.h"
 __attribute__((unused)) static inline void *__cvta_shared_to_generic(size_t rawbits) {int volatile ___ = 1;(void)rawbits;::exit(___);}
 #if 0
 # 1532
 { } 
 #endif
-# 1533 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_20_intrinsics.h"
+# 1533 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_20_intrinsics.h"
 __attribute__((unused)) static inline void *__cvta_constant_to_generic(size_t rawbits) {int volatile ___ = 1;(void)rawbits;::exit(___);}
 #if 0
 # 1533
 { } 
 #endif
-# 1534 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_20_intrinsics.h"
+# 1534 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_20_intrinsics.h"
 __attribute__((unused)) static inline void *__cvta_local_to_generic(size_t rawbits) {int volatile ___ = 1;(void)rawbits;::exit(___);}
 #if 0
 # 1534
 { } 
 #endif
-# 102 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 102 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute__((unused)) static inline unsigned __fns(unsigned mask, unsigned base, int offset) {int volatile ___ = 1;(void)mask;(void)base;(void)offset;::exit(___);}
 #if 0
 # 102
 { } 
 #endif
-# 103 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 103 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute__((unused)) static inline void __barrier_sync(unsigned id) {int volatile ___ = 1;(void)id;::exit(___);}
 #if 0
 # 103
 { } 
 #endif
-# 104 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 104 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute__((unused)) static inline void __barrier_sync_count(unsigned id, unsigned cnt) {int volatile ___ = 1;(void)id;(void)cnt;::exit(___);}
 #if 0
 # 104
 { } 
 #endif
-# 105 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 105 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute__((unused)) static inline void __syncwarp(unsigned mask = 4294967295U) {int volatile ___ = 1;(void)mask;::exit(___);}
 #if 0
 # 105
 { } 
 #endif
-# 106 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 106 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute__((unused)) static inline int __all_sync(unsigned mask, int pred) {int volatile ___ = 1;(void)mask;(void)pred;::exit(___);}
 #if 0
 # 106
 { } 
 #endif
-# 107 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 107 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute__((unused)) static inline int __any_sync(unsigned mask, int pred) {int volatile ___ = 1;(void)mask;(void)pred;::exit(___);}
 #if 0
 # 107
 { } 
 #endif
-# 108 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 108 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute__((unused)) static inline int __uni_sync(unsigned mask, int pred) {int volatile ___ = 1;(void)mask;(void)pred;::exit(___);}
 #if 0
 # 108
 { } 
 #endif
-# 109 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 109 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute__((unused)) static inline unsigned __ballot_sync(unsigned mask, int pred) {int volatile ___ = 1;(void)mask;(void)pred;::exit(___);}
 #if 0
 # 109
 { } 
 #endif
-# 110 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 110 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute__((unused)) static inline unsigned __activemask() {int volatile ___ = 1;::exit(___);}
 #if 0
 # 110
 { } 
 #endif
-# 119 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 119 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute((deprecated("__shfl() is deprecated in favor of __shfl_sync() and may be removed in a future release (Use -Wno-deprecated-declarations to sup" "press this warning)."))) __attribute__((unused)) static inline int __shfl(int var, int srcLane, int width = 32) {int volatile ___ = 1;(void)var;(void)srcLane;(void)width;::exit(___);}
 #if 0
 # 119
 { } 
 #endif
-# 120 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 120 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute((deprecated("__shfl() is deprecated in favor of __shfl_sync() and may be removed in a future release (Use -Wno-deprecated-declarations to sup" "press this warning)."))) __attribute__((unused)) static inline unsigned __shfl(unsigned var, int srcLane, int width = 32) {int volatile ___ = 1;(void)var;(void)srcLane;(void)width;::exit(___);}
 #if 0
 # 120
 { } 
 #endif
-# 121 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 121 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute((deprecated("__shfl_up() is deprecated in favor of __shfl_up_sync() and may be removed in a future release (Use -Wno-deprecated-declarations " "to suppress this warning)."))) __attribute__((unused)) static inline int __shfl_up(int var, unsigned delta, int width = 32) {int volatile ___ = 1;(void)var;(void)delta;(void)width;::exit(___);}
 #if 0
 # 121
 { } 
 #endif
-# 122 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 122 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute((deprecated("__shfl_up() is deprecated in favor of __shfl_up_sync() and may be removed in a future release (Use -Wno-deprecated-declarations " "to suppress this warning)."))) __attribute__((unused)) static inline unsigned __shfl_up(unsigned var, unsigned delta, int width = 32) {int volatile ___ = 1;(void)var;(void)delta;(void)width;::exit(___);}
 #if 0
 # 122
 { } 
 #endif
-# 123 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 123 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute((deprecated("__shfl_down() is deprecated in favor of __shfl_down_sync() and may be removed in a future release (Use -Wno-deprecated-declarati" "ons to suppress this warning)."))) __attribute__((unused)) static inline int __shfl_down(int var, unsigned delta, int width = 32) {int volatile ___ = 1;(void)var;(void)delta;(void)width;::exit(___);}
 #if 0
 # 123
 { } 
 #endif
-# 124 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 124 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute((deprecated("__shfl_down() is deprecated in favor of __shfl_down_sync() and may be removed in a future release (Use -Wno-deprecated-declarati" "ons to suppress this warning)."))) __attribute__((unused)) static inline unsigned __shfl_down(unsigned var, unsigned delta, int width = 32) {int volatile ___ = 1;(void)var;(void)delta;(void)width;::exit(___);}
 #if 0
 # 124
 { } 
 #endif
-# 125 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 125 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute((deprecated("__shfl_xor() is deprecated in favor of __shfl_xor_sync() and may be removed in a future release (Use -Wno-deprecated-declaration" "s to suppress this warning)."))) __attribute__((unused)) static inline int __shfl_xor(int var, int laneMask, int width = 32) {int volatile ___ = 1;(void)var;(void)laneMask;(void)width;::exit(___);}
 #if 0
 # 125
 { } 
 #endif
-# 126 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 126 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute((deprecated("__shfl_xor() is deprecated in favor of __shfl_xor_sync() and may be removed in a future release (Use -Wno-deprecated-declaration" "s to suppress this warning)."))) __attribute__((unused)) static inline unsigned __shfl_xor(unsigned var, int laneMask, int width = 32) {int volatile ___ = 1;(void)var;(void)laneMask;(void)width;::exit(___);}
 #if 0
 # 126
 { } 
 #endif
-# 127 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 127 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute((deprecated("__shfl() is deprecated in favor of __shfl_sync() and may be removed in a future release (Use -Wno-deprecated-declarations to sup" "press this warning)."))) __attribute__((unused)) static inline float __shfl(float var, int srcLane, int width = 32) {int volatile ___ = 1;(void)var;(void)srcLane;(void)width;::exit(___);}
 #if 0
 # 127
 { } 
 #endif
-# 128 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 128 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute((deprecated("__shfl_up() is deprecated in favor of __shfl_up_sync() and may be removed in a future release (Use -Wno-deprecated-declarations " "to suppress this warning)."))) __attribute__((unused)) static inline float __shfl_up(float var, unsigned delta, int width = 32) {int volatile ___ = 1;(void)var;(void)delta;(void)width;::exit(___);}
 #if 0
 # 128
 { } 
 #endif
-# 129 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 129 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute((deprecated("__shfl_down() is deprecated in favor of __shfl_down_sync() and may be removed in a future release (Use -Wno-deprecated-declarati" "ons to suppress this warning)."))) __attribute__((unused)) static inline float __shfl_down(float var, unsigned delta, int width = 32) {int volatile ___ = 1;(void)var;(void)delta;(void)width;::exit(___);}
 #if 0
 # 129
 { } 
 #endif
-# 130 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 130 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute((deprecated("__shfl_xor() is deprecated in favor of __shfl_xor_sync() and may be removed in a future release (Use -Wno-deprecated-declaration" "s to suppress this warning)."))) __attribute__((unused)) static inline float __shfl_xor(float var, int laneMask, int width = 32) {int volatile ___ = 1;(void)var;(void)laneMask;(void)width;::exit(___);}
 #if 0
 # 130
 { } 
 #endif
-# 133 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 133 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute__((unused)) static inline int __shfl_sync(unsigned mask, int var, int srcLane, int width = 32) {int volatile ___ = 1;(void)mask;(void)var;(void)srcLane;(void)width;::exit(___);}
 #if 0
 # 133
 { } 
 #endif
-# 134 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 134 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute__((unused)) static inline unsigned __shfl_sync(unsigned mask, unsigned var, int srcLane, int width = 32) {int volatile ___ = 1;(void)mask;(void)var;(void)srcLane;(void)width;::exit(___);}
 #if 0
 # 134
 { } 
 #endif
-# 135 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 135 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute__((unused)) static inline int __shfl_up_sync(unsigned mask, int var, unsigned delta, int width = 32) {int volatile ___ = 1;(void)mask;(void)var;(void)delta;(void)width;::exit(___);}
 #if 0
 # 135
 { } 
 #endif
-# 136 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 136 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute__((unused)) static inline unsigned __shfl_up_sync(unsigned mask, unsigned var, unsigned delta, int width = 32) {int volatile ___ = 1;(void)mask;(void)var;(void)delta;(void)width;::exit(___);}
 #if 0
 # 136
 { } 
 #endif
-# 137 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 137 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute__((unused)) static inline int __shfl_down_sync(unsigned mask, int var, unsigned delta, int width = 32) {int volatile ___ = 1;(void)mask;(void)var;(void)delta;(void)width;::exit(___);}
 #if 0
 # 137
 { } 
 #endif
-# 138 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 138 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute__((unused)) static inline unsigned __shfl_down_sync(unsigned mask, unsigned var, unsigned delta, int width = 32) {int volatile ___ = 1;(void)mask;(void)var;(void)delta;(void)width;::exit(___);}
 #if 0
 # 138
 { } 
 #endif
-# 139 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 139 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute__((unused)) static inline int __shfl_xor_sync(unsigned mask, int var, int laneMask, int width = 32) {int volatile ___ = 1;(void)mask;(void)var;(void)laneMask;(void)width;::exit(___);}
 #if 0
 # 139
 { } 
 #endif
-# 140 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 140 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute__((unused)) static inline unsigned __shfl_xor_sync(unsigned mask, unsigned var, int laneMask, int width = 32) {int volatile ___ = 1;(void)mask;(void)var;(void)laneMask;(void)width;::exit(___);}
 #if 0
 # 140
 { } 
 #endif
-# 141 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 141 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute__((unused)) static inline float __shfl_sync(unsigned mask, float var, int srcLane, int width = 32) {int volatile ___ = 1;(void)mask;(void)var;(void)srcLane;(void)width;::exit(___);}
 #if 0
 # 141
 { } 
 #endif
-# 142 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 142 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute__((unused)) static inline float __shfl_up_sync(unsigned mask, float var, unsigned delta, int width = 32) {int volatile ___ = 1;(void)mask;(void)var;(void)delta;(void)width;::exit(___);}
 #if 0
 # 142
 { } 
 #endif
-# 143 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 143 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute__((unused)) static inline float __shfl_down_sync(unsigned mask, float var, unsigned delta, int width = 32) {int volatile ___ = 1;(void)mask;(void)var;(void)delta;(void)width;::exit(___);}
 #if 0
 # 143
 { } 
 #endif
-# 144 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 144 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute__((unused)) static inline float __shfl_xor_sync(unsigned mask, float var, int laneMask, int width = 32) {int volatile ___ = 1;(void)mask;(void)var;(void)laneMask;(void)width;::exit(___);}
 #if 0
 # 144
 { } 
 #endif
-# 148 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 148 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute((deprecated("__shfl() is deprecated in favor of __shfl_sync() and may be removed in a future release (Use -Wno-deprecated-declarations to sup" "press this warning)."))) __attribute__((unused)) static inline unsigned long long __shfl(unsigned long long var, int srcLane, int width = 32) {int volatile ___ = 1;(void)var;(void)srcLane;(void)width;::exit(___);}
 #if 0
 # 148
 { } 
 #endif
-# 149 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 149 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute((deprecated("__shfl() is deprecated in favor of __shfl_sync() and may be removed in a future release (Use -Wno-deprecated-declarations to sup" "press this warning)."))) __attribute__((unused)) static inline long long __shfl(long long var, int srcLane, int width = 32) {int volatile ___ = 1;(void)var;(void)srcLane;(void)width;::exit(___);}
 #if 0
 # 149
 { } 
 #endif
-# 150 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 150 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute((deprecated("__shfl_up() is deprecated in favor of __shfl_up_sync() and may be removed in a future release (Use -Wno-deprecated-declarations " "to suppress this warning)."))) __attribute__((unused)) static inline long long __shfl_up(long long var, unsigned delta, int width = 32) {int volatile ___ = 1;(void)var;(void)delta;(void)width;::exit(___);}
 #if 0
 # 150
 { } 
 #endif
-# 151 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 151 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute((deprecated("__shfl_up() is deprecated in favor of __shfl_up_sync() and may be removed in a future release (Use -Wno-deprecated-declarations " "to suppress this warning)."))) __attribute__((unused)) static inline unsigned long long __shfl_up(unsigned long long var, unsigned delta, int width = 32) {int volatile ___ = 1;(void)var;(void)delta;(void)width;::exit(___);}
 #if 0
 # 151
 { } 
 #endif
-# 152 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 152 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute((deprecated("__shfl_down() is deprecated in favor of __shfl_down_sync() and may be removed in a future release (Use -Wno-deprecated-declarati" "ons to suppress this warning)."))) __attribute__((unused)) static inline long long __shfl_down(long long var, unsigned delta, int width = 32) {int volatile ___ = 1;(void)var;(void)delta;(void)width;::exit(___);}
 #if 0
 # 152
 { } 
 #endif
-# 153 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 153 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute((deprecated("__shfl_down() is deprecated in favor of __shfl_down_sync() and may be removed in a future release (Use -Wno-deprecated-declarati" "ons to suppress this warning)."))) __attribute__((unused)) static inline unsigned long long __shfl_down(unsigned long long var, unsigned delta, int width = 32) {int volatile ___ = 1;(void)var;(void)delta;(void)width;::exit(___);}
 #if 0
 # 153
 { } 
 #endif
-# 154 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 154 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute((deprecated("__shfl_xor() is deprecated in favor of __shfl_xor_sync() and may be removed in a future release (Use -Wno-deprecated-declaration" "s to suppress this warning)."))) __attribute__((unused)) static inline long long __shfl_xor(long long var, int laneMask, int width = 32) {int volatile ___ = 1;(void)var;(void)laneMask;(void)width;::exit(___);}
 #if 0
 # 154
 { } 
 #endif
-# 155 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 155 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute((deprecated("__shfl_xor() is deprecated in favor of __shfl_xor_sync() and may be removed in a future release (Use -Wno-deprecated-declaration" "s to suppress this warning)."))) __attribute__((unused)) static inline unsigned long long __shfl_xor(unsigned long long var, int laneMask, int width = 32) {int volatile ___ = 1;(void)var;(void)laneMask;(void)width;::exit(___);}
 #if 0
 # 155
 { } 
 #endif
-# 156 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 156 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute((deprecated("__shfl() is deprecated in favor of __shfl_sync() and may be removed in a future release (Use -Wno-deprecated-declarations to sup" "press this warning)."))) __attribute__((unused)) static inline double __shfl(double var, int srcLane, int width = 32) {int volatile ___ = 1;(void)var;(void)srcLane;(void)width;::exit(___);}
 #if 0
 # 156
 { } 
 #endif
-# 157 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 157 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute((deprecated("__shfl_up() is deprecated in favor of __shfl_up_sync() and may be removed in a future release (Use -Wno-deprecated-declarations " "to suppress this warning)."))) __attribute__((unused)) static inline double __shfl_up(double var, unsigned delta, int width = 32) {int volatile ___ = 1;(void)var;(void)delta;(void)width;::exit(___);}
 #if 0
 # 157
 { } 
 #endif
-# 158 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 158 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute((deprecated("__shfl_down() is deprecated in favor of __shfl_down_sync() and may be removed in a future release (Use -Wno-deprecated-declarati" "ons to suppress this warning)."))) __attribute__((unused)) static inline double __shfl_down(double var, unsigned delta, int width = 32) {int volatile ___ = 1;(void)var;(void)delta;(void)width;::exit(___);}
 #if 0
 # 158
 { } 
 #endif
-# 159 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 159 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute((deprecated("__shfl_xor() is deprecated in favor of __shfl_xor_sync() and may be removed in a future release (Use -Wno-deprecated-declaration" "s to suppress this warning)."))) __attribute__((unused)) static inline double __shfl_xor(double var, int laneMask, int width = 32) {int volatile ___ = 1;(void)var;(void)laneMask;(void)width;::exit(___);}
 #if 0
 # 159
 { } 
 #endif
-# 162 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 162 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute__((unused)) static inline long long __shfl_sync(unsigned mask, long long var, int srcLane, int width = 32) {int volatile ___ = 1;(void)mask;(void)var;(void)srcLane;(void)width;::exit(___);}
 #if 0
 # 162
 { } 
 #endif
-# 163 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 163 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute__((unused)) static inline unsigned long long __shfl_sync(unsigned mask, unsigned long long var, int srcLane, int width = 32) {int volatile ___ = 1;(void)mask;(void)var;(void)srcLane;(void)width;::exit(___);}
 #if 0
 # 163
 { } 
 #endif
-# 164 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 164 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute__((unused)) static inline long long __shfl_up_sync(unsigned mask, long long var, unsigned delta, int width = 32) {int volatile ___ = 1;(void)mask;(void)var;(void)delta;(void)width;::exit(___);}
 #if 0
 # 164
 { } 
 #endif
-# 165 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 165 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute__((unused)) static inline unsigned long long __shfl_up_sync(unsigned mask, unsigned long long var, unsigned delta, int width = 32) {int volatile ___ = 1;(void)mask;(void)var;(void)delta;(void)width;::exit(___);}
 #if 0
 # 165
 { } 
 #endif
-# 166 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 166 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute__((unused)) static inline long long __shfl_down_sync(unsigned mask, long long var, unsigned delta, int width = 32) {int volatile ___ = 1;(void)mask;(void)var;(void)delta;(void)width;::exit(___);}
 #if 0
 # 166
 { } 
 #endif
-# 167 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 167 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute__((unused)) static inline unsigned long long __shfl_down_sync(unsigned mask, unsigned long long var, unsigned delta, int width = 32) {int volatile ___ = 1;(void)mask;(void)var;(void)delta;(void)width;::exit(___);}
 #if 0
 # 167
 { } 
 #endif
-# 168 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 168 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute__((unused)) static inline long long __shfl_xor_sync(unsigned mask, long long var, int laneMask, int width = 32) {int volatile ___ = 1;(void)mask;(void)var;(void)laneMask;(void)width;::exit(___);}
 #if 0
 # 168
 { } 
 #endif
-# 169 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 169 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute__((unused)) static inline unsigned long long __shfl_xor_sync(unsigned mask, unsigned long long var, int laneMask, int width = 32) {int volatile ___ = 1;(void)mask;(void)var;(void)laneMask;(void)width;::exit(___);}
 #if 0
 # 169
 { } 
 #endif
-# 170 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 170 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute__((unused)) static inline double __shfl_sync(unsigned mask, double var, int srcLane, int width = 32) {int volatile ___ = 1;(void)mask;(void)var;(void)srcLane;(void)width;::exit(___);}
 #if 0
 # 170
 { } 
 #endif
-# 171 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 171 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute__((unused)) static inline double __shfl_up_sync(unsigned mask, double var, unsigned delta, int width = 32) {int volatile ___ = 1;(void)mask;(void)var;(void)delta;(void)width;::exit(___);}
 #if 0
 # 171
 { } 
 #endif
-# 172 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 172 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute__((unused)) static inline double __shfl_down_sync(unsigned mask, double var, unsigned delta, int width = 32) {int volatile ___ = 1;(void)mask;(void)var;(void)delta;(void)width;::exit(___);}
 #if 0
 # 172
 { } 
 #endif
-# 173 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 173 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute__((unused)) static inline double __shfl_xor_sync(unsigned mask, double var, int laneMask, int width = 32) {int volatile ___ = 1;(void)mask;(void)var;(void)laneMask;(void)width;::exit(___);}
 #if 0
 # 173
 { } 
 #endif
-# 177 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 177 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute((deprecated("__shfl() is deprecated in favor of __shfl_sync() and may be removed in a future release (Use -Wno-deprecated-declarations to sup" "press this warning)."))) __attribute__((unused)) static inline long __shfl(long var, int srcLane, int width = 32) {int volatile ___ = 1;(void)var;(void)srcLane;(void)width;::exit(___);}
 #if 0
 # 177
 { } 
 #endif
-# 178 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 178 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute((deprecated("__shfl() is deprecated in favor of __shfl_sync() and may be removed in a future release (Use -Wno-deprecated-declarations to sup" "press this warning)."))) __attribute__((unused)) static inline unsigned long __shfl(unsigned long var, int srcLane, int width = 32) {int volatile ___ = 1;(void)var;(void)srcLane;(void)width;::exit(___);}
 #if 0
 # 178
 { } 
 #endif
-# 179 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 179 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute((deprecated("__shfl_up() is deprecated in favor of __shfl_up_sync() and may be removed in a future release (Use -Wno-deprecated-declarations " "to suppress this warning)."))) __attribute__((unused)) static inline long __shfl_up(long var, unsigned delta, int width = 32) {int volatile ___ = 1;(void)var;(void)delta;(void)width;::exit(___);}
 #if 0
 # 179
 { } 
 #endif
-# 180 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 180 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute((deprecated("__shfl_up() is deprecated in favor of __shfl_up_sync() and may be removed in a future release (Use -Wno-deprecated-declarations " "to suppress this warning)."))) __attribute__((unused)) static inline unsigned long __shfl_up(unsigned long var, unsigned delta, int width = 32) {int volatile ___ = 1;(void)var;(void)delta;(void)width;::exit(___);}
 #if 0
 # 180
 { } 
 #endif
-# 181 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 181 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute((deprecated("__shfl_down() is deprecated in favor of __shfl_down_sync() and may be removed in a future release (Use -Wno-deprecated-declarati" "ons to suppress this warning)."))) __attribute__((unused)) static inline long __shfl_down(long var, unsigned delta, int width = 32) {int volatile ___ = 1;(void)var;(void)delta;(void)width;::exit(___);}
 #if 0
 # 181
 { } 
 #endif
-# 182 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 182 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute((deprecated("__shfl_down() is deprecated in favor of __shfl_down_sync() and may be removed in a future release (Use -Wno-deprecated-declarati" "ons to suppress this warning)."))) __attribute__((unused)) static inline unsigned long __shfl_down(unsigned long var, unsigned delta, int width = 32) {int volatile ___ = 1;(void)var;(void)delta;(void)width;::exit(___);}
 #if 0
 # 182
 { } 
 #endif
-# 183 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 183 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute((deprecated("__shfl_xor() is deprecated in favor of __shfl_xor_sync() and may be removed in a future release (Use -Wno-deprecated-declaration" "s to suppress this warning)."))) __attribute__((unused)) static inline long __shfl_xor(long var, int laneMask, int width = 32) {int volatile ___ = 1;(void)var;(void)laneMask;(void)width;::exit(___);}
 #if 0
 # 183
 { } 
 #endif
-# 184 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 184 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute((deprecated("__shfl_xor() is deprecated in favor of __shfl_xor_sync() and may be removed in a future release (Use -Wno-deprecated-declaration" "s to suppress this warning)."))) __attribute__((unused)) static inline unsigned long __shfl_xor(unsigned long var, int laneMask, int width = 32) {int volatile ___ = 1;(void)var;(void)laneMask;(void)width;::exit(___);}
 #if 0
 # 184
 { } 
 #endif
-# 187 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 187 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute__((unused)) static inline long __shfl_sync(unsigned mask, long var, int srcLane, int width = 32) {int volatile ___ = 1;(void)mask;(void)var;(void)srcLane;(void)width;::exit(___);}
 #if 0
 # 187
 { } 
 #endif
-# 188 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 188 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute__((unused)) static inline unsigned long __shfl_sync(unsigned mask, unsigned long var, int srcLane, int width = 32) {int volatile ___ = 1;(void)mask;(void)var;(void)srcLane;(void)width;::exit(___);}
 #if 0
 # 188
 { } 
 #endif
-# 189 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 189 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute__((unused)) static inline long __shfl_up_sync(unsigned mask, long var, unsigned delta, int width = 32) {int volatile ___ = 1;(void)mask;(void)var;(void)delta;(void)width;::exit(___);}
 #if 0
 # 189
 { } 
 #endif
-# 190 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 190 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute__((unused)) static inline unsigned long __shfl_up_sync(unsigned mask, unsigned long var, unsigned delta, int width = 32) {int volatile ___ = 1;(void)mask;(void)var;(void)delta;(void)width;::exit(___);}
 #if 0
 # 190
 { } 
 #endif
-# 191 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 191 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute__((unused)) static inline long __shfl_down_sync(unsigned mask, long var, unsigned delta, int width = 32) {int volatile ___ = 1;(void)mask;(void)var;(void)delta;(void)width;::exit(___);}
 #if 0
 # 191
 { } 
 #endif
-# 192 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 192 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute__((unused)) static inline unsigned long __shfl_down_sync(unsigned mask, unsigned long var, unsigned delta, int width = 32) {int volatile ___ = 1;(void)mask;(void)var;(void)delta;(void)width;::exit(___);}
 #if 0
 # 192
 { } 
 #endif
-# 193 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 193 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute__((unused)) static inline long __shfl_xor_sync(unsigned mask, long var, int laneMask, int width = 32) {int volatile ___ = 1;(void)mask;(void)var;(void)laneMask;(void)width;::exit(___);}
 #if 0
 # 193
 { } 
 #endif
-# 194 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_30_intrinsics.h"
+# 194 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_30_intrinsics.h"
 __attribute__((unused)) static inline unsigned long __shfl_xor_sync(unsigned mask, unsigned long var, int laneMask, int width = 32) {int volatile ___ = 1;(void)mask;(void)var;(void)laneMask;(void)width;::exit(___);}
 #if 0
 # 194
 { } 
 #endif
-# 87 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 87 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline long __ldg(const long *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 87
 { } 
 #endif
-# 88 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 88 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline unsigned long __ldg(const unsigned long *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 88
 { } 
 #endif
-# 90 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 90 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline char __ldg(const char *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 90
 { } 
 #endif
-# 91 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 91 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline signed char __ldg(const signed char *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 91
 { } 
 #endif
-# 92 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 92 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline short __ldg(const short *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 92
 { } 
 #endif
-# 93 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 93 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline int __ldg(const int *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 93
 { } 
 #endif
-# 94 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 94 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline long long __ldg(const long long *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 94
 { } 
 #endif
-# 95 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 95 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline char2 __ldg(const char2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 95
 { } 
 #endif
-# 96 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 96 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline char4 __ldg(const char4 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 96
 { } 
 #endif
-# 97 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 97 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline short2 __ldg(const short2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 97
 { } 
 #endif
-# 98 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 98 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline short4 __ldg(const short4 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 98
 { } 
 #endif
-# 99 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 99 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline int2 __ldg(const int2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 99
 { } 
 #endif
-# 100 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 100 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline int4 __ldg(const int4 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 100
 { } 
 #endif
-# 101 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 101 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline longlong2 __ldg(const longlong2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 101
 { } 
 #endif
-# 103 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 103 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline unsigned char __ldg(const unsigned char *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 103
 { } 
 #endif
-# 104 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 104 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline unsigned short __ldg(const unsigned short *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 104
 { } 
 #endif
-# 105 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 105 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline unsigned __ldg(const unsigned *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 105
 { } 
 #endif
-# 106 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 106 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline unsigned long long __ldg(const unsigned long long *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 106
 { } 
 #endif
-# 107 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 107 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline uchar2 __ldg(const uchar2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 107
 { } 
 #endif
-# 108 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 108 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline uchar4 __ldg(const uchar4 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 108
 { } 
 #endif
-# 109 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 109 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline ushort2 __ldg(const ushort2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 109
 { } 
 #endif
-# 110 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 110 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline ushort4 __ldg(const ushort4 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 110
 { } 
 #endif
-# 111 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 111 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline uint2 __ldg(const uint2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 111
 { } 
 #endif
-# 112 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 112 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline uint4 __ldg(const uint4 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 112
 { } 
 #endif
-# 113 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 113 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline ulonglong2 __ldg(const ulonglong2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 113
 { } 
 #endif
-# 115 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 115 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline float __ldg(const float *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 115
 { } 
 #endif
-# 116 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 116 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline double __ldg(const double *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 116
 { } 
 #endif
-# 117 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 117 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline float2 __ldg(const float2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 117
 { } 
 #endif
-# 118 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 118 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline float4 __ldg(const float4 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 118
 { } 
 #endif
-# 119 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 119 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline double2 __ldg(const double2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 119
 { } 
 #endif
-# 123 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 123 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline long __ldcg(const long *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 123
 { } 
 #endif
-# 124 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 124 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline unsigned long __ldcg(const unsigned long *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 124
 { } 
 #endif
-# 126 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 126 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline char __ldcg(const char *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 126
 { } 
 #endif
-# 127 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 127 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline signed char __ldcg(const signed char *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 127
 { } 
 #endif
-# 128 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 128 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline short __ldcg(const short *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 128
 { } 
 #endif
-# 129 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 129 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline int __ldcg(const int *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 129
 { } 
 #endif
-# 130 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 130 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline long long __ldcg(const long long *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 130
 { } 
 #endif
-# 131 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 131 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline char2 __ldcg(const char2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 131
 { } 
 #endif
-# 132 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 132 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline char4 __ldcg(const char4 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 132
 { } 
 #endif
-# 133 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 133 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline short2 __ldcg(const short2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 133
 { } 
 #endif
-# 134 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 134 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline short4 __ldcg(const short4 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 134
 { } 
 #endif
-# 135 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 135 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline int2 __ldcg(const int2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 135
 { } 
 #endif
-# 136 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 136 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline int4 __ldcg(const int4 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 136
 { } 
 #endif
-# 137 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 137 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline longlong2 __ldcg(const longlong2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 137
 { } 
 #endif
-# 139 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 139 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline unsigned char __ldcg(const unsigned char *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 139
 { } 
 #endif
-# 140 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 140 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline unsigned short __ldcg(const unsigned short *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 140
 { } 
 #endif
-# 141 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 141 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline unsigned __ldcg(const unsigned *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 141
 { } 
 #endif
-# 142 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 142 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline unsigned long long __ldcg(const unsigned long long *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 142
 { } 
 #endif
-# 143 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 143 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline uchar2 __ldcg(const uchar2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 143
 { } 
 #endif
-# 144 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 144 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline uchar4 __ldcg(const uchar4 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 144
 { } 
 #endif
-# 145 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 145 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline ushort2 __ldcg(const ushort2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 145
 { } 
 #endif
-# 146 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 146 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline ushort4 __ldcg(const ushort4 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 146
 { } 
 #endif
-# 147 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 147 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline uint2 __ldcg(const uint2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 147
 { } 
 #endif
-# 148 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 148 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline uint4 __ldcg(const uint4 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 148
 { } 
 #endif
-# 149 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 149 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline ulonglong2 __ldcg(const ulonglong2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 149
 { } 
 #endif
-# 151 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 151 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline float __ldcg(const float *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 151
 { } 
 #endif
-# 152 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 152 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline double __ldcg(const double *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 152
 { } 
 #endif
-# 153 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 153 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline float2 __ldcg(const float2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 153
 { } 
 #endif
-# 154 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 154 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline float4 __ldcg(const float4 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 154
 { } 
 #endif
-# 155 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 155 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline double2 __ldcg(const double2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 155
 { } 
 #endif
-# 159 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 159 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline long __ldca(const long *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 159
 { } 
 #endif
-# 160 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 160 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline unsigned long __ldca(const unsigned long *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 160
 { } 
 #endif
-# 162 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 162 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline char __ldca(const char *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 162
 { } 
 #endif
-# 163 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 163 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline signed char __ldca(const signed char *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 163
 { } 
 #endif
-# 164 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 164 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline short __ldca(const short *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 164
 { } 
 #endif
-# 165 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 165 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline int __ldca(const int *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 165
 { } 
 #endif
-# 166 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 166 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline long long __ldca(const long long *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 166
 { } 
 #endif
-# 167 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 167 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline char2 __ldca(const char2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 167
 { } 
 #endif
-# 168 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 168 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline char4 __ldca(const char4 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 168
 { } 
 #endif
-# 169 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 169 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline short2 __ldca(const short2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 169
 { } 
 #endif
-# 170 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 170 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline short4 __ldca(const short4 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 170
 { } 
 #endif
-# 171 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 171 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline int2 __ldca(const int2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 171
 { } 
 #endif
-# 172 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 172 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline int4 __ldca(const int4 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 172
 { } 
 #endif
-# 173 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 173 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline longlong2 __ldca(const longlong2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 173
 { } 
 #endif
-# 175 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 175 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline unsigned char __ldca(const unsigned char *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 175
 { } 
 #endif
-# 176 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 176 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline unsigned short __ldca(const unsigned short *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 176
 { } 
 #endif
-# 177 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 177 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline unsigned __ldca(const unsigned *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 177
 { } 
 #endif
-# 178 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 178 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline unsigned long long __ldca(const unsigned long long *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 178
 { } 
 #endif
-# 179 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 179 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline uchar2 __ldca(const uchar2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 179
 { } 
 #endif
-# 180 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 180 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline uchar4 __ldca(const uchar4 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 180
 { } 
 #endif
-# 181 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 181 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline ushort2 __ldca(const ushort2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 181
 { } 
 #endif
-# 182 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 182 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline ushort4 __ldca(const ushort4 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 182
 { } 
 #endif
-# 183 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 183 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline uint2 __ldca(const uint2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 183
 { } 
 #endif
-# 184 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 184 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline uint4 __ldca(const uint4 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 184
 { } 
 #endif
-# 185 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 185 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline ulonglong2 __ldca(const ulonglong2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 185
 { } 
 #endif
-# 187 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 187 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline float __ldca(const float *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 187
 { } 
 #endif
-# 188 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 188 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline double __ldca(const double *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 188
 { } 
 #endif
-# 189 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 189 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline float2 __ldca(const float2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 189
 { } 
 #endif
-# 190 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 190 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline float4 __ldca(const float4 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 190
 { } 
 #endif
-# 191 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 191 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline double2 __ldca(const double2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 191
 { } 
 #endif
-# 195 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 195 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline long __ldcs(const long *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 195
 { } 
 #endif
-# 196 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 196 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline unsigned long __ldcs(const unsigned long *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 196
 { } 
 #endif
-# 198 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 198 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline char __ldcs(const char *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 198
 { } 
 #endif
-# 199 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 199 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline signed char __ldcs(const signed char *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 199
 { } 
 #endif
-# 200 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 200 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline short __ldcs(const short *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 200
 { } 
 #endif
-# 201 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 201 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline int __ldcs(const int *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 201
 { } 
 #endif
-# 202 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 202 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline long long __ldcs(const long long *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 202
 { } 
 #endif
-# 203 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 203 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline char2 __ldcs(const char2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 203
 { } 
 #endif
-# 204 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 204 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline char4 __ldcs(const char4 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 204
 { } 
 #endif
-# 205 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 205 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline short2 __ldcs(const short2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 205
 { } 
 #endif
-# 206 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 206 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline short4 __ldcs(const short4 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 206
 { } 
 #endif
-# 207 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 207 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline int2 __ldcs(const int2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 207
 { } 
 #endif
-# 208 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 208 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline int4 __ldcs(const int4 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 208
 { } 
 #endif
-# 209 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 209 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline longlong2 __ldcs(const longlong2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 209
 { } 
 #endif
-# 211 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 211 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline unsigned char __ldcs(const unsigned char *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 211
 { } 
 #endif
-# 212 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 212 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline unsigned short __ldcs(const unsigned short *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 212
 { } 
 #endif
-# 213 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 213 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline unsigned __ldcs(const unsigned *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 213
 { } 
 #endif
-# 214 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 214 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline unsigned long long __ldcs(const unsigned long long *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 214
 { } 
 #endif
-# 215 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 215 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline uchar2 __ldcs(const uchar2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 215
 { } 
 #endif
-# 216 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 216 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline uchar4 __ldcs(const uchar4 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 216
 { } 
 #endif
-# 217 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 217 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline ushort2 __ldcs(const ushort2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 217
 { } 
 #endif
-# 218 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 218 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline ushort4 __ldcs(const ushort4 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 218
 { } 
 #endif
-# 219 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 219 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline uint2 __ldcs(const uint2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 219
 { } 
 #endif
-# 220 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 220 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline uint4 __ldcs(const uint4 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 220
 { } 
 #endif
-# 221 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 221 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline ulonglong2 __ldcs(const ulonglong2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 221
 { } 
 #endif
-# 223 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 223 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline float __ldcs(const float *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 223
 { } 
 #endif
-# 224 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 224 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline double __ldcs(const double *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 224
 { } 
 #endif
-# 225 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 225 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline float2 __ldcs(const float2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 225
 { } 
 #endif
-# 226 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 226 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline float4 __ldcs(const float4 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 226
 { } 
 #endif
-# 227 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 227 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline double2 __ldcs(const double2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 227
 { } 
 #endif
-# 231 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 231 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline long __ldlu(const long *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 231
 { } 
 #endif
-# 232 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 232 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline unsigned long __ldlu(const unsigned long *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 232
 { } 
 #endif
-# 234 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 234 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline char __ldlu(const char *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 234
 { } 
 #endif
-# 235 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 235 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline signed char __ldlu(const signed char *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 235
 { } 
 #endif
-# 236 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 236 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline short __ldlu(const short *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 236
 { } 
 #endif
-# 237 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 237 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline int __ldlu(const int *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 237
 { } 
 #endif
-# 238 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 238 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline long long __ldlu(const long long *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 238
 { } 
 #endif
-# 239 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 239 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline char2 __ldlu(const char2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 239
 { } 
 #endif
-# 240 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 240 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline char4 __ldlu(const char4 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 240
 { } 
 #endif
-# 241 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 241 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline short2 __ldlu(const short2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 241
 { } 
 #endif
-# 242 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 242 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline short4 __ldlu(const short4 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 242
 { } 
 #endif
-# 243 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 243 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline int2 __ldlu(const int2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 243
 { } 
 #endif
-# 244 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 244 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline int4 __ldlu(const int4 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 244
 { } 
 #endif
-# 245 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 245 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline longlong2 __ldlu(const longlong2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 245
 { } 
 #endif
-# 247 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 247 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline unsigned char __ldlu(const unsigned char *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 247
 { } 
 #endif
-# 248 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 248 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline unsigned short __ldlu(const unsigned short *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 248
 { } 
 #endif
-# 249 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 249 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline unsigned __ldlu(const unsigned *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 249
 { } 
 #endif
-# 250 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 250 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline unsigned long long __ldlu(const unsigned long long *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 250
 { } 
 #endif
-# 251 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 251 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline uchar2 __ldlu(const uchar2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 251
 { } 
 #endif
-# 252 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 252 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline uchar4 __ldlu(const uchar4 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 252
 { } 
 #endif
-# 253 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 253 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline ushort2 __ldlu(const ushort2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 253
 { } 
 #endif
-# 254 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 254 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline ushort4 __ldlu(const ushort4 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 254
 { } 
 #endif
-# 255 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 255 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline uint2 __ldlu(const uint2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 255
 { } 
 #endif
-# 256 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 256 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline uint4 __ldlu(const uint4 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 256
 { } 
 #endif
-# 257 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 257 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline ulonglong2 __ldlu(const ulonglong2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 257
 { } 
 #endif
-# 259 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 259 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline float __ldlu(const float *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 259
 { } 
 #endif
-# 260 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 260 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline double __ldlu(const double *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 260
 { } 
 #endif
-# 261 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 261 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline float2 __ldlu(const float2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 261
 { } 
 #endif
-# 262 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 262 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline float4 __ldlu(const float4 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 262
 { } 
 #endif
-# 263 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 263 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline double2 __ldlu(const double2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 263
 { } 
 #endif
-# 267 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 267 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline long __ldcv(const long *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 267
 { } 
 #endif
-# 268 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 268 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline unsigned long __ldcv(const unsigned long *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 268
 { } 
 #endif
-# 270 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 270 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline char __ldcv(const char *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 270
 { } 
 #endif
-# 271 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 271 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline signed char __ldcv(const signed char *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 271
 { } 
 #endif
-# 272 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 272 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline short __ldcv(const short *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 272
 { } 
 #endif
-# 273 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 273 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline int __ldcv(const int *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 273
 { } 
 #endif
-# 274 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 274 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline long long __ldcv(const long long *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 274
 { } 
 #endif
-# 275 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 275 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline char2 __ldcv(const char2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 275
 { } 
 #endif
-# 276 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 276 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline char4 __ldcv(const char4 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 276
 { } 
 #endif
-# 277 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 277 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline short2 __ldcv(const short2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 277
 { } 
 #endif
-# 278 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 278 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline short4 __ldcv(const short4 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 278
 { } 
 #endif
-# 279 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 279 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline int2 __ldcv(const int2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 279
 { } 
 #endif
-# 280 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 280 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline int4 __ldcv(const int4 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 280
 { } 
 #endif
-# 281 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 281 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline longlong2 __ldcv(const longlong2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 281
 { } 
 #endif
-# 283 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 283 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline unsigned char __ldcv(const unsigned char *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 283
 { } 
 #endif
-# 284 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 284 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline unsigned short __ldcv(const unsigned short *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 284
 { } 
 #endif
-# 285 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 285 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline unsigned __ldcv(const unsigned *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 285
 { } 
 #endif
-# 286 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 286 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline unsigned long long __ldcv(const unsigned long long *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 286
 { } 
 #endif
-# 287 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 287 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline uchar2 __ldcv(const uchar2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 287
 { } 
 #endif
-# 288 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 288 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline uchar4 __ldcv(const uchar4 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 288
 { } 
 #endif
-# 289 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 289 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline ushort2 __ldcv(const ushort2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 289
 { } 
 #endif
-# 290 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 290 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline ushort4 __ldcv(const ushort4 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 290
 { } 
 #endif
-# 291 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 291 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline uint2 __ldcv(const uint2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 291
 { } 
 #endif
-# 292 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 292 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline uint4 __ldcv(const uint4 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 292
 { } 
 #endif
-# 293 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 293 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline ulonglong2 __ldcv(const ulonglong2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 293
 { } 
 #endif
-# 295 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 295 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline float __ldcv(const float *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 295
 { } 
 #endif
-# 296 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 296 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline double __ldcv(const double *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 296
 { } 
 #endif
-# 297 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 297 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline float2 __ldcv(const float2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 297
 { } 
 #endif
-# 298 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 298 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline float4 __ldcv(const float4 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 298
 { } 
 #endif
-# 299 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 299 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline double2 __ldcv(const double2 *ptr) {int volatile ___ = 1;(void)ptr;::exit(___);}
 #if 0
 # 299
 { } 
 #endif
-# 303 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 303 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwb(long *ptr, long value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 303
 { } 
 #endif
-# 304 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 304 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwb(unsigned long *ptr, unsigned long value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 304
 { } 
 #endif
-# 306 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 306 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwb(char *ptr, char value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 306
 { } 
 #endif
-# 307 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 307 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwb(signed char *ptr, signed char value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 307
 { } 
 #endif
-# 308 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 308 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwb(short *ptr, short value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 308
 { } 
 #endif
-# 309 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 309 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwb(int *ptr, int value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 309
 { } 
 #endif
-# 310 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 310 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwb(long long *ptr, long long value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 310
 { } 
 #endif
-# 311 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 311 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwb(char2 *ptr, char2 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 311
 { } 
 #endif
-# 312 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 312 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwb(char4 *ptr, char4 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 312
 { } 
 #endif
-# 313 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 313 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwb(short2 *ptr, short2 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 313
 { } 
 #endif
-# 314 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 314 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwb(short4 *ptr, short4 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 314
 { } 
 #endif
-# 315 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 315 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwb(int2 *ptr, int2 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 315
 { } 
 #endif
-# 316 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 316 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwb(int4 *ptr, int4 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 316
 { } 
 #endif
-# 317 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 317 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwb(longlong2 *ptr, longlong2 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 317
 { } 
 #endif
-# 319 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 319 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwb(unsigned char *ptr, unsigned char value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 319
 { } 
 #endif
-# 320 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 320 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwb(unsigned short *ptr, unsigned short value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 320
 { } 
 #endif
-# 321 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 321 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwb(unsigned *ptr, unsigned value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 321
 { } 
 #endif
-# 322 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 322 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwb(unsigned long long *ptr, unsigned long long value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 322
 { } 
 #endif
-# 323 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 323 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwb(uchar2 *ptr, uchar2 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 323
 { } 
 #endif
-# 324 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 324 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwb(uchar4 *ptr, uchar4 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 324
 { } 
 #endif
-# 325 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 325 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwb(ushort2 *ptr, ushort2 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 325
 { } 
 #endif
-# 326 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 326 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwb(ushort4 *ptr, ushort4 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 326
 { } 
 #endif
-# 327 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 327 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwb(uint2 *ptr, uint2 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 327
 { } 
 #endif
-# 328 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 328 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwb(uint4 *ptr, uint4 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 328
 { } 
 #endif
-# 329 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 329 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwb(ulonglong2 *ptr, ulonglong2 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 329
 { } 
 #endif
-# 331 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 331 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwb(float *ptr, float value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 331
 { } 
 #endif
-# 332 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 332 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwb(double *ptr, double value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 332
 { } 
 #endif
-# 333 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 333 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwb(float2 *ptr, float2 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 333
 { } 
 #endif
-# 334 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 334 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwb(float4 *ptr, float4 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 334
 { } 
 #endif
-# 335 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 335 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwb(double2 *ptr, double2 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 335
 { } 
 #endif
-# 339 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 339 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcg(long *ptr, long value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 339
 { } 
 #endif
-# 340 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 340 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcg(unsigned long *ptr, unsigned long value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 340
 { } 
 #endif
-# 342 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 342 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcg(char *ptr, char value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 342
 { } 
 #endif
-# 343 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 343 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcg(signed char *ptr, signed char value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 343
 { } 
 #endif
-# 344 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 344 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcg(short *ptr, short value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 344
 { } 
 #endif
-# 345 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 345 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcg(int *ptr, int value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 345
 { } 
 #endif
-# 346 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 346 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcg(long long *ptr, long long value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 346
 { } 
 #endif
-# 347 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 347 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcg(char2 *ptr, char2 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 347
 { } 
 #endif
-# 348 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 348 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcg(char4 *ptr, char4 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 348
 { } 
 #endif
-# 349 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 349 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcg(short2 *ptr, short2 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 349
 { } 
 #endif
-# 350 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 350 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcg(short4 *ptr, short4 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 350
 { } 
 #endif
-# 351 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 351 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcg(int2 *ptr, int2 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 351
 { } 
 #endif
-# 352 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 352 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcg(int4 *ptr, int4 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 352
 { } 
 #endif
-# 353 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 353 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcg(longlong2 *ptr, longlong2 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 353
 { } 
 #endif
-# 355 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 355 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcg(unsigned char *ptr, unsigned char value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 355
 { } 
 #endif
-# 356 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 356 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcg(unsigned short *ptr, unsigned short value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 356
 { } 
 #endif
-# 357 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 357 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcg(unsigned *ptr, unsigned value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 357
 { } 
 #endif
-# 358 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 358 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcg(unsigned long long *ptr, unsigned long long value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 358
 { } 
 #endif
-# 359 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 359 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcg(uchar2 *ptr, uchar2 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 359
 { } 
 #endif
-# 360 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 360 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcg(uchar4 *ptr, uchar4 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 360
 { } 
 #endif
-# 361 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 361 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcg(ushort2 *ptr, ushort2 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 361
 { } 
 #endif
-# 362 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 362 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcg(ushort4 *ptr, ushort4 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 362
 { } 
 #endif
-# 363 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 363 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcg(uint2 *ptr, uint2 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 363
 { } 
 #endif
-# 364 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 364 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcg(uint4 *ptr, uint4 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 364
 { } 
 #endif
-# 365 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 365 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcg(ulonglong2 *ptr, ulonglong2 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 365
 { } 
 #endif
-# 367 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 367 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcg(float *ptr, float value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 367
 { } 
 #endif
-# 368 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 368 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcg(double *ptr, double value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 368
 { } 
 #endif
-# 369 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 369 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcg(float2 *ptr, float2 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 369
 { } 
 #endif
-# 370 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 370 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcg(float4 *ptr, float4 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 370
 { } 
 #endif
-# 371 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 371 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcg(double2 *ptr, double2 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 371
 { } 
 #endif
-# 375 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 375 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcs(long *ptr, long value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 375
 { } 
 #endif
-# 376 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 376 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcs(unsigned long *ptr, unsigned long value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 376
 { } 
 #endif
-# 378 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 378 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcs(char *ptr, char value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 378
 { } 
 #endif
-# 379 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 379 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcs(signed char *ptr, signed char value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 379
 { } 
 #endif
-# 380 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 380 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcs(short *ptr, short value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 380
 { } 
 #endif
-# 381 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 381 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcs(int *ptr, int value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 381
 { } 
 #endif
-# 382 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 382 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcs(long long *ptr, long long value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 382
 { } 
 #endif
-# 383 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 383 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcs(char2 *ptr, char2 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 383
 { } 
 #endif
-# 384 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 384 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcs(char4 *ptr, char4 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 384
 { } 
 #endif
-# 385 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 385 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcs(short2 *ptr, short2 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 385
 { } 
 #endif
-# 386 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 386 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcs(short4 *ptr, short4 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 386
 { } 
 #endif
-# 387 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 387 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcs(int2 *ptr, int2 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 387
 { } 
 #endif
-# 388 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 388 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcs(int4 *ptr, int4 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 388
 { } 
 #endif
-# 389 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 389 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcs(longlong2 *ptr, longlong2 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 389
 { } 
 #endif
-# 391 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 391 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcs(unsigned char *ptr, unsigned char value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 391
 { } 
 #endif
-# 392 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 392 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcs(unsigned short *ptr, unsigned short value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 392
 { } 
 #endif
-# 393 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 393 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcs(unsigned *ptr, unsigned value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 393
 { } 
 #endif
-# 394 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 394 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcs(unsigned long long *ptr, unsigned long long value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 394
 { } 
 #endif
-# 395 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 395 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcs(uchar2 *ptr, uchar2 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 395
 { } 
 #endif
-# 396 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 396 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcs(uchar4 *ptr, uchar4 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 396
 { } 
 #endif
-# 397 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 397 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcs(ushort2 *ptr, ushort2 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 397
 { } 
 #endif
-# 398 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 398 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcs(ushort4 *ptr, ushort4 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 398
 { } 
 #endif
-# 399 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 399 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcs(uint2 *ptr, uint2 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 399
 { } 
 #endif
-# 400 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 400 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcs(uint4 *ptr, uint4 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 400
 { } 
 #endif
-# 401 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 401 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcs(ulonglong2 *ptr, ulonglong2 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 401
 { } 
 #endif
-# 403 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 403 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcs(float *ptr, float value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 403
 { } 
 #endif
-# 404 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 404 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcs(double *ptr, double value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 404
 { } 
 #endif
-# 405 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 405 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcs(float2 *ptr, float2 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 405
 { } 
 #endif
-# 406 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 406 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcs(float4 *ptr, float4 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 406
 { } 
 #endif
-# 407 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 407 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stcs(double2 *ptr, double2 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 407
 { } 
 #endif
-# 411 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 411 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwt(long *ptr, long value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 411
 { } 
 #endif
-# 412 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 412 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwt(unsigned long *ptr, unsigned long value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 412
 { } 
 #endif
-# 414 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 414 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwt(char *ptr, char value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 414
 { } 
 #endif
-# 415 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 415 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwt(signed char *ptr, signed char value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 415
 { } 
 #endif
-# 416 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 416 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwt(short *ptr, short value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 416
 { } 
 #endif
-# 417 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 417 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwt(int *ptr, int value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 417
 { } 
 #endif
-# 418 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 418 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwt(long long *ptr, long long value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 418
 { } 
 #endif
-# 419 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 419 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwt(char2 *ptr, char2 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 419
 { } 
 #endif
-# 420 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 420 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwt(char4 *ptr, char4 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 420
 { } 
 #endif
-# 421 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 421 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwt(short2 *ptr, short2 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 421
 { } 
 #endif
-# 422 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 422 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwt(short4 *ptr, short4 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 422
 { } 
 #endif
-# 423 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 423 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwt(int2 *ptr, int2 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 423
 { } 
 #endif
-# 424 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 424 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwt(int4 *ptr, int4 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 424
 { } 
 #endif
-# 425 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 425 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwt(longlong2 *ptr, longlong2 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 425
 { } 
 #endif
-# 427 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 427 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwt(unsigned char *ptr, unsigned char value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 427
 { } 
 #endif
-# 428 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 428 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwt(unsigned short *ptr, unsigned short value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 428
 { } 
 #endif
-# 429 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 429 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwt(unsigned *ptr, unsigned value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 429
 { } 
 #endif
-# 430 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 430 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwt(unsigned long long *ptr, unsigned long long value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 430
 { } 
 #endif
-# 431 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 431 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwt(uchar2 *ptr, uchar2 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 431
 { } 
 #endif
-# 432 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 432 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwt(uchar4 *ptr, uchar4 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 432
 { } 
 #endif
-# 433 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 433 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwt(ushort2 *ptr, ushort2 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 433
 { } 
 #endif
-# 434 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 434 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwt(ushort4 *ptr, ushort4 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 434
 { } 
 #endif
-# 435 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 435 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwt(uint2 *ptr, uint2 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 435
 { } 
 #endif
-# 436 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 436 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwt(uint4 *ptr, uint4 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 436
 { } 
 #endif
-# 437 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 437 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwt(ulonglong2 *ptr, ulonglong2 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 437
 { } 
 #endif
-# 439 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 439 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwt(float *ptr, float value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 439
 { } 
 #endif
-# 440 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 440 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwt(double *ptr, double value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 440
 { } 
 #endif
-# 441 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 441 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwt(float2 *ptr, float2 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 441
 { } 
 #endif
-# 442 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 442 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwt(float4 *ptr, float4 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 442
 { } 
 #endif
-# 443 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 443 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline void __stwt(double2 *ptr, double2 value) {int volatile ___ = 1;(void)ptr;(void)value;::exit(___);}
 #if 0
 # 443
 { } 
 #endif
-# 460 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 460 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline unsigned __funnelshift_l(unsigned lo, unsigned hi, unsigned shift) {int volatile ___ = 1;(void)lo;(void)hi;(void)shift;::exit(___);}
 #if 0
 # 460
 { } 
 #endif
-# 472 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 472 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline unsigned __funnelshift_lc(unsigned lo, unsigned hi, unsigned shift) {int volatile ___ = 1;(void)lo;(void)hi;(void)shift;::exit(___);}
 #if 0
 # 472
 { } 
 #endif
-# 485 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 485 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline unsigned __funnelshift_r(unsigned lo, unsigned hi, unsigned shift) {int volatile ___ = 1;(void)lo;(void)hi;(void)shift;::exit(___);}
 #if 0
 # 485
 { } 
 #endif
-# 497 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_32_intrinsics.h"
+# 497 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_32_intrinsics.h"
 __attribute__((unused)) static inline unsigned __funnelshift_rc(unsigned lo, unsigned hi, unsigned shift) {int volatile ___ = 1;(void)lo;(void)hi;(void)shift;::exit(___);}
 #if 0
 # 497
 { } 
 #endif
-# 89 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_61_intrinsics.h"
+# 89 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_61_intrinsics.h"
 __attribute__((unused)) static inline int __dp2a_lo(int srcA, int srcB, int c) {int volatile ___ = 1;(void)srcA;(void)srcB;(void)c;::exit(___);}
 #if 0
 # 89
 { } 
 #endif
-# 90 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_61_intrinsics.h"
+# 90 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_61_intrinsics.h"
 __attribute__((unused)) static inline unsigned __dp2a_lo(unsigned srcA, unsigned srcB, unsigned c) {int volatile ___ = 1;(void)srcA;(void)srcB;(void)c;::exit(___);}
 #if 0
 # 90
 { } 
 #endif
-# 92 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_61_intrinsics.h"
+# 92 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_61_intrinsics.h"
 __attribute__((unused)) static inline int __dp2a_lo(short2 srcA, char4 srcB, int c) {int volatile ___ = 1;(void)srcA;(void)srcB;(void)c;::exit(___);}
 #if 0
 # 92
 { } 
 #endif
-# 93 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_61_intrinsics.h"
+# 93 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_61_intrinsics.h"
 __attribute__((unused)) static inline unsigned __dp2a_lo(ushort2 srcA, uchar4 srcB, unsigned c) {int volatile ___ = 1;(void)srcA;(void)srcB;(void)c;::exit(___);}
 #if 0
 # 93
 { } 
 #endif
-# 95 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_61_intrinsics.h"
+# 95 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_61_intrinsics.h"
 __attribute__((unused)) static inline int __dp2a_hi(int srcA, int srcB, int c) {int volatile ___ = 1;(void)srcA;(void)srcB;(void)c;::exit(___);}
 #if 0
 # 95
 { } 
 #endif
-# 96 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_61_intrinsics.h"
+# 96 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_61_intrinsics.h"
 __attribute__((unused)) static inline unsigned __dp2a_hi(unsigned srcA, unsigned srcB, unsigned c) {int volatile ___ = 1;(void)srcA;(void)srcB;(void)c;::exit(___);}
 #if 0
 # 96
 { } 
 #endif
-# 98 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_61_intrinsics.h"
+# 98 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_61_intrinsics.h"
 __attribute__((unused)) static inline int __dp2a_hi(short2 srcA, char4 srcB, int c) {int volatile ___ = 1;(void)srcA;(void)srcB;(void)c;::exit(___);}
 #if 0
 # 98
 { } 
 #endif
-# 99 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_61_intrinsics.h"
+# 99 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_61_intrinsics.h"
 __attribute__((unused)) static inline unsigned __dp2a_hi(ushort2 srcA, uchar4 srcB, unsigned c) {int volatile ___ = 1;(void)srcA;(void)srcB;(void)c;::exit(___);}
 #if 0
 # 99
 { } 
 #endif
-# 106 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_61_intrinsics.h"
+# 106 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_61_intrinsics.h"
 __attribute__((unused)) static inline int __dp4a(int srcA, int srcB, int c) {int volatile ___ = 1;(void)srcA;(void)srcB;(void)c;::exit(___);}
 #if 0
 # 106
 { } 
 #endif
-# 107 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_61_intrinsics.h"
+# 107 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_61_intrinsics.h"
 __attribute__((unused)) static inline unsigned __dp4a(unsigned srcA, unsigned srcB, unsigned c) {int volatile ___ = 1;(void)srcA;(void)srcB;(void)c;::exit(___);}
 #if 0
 # 107
 { } 
 #endif
-# 109 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_61_intrinsics.h"
+# 109 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_61_intrinsics.h"
 __attribute__((unused)) static inline int __dp4a(char4 srcA, char4 srcB, int c) {int volatile ___ = 1;(void)srcA;(void)srcB;(void)c;::exit(___);}
 #if 0
 # 109
 { } 
 #endif
-# 110 "/usr/local/cuda/bin/../targets/x86_64-linux/include/sm_61_intrinsics.h"
+# 110 "/home/poweruser/junda.feng/anaconda3/bin/../include/sm_61_intrinsics.h"
 __attribute__((unused)) static inline unsigned __dp4a(uchar4 srcA, uchar4 srcB, unsigned c) {int volatile ___ = 1;(void)srcA;(void)srcB;(void)c;::exit(___);}
 #if 0
 # 110
 { } 
 #endif
-# 93 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/sm_70_rt.h"
+# 93 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/sm_70_rt.h"
 __attribute__((unused)) static inline unsigned __match_any_sync(unsigned mask, unsigned value) {int volatile ___ = 1;(void)mask;(void)value;::exit(___);}
 #if 0
 # 93
 { } 
 #endif
-# 94 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/sm_70_rt.h"
+# 94 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/sm_70_rt.h"
 __attribute__((unused)) static inline unsigned __match_any_sync(unsigned mask, int value) {int volatile ___ = 1;(void)mask;(void)value;::exit(___);}
 #if 0
 # 94
 { } 
 #endif
-# 95 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/sm_70_rt.h"
+# 95 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/sm_70_rt.h"
 __attribute__((unused)) static inline unsigned __match_any_sync(unsigned mask, unsigned long value) {int volatile ___ = 1;(void)mask;(void)value;::exit(___);}
 #if 0
 # 95
 { } 
 #endif
-# 96 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/sm_70_rt.h"
+# 96 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/sm_70_rt.h"
 __attribute__((unused)) static inline unsigned __match_any_sync(unsigned mask, long value) {int volatile ___ = 1;(void)mask;(void)value;::exit(___);}
 #if 0
 # 96
 { } 
 #endif
-# 97 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/sm_70_rt.h"
+# 97 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/sm_70_rt.h"
 __attribute__((unused)) static inline unsigned __match_any_sync(unsigned mask, unsigned long long value) {int volatile ___ = 1;(void)mask;(void)value;::exit(___);}
 #if 0
 # 97
 { } 
 #endif
-# 98 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/sm_70_rt.h"
+# 98 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/sm_70_rt.h"
 __attribute__((unused)) static inline unsigned __match_any_sync(unsigned mask, long long value) {int volatile ___ = 1;(void)mask;(void)value;::exit(___);}
 #if 0
 # 98
 { } 
 #endif
-# 99 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/sm_70_rt.h"
+# 99 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/sm_70_rt.h"
 __attribute__((unused)) static inline unsigned __match_any_sync(unsigned mask, float value) {int volatile ___ = 1;(void)mask;(void)value;::exit(___);}
 #if 0
 # 99
 { } 
 #endif
-# 100 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/sm_70_rt.h"
+# 100 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/sm_70_rt.h"
 __attribute__((unused)) static inline unsigned __match_any_sync(unsigned mask, double value) {int volatile ___ = 1;(void)mask;(void)value;::exit(___);}
 #if 0
 # 100
 { } 
 #endif
-# 102 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/sm_70_rt.h"
+# 102 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/sm_70_rt.h"
 __attribute__((unused)) static inline unsigned __match_all_sync(unsigned mask, unsigned value, int *pred) {int volatile ___ = 1;(void)mask;(void)value;(void)pred;::exit(___);}
 #if 0
 # 102
 { } 
 #endif
-# 103 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/sm_70_rt.h"
+# 103 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/sm_70_rt.h"
 __attribute__((unused)) static inline unsigned __match_all_sync(unsigned mask, int value, int *pred) {int volatile ___ = 1;(void)mask;(void)value;(void)pred;::exit(___);}
 #if 0
 # 103
 { } 
 #endif
-# 104 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/sm_70_rt.h"
+# 104 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/sm_70_rt.h"
 __attribute__((unused)) static inline unsigned __match_all_sync(unsigned mask, unsigned long value, int *pred) {int volatile ___ = 1;(void)mask;(void)value;(void)pred;::exit(___);}
 #if 0
 # 104
 { } 
 #endif
-# 105 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/sm_70_rt.h"
+# 105 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/sm_70_rt.h"
 __attribute__((unused)) static inline unsigned __match_all_sync(unsigned mask, long value, int *pred) {int volatile ___ = 1;(void)mask;(void)value;(void)pred;::exit(___);}
 #if 0
 # 105
 { } 
 #endif
-# 106 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/sm_70_rt.h"
+# 106 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/sm_70_rt.h"
 __attribute__((unused)) static inline unsigned __match_all_sync(unsigned mask, unsigned long long value, int *pred) {int volatile ___ = 1;(void)mask;(void)value;(void)pred;::exit(___);}
 #if 0
 # 106
 { } 
 #endif
-# 107 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/sm_70_rt.h"
+# 107 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/sm_70_rt.h"
 __attribute__((unused)) static inline unsigned __match_all_sync(unsigned mask, long long value, int *pred) {int volatile ___ = 1;(void)mask;(void)value;(void)pred;::exit(___);}
 #if 0
 # 107
 { } 
 #endif
-# 108 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/sm_70_rt.h"
+# 108 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/sm_70_rt.h"
 __attribute__((unused)) static inline unsigned __match_all_sync(unsigned mask, float value, int *pred) {int volatile ___ = 1;(void)mask;(void)value;(void)pred;::exit(___);}
 #if 0
 # 108
 { } 
 #endif
-# 109 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/sm_70_rt.h"
+# 109 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/sm_70_rt.h"
 __attribute__((unused)) static inline unsigned __match_all_sync(unsigned mask, double value, int *pred) {int volatile ___ = 1;(void)mask;(void)value;(void)pred;::exit(___);}
 #if 0
 # 109
 { } 
 #endif
-# 111 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/sm_70_rt.h"
+# 111 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/sm_70_rt.h"
 __attribute__((unused)) static inline void __nanosleep(unsigned ns) {int volatile ___ = 1;(void)ns;::exit(___);}
 #if 0
 # 111
 { } 
 #endif
-# 113 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/sm_70_rt.h"
+# 113 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/sm_70_rt.h"
 __attribute__((unused)) static inline unsigned short atomicCAS(unsigned short *address, unsigned short compare, unsigned short val) {int volatile ___ = 1;(void)address;(void)compare;(void)val;::exit(___);}
 #if 0
 # 113
 { } 
 #endif
-# 93 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/sm_80_rt.h"
+# 93 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/sm_80_rt.h"
 __attribute__((unused)) static inline unsigned __reduce_add_sync(unsigned mask, unsigned value) {int volatile ___ = 1;(void)mask;(void)value;::exit(___);}
 #if 0
 # 93
 { } 
 #endif
-# 94 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/sm_80_rt.h"
+# 94 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/sm_80_rt.h"
 __attribute__((unused)) static inline unsigned __reduce_min_sync(unsigned mask, unsigned value) {int volatile ___ = 1;(void)mask;(void)value;::exit(___);}
 #if 0
 # 94
 { } 
 #endif
-# 95 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/sm_80_rt.h"
+# 95 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/sm_80_rt.h"
 __attribute__((unused)) static inline unsigned __reduce_max_sync(unsigned mask, unsigned value) {int volatile ___ = 1;(void)mask;(void)value;::exit(___);}
 #if 0
 # 95
 { } 
 #endif
-# 97 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/sm_80_rt.h"
+# 97 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/sm_80_rt.h"
 __attribute__((unused)) static inline int __reduce_add_sync(unsigned mask, int value) {int volatile ___ = 1;(void)mask;(void)value;::exit(___);}
 #if 0
 # 97
 { } 
 #endif
-# 98 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/sm_80_rt.h"
+# 98 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/sm_80_rt.h"
 __attribute__((unused)) static inline int __reduce_min_sync(unsigned mask, int value) {int volatile ___ = 1;(void)mask;(void)value;::exit(___);}
 #if 0
 # 98
 { } 
 #endif
-# 99 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/sm_80_rt.h"
+# 99 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/sm_80_rt.h"
 __attribute__((unused)) static inline int __reduce_max_sync(unsigned mask, int value) {int volatile ___ = 1;(void)mask;(void)value;::exit(___);}
 #if 0
 # 99
 { } 
 #endif
-# 101 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/sm_80_rt.h"
+# 101 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/sm_80_rt.h"
 __attribute__((unused)) static inline unsigned __reduce_and_sync(unsigned mask, unsigned value) {int volatile ___ = 1;(void)mask;(void)value;::exit(___);}
 #if 0
 # 101
 { } 
 #endif
-# 102 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/sm_80_rt.h"
+# 102 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/sm_80_rt.h"
 __attribute__((unused)) static inline unsigned __reduce_or_sync(unsigned mask, unsigned value) {int volatile ___ = 1;(void)mask;(void)value;::exit(___);}
 #if 0
 # 102
 { } 
 #endif
-# 103 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/sm_80_rt.h"
+# 103 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/sm_80_rt.h"
 __attribute__((unused)) static inline unsigned __reduce_xor_sync(unsigned mask, unsigned value) {int volatile ___ = 1;(void)mask;(void)value;::exit(___);}
 #if 0
 # 103
 { } 
 #endif
-# 106 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/sm_80_rt.h"
+# 106 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/sm_80_rt.h"
 extern "C" {
 # 107
 __attribute__((unused)) inline void *__nv_associate_access_property(const void *ptr, unsigned long long 
@@ -15491,7 +15491,7 @@ return __nv_associate_access_property_impl(ptr, property);
 # 112
 } 
 #endif
-# 114 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/sm_80_rt.h"
+# 114 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/sm_80_rt.h"
 __attribute__((unused)) inline void __nv_memcpy_async_shared_global_4(void *dst, const void *
 # 115
 src, unsigned 
@@ -15509,7 +15509,7 @@ __nv_memcpy_async_shared_global_4_impl(dst, src, src_size);
 # 121
 } 
 #endif
-# 123 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/sm_80_rt.h"
+# 123 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/sm_80_rt.h"
 __attribute__((unused)) inline void __nv_memcpy_async_shared_global_8(void *dst, const void *
 # 124
 src, unsigned 
@@ -15527,7 +15527,7 @@ __nv_memcpy_async_shared_global_8_impl(dst, src, src_size);
 # 130
 } 
 #endif
-# 132 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/sm_80_rt.h"
+# 132 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/sm_80_rt.h"
 __attribute__((unused)) inline void __nv_memcpy_async_shared_global_16(void *dst, const void *
 # 133
 src, unsigned 
@@ -15545,9 +15545,9 @@ __nv_memcpy_async_shared_global_16_impl(dst, src, src_size);
 # 139
 } 
 #endif
-# 141 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/sm_80_rt.h"
+# 141 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/sm_80_rt.h"
 }
-# 122 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_functions.h"
+# 122 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_functions.h"
 template< class T> 
 # 123
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline void surf1Dread(T *res, surface< void, 1>  surf, int x, int s, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -15561,7 +15561,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 128
 } 
 #endif
-# 130 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_functions.h"
+# 130 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_functions.h"
 template< class T> 
 # 131
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline T surf1Dread(surface< void, 1>  surf, int x, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -15575,7 +15575,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 138
 } 
 #endif
-# 140 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_functions.h"
+# 140 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_functions.h"
 template< class T> 
 # 141
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline void surf1Dread(T *res, surface< void, 1>  surf, int x, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -15589,7 +15589,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 146
 } 
 #endif
-# 149 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_functions.h"
+# 149 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_functions.h"
 template< class T> 
 # 150
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline void surf2Dread(T *res, surface< void, 2>  surf, int x, int y, int s, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -15603,7 +15603,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 155
 } 
 #endif
-# 157 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_functions.h"
+# 157 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_functions.h"
 template< class T> 
 # 158
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline T surf2Dread(surface< void, 2>  surf, int x, int y, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -15617,7 +15617,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 165
 } 
 #endif
-# 167 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_functions.h"
+# 167 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_functions.h"
 template< class T> 
 # 168
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline void surf2Dread(T *res, surface< void, 2>  surf, int x, int y, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -15631,7 +15631,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 173
 } 
 #endif
-# 176 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_functions.h"
+# 176 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_functions.h"
 template< class T> 
 # 177
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline void surf3Dread(T *res, surface< void, 3>  surf, int x, int y, int z, int s, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -15645,7 +15645,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 182
 } 
 #endif
-# 184 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_functions.h"
+# 184 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_functions.h"
 template< class T> 
 # 185
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline T surf3Dread(surface< void, 3>  surf, int x, int y, int z, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -15659,7 +15659,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 192
 } 
 #endif
-# 194 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_functions.h"
+# 194 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_functions.h"
 template< class T> 
 # 195
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline void surf3Dread(T *res, surface< void, 3>  surf, int x, int y, int z, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -15673,7 +15673,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 200
 } 
 #endif
-# 204 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_functions.h"
+# 204 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_functions.h"
 template< class T> 
 # 205
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline void surf1DLayeredread(T *res, surface< void, 241>  surf, int x, int layer, int s, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -15687,7 +15687,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 210
 } 
 #endif
-# 212 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_functions.h"
+# 212 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_functions.h"
 template< class T> 
 # 213
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline T surf1DLayeredread(surface< void, 241>  surf, int x, int layer, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -15701,7 +15701,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 220
 } 
 #endif
-# 223 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_functions.h"
+# 223 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_functions.h"
 template< class T> 
 # 224
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline void surf1DLayeredread(T *res, surface< void, 241>  surf, int x, int layer, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -15715,7 +15715,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 229
 } 
 #endif
-# 232 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_functions.h"
+# 232 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_functions.h"
 template< class T> 
 # 233
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline void surf2DLayeredread(T *res, surface< void, 242>  surf, int x, int y, int layer, int s, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -15729,7 +15729,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 238
 } 
 #endif
-# 240 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_functions.h"
+# 240 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_functions.h"
 template< class T> 
 # 241
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline T surf2DLayeredread(surface< void, 242>  surf, int x, int y, int layer, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -15743,7 +15743,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 248
 } 
 #endif
-# 251 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_functions.h"
+# 251 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_functions.h"
 template< class T> 
 # 252
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline void surf2DLayeredread(T *res, surface< void, 242>  surf, int x, int y, int layer, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -15757,7 +15757,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 257
 } 
 #endif
-# 260 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_functions.h"
+# 260 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_functions.h"
 template< class T> 
 # 261
 __attribute((always_inline)) __attribute__((unused)) static inline void surfCubemapread(T *res, surface< void, 12>  surf, int x, int y, int face, int s, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -15771,7 +15771,7 @@ __attribute((always_inline)) __attribute__((unused)) static inline void surfCube
 # 266
 } 
 #endif
-# 268 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_functions.h"
+# 268 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_functions.h"
 template< class T> 
 # 269
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline T surfCubemapread(surface< void, 12>  surf, int x, int y, int face, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -15785,7 +15785,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 277
 } 
 #endif
-# 279 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_functions.h"
+# 279 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_functions.h"
 template< class T> 
 # 280
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline void surfCubemapread(T *res, surface< void, 12>  surf, int x, int y, int face, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -15799,7 +15799,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 285
 } 
 #endif
-# 288 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_functions.h"
+# 288 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_functions.h"
 template< class T> 
 # 289
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline void surfCubemapLayeredread(T *res, surface< void, 252>  surf, int x, int y, int layerFace, int s, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -15813,7 +15813,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 294
 } 
 #endif
-# 296 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_functions.h"
+# 296 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_functions.h"
 template< class T> 
 # 297
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline T surfCubemapLayeredread(surface< void, 252>  surf, int x, int y, int layerFace, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -15827,7 +15827,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 304
 } 
 #endif
-# 306 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_functions.h"
+# 306 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_functions.h"
 template< class T> 
 # 307
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline void surfCubemapLayeredread(T *res, surface< void, 252>  surf, int x, int y, int layerFace, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -15841,7 +15841,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 312
 } 
 #endif
-# 315 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_functions.h"
+# 315 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_functions.h"
 template< class T> 
 # 316
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline void surf1Dwrite(T val, surface< void, 1>  surf, int x, int s, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -15855,7 +15855,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 321
 } 
 #endif
-# 323 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_functions.h"
+# 323 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_functions.h"
 template< class T> 
 # 324
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline void surf1Dwrite(T val, surface< void, 1>  surf, int x, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -15869,7 +15869,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 329
 } 
 #endif
-# 333 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_functions.h"
+# 333 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_functions.h"
 template< class T> 
 # 334
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline void surf2Dwrite(T val, surface< void, 2>  surf, int x, int y, int s, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -15883,7 +15883,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 339
 } 
 #endif
-# 341 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_functions.h"
+# 341 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_functions.h"
 template< class T> 
 # 342
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline void surf2Dwrite(T val, surface< void, 2>  surf, int x, int y, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -15897,7 +15897,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 347
 } 
 #endif
-# 350 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_functions.h"
+# 350 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_functions.h"
 template< class T> 
 # 351
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline void surf3Dwrite(T val, surface< void, 3>  surf, int x, int y, int z, int s, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -15911,7 +15911,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 356
 } 
 #endif
-# 358 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_functions.h"
+# 358 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_functions.h"
 template< class T> 
 # 359
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline void surf3Dwrite(T val, surface< void, 3>  surf, int x, int y, int z, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -15925,7 +15925,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 364
 } 
 #endif
-# 367 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_functions.h"
+# 367 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_functions.h"
 template< class T> 
 # 368
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline void surf1DLayeredwrite(T val, surface< void, 241>  surf, int x, int layer, int s, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -15939,7 +15939,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 373
 } 
 #endif
-# 375 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_functions.h"
+# 375 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_functions.h"
 template< class T> 
 # 376
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline void surf1DLayeredwrite(T val, surface< void, 241>  surf, int x, int layer, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -15953,7 +15953,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 381
 } 
 #endif
-# 384 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_functions.h"
+# 384 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_functions.h"
 template< class T> 
 # 385
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline void surf2DLayeredwrite(T val, surface< void, 242>  surf, int x, int y, int layer, int s, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -15967,7 +15967,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 390
 } 
 #endif
-# 392 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_functions.h"
+# 392 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_functions.h"
 template< class T> 
 # 393
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline void surf2DLayeredwrite(T val, surface< void, 242>  surf, int x, int y, int layer, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -15981,7 +15981,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 398
 } 
 #endif
-# 401 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_functions.h"
+# 401 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_functions.h"
 template< class T> 
 # 402
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline void surfCubemapwrite(T val, surface< void, 12>  surf, int x, int y, int face, int s, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -15995,7 +15995,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 407
 } 
 #endif
-# 409 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_functions.h"
+# 409 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_functions.h"
 template< class T> 
 # 410
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline void surfCubemapwrite(T val, surface< void, 12>  surf, int x, int y, int face, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -16009,7 +16009,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 415
 } 
 #endif
-# 419 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_functions.h"
+# 419 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_functions.h"
 template< class T> 
 # 420
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline void surfCubemapLayeredwrite(T val, surface< void, 252>  surf, int x, int y, int layerFace, int s, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -16023,7 +16023,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 425
 } 
 #endif
-# 427 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_functions.h"
+# 427 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_functions.h"
 template< class T> 
 # 428
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline void surfCubemapLayeredwrite(T val, surface< void, 252>  surf, int x, int y, int layerFace, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -16037,7 +16037,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 433
 } 
 #endif
-# 72 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 72 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 73
 struct __nv_tex_rmet_ret { }; 
@@ -16091,7 +16091,7 @@ template<> struct __nv_tex_rmet_ret< uint2>  { typedef uint2 type; };
 template<> struct __nv_tex_rmet_ret< int4>  { typedef int4 type; }; 
 # 101
 template<> struct __nv_tex_rmet_ret< uint4>  { typedef uint4 type; }; 
-# 113 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 113 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template<> struct __nv_tex_rmet_ret< float>  { typedef float type; }; 
 # 114
 template<> struct __nv_tex_rmet_ret< float1>  { typedef float1 type; }; 
@@ -16101,7 +16101,7 @@ template<> struct __nv_tex_rmet_ret< float2>  { typedef float2 type; };
 template<> struct __nv_tex_rmet_ret< float4>  { typedef float4 type; }; 
 # 119
 template< class T> struct __nv_tex_rmet_cast { typedef T *type; }; 
-# 131 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 131 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 132
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline typename __nv_tex_rmet_ret< T> ::type tex1Dfetch(texture< T, 1, cudaReadModeElementType>  t, int x) 
@@ -16115,7 +16115,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 139
 } 
 #endif
-# 141 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 141 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 142
 struct __nv_tex_rmnf_ret { }; 
@@ -16167,7 +16167,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 171
 } 
 #endif
-# 174 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 174 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 175
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline typename __nv_tex_rmet_ret< T> ::type tex1D(texture< T, 1, cudaReadModeElementType>  t, float x) 
@@ -16181,7 +16181,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 182
 } 
 #endif
-# 184 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 184 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 185
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline typename __nv_tex_rmnf_ret< T> ::type tex1D(texture< T, 1, cudaReadModeNormalizedFloat>  t, float x) 
@@ -16195,7 +16195,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 193
 } 
 #endif
-# 197 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 197 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 198
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline typename __nv_tex_rmet_ret< T> ::type tex2D(texture< T, 2, cudaReadModeElementType>  t, float x, float y) 
@@ -16209,7 +16209,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 206
 } 
 #endif
-# 208 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 208 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 209
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline typename __nv_tex_rmnf_ret< T> ::type tex2D(texture< T, 2, cudaReadModeNormalizedFloat>  t, float x, float y) 
@@ -16223,7 +16223,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 217
 } 
 #endif
-# 221 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 221 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 222
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline typename __nv_tex_rmet_ret< T> ::type tex1DLayered(texture< T, 241, cudaReadModeElementType>  t, float x, int layer) 
@@ -16237,7 +16237,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 229
 } 
 #endif
-# 231 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 231 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 232
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline typename __nv_tex_rmnf_ret< T> ::type tex1DLayered(texture< T, 241, cudaReadModeNormalizedFloat>  t, float x, int layer) 
@@ -16251,7 +16251,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 240
 } 
 #endif
-# 244 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 244 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 245
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline typename __nv_tex_rmet_ret< T> ::type tex2DLayered(texture< T, 242, cudaReadModeElementType>  t, float x, float y, int layer) 
@@ -16265,7 +16265,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 252
 } 
 #endif
-# 254 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 254 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 255
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline typename __nv_tex_rmnf_ret< T> ::type tex2DLayered(texture< T, 242, cudaReadModeNormalizedFloat>  t, float x, float y, int layer) 
@@ -16279,7 +16279,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 263
 } 
 #endif
-# 266 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 266 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 267
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline typename __nv_tex_rmet_ret< T> ::type tex3D(texture< T, 3, cudaReadModeElementType>  t, float x, float y, float z) 
@@ -16293,7 +16293,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 274
 } 
 #endif
-# 276 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 276 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 277
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline typename __nv_tex_rmnf_ret< T> ::type tex3D(texture< T, 3, cudaReadModeNormalizedFloat>  t, float x, float y, float z) 
@@ -16307,7 +16307,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 285
 } 
 #endif
-# 288 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 288 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 289
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline typename __nv_tex_rmet_ret< T> ::type texCubemap(texture< T, 12, cudaReadModeElementType>  t, float x, float y, float z) 
@@ -16321,7 +16321,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 296
 } 
 #endif
-# 298 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 298 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 299
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline typename __nv_tex_rmnf_ret< T> ::type texCubemap(texture< T, 12, cudaReadModeNormalizedFloat>  t, float x, float y, float z) 
@@ -16335,7 +16335,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 307
 } 
 #endif
-# 310 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 310 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 311
 struct __nv_tex2dgather_ret { }; 
@@ -16425,7 +16425,7 @@ __attribute((always_inline)) __attribute__((unused)) static inline typename __nv
 # 361
 } 
 #endif
-# 364 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 364 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> struct __nv_tex2dgather_rmnf_ret { }; 
 # 365
 template<> struct __nv_tex2dgather_rmnf_ret< char>  { typedef float4 type; }; 
@@ -16483,7 +16483,7 @@ __attribute((always_inline)) __attribute__((unused)) static inline typename __nv
 # 396
 } 
 #endif
-# 400 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 400 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 401
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline typename __nv_tex_rmet_ret< T> ::type tex1DLod(texture< T, 1, cudaReadModeElementType>  t, float x, float level) 
@@ -16497,7 +16497,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 408
 } 
 #endif
-# 410 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 410 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 411
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline typename __nv_tex_rmnf_ret< T> ::type tex1DLod(texture< T, 1, cudaReadModeNormalizedFloat>  t, float x, float level) 
@@ -16511,7 +16511,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 419
 } 
 #endif
-# 422 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 422 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 423
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline typename __nv_tex_rmet_ret< T> ::type tex2DLod(texture< T, 2, cudaReadModeElementType>  t, float x, float y, float level) 
@@ -16525,7 +16525,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 430
 } 
 #endif
-# 432 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 432 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 433
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline typename __nv_tex_rmnf_ret< T> ::type tex2DLod(texture< T, 2, cudaReadModeNormalizedFloat>  t, float x, float y, float level) 
@@ -16539,7 +16539,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 441
 } 
 #endif
-# 444 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 444 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 445
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline typename __nv_tex_rmet_ret< T> ::type tex1DLayeredLod(texture< T, 241, cudaReadModeElementType>  t, float x, int layer, float level) 
@@ -16553,7 +16553,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 452
 } 
 #endif
-# 454 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 454 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 455
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline typename __nv_tex_rmnf_ret< T> ::type tex1DLayeredLod(texture< T, 241, cudaReadModeNormalizedFloat>  t, float x, int layer, float level) 
@@ -16567,7 +16567,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 463
 } 
 #endif
-# 466 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 466 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 467
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline typename __nv_tex_rmet_ret< T> ::type tex2DLayeredLod(texture< T, 242, cudaReadModeElementType>  t, float x, float y, int layer, float level) 
@@ -16581,7 +16581,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 474
 } 
 #endif
-# 476 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 476 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 477
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline typename __nv_tex_rmnf_ret< T> ::type tex2DLayeredLod(texture< T, 242, cudaReadModeNormalizedFloat>  t, float x, float y, int layer, float level) 
@@ -16595,7 +16595,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 485
 } 
 #endif
-# 488 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 488 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 489
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline typename __nv_tex_rmet_ret< T> ::type tex3DLod(texture< T, 3, cudaReadModeElementType>  t, float x, float y, float z, float level) 
@@ -16609,7 +16609,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 496
 } 
 #endif
-# 498 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 498 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 499
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline typename __nv_tex_rmnf_ret< T> ::type tex3DLod(texture< T, 3, cudaReadModeNormalizedFloat>  t, float x, float y, float z, float level) 
@@ -16623,7 +16623,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 507
 } 
 #endif
-# 510 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 510 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 511
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline typename __nv_tex_rmet_ret< T> ::type texCubemapLod(texture< T, 12, cudaReadModeElementType>  t, float x, float y, float z, float level) 
@@ -16637,7 +16637,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 518
 } 
 #endif
-# 520 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 520 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 521
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline typename __nv_tex_rmnf_ret< T> ::type texCubemapLod(texture< T, 12, cudaReadModeNormalizedFloat>  t, float x, float y, float z, float level) 
@@ -16651,7 +16651,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 529
 } 
 #endif
-# 533 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 533 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 534
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline typename __nv_tex_rmet_ret< T> ::type texCubemapLayered(texture< T, 252, cudaReadModeElementType>  t, float x, float y, float z, int layer) 
@@ -16665,7 +16665,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 541
 } 
 #endif
-# 543 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 543 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 544
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline typename __nv_tex_rmnf_ret< T> ::type texCubemapLayered(texture< T, 252, cudaReadModeNormalizedFloat>  t, float x, float y, float z, int layer) 
@@ -16679,7 +16679,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 552
 } 
 #endif
-# 556 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 556 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 557
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline typename __nv_tex_rmet_ret< T> ::type texCubemapLayeredLod(texture< T, 252, cudaReadModeElementType>  t, float x, float y, float z, int layer, float level) 
@@ -16693,7 +16693,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 564
 } 
 #endif
-# 566 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 566 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 567
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline typename __nv_tex_rmnf_ret< T> ::type texCubemapLayeredLod(texture< T, 252, cudaReadModeNormalizedFloat>  t, float x, float y, float z, int layer, float level) 
@@ -16707,7 +16707,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 575
 } 
 #endif
-# 579 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 579 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 580
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline typename __nv_tex_rmet_ret< T> ::type texCubemapGrad(texture< T, 12, cudaReadModeElementType>  t, float x, float y, float z, float4 dPdx, float4 dPdy) 
@@ -16721,7 +16721,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 587
 } 
 #endif
-# 589 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 589 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 590
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline typename __nv_tex_rmnf_ret< T> ::type texCubemapGrad(texture< T, 12, cudaReadModeNormalizedFloat>  t, float x, float y, float z, float4 dPdx, float4 dPdy) 
@@ -16735,7 +16735,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 598
 } 
 #endif
-# 602 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 602 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 603
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline typename __nv_tex_rmet_ret< T> ::type texCubemapLayeredGrad(texture< T, 252, cudaReadModeElementType>  t, float x, float y, float z, int layer, float4 dPdx, float4 dPdy) 
@@ -16749,7 +16749,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 610
 } 
 #endif
-# 612 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 612 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 613
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline typename __nv_tex_rmnf_ret< T> ::type texCubemapLayeredGrad(texture< T, 252, cudaReadModeNormalizedFloat>  t, float x, float y, float z, int layer, float4 dPdx, float4 dPdy) 
@@ -16763,7 +16763,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 621
 } 
 #endif
-# 625 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 625 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 626
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline typename __nv_tex_rmet_ret< T> ::type tex1DGrad(texture< T, 1, cudaReadModeElementType>  t, float x, float dPdx, float dPdy) 
@@ -16777,7 +16777,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 633
 } 
 #endif
-# 635 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 635 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 636
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline typename __nv_tex_rmnf_ret< T> ::type tex1DGrad(texture< T, 1, cudaReadModeNormalizedFloat>  t, float x, float dPdx, float dPdy) 
@@ -16791,7 +16791,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 644
 } 
 #endif
-# 648 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 648 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 649
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline typename __nv_tex_rmet_ret< T> ::type tex2DGrad(texture< T, 2, cudaReadModeElementType>  t, float x, float y, float2 dPdx, float2 dPdy) 
@@ -16805,7 +16805,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 656
 } 
 #endif
-# 658 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 658 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 659
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline typename __nv_tex_rmnf_ret< T> ::type tex2DGrad(texture< T, 2, cudaReadModeNormalizedFloat>  t, float x, float y, float2 dPdx, float2 dPdy) 
@@ -16819,7 +16819,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 667
 } 
 #endif
-# 670 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 670 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 671
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline typename __nv_tex_rmet_ret< T> ::type tex1DLayeredGrad(texture< T, 241, cudaReadModeElementType>  t, float x, int layer, float dPdx, float dPdy) 
@@ -16833,7 +16833,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 678
 } 
 #endif
-# 680 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 680 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 681
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline typename __nv_tex_rmnf_ret< T> ::type tex1DLayeredGrad(texture< T, 241, cudaReadModeNormalizedFloat>  t, float x, int layer, float dPdx, float dPdy) 
@@ -16847,7 +16847,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 689
 } 
 #endif
-# 692 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 692 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 693
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline typename __nv_tex_rmet_ret< T> ::type tex2DLayeredGrad(texture< T, 242, cudaReadModeElementType>  t, float x, float y, int layer, float2 dPdx, float2 dPdy) 
@@ -16861,7 +16861,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 700
 } 
 #endif
-# 702 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 702 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 703
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline typename __nv_tex_rmnf_ret< T> ::type tex2DLayeredGrad(texture< T, 242, cudaReadModeNormalizedFloat>  t, float x, float y, int layer, float2 dPdx, float2 dPdy) 
@@ -16875,7 +16875,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 711
 } 
 #endif
-# 714 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 714 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 715
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline typename __nv_tex_rmet_ret< T> ::type tex3DGrad(texture< T, 3, cudaReadModeElementType>  t, float x, float y, float z, float4 dPdx, float4 dPdy) 
@@ -16889,7 +16889,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 722
 } 
 #endif
-# 724 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_fetch_functions.h"
+# 724 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_fetch_functions.h"
 template< class T> 
 # 725
 __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) static inline typename __nv_tex_rmnf_ret< T> ::type tex3DGrad(texture< T, 3, cudaReadModeNormalizedFloat>  t, float x, float y, float z, float4 dPdx, float4 dPdy) 
@@ -16903,7 +16903,7 @@ __attribute((deprecated)) __attribute((always_inline)) __attribute__((unused)) s
 # 733
 } 
 #endif
-# 64 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 64 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> struct __nv_itex_trait { }; 
 # 65
 template<> struct __nv_itex_trait< char>  { typedef void type; }; 
@@ -16955,7 +16955,7 @@ template<> struct __nv_itex_trait< uint1>  { typedef void type; };
 template<> struct __nv_itex_trait< uint2>  { typedef void type; }; 
 # 89
 template<> struct __nv_itex_trait< uint4>  { typedef void type; }; 
-# 100 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 100 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template<> struct __nv_itex_trait< float>  { typedef void type; }; 
 # 101
 template<> struct __nv_itex_trait< float1>  { typedef void type; }; 
@@ -16977,7 +16977,7 @@ tex1Dfetch(T *ptr, cudaTextureObject_t obj, int x)
 # 113
 } 
 #endif
-# 115 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 115 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static T 
 # 116
 tex1Dfetch(cudaTextureObject_t texObject, int x) 
@@ -16991,7 +16991,7 @@ tex1Dfetch(cudaTextureObject_t texObject, int x)
 # 123
 } 
 #endif
-# 125 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 125 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static typename __nv_itex_trait< T> ::type 
 # 126
 tex1D(T *ptr, cudaTextureObject_t obj, float x) 
@@ -17005,7 +17005,7 @@ tex1D(T *ptr, cudaTextureObject_t obj, float x)
 # 131
 } 
 #endif
-# 134 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 134 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static T 
 # 135
 tex1D(cudaTextureObject_t texObject, float x) 
@@ -17019,7 +17019,7 @@ tex1D(cudaTextureObject_t texObject, float x)
 # 142
 } 
 #endif
-# 145 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 145 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static typename __nv_itex_trait< T> ::type 
 # 146
 tex2D(T *ptr, cudaTextureObject_t obj, float x, float y) 
@@ -17033,7 +17033,7 @@ tex2D(T *ptr, cudaTextureObject_t obj, float x, float y)
 # 151
 } 
 #endif
-# 153 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 153 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static T 
 # 154
 tex2D(cudaTextureObject_t texObject, float x, float y) 
@@ -17047,7 +17047,7 @@ tex2D(cudaTextureObject_t texObject, float x, float y)
 # 161
 } 
 #endif
-# 164 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 164 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static typename __nv_itex_trait< T> ::type 
 # 165
 tex2D(T *ptr, cudaTextureObject_t obj, float x, float y, bool *
@@ -17063,7 +17063,7 @@ isResident)
 # 173
 } 
 #endif
-# 175 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 175 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static T 
 # 176
 tex2D(cudaTextureObject_t texObject, float x, float y, bool *isResident) 
@@ -17077,7 +17077,7 @@ tex2D(cudaTextureObject_t texObject, float x, float y, bool *isResident)
 # 183
 } 
 #endif
-# 188 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 188 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static typename __nv_itex_trait< T> ::type 
 # 189
 tex3D(T *ptr, cudaTextureObject_t obj, float x, float y, float z) 
@@ -17091,7 +17091,7 @@ tex3D(T *ptr, cudaTextureObject_t obj, float x, float y, float z)
 # 194
 } 
 #endif
-# 196 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 196 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static T 
 # 197
 tex3D(cudaTextureObject_t texObject, float x, float y, float z) 
@@ -17105,7 +17105,7 @@ tex3D(cudaTextureObject_t texObject, float x, float y, float z)
 # 204
 } 
 #endif
-# 207 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 207 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static typename __nv_itex_trait< T> ::type 
 # 208
 tex3D(T *ptr, cudaTextureObject_t obj, float x, float y, float z, bool *
@@ -17121,7 +17121,7 @@ isResident)
 # 216
 } 
 #endif
-# 218 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 218 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static T 
 # 219
 tex3D(cudaTextureObject_t texObject, float x, float y, float z, bool *isResident) 
@@ -17135,7 +17135,7 @@ tex3D(cudaTextureObject_t texObject, float x, float y, float z, bool *isResident
 # 226
 } 
 #endif
-# 230 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 230 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static typename __nv_itex_trait< T> ::type 
 # 231
 tex1DLayered(T *ptr, cudaTextureObject_t obj, float x, int layer) 
@@ -17149,7 +17149,7 @@ tex1DLayered(T *ptr, cudaTextureObject_t obj, float x, int layer)
 # 236
 } 
 #endif
-# 238 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 238 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static T 
 # 239
 tex1DLayered(cudaTextureObject_t texObject, float x, int layer) 
@@ -17163,7 +17163,7 @@ tex1DLayered(cudaTextureObject_t texObject, float x, int layer)
 # 246
 } 
 #endif
-# 248 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 248 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static typename __nv_itex_trait< T> ::type 
 # 249
 tex2DLayered(T *ptr, cudaTextureObject_t obj, float x, float y, int layer) 
@@ -17177,7 +17177,7 @@ tex2DLayered(T *ptr, cudaTextureObject_t obj, float x, float y, int layer)
 # 254
 } 
 #endif
-# 256 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 256 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static T 
 # 257
 tex2DLayered(cudaTextureObject_t texObject, float x, float y, int layer) 
@@ -17191,7 +17191,7 @@ tex2DLayered(cudaTextureObject_t texObject, float x, float y, int layer)
 # 264
 } 
 #endif
-# 267 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 267 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static typename __nv_itex_trait< T> ::type 
 # 268
 tex2DLayered(T *ptr, cudaTextureObject_t obj, float x, float y, int layer, bool *isResident) 
@@ -17205,7 +17205,7 @@ tex2DLayered(T *ptr, cudaTextureObject_t obj, float x, float y, int layer, bool 
 # 275
 } 
 #endif
-# 277 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 277 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static T 
 # 278
 tex2DLayered(cudaTextureObject_t texObject, float x, float y, int layer, bool *isResident) 
@@ -17219,7 +17219,7 @@ tex2DLayered(cudaTextureObject_t texObject, float x, float y, int layer, bool *i
 # 285
 } 
 #endif
-# 289 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 289 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static typename __nv_itex_trait< T> ::type 
 # 290
 texCubemap(T *ptr, cudaTextureObject_t obj, float x, float y, float z) 
@@ -17233,7 +17233,7 @@ texCubemap(T *ptr, cudaTextureObject_t obj, float x, float y, float z)
 # 295
 } 
 #endif
-# 298 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 298 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static T 
 # 299
 texCubemap(cudaTextureObject_t texObject, float x, float y, float z) 
@@ -17247,7 +17247,7 @@ texCubemap(cudaTextureObject_t texObject, float x, float y, float z)
 # 306
 } 
 #endif
-# 309 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 309 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static typename __nv_itex_trait< T> ::type 
 # 310
 texCubemapLayered(T *ptr, cudaTextureObject_t obj, float x, float y, float z, int layer) 
@@ -17261,7 +17261,7 @@ texCubemapLayered(T *ptr, cudaTextureObject_t obj, float x, float y, float z, in
 # 315
 } 
 #endif
-# 317 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 317 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static T 
 # 318
 texCubemapLayered(cudaTextureObject_t texObject, float x, float y, float z, int layer) 
@@ -17275,7 +17275,7 @@ texCubemapLayered(cudaTextureObject_t texObject, float x, float y, float z, int 
 # 325
 } 
 #endif
-# 327 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 327 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static typename __nv_itex_trait< T> ::type 
 # 328
 tex2Dgather(T *ptr, cudaTextureObject_t obj, float x, float y, int comp = 0) 
@@ -17289,7 +17289,7 @@ tex2Dgather(T *ptr, cudaTextureObject_t obj, float x, float y, int comp = 0)
 # 333
 } 
 #endif
-# 335 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 335 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static T 
 # 336
 tex2Dgather(cudaTextureObject_t to, float x, float y, int comp = 0) 
@@ -17303,7 +17303,7 @@ tex2Dgather(cudaTextureObject_t to, float x, float y, int comp = 0)
 # 343
 } 
 #endif
-# 346 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 346 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static typename __nv_itex_trait< T> ::type 
 # 347
 tex2Dgather(T *ptr, cudaTextureObject_t obj, float x, float y, bool *isResident, int comp = 0) 
@@ -17317,7 +17317,7 @@ tex2Dgather(T *ptr, cudaTextureObject_t obj, float x, float y, bool *isResident,
 # 354
 } 
 #endif
-# 356 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 356 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static T 
 # 357
 tex2Dgather(cudaTextureObject_t to, float x, float y, bool *isResident, int comp = 0) 
@@ -17331,7 +17331,7 @@ tex2Dgather(cudaTextureObject_t to, float x, float y, bool *isResident, int comp
 # 364
 } 
 #endif
-# 368 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 368 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static typename __nv_itex_trait< T> ::type 
 # 369
 tex1DLod(T *ptr, cudaTextureObject_t obj, float x, float level) 
@@ -17345,7 +17345,7 @@ tex1DLod(T *ptr, cudaTextureObject_t obj, float x, float level)
 # 374
 } 
 #endif
-# 376 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 376 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static T 
 # 377
 tex1DLod(cudaTextureObject_t texObject, float x, float level) 
@@ -17359,7 +17359,7 @@ tex1DLod(cudaTextureObject_t texObject, float x, float level)
 # 384
 } 
 #endif
-# 387 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 387 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static typename __nv_itex_trait< T> ::type 
 # 388
 tex2DLod(T *ptr, cudaTextureObject_t obj, float x, float y, float level) 
@@ -17373,7 +17373,7 @@ tex2DLod(T *ptr, cudaTextureObject_t obj, float x, float y, float level)
 # 393
 } 
 #endif
-# 395 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 395 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static T 
 # 396
 tex2DLod(cudaTextureObject_t texObject, float x, float y, float level) 
@@ -17387,7 +17387,7 @@ tex2DLod(cudaTextureObject_t texObject, float x, float y, float level)
 # 403
 } 
 #endif
-# 407 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 407 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static typename __nv_itex_trait< T> ::type 
 # 408
 tex2DLod(T *ptr, cudaTextureObject_t obj, float x, float y, float level, bool *isResident) 
@@ -17401,7 +17401,7 @@ tex2DLod(T *ptr, cudaTextureObject_t obj, float x, float y, float level, bool *i
 # 415
 } 
 #endif
-# 417 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 417 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static T 
 # 418
 tex2DLod(cudaTextureObject_t texObject, float x, float y, float level, bool *isResident) 
@@ -17415,7 +17415,7 @@ tex2DLod(cudaTextureObject_t texObject, float x, float y, float level, bool *isR
 # 425
 } 
 #endif
-# 430 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 430 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static typename __nv_itex_trait< T> ::type 
 # 431
 tex3DLod(T *ptr, cudaTextureObject_t obj, float x, float y, float z, float level) 
@@ -17429,7 +17429,7 @@ tex3DLod(T *ptr, cudaTextureObject_t obj, float x, float y, float z, float level
 # 436
 } 
 #endif
-# 438 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 438 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static T 
 # 439
 tex3DLod(cudaTextureObject_t texObject, float x, float y, float z, float level) 
@@ -17443,7 +17443,7 @@ tex3DLod(cudaTextureObject_t texObject, float x, float y, float z, float level)
 # 446
 } 
 #endif
-# 449 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 449 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static typename __nv_itex_trait< T> ::type 
 # 450
 tex3DLod(T *ptr, cudaTextureObject_t obj, float x, float y, float z, float level, bool *isResident) 
@@ -17457,7 +17457,7 @@ tex3DLod(T *ptr, cudaTextureObject_t obj, float x, float y, float z, float level
 # 457
 } 
 #endif
-# 459 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 459 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static T 
 # 460
 tex3DLod(cudaTextureObject_t texObject, float x, float y, float z, float level, bool *isResident) 
@@ -17471,7 +17471,7 @@ tex3DLod(cudaTextureObject_t texObject, float x, float y, float z, float level, 
 # 467
 } 
 #endif
-# 472 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 472 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static typename __nv_itex_trait< T> ::type 
 # 473
 tex1DLayeredLod(T *ptr, cudaTextureObject_t obj, float x, int layer, float level) 
@@ -17485,7 +17485,7 @@ tex1DLayeredLod(T *ptr, cudaTextureObject_t obj, float x, int layer, float level
 # 478
 } 
 #endif
-# 480 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 480 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static T 
 # 481
 tex1DLayeredLod(cudaTextureObject_t texObject, float x, int layer, float level) 
@@ -17499,7 +17499,7 @@ tex1DLayeredLod(cudaTextureObject_t texObject, float x, int layer, float level)
 # 488
 } 
 #endif
-# 491 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 491 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static typename __nv_itex_trait< T> ::type 
 # 492
 tex2DLayeredLod(T *ptr, cudaTextureObject_t obj, float x, float y, int layer, float level) 
@@ -17513,7 +17513,7 @@ tex2DLayeredLod(T *ptr, cudaTextureObject_t obj, float x, float y, int layer, fl
 # 497
 } 
 #endif
-# 499 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 499 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static T 
 # 500
 tex2DLayeredLod(cudaTextureObject_t texObject, float x, float y, int layer, float level) 
@@ -17527,7 +17527,7 @@ tex2DLayeredLod(cudaTextureObject_t texObject, float x, float y, int layer, floa
 # 507
 } 
 #endif
-# 510 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 510 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static typename __nv_itex_trait< T> ::type 
 # 511
 tex2DLayeredLod(T *ptr, cudaTextureObject_t obj, float x, float y, int layer, float level, bool *isResident) 
@@ -17541,7 +17541,7 @@ tex2DLayeredLod(T *ptr, cudaTextureObject_t obj, float x, float y, int layer, fl
 # 518
 } 
 #endif
-# 520 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 520 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static T 
 # 521
 tex2DLayeredLod(cudaTextureObject_t texObject, float x, float y, int layer, float level, bool *isResident) 
@@ -17555,7 +17555,7 @@ tex2DLayeredLod(cudaTextureObject_t texObject, float x, float y, int layer, floa
 # 528
 } 
 #endif
-# 531 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 531 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static typename __nv_itex_trait< T> ::type 
 # 532
 texCubemapLod(T *ptr, cudaTextureObject_t obj, float x, float y, float z, float level) 
@@ -17569,7 +17569,7 @@ texCubemapLod(T *ptr, cudaTextureObject_t obj, float x, float y, float z, float 
 # 537
 } 
 #endif
-# 539 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 539 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static T 
 # 540
 texCubemapLod(cudaTextureObject_t texObject, float x, float y, float z, float level) 
@@ -17583,7 +17583,7 @@ texCubemapLod(cudaTextureObject_t texObject, float x, float y, float z, float le
 # 547
 } 
 #endif
-# 550 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 550 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static typename __nv_itex_trait< T> ::type 
 # 551
 texCubemapGrad(T *ptr, cudaTextureObject_t obj, float x, float y, float z, float4 dPdx, float4 dPdy) 
@@ -17597,7 +17597,7 @@ texCubemapGrad(T *ptr, cudaTextureObject_t obj, float x, float y, float z, float
 # 556
 } 
 #endif
-# 558 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 558 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static T 
 # 559
 texCubemapGrad(cudaTextureObject_t texObject, float x, float y, float z, float4 dPdx, float4 dPdy) 
@@ -17611,7 +17611,7 @@ texCubemapGrad(cudaTextureObject_t texObject, float x, float y, float z, float4 
 # 566
 } 
 #endif
-# 568 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 568 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static typename __nv_itex_trait< T> ::type 
 # 569
 texCubemapLayeredLod(T *ptr, cudaTextureObject_t obj, float x, float y, float z, int layer, float level) 
@@ -17625,7 +17625,7 @@ texCubemapLayeredLod(T *ptr, cudaTextureObject_t obj, float x, float y, float z,
 # 574
 } 
 #endif
-# 576 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 576 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static T 
 # 577
 texCubemapLayeredLod(cudaTextureObject_t texObject, float x, float y, float z, int layer, float level) 
@@ -17639,7 +17639,7 @@ texCubemapLayeredLod(cudaTextureObject_t texObject, float x, float y, float z, i
 # 584
 } 
 #endif
-# 586 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 586 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static typename __nv_itex_trait< T> ::type 
 # 587
 tex1DGrad(T *ptr, cudaTextureObject_t obj, float x, float dPdx, float dPdy) 
@@ -17653,7 +17653,7 @@ tex1DGrad(T *ptr, cudaTextureObject_t obj, float x, float dPdx, float dPdy)
 # 592
 } 
 #endif
-# 594 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 594 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static T 
 # 595
 tex1DGrad(cudaTextureObject_t texObject, float x, float dPdx, float dPdy) 
@@ -17667,7 +17667,7 @@ tex1DGrad(cudaTextureObject_t texObject, float x, float dPdx, float dPdy)
 # 602
 } 
 #endif
-# 605 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 605 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static typename __nv_itex_trait< T> ::type 
 # 606
 tex2DGrad(T *ptr, cudaTextureObject_t obj, float x, float y, float2 dPdx, float2 dPdy) 
@@ -17681,7 +17681,7 @@ tex2DGrad(T *ptr, cudaTextureObject_t obj, float x, float y, float2 dPdx, float2
 # 612
 } 
 #endif
-# 614 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 614 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static T 
 # 615
 tex2DGrad(cudaTextureObject_t texObject, float x, float y, float2 dPdx, float2 dPdy) 
@@ -17695,7 +17695,7 @@ tex2DGrad(cudaTextureObject_t texObject, float x, float y, float2 dPdx, float2 d
 # 622
 } 
 #endif
-# 625 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 625 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static typename __nv_itex_trait< T> ::type 
 # 626
 tex2DGrad(T *ptr, cudaTextureObject_t obj, float x, float y, float2 dPdx, float2 dPdy, bool *isResident) 
@@ -17709,7 +17709,7 @@ tex2DGrad(T *ptr, cudaTextureObject_t obj, float x, float y, float2 dPdx, float2
 # 634
 } 
 #endif
-# 636 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 636 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static T 
 # 637
 tex2DGrad(cudaTextureObject_t texObject, float x, float y, float2 dPdx, float2 dPdy, bool *isResident) 
@@ -17723,7 +17723,7 @@ tex2DGrad(cudaTextureObject_t texObject, float x, float y, float2 dPdx, float2 d
 # 644
 } 
 #endif
-# 648 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 648 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static typename __nv_itex_trait< T> ::type 
 # 649
 tex3DGrad(T *ptr, cudaTextureObject_t obj, float x, float y, float z, float4 dPdx, float4 dPdy) 
@@ -17737,7 +17737,7 @@ tex3DGrad(T *ptr, cudaTextureObject_t obj, float x, float y, float z, float4 dPd
 # 654
 } 
 #endif
-# 656 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 656 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static T 
 # 657
 tex3DGrad(cudaTextureObject_t texObject, float x, float y, float z, float4 dPdx, float4 dPdy) 
@@ -17751,7 +17751,7 @@ tex3DGrad(cudaTextureObject_t texObject, float x, float y, float z, float4 dPdx,
 # 664
 } 
 #endif
-# 667 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 667 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static typename __nv_itex_trait< T> ::type 
 # 668
 tex3DGrad(T *ptr, cudaTextureObject_t obj, float x, float y, float z, float4 dPdx, float4 dPdy, bool *isResident) 
@@ -17765,7 +17765,7 @@ tex3DGrad(T *ptr, cudaTextureObject_t obj, float x, float y, float z, float4 dPd
 # 675
 } 
 #endif
-# 677 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 677 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static T 
 # 678
 tex3DGrad(cudaTextureObject_t texObject, float x, float y, float z, float4 dPdx, float4 dPdy, bool *isResident) 
@@ -17779,7 +17779,7 @@ tex3DGrad(cudaTextureObject_t texObject, float x, float y, float z, float4 dPdx,
 # 685
 } 
 #endif
-# 690 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 690 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static typename __nv_itex_trait< T> ::type 
 # 691
 tex1DLayeredGrad(T *ptr, cudaTextureObject_t obj, float x, int layer, float dPdx, float dPdy) 
@@ -17793,7 +17793,7 @@ tex1DLayeredGrad(T *ptr, cudaTextureObject_t obj, float x, int layer, float dPdx
 # 696
 } 
 #endif
-# 698 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 698 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static T 
 # 699
 tex1DLayeredGrad(cudaTextureObject_t texObject, float x, int layer, float dPdx, float dPdy) 
@@ -17807,7 +17807,7 @@ tex1DLayeredGrad(cudaTextureObject_t texObject, float x, int layer, float dPdx, 
 # 706
 } 
 #endif
-# 709 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 709 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static typename __nv_itex_trait< T> ::type 
 # 710
 tex2DLayeredGrad(T *ptr, cudaTextureObject_t obj, float x, float y, int layer, float2 dPdx, float2 dPdy) 
@@ -17821,7 +17821,7 @@ tex2DLayeredGrad(T *ptr, cudaTextureObject_t obj, float x, float y, int layer, f
 # 715
 } 
 #endif
-# 717 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 717 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static T 
 # 718
 tex2DLayeredGrad(cudaTextureObject_t texObject, float x, float y, int layer, float2 dPdx, float2 dPdy) 
@@ -17835,7 +17835,7 @@ tex2DLayeredGrad(cudaTextureObject_t texObject, float x, float y, int layer, flo
 # 725
 } 
 #endif
-# 728 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 728 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static typename __nv_itex_trait< T> ::type 
 # 729
 tex2DLayeredGrad(T *ptr, cudaTextureObject_t obj, float x, float y, int layer, float2 dPdx, float2 dPdy, bool *isResident) 
@@ -17849,7 +17849,7 @@ tex2DLayeredGrad(T *ptr, cudaTextureObject_t obj, float x, float y, int layer, f
 # 736
 } 
 #endif
-# 738 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 738 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static T 
 # 739
 tex2DLayeredGrad(cudaTextureObject_t texObject, float x, float y, int layer, float2 dPdx, float2 dPdy, bool *isResident) 
@@ -17863,7 +17863,7 @@ tex2DLayeredGrad(cudaTextureObject_t texObject, float x, float y, int layer, flo
 # 746
 } 
 #endif
-# 750 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 750 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static typename __nv_itex_trait< T> ::type 
 # 751
 texCubemapLayeredGrad(T *ptr, cudaTextureObject_t obj, float x, float y, float z, int layer, float4 dPdx, float4 dPdy) 
@@ -17877,7 +17877,7 @@ texCubemapLayeredGrad(T *ptr, cudaTextureObject_t obj, float x, float y, float z
 # 756
 } 
 #endif
-# 758 "/usr/local/cuda/bin/../targets/x86_64-linux/include/texture_indirect_functions.h"
+# 758 "/home/poweruser/junda.feng/anaconda3/bin/../include/texture_indirect_functions.h"
 template< class T> __attribute__((unused)) static T 
 # 759
 texCubemapLayeredGrad(cudaTextureObject_t texObject, float x, float y, float z, int layer, float4 dPdx, float4 dPdy) 
@@ -17891,7 +17891,7 @@ texCubemapLayeredGrad(cudaTextureObject_t texObject, float x, float y, float z, 
 # 766
 } 
 #endif
-# 59 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_indirect_functions.h"
+# 59 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_indirect_functions.h"
 template< class T> struct __nv_isurf_trait { }; 
 # 60
 template<> struct __nv_isurf_trait< char>  { typedef void type; }; 
@@ -17977,7 +17977,7 @@ surf1Dread(T *ptr, cudaSurfaceObject_t obj, int x, cudaSurfaceBoundaryMode mode 
 # 105
 } 
 #endif
-# 107 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_indirect_functions.h"
+# 107 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_indirect_functions.h"
 template< class T> __attribute__((unused)) static T 
 # 108
 surf1Dread(cudaSurfaceObject_t surfObject, int x, cudaSurfaceBoundaryMode boundaryMode = cudaBoundaryModeTrap) 
@@ -17991,7 +17991,7 @@ surf1Dread(cudaSurfaceObject_t surfObject, int x, cudaSurfaceBoundaryMode bounda
 # 115
 } 
 #endif
-# 117 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_indirect_functions.h"
+# 117 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_indirect_functions.h"
 template< class T> __attribute__((unused)) static typename __nv_isurf_trait< T> ::type 
 # 118
 surf2Dread(T *ptr, cudaSurfaceObject_t obj, int x, int y, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -18005,7 +18005,7 @@ surf2Dread(T *ptr, cudaSurfaceObject_t obj, int x, int y, cudaSurfaceBoundaryMod
 # 123
 } 
 #endif
-# 125 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_indirect_functions.h"
+# 125 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_indirect_functions.h"
 template< class T> __attribute__((unused)) static T 
 # 126
 surf2Dread(cudaSurfaceObject_t surfObject, int x, int y, cudaSurfaceBoundaryMode boundaryMode = cudaBoundaryModeTrap) 
@@ -18019,7 +18019,7 @@ surf2Dread(cudaSurfaceObject_t surfObject, int x, int y, cudaSurfaceBoundaryMode
 # 133
 } 
 #endif
-# 136 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_indirect_functions.h"
+# 136 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_indirect_functions.h"
 template< class T> __attribute__((unused)) static typename __nv_isurf_trait< T> ::type 
 # 137
 surf3Dread(T *ptr, cudaSurfaceObject_t obj, int x, int y, int z, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -18033,7 +18033,7 @@ surf3Dread(T *ptr, cudaSurfaceObject_t obj, int x, int y, int z, cudaSurfaceBoun
 # 142
 } 
 #endif
-# 144 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_indirect_functions.h"
+# 144 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_indirect_functions.h"
 template< class T> __attribute__((unused)) static T 
 # 145
 surf3Dread(cudaSurfaceObject_t surfObject, int x, int y, int z, cudaSurfaceBoundaryMode boundaryMode = cudaBoundaryModeTrap) 
@@ -18047,7 +18047,7 @@ surf3Dread(cudaSurfaceObject_t surfObject, int x, int y, int z, cudaSurfaceBound
 # 152
 } 
 #endif
-# 154 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_indirect_functions.h"
+# 154 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_indirect_functions.h"
 template< class T> __attribute__((unused)) static typename __nv_isurf_trait< T> ::type 
 # 155
 surf1DLayeredread(T *ptr, cudaSurfaceObject_t obj, int x, int layer, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -18061,7 +18061,7 @@ surf1DLayeredread(T *ptr, cudaSurfaceObject_t obj, int x, int layer, cudaSurface
 # 160
 } 
 #endif
-# 162 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_indirect_functions.h"
+# 162 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_indirect_functions.h"
 template< class T> __attribute__((unused)) static T 
 # 163
 surf1DLayeredread(cudaSurfaceObject_t surfObject, int x, int layer, cudaSurfaceBoundaryMode boundaryMode = cudaBoundaryModeTrap) 
@@ -18075,7 +18075,7 @@ surf1DLayeredread(cudaSurfaceObject_t surfObject, int x, int layer, cudaSurfaceB
 # 170
 } 
 #endif
-# 172 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_indirect_functions.h"
+# 172 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_indirect_functions.h"
 template< class T> __attribute__((unused)) static typename __nv_isurf_trait< T> ::type 
 # 173
 surf2DLayeredread(T *ptr, cudaSurfaceObject_t obj, int x, int y, int layer, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -18089,7 +18089,7 @@ surf2DLayeredread(T *ptr, cudaSurfaceObject_t obj, int x, int y, int layer, cuda
 # 178
 } 
 #endif
-# 180 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_indirect_functions.h"
+# 180 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_indirect_functions.h"
 template< class T> __attribute__((unused)) static T 
 # 181
 surf2DLayeredread(cudaSurfaceObject_t surfObject, int x, int y, int layer, cudaSurfaceBoundaryMode boundaryMode = cudaBoundaryModeTrap) 
@@ -18103,7 +18103,7 @@ surf2DLayeredread(cudaSurfaceObject_t surfObject, int x, int y, int layer, cudaS
 # 188
 } 
 #endif
-# 190 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_indirect_functions.h"
+# 190 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_indirect_functions.h"
 template< class T> __attribute__((unused)) static typename __nv_isurf_trait< T> ::type 
 # 191
 surfCubemapread(T *ptr, cudaSurfaceObject_t obj, int x, int y, int face, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -18117,7 +18117,7 @@ surfCubemapread(T *ptr, cudaSurfaceObject_t obj, int x, int y, int face, cudaSur
 # 196
 } 
 #endif
-# 198 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_indirect_functions.h"
+# 198 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_indirect_functions.h"
 template< class T> __attribute__((unused)) static T 
 # 199
 surfCubemapread(cudaSurfaceObject_t surfObject, int x, int y, int face, cudaSurfaceBoundaryMode boundaryMode = cudaBoundaryModeTrap) 
@@ -18131,7 +18131,7 @@ surfCubemapread(cudaSurfaceObject_t surfObject, int x, int y, int face, cudaSurf
 # 206
 } 
 #endif
-# 208 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_indirect_functions.h"
+# 208 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_indirect_functions.h"
 template< class T> __attribute__((unused)) static typename __nv_isurf_trait< T> ::type 
 # 209
 surfCubemapLayeredread(T *ptr, cudaSurfaceObject_t obj, int x, int y, int layerface, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -18145,7 +18145,7 @@ surfCubemapLayeredread(T *ptr, cudaSurfaceObject_t obj, int x, int y, int layerf
 # 214
 } 
 #endif
-# 216 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_indirect_functions.h"
+# 216 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_indirect_functions.h"
 template< class T> __attribute__((unused)) static T 
 # 217
 surfCubemapLayeredread(cudaSurfaceObject_t surfObject, int x, int y, int layerface, cudaSurfaceBoundaryMode boundaryMode = cudaBoundaryModeTrap) 
@@ -18159,7 +18159,7 @@ surfCubemapLayeredread(cudaSurfaceObject_t surfObject, int x, int y, int layerfa
 # 224
 } 
 #endif
-# 226 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_indirect_functions.h"
+# 226 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_indirect_functions.h"
 template< class T> __attribute__((unused)) static typename __nv_isurf_trait< T> ::type 
 # 227
 surf1Dwrite(T val, cudaSurfaceObject_t obj, int x, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -18173,7 +18173,7 @@ surf1Dwrite(T val, cudaSurfaceObject_t obj, int x, cudaSurfaceBoundaryMode mode 
 # 232
 } 
 #endif
-# 234 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_indirect_functions.h"
+# 234 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_indirect_functions.h"
 template< class T> __attribute__((unused)) static typename __nv_isurf_trait< T> ::type 
 # 235
 surf2Dwrite(T val, cudaSurfaceObject_t obj, int x, int y, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -18187,7 +18187,7 @@ surf2Dwrite(T val, cudaSurfaceObject_t obj, int x, int y, cudaSurfaceBoundaryMod
 # 240
 } 
 #endif
-# 242 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_indirect_functions.h"
+# 242 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_indirect_functions.h"
 template< class T> __attribute__((unused)) static typename __nv_isurf_trait< T> ::type 
 # 243
 surf3Dwrite(T val, cudaSurfaceObject_t obj, int x, int y, int z, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -18201,7 +18201,7 @@ surf3Dwrite(T val, cudaSurfaceObject_t obj, int x, int y, int z, cudaSurfaceBoun
 # 248
 } 
 #endif
-# 250 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_indirect_functions.h"
+# 250 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_indirect_functions.h"
 template< class T> __attribute__((unused)) static typename __nv_isurf_trait< T> ::type 
 # 251
 surf1DLayeredwrite(T val, cudaSurfaceObject_t obj, int x, int layer, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -18215,7 +18215,7 @@ surf1DLayeredwrite(T val, cudaSurfaceObject_t obj, int x, int layer, cudaSurface
 # 256
 } 
 #endif
-# 258 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_indirect_functions.h"
+# 258 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_indirect_functions.h"
 template< class T> __attribute__((unused)) static typename __nv_isurf_trait< T> ::type 
 # 259
 surf2DLayeredwrite(T val, cudaSurfaceObject_t obj, int x, int y, int layer, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -18229,7 +18229,7 @@ surf2DLayeredwrite(T val, cudaSurfaceObject_t obj, int x, int y, int layer, cuda
 # 264
 } 
 #endif
-# 266 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_indirect_functions.h"
+# 266 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_indirect_functions.h"
 template< class T> __attribute__((unused)) static typename __nv_isurf_trait< T> ::type 
 # 267
 surfCubemapwrite(T val, cudaSurfaceObject_t obj, int x, int y, int face, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -18243,7 +18243,7 @@ surfCubemapwrite(T val, cudaSurfaceObject_t obj, int x, int y, int face, cudaSur
 # 272
 } 
 #endif
-# 274 "/usr/local/cuda/bin/../targets/x86_64-linux/include/surface_indirect_functions.h"
+# 274 "/home/poweruser/junda.feng/anaconda3/bin/../include/surface_indirect_functions.h"
 template< class T> __attribute__((unused)) static typename __nv_isurf_trait< T> ::type 
 # 275
 surfCubemapLayeredwrite(T val, cudaSurfaceObject_t obj, int x, int y, int layerface, cudaSurfaceBoundaryMode mode = cudaBoundaryModeTrap) 
@@ -18257,9 +18257,9 @@ surfCubemapLayeredwrite(T val, cudaSurfaceObject_t obj, int x, int y, int layerf
 # 280
 } 
 #endif
-# 3307 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/device_functions.h"
+# 3307 "/home/poweruser/junda.feng/anaconda3/bin/../include/crt/device_functions.h"
 extern "C" unsigned __cudaPushCallConfiguration(dim3 gridDim, dim3 blockDim, size_t sharedMem = 0, CUstream_st * stream = 0); 
-# 68 "/usr/local/cuda/bin/../targets/x86_64-linux/include/device_launch_parameters.h"
+# 68 "/home/poweruser/junda.feng/anaconda3/bin/../include/device_launch_parameters.h"
 extern "C" {
 # 71
 extern const uint3 __device_builtin_variable_threadIdx; 
@@ -18273,7 +18273,7 @@ extern const dim3 __device_builtin_variable_gridDim;
 extern const int __device_builtin_variable_warpSize; 
 # 80
 }
-# 201 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 201 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 template< class T> static inline cudaError_t 
 # 202
 cudaLaunchKernel(const T *
@@ -18295,7 +18295,7 @@ stream = 0)
 return ::cudaLaunchKernel((const void *)func, gridDim, blockDim, args, sharedMem, stream); 
 # 212
 } 
-# 263 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 263 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 template< class T> static inline cudaError_t 
 # 264
 cudaLaunchCooperativeKernel(const T *
@@ -18317,7 +18317,7 @@ stream = 0)
 return ::cudaLaunchCooperativeKernel((const void *)func, gridDim, blockDim, args, sharedMem, stream); 
 # 274
 } 
-# 307 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 307 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 static inline cudaError_t cudaEventCreate(cudaEvent_t *
 # 308
 event, unsigned 
@@ -18329,7 +18329,7 @@ flags)
 return ::cudaEventCreateWithFlags(event, flags); 
 # 313
 } 
-# 372 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 372 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 static inline cudaError_t cudaMallocHost(void **
 # 373
 ptr, size_t 
@@ -18375,7 +18375,7 @@ flags)
 return ::cudaHostGetDevicePointer((void **)((void *)pDevice), pHost, flags); 
 # 399
 } 
-# 501 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 501 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 template< class T> static inline cudaError_t 
 # 502
 cudaMallocManaged(T **
@@ -18391,7 +18391,7 @@ flags = 1)
 return ::cudaMallocManaged((void **)((void *)devPtr), size, flags); 
 # 509
 } 
-# 591 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 591 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 template< class T> static inline cudaError_t 
 # 592
 cudaStreamAttachMemAsync(cudaStream_t 
@@ -18457,7 +18457,7 @@ height)
 return ::cudaMallocPitch((void **)((void *)devPtr), pitch, width, height); 
 # 630
 } 
-# 641 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 641 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 static inline cudaError_t cudaMallocAsync(void **
 # 642
 ptr, size_t 
@@ -18525,7 +18525,7 @@ stream)
 return ::cudaMallocFromPoolAsync((void **)((void *)ptr), size, memPool, stream); 
 # 681
 } 
-# 720 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 720 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 template< class T> static inline cudaError_t 
 # 721
 cudaMemcpyToSymbol(const T &
@@ -18545,7 +18545,7 @@ kind = cudaMemcpyHostToDevice)
 return ::cudaMemcpyToSymbol((const void *)(&symbol), src, count, offset, kind); 
 # 730
 } 
-# 774 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 774 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 template< class T> static inline cudaError_t 
 # 775
 cudaMemcpyToSymbolAsync(const T &
@@ -18567,7 +18567,7 @@ stream = 0)
 return ::cudaMemcpyToSymbolAsync((const void *)(&symbol), src, count, offset, kind, stream); 
 # 785
 } 
-# 822 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 822 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 template< class T> static inline cudaError_t 
 # 823
 cudaMemcpyFromSymbol(void *
@@ -18587,7 +18587,7 @@ kind = cudaMemcpyDeviceToHost)
 return ::cudaMemcpyFromSymbol(dst, (const void *)(&symbol), count, offset, kind); 
 # 832
 } 
-# 876 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 876 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 template< class T> static inline cudaError_t 
 # 877
 cudaMemcpyFromSymbolAsync(void *
@@ -18609,7 +18609,7 @@ stream = 0)
 return ::cudaMemcpyFromSymbolAsync(dst, (const void *)(&symbol), count, offset, kind, stream); 
 # 887
 } 
-# 945 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 945 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 template< class T> static inline cudaError_t 
 # 946
 cudaGraphAddMemcpyNodeToSymbol(cudaGraphNode_t *
@@ -18637,7 +18637,7 @@ kind)
 return ::cudaGraphAddMemcpyNodeToSymbol(pGraphNode, graph, pDependencies, numDependencies, (const void *)(&symbol), src, count, offset, kind); 
 # 958
 } 
-# 1016 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 1016 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 template< class T> static inline cudaError_t 
 # 1017
 cudaGraphAddMemcpyNodeFromSymbol(cudaGraphNode_t *
@@ -18665,7 +18665,7 @@ kind)
 return ::cudaGraphAddMemcpyNodeFromSymbol(pGraphNode, graph, pDependencies, numDependencies, dst, (const void *)(&symbol), count, offset, kind); 
 # 1029
 } 
-# 1067 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 1067 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 template< class T> static inline cudaError_t 
 # 1068
 cudaGraphMemcpyNodeSetParamsToSymbol(cudaGraphNode_t 
@@ -18687,7 +18687,7 @@ kind)
 return ::cudaGraphMemcpyNodeSetParamsToSymbol(node, (const void *)(&symbol), src, count, offset, kind); 
 # 1077
 } 
-# 1115 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 1115 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 template< class T> static inline cudaError_t 
 # 1116
 cudaGraphMemcpyNodeSetParamsFromSymbol(cudaGraphNode_t 
@@ -18709,7 +18709,7 @@ kind)
 return ::cudaGraphMemcpyNodeSetParamsFromSymbol(node, dst, (const void *)(&symbol), count, offset, kind); 
 # 1125
 } 
-# 1173 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 1173 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 template< class T> static inline cudaError_t 
 # 1174
 cudaGraphExecMemcpyNodeSetParamsToSymbol(cudaGraphExec_t 
@@ -18733,7 +18733,7 @@ kind)
 return ::cudaGraphExecMemcpyNodeSetParamsToSymbol(hGraphExec, node, (const void *)(&symbol), src, count, offset, kind); 
 # 1184
 } 
-# 1232 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 1232 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 template< class T> static inline cudaError_t 
 # 1233
 cudaGraphExecMemcpyNodeSetParamsFromSymbol(cudaGraphExec_t 
@@ -18757,7 +18757,7 @@ kind)
 return ::cudaGraphExecMemcpyNodeSetParamsFromSymbol(hGraphExec, node, dst, (const void *)(&symbol), count, offset, kind); 
 # 1243
 } 
-# 1271 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 1271 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 template< class T> static inline cudaError_t 
 # 1272
 cudaUserObjectCreate(cudaUserObject_t *
@@ -18795,7 +18795,7 @@ flags)
 return cudaUserObjectCreate(object_out, objectToWrap, initialRefcount, (unsigned)flags); 
 # 1294
 } 
-# 1321 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 1321 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 template< class T> static inline cudaError_t 
 # 1322
 cudaGetSymbolAddress(void **
@@ -18809,7 +18809,7 @@ symbol)
 return ::cudaGetSymbolAddress(devPtr, (const void *)(&symbol)); 
 # 1328
 } 
-# 1353 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 1353 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 template< class T> static inline cudaError_t 
 # 1354
 cudaGetSymbolSize(size_t *
@@ -18823,7 +18823,7 @@ symbol)
 return ::cudaGetSymbolSize(size, (const void *)(&symbol)); 
 # 1360
 } 
-# 1397 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 1397 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 template< class T, int dim, cudaTextureReadMode readMode> 
 # 1398
 __attribute((deprecated)) static inline cudaError_t cudaBindTexture(size_t *
@@ -18837,13 +18837,13 @@ devPtr, const cudaChannelFormatDesc &
 desc, size_t 
 # 1403
 size = ((2147483647) * 2U) + 1U) 
-# 1405 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 1405 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 { 
 # 1406
 return ::cudaBindTexture(offset, &tex, devPtr, &desc, size); 
 # 1407
 } 
-# 1443 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 1443 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 template< class T, int dim, cudaTextureReadMode readMode> 
 # 1444
 __attribute((deprecated)) static inline cudaError_t cudaBindTexture(size_t *
@@ -18855,13 +18855,13 @@ tex, const void *
 devPtr, size_t 
 # 1448
 size = ((2147483647) * 2U) + 1U) 
-# 1450 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 1450 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 { 
 # 1451
 return cudaBindTexture(offset, tex, devPtr, (tex.channelDesc), size); 
 # 1452
 } 
-# 1500 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 1500 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 template< class T, int dim, cudaTextureReadMode readMode> 
 # 1501
 __attribute((deprecated)) static inline cudaError_t cudaBindTexture2D(size_t *
@@ -18885,7 +18885,7 @@ pitch)
 return ::cudaBindTexture2D(offset, &tex, devPtr, &desc, width, height, pitch); 
 # 1512
 } 
-# 1559 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 1559 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 template< class T, int dim, cudaTextureReadMode readMode> 
 # 1560
 __attribute((deprecated)) static inline cudaError_t cudaBindTexture2D(size_t *
@@ -18907,7 +18907,7 @@ pitch)
 return ::cudaBindTexture2D(offset, &tex, devPtr, &(tex.channelDesc), width, height, pitch); 
 # 1570
 } 
-# 1602 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 1602 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 template< class T, int dim, cudaTextureReadMode readMode> 
 # 1603
 __attribute((deprecated)) static inline cudaError_t cudaBindTextureToArray(const texture< T, dim, readMode>  &
@@ -18923,7 +18923,7 @@ desc)
 return ::cudaBindTextureToArray(&tex, array, &desc); 
 # 1610
 } 
-# 1641 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 1641 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 template< class T, int dim, cudaTextureReadMode readMode> 
 # 1642
 __attribute((deprecated)) static inline cudaError_t cudaBindTextureToArray(const texture< T, dim, readMode>  &
@@ -18941,7 +18941,7 @@ cudaError_t err = ::cudaGetChannelDesc(&desc, array);
 return (err == (cudaSuccess)) ? cudaBindTextureToArray(tex, array, desc) : err; 
 # 1651
 } 
-# 1683 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 1683 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 template< class T, int dim, cudaTextureReadMode readMode> 
 # 1684
 __attribute((deprecated)) static inline cudaError_t cudaBindTextureToMipmappedArray(const texture< T, dim, readMode>  &
@@ -18957,7 +18957,7 @@ desc)
 return ::cudaBindTextureToMipmappedArray(&tex, mipmappedArray, &desc); 
 # 1691
 } 
-# 1722 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 1722 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 template< class T, int dim, cudaTextureReadMode readMode> 
 # 1723
 __attribute((deprecated)) static inline cudaError_t cudaBindTextureToMipmappedArray(const texture< T, dim, readMode>  &
@@ -18985,7 +18985,7 @@ err = ::cudaGetChannelDesc(&desc, levelArray);
 return (err == (cudaSuccess)) ? cudaBindTextureToMipmappedArray(tex, mipmappedArray, desc) : err; 
 # 1738
 } 
-# 1765 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 1765 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 template< class T, int dim, cudaTextureReadMode readMode> 
 # 1766
 __attribute((deprecated)) static inline cudaError_t cudaUnbindTexture(const texture< T, dim, readMode>  &
@@ -18997,7 +18997,7 @@ tex)
 return ::cudaUnbindTexture(&tex); 
 # 1771
 } 
-# 1801 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 1801 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 template< class T, int dim, cudaTextureReadMode readMode> 
 # 1802
 __attribute((deprecated)) static inline cudaError_t cudaGetTextureAlignmentOffset(size_t *
@@ -19011,7 +19011,7 @@ tex)
 return ::cudaGetTextureAlignmentOffset(offset, &tex); 
 # 1808
 } 
-# 1853 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 1853 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 template< class T> static inline cudaError_t 
 # 1854
 cudaFuncSetCacheConfig(T *
@@ -19039,7 +19039,7 @@ config)
 return ::cudaFuncSetSharedMemConfig((const void *)func, config); 
 # 1869
 } 
-# 1901 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 1901 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 template< class T> inline cudaError_t 
 # 1902
 cudaOccupancyMaxActiveBlocksPerMultiprocessor(int *
@@ -19057,7 +19057,7 @@ dynamicSMemSize)
 return ::cudaOccupancyMaxActiveBlocksPerMultiprocessorWithFlags(numBlocks, (const void *)func, blockSize, dynamicSMemSize, 0); 
 # 1909
 } 
-# 1953 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 1953 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 template< class T> inline cudaError_t 
 # 1954
 cudaOccupancyMaxActiveBlocksPerMultiprocessorWithFlags(int *
@@ -19093,7 +19093,7 @@ return n;
 } 
 # 1975
 }; 
-# 2023 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 2023 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 template< class UnaryFunction, class T> static inline cudaError_t 
 # 2024
 cudaOccupancyMaxPotentialBlockSizeVariableSMemWithFlags(int *
@@ -19279,7 +19279,7 @@ break;
 return status; 
 # 2185
 } 
-# 2219 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 2219 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 template< class UnaryFunction, class T> static inline cudaError_t 
 # 2220
 cudaOccupancyMaxPotentialBlockSizeVariableSMem(int *
@@ -19299,7 +19299,7 @@ blockSizeLimit = 0)
 return cudaOccupancyMaxPotentialBlockSizeVariableSMemWithFlags(minGridSize, blockSize, func, blockSizeToDynamicSMemSize, blockSizeLimit, 0); 
 # 2228
 } 
-# 2265 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 2265 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 template< class T> static inline cudaError_t 
 # 2266
 cudaOccupancyMaxPotentialBlockSize(int *
@@ -19319,7 +19319,7 @@ blockSizeLimit = 0)
 return cudaOccupancyMaxPotentialBlockSizeVariableSMemWithFlags(minGridSize, blockSize, func, ((__cudaOccupancyB2DHelper)(dynamicSMemSize)), blockSizeLimit, 0); 
 # 2274
 } 
-# 2303 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 2303 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 template< class T> static inline cudaError_t 
 # 2304
 cudaOccupancyAvailableDynamicSMemPerBlock(size_t *
@@ -19337,7 +19337,7 @@ blockSize)
 return ::cudaOccupancyAvailableDynamicSMemPerBlock(dynamicSmemSize, (const void *)func, numBlocks, blockSize); 
 # 2311
 } 
-# 2362 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 2362 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 template< class T> static inline cudaError_t 
 # 2363
 cudaOccupancyMaxPotentialBlockSizeWithFlags(int *
@@ -19359,7 +19359,7 @@ flags = 0)
 return cudaOccupancyMaxPotentialBlockSizeVariableSMemWithFlags(minGridSize, blockSize, func, ((__cudaOccupancyB2DHelper)(dynamicSMemSize)), blockSizeLimit, flags); 
 # 2372
 } 
-# 2405 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 2405 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 template< class T> inline cudaError_t 
 # 2406
 cudaFuncGetAttributes(cudaFuncAttributes *
@@ -19373,7 +19373,7 @@ entry)
 return ::cudaFuncGetAttributes(attr, (const void *)entry); 
 # 2412
 } 
-# 2450 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 2450 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 template< class T> static inline cudaError_t 
 # 2451
 cudaFuncSetAttribute(T *
@@ -19389,7 +19389,7 @@ value)
 return ::cudaFuncSetAttribute((const void *)entry, attr, value); 
 # 2458
 } 
-# 2482 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 2482 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 template< class T, int dim> 
 # 2483
 __attribute((deprecated)) static inline cudaError_t cudaBindSurfaceToArray(const surface< T, dim>  &
@@ -19405,7 +19405,7 @@ desc)
 return ::cudaBindSurfaceToArray(&surf, array, &desc); 
 # 2490
 } 
-# 2513 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 2513 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 template< class T, int dim> 
 # 2514
 __attribute((deprecated)) static inline cudaError_t cudaBindSurfaceToArray(const surface< T, dim>  &
@@ -19423,14 +19423,14 @@ cudaError_t err = ::cudaGetChannelDesc(&desc, array);
 return (err == (cudaSuccess)) ? cudaBindSurfaceToArray(surf, array, desc) : err; 
 # 2523
 } 
-# 2534 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+# 2534 "/home/poweruser/junda.feng/anaconda3/bin/../include/cuda_runtime.h"
 #pragma GCC diagnostic pop
 # 64 "CMakeCUDACompilerId.cu"
 const char *info_compiler = ("INFO:compiler[NVIDIA]"); 
 # 66
 const char *info_simulate = ("INFO:simulate[GNU]"); 
 # 369 "CMakeCUDACompilerId.cu"
-const char info_version[] = {'I', 'N', 'F', 'O', ':', 'c', 'o', 'm', 'p', 'i', 'l', 'e', 'r', '_', 'v', 'e', 'r', 's', 'i', 'o', 'n', '[', (('0') + ((11 / 10000000) % 10)), (('0') + ((11 / 1000000) % 10)), (('0') + ((11 / 100000) % 10)), (('0') + ((11 / 10000) % 10)), (('0') + ((11 / 1000) % 10)), (('0') + ((11 / 100) % 10)), (('0') + ((11 / 10) % 10)), (('0') + (11 % 10)), '.', (('0') + ((6 / 10000000) % 10)), (('0') + ((6 / 1000000) % 10)), (('0') + ((6 / 100000) % 10)), (('0') + ((6 / 10000) % 10)), (('0') + ((6 / 1000) % 10)), (('0') + ((6 / 100) % 10)), (('0') + ((6 / 10) % 10)), (('0') + (6 % 10)), '.', (('0') + ((55 / 10000000) % 10)), (('0') + ((55 / 1000000) % 10)), (('0') + ((55 / 100000) % 10)), (('0') + ((55 / 10000) % 10)), (('0') + ((55 / 1000) % 10)), (('0') + ((55 / 100) % 10)), (('0') + ((55 / 10) % 10)), (('0') + (55 % 10)), ']', '\000'}; 
+const char info_version[] = {'I', 'N', 'F', 'O', ':', 'c', 'o', 'm', 'p', 'i', 'l', 'e', 'r', '_', 'v', 'e', 'r', 's', 'i', 'o', 'n', '[', (('0') + ((11 / 10000000) % 10)), (('0') + ((11 / 1000000) % 10)), (('0') + ((11 / 100000) % 10)), (('0') + ((11 / 10000) % 10)), (('0') + ((11 / 1000) % 10)), (('0') + ((11 / 100) % 10)), (('0') + ((11 / 10) % 10)), (('0') + (11 % 10)), '.', (('0') + ((6 / 10000000) % 10)), (('0') + ((6 / 1000000) % 10)), (('0') + ((6 / 100000) % 10)), (('0') + ((6 / 10000) % 10)), (('0') + ((6 / 1000) % 10)), (('0') + ((6 / 100) % 10)), (('0') + ((6 / 10) % 10)), (('0') + (6 % 10)), '.', (('0') + ((124 / 10000000) % 10)), (('0') + ((124 / 1000000) % 10)), (('0') + ((124 / 100000) % 10)), (('0') + ((124 / 10000) % 10)), (('0') + ((124 / 1000) % 10)), (('0') + ((124 / 100) % 10)), (('0') + ((124 / 10) % 10)), (('0') + (124 % 10)), ']', '\000'}; 
 # 398 "CMakeCUDACompilerId.cu"
 const char info_simulate_version[] = {'I', 'N', 'F', 'O', ':', 's', 'i', 'm', 'u', 'l', 'a', 't', 'e', '_', 'v', 'e', 'r', 's', 'i', 'o', 'n', '[', (('0') + ((7 / 10000000) % 10)), (('0') + ((7 / 1000000) % 10)), (('0') + ((7 / 100000) % 10)), (('0') + ((7 / 10000) % 10)), (('0') + ((7 / 1000) % 10)), (('0') + ((7 / 100) % 10)), (('0') + ((7 / 10) % 10)), (('0') + (7 % 10)), '.', (('0') + ((5 / 10000000) % 10)), (('0') + ((5 / 1000000) % 10)), (('0') + ((5 / 100000) % 10)), (('0') + ((5 / 10000) % 10)), (('0') + ((5 / 1000) % 10)), (('0') + ((5 / 100) % 10)), (('0') + ((5 / 10) % 10)), (('0') + (5 % 10)), ']', '\000'}; 
 # 418
@@ -19469,7 +19469,7 @@ return require;
 } 
 
 # 1 "CMakeCUDACompilerId.cudafe1.stub.c"
-#define _NV_ANON_NAMESPACE _GLOBAL__N__bc83a029_22_CMakeCUDACompilerId_cu_bd57c623
+#define _NV_ANON_NAMESPACE _GLOBAL__N__923e1357_22_CMakeCUDACompilerId_cu_bd57c623
 #ifdef _NV_ANON_NAMESPACE
 #endif
 # 1 "CMakeCUDACompilerId.cudafe1.stub.c"

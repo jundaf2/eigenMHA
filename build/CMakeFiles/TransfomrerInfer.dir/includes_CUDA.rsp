@@ -1,1 +1,0 @@
--I"/home/poweruser/junda.feng/Flash-LightSeq/SYSTEM" -I"/home/poweruser/junda.feng/Flash-LightSeq" -I"/home/poweruser/junda.feng/Flash-LightSeq/fmha" -I"/home/poweruser/junda.feng/Flash-LightSeq/include" -I/usr/include/hdf5/serial -I"/home/poweruser/junda.feng/Flash-LightSeq/build" -isystem /usr/local/cuda/include
