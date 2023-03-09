@@ -1,27 +1,58 @@
-#include <Eigen/Core>
 #include <iostream>
 #include <fstream>
-#include <vector>
+#include "eigenDNN.h"
 
 using namespace std;
-using namespace Eigen;
 
-void SoftMax(Eigen::MatrixXf mat)
-{
-	MatrixXf m = mat.array().exp();
-	cout << "\n" << m;
-	float sum = m.sum();
-	cout << "\n" << sum;
-	MatrixXf n = m / sum;
-	cout << "\n" << n;
-	cout << "\n" << n.sum();
+void test_eidnnLinearForward(unsigned batch_size,unsigned n_heads,unsigned seq_len,unsigned head_size,unsigned hidden_size,float dropout_rate){
+  using namespace Eigen;
+  eigenDNN::eidnnHandle_t handle;
+
+  Tensor<float, 2> q_weight(hidden_size, hidden_size); 
+  Tensor<float, 3> q_in(batch_size, seq_len, hidden_size);
+  Tensor<float, 3> q_out(batch_size, seq_len, hidden_size);
+
+  q_out.setConstant(0);
+  q_weight.setConstant(1);
+  q_in.setConstant(1);
+  
+  eigenDNN::eidnnLinearForward(handle, q_in, q_weight, q_out);
+  cout << "q_out: " << endl << q_out << endl;
+}
+
+void test_eidnnLinearBackward(unsigned batch_size,unsigned n_heads,unsigned seq_len,unsigned head_size,unsigned hidden_size,float dropout_rate){
+  using namespace Eigen;
+  eigenDNN::eidnnHandle_t handle;
+
+  Tensor<float, 3> q_out_grad(batch_size, seq_len, hidden_size);
+  Tensor<float, 3> q_in(batch_size, seq_len, hidden_size);
+  Tensor<float, 2> q_weight(hidden_size, hidden_size); 
+
+  Tensor<float, 3> q_in_grad(batch_size, seq_len, hidden_size);
+  Tensor<float, 2> q_weight_grad(hidden_size, hidden_size); 
+
+  q_in_grad.setConstant(0);
+  q_weight_grad.setConstant(0);
+
+  q_out_grad.setConstant(1);
+  q_in.setConstant(1);
+  q_weight.setConstant(1);
+  
+  eigenDNN::eidnnLinearBackward(handle, q_out_grad, q_in, q_weight, q_in_grad, q_weight_grad);
+  cout << "q_in_grad: " << endl << q_in_grad << endl;
+  cout << "q_weight_grad: " << endl << q_weight_grad << endl;
 }
 
 int main(int argc, char* argv[]) {
-  MatrixXf input(1, 4);
-
-	input << -1, -2, -3, -4;
-	cout << "input: \n" << input;
-	SoftMax(input);
+  unsigned batch_size = 1;
+  unsigned n_heads = 1;
+  unsigned seq_len = 2;
+  unsigned head_size = 4;
+  unsigned hidden_size = head_size*n_heads;
+  float dropout_rate = 0.1;
+  
+  test_eidnnLinearForward(batch_size,n_heads,seq_len,head_size,hidden_size,dropout_rate);
+  test_eidnnLinearBackward(batch_size,n_heads,seq_len,head_size,hidden_size,dropout_rate);
+  
   return 0;
 }

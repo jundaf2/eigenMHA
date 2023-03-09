@@ -57,10 +57,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/poweruser/junda.feng/cuTransDNN
+CMAKE_SOURCE_DIR = /home/poweruser/junda.feng/cuSimpleDNN
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/poweruser/junda.feng/cuTransDNN/build
+CMAKE_BINARY_DIR = /home/poweruser/junda.feng/cuSimpleDNN/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/poweruser/junda.feng/cuTransDNN/build/CMakeFiles /home/poweruser/junda.feng/cuTransDNN/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/poweruser/junda.feng/cuSimpleDNN/build/CMakeFiles /home/poweruser/junda.feng/cuSimpleDNN/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/poweruser/junda.feng/cuTransDNN/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/poweruser/junda.feng/cuSimpleDNN/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -368,6 +368,30 @@ src/dropout_kernels.s: src/dropout_kernels.cu.s
 src/dropout_kernels.cu.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mha.dir/build.make CMakeFiles/mha.dir/src/dropout_kernels.cu.s
 .PHONY : src/dropout_kernels.cu.s
+
+src/eigenDNN.o: src/eigenDNN.cpp.o
+.PHONY : src/eigenDNN.o
+
+# target to build an object file
+src/eigenDNN.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mha.dir/build.make CMakeFiles/mha.dir/src/eigenDNN.cpp.o
+.PHONY : src/eigenDNN.cpp.o
+
+src/eigenDNN.i: src/eigenDNN.cpp.i
+.PHONY : src/eigenDNN.i
+
+# target to preprocess a source file
+src/eigenDNN.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mha.dir/build.make CMakeFiles/mha.dir/src/eigenDNN.cpp.i
+.PHONY : src/eigenDNN.cpp.i
+
+src/eigenDNN.s: src/eigenDNN.cpp.s
+.PHONY : src/eigenDNN.s
+
+# target to generate assembly for a file
+src/eigenDNN.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mha.dir/build.make CMakeFiles/mha.dir/src/eigenDNN.cpp.s
+.PHONY : src/eigenDNN.cpp.s
 
 src/embKernels.cc.o: src/embKernels.cc.cu.o
 .PHONY : src/embKernels.cc.o
@@ -840,6 +864,9 @@ help:
 	@echo "... src/dropout_kernels.o"
 	@echo "... src/dropout_kernels.i"
 	@echo "... src/dropout_kernels.s"
+	@echo "... src/eigenDNN.o"
+	@echo "... src/eigenDNN.i"
+	@echo "... src/eigenDNN.s"
 	@echo "... src/embKernels.cc.o"
 	@echo "... src/embKernels.cc.i"
 	@echo "... src/embKernels.cc.s"

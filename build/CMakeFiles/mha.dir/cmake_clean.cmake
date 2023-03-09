@@ -19,6 +19,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/mha.dir/src/dropout.cpp.o.d"
   "CMakeFiles/mha.dir/src/dropout_kernels.cu.o"
   "CMakeFiles/mha.dir/src/dropout_kernels.cu.o.d"
+  "CMakeFiles/mha.dir/src/eigenDNN.cpp.o"
+  "CMakeFiles/mha.dir/src/eigenDNN.cpp.o.d"
   "CMakeFiles/mha.dir/src/embKernels.cc.cu.o"
   "CMakeFiles/mha.dir/src/embKernels.cc.cu.o.d"
   "CMakeFiles/mha.dir/src/embedding_kernels.cu.o"

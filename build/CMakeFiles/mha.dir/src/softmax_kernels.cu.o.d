@@ -1,4 +1,4 @@
-CMakeFiles/mha.dir/src/softmax_kernels.cu.o : /home/poweruser/junda.feng/cuTransDNN/src/softmax_kernels.cu \
+CMakeFiles/mha.dir/src/softmax_kernels.cu.o : /home/poweruser/junda.feng/cuSimpleDNN/src/softmax_kernels.cu \
     /usr/include/stdc-predef.h \
     /home/poweruser/junda.feng/anaconda3/include/cuda_runtime.h \
     /home/poweruser/junda.feng/anaconda3/include/crt/host_config.h \
@@ -496,9 +496,9 @@ CMakeFiles/mha.dir/src/softmax_kernels.cu.o : /home/poweruser/junda.feng/cuTrans
     /usr/include/c++/7/ctime \
     /usr/include/c++/7/bits/parse_numbers.h \
     /usr/include/c++/7/bits/std_mutex.h \
-    /home/poweruser/junda.feng/cuTransDNN/include/block_reduce.h \
+    /home/poweruser/junda.feng/cuSimpleDNN/include/block_reduce.h \
     /home/poweruser/junda.feng/anaconda3/include/cuda.h \
-    /home/poweruser/junda.feng/cuTransDNN/include/kernels.h \
+    /home/poweruser/junda.feng/cuSimpleDNN/include/kernels.h \
     /home/poweruser/junda.feng/anaconda3/include/curand_kernel.h \
     /home/poweruser/junda.feng/anaconda3/include/nv/target \
     /home/poweruser/junda.feng/anaconda3/include/nv/detail/__target_macros \
@@ -518,7 +518,7 @@ CMakeFiles/mha.dir/src/softmax_kernels.cu.o : /home/poweruser/junda.feng/cuTrans
     /home/poweruser/junda.feng/anaconda3/include/curand_lognormal.h \
     /home/poweruser/junda.feng/anaconda3/include/curand_poisson.h \
     /home/poweruser/junda.feng/anaconda3/include/curand_discrete2.h \
-    /home/poweruser/junda.feng/cuTransDNN/include/cuda_util.h \
+    /home/poweruser/junda.feng/cuSimpleDNN/include/cuda_util.h \
     /home/poweruser/junda.feng/anaconda3/include/cublas_v2.h \
     /home/poweruser/junda.feng/anaconda3/include/cublas_api.h \
     /home/poweruser/junda.feng/anaconda3/include/cuComplex.h \

@@ -1,4 +1,4 @@
-CMakeFiles/mha.dir/src/cuda_util.cu.o : /home/poweruser/junda.feng/cuTransDNN/src/cuda_util.cu \
+CMakeFiles/mha.dir/src/cuda_util.cu.o : /home/poweruser/junda.feng/cuSimpleDNN/src/cuda_util.cu \
     /usr/include/stdc-predef.h \
     /home/poweruser/junda.feng/anaconda3/include/cuda_runtime.h \
     /home/poweruser/junda.feng/anaconda3/include/crt/host_config.h \
@@ -839,7 +839,7 @@ CMakeFiles/mha.dir/src/cuda_util.cu.o : /home/poweruser/junda.feng/cuTransDNN/sr
     /home/poweruser/junda.feng/anaconda3/include/thrust/mr/new.h \
     /home/poweruser/junda.feng/anaconda3/include/thrust/mr/fancy_pointer_resource.h \
     /home/poweruser/junda.feng/anaconda3/include/thrust/system/cpp/pointer.h \
-    /home/poweruser/junda.feng/cuTransDNN/include/cuda_util.h \
+    /home/poweruser/junda.feng/cuSimpleDNN/include/cuda_util.h \
     /home/poweruser/junda.feng/anaconda3/include/cublas_v2.h \
     /home/poweruser/junda.feng/anaconda3/include/cublas_api.h \
     /home/poweruser/junda.feng/anaconda3/include/cuComplex.h \

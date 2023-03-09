@@ -1,4 +1,4 @@
-CMakeFiles/mha.dir/src/transform_kernels.cu.o : /home/poweruser/junda.feng/cuTransDNN/src/transform_kernels.cu \
+CMakeFiles/mha.dir/src/transform_kernels.cu.o : /home/poweruser/junda.feng/cuSimpleDNN/src/transform_kernels.cu \
     /usr/include/stdc-predef.h \
     /home/poweruser/junda.feng/anaconda3/include/cuda_runtime.h \
     /home/poweruser/junda.feng/anaconda3/include/crt/host_config.h \
@@ -291,7 +291,7 @@ CMakeFiles/mha.dir/src/transform_kernels.cu.o : /home/poweruser/junda.feng/cuTra
     /home/poweruser/junda.feng/anaconda3/include/cub/warp/specializations/warp_scan_smem.cuh \
     /home/poweruser/junda.feng/anaconda3/include/cub/block/specializations/block_scan_warp_scans.cuh \
     /home/poweruser/junda.feng/anaconda3/include/cub/block/block_store.cuh \
-    /home/poweruser/junda.feng/cuTransDNN/include/kernels.h \
+    /home/poweruser/junda.feng/cuSimpleDNN/include/kernels.h \
     /home/poweruser/junda.feng/anaconda3/include/cuda.h \
     /home/poweruser/junda.feng/anaconda3/include/curand_kernel.h \
     /home/poweruser/junda.feng/anaconda3/include/nv/target \

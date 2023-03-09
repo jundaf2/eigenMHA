@@ -7,7 +7,7 @@ git clone --recursive
 ## Introduction
 This repo mainly focuses on rewriting the cuDNN library to train and inference Deep Neural Networks. 
 * eigenDNN: a CPU version that serves as the ground truth for GPU implementation.
-* cuTransDNN: a GPU version that takes advantages of LightSeq and Flash-Attention 
+* cudaDNN: a GPU version that takes advantages of LightSeq and Flash-Attention 
 
 Currently, it focuses on
 

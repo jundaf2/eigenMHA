@@ -1,4 +1,4 @@
-CMakeFiles/mha.dir/src/cross_entropy.cu.o : /home/poweruser/junda.feng/cuTransDNN/src/cross_entropy.cu \
+CMakeFiles/mha.dir/src/cross_entropy.cu.o : /home/poweruser/junda.feng/cuSimpleDNN/src/cross_entropy.cu \
     /usr/include/stdc-predef.h \
     /home/poweruser/junda.feng/anaconda3/include/cuda_runtime.h \
     /home/poweruser/junda.feng/anaconda3/include/crt/host_config.h \
@@ -225,11 +225,11 @@ CMakeFiles/mha.dir/src/cross_entropy.cu.o : /home/poweruser/junda.feng/cuTransDN
     /usr/include/c++/7/bits/invoke.h \
     /usr/include/c++/7/bits/std_function.h \
     /usr/include/c++/7/bits/refwrap.h \
-    /home/poweruser/junda.feng/cuTransDNN/include/block_reduce.h \
+    /home/poweruser/junda.feng/cuSimpleDNN/include/block_reduce.h \
     /home/poweruser/junda.feng/anaconda3/include/cuda.h \
     /home/poweruser/junda.feng/anaconda3/include/cuda_fp16.h \
     /home/poweruser/junda.feng/anaconda3/include/cuda_fp16.hpp \
-    /home/poweruser/junda.feng/cuTransDNN/include/cuda_util.h \
+    /home/poweruser/junda.feng/cuSimpleDNN/include/cuda_util.h \
     /home/poweruser/junda.feng/anaconda3/include/cublas_v2.h \
     /home/poweruser/junda.feng/anaconda3/include/cublas_api.h \
     /home/poweruser/junda.feng/anaconda3/include/cuComplex.h \
@@ -275,7 +275,7 @@ CMakeFiles/mha.dir/src/cross_entropy.cu.o : /home/poweruser/junda.feng/cuTransDN
     /usr/include/c++/7/bits/stl_vector.h \
     /usr/include/c++/7/bits/stl_bvector.h \
     /usr/include/c++/7/bits/vector.tcc \
-    /home/poweruser/junda.feng/cuTransDNN/include/kernels.h \
+    /home/poweruser/junda.feng/cuSimpleDNN/include/kernels.h \
     /home/poweruser/junda.feng/anaconda3/include/curand_kernel.h \
     /home/poweruser/junda.feng/anaconda3/include/nv/target \
     /home/poweruser/junda.feng/anaconda3/include/nv/detail/__target_macros \
@@ -295,7 +295,7 @@ CMakeFiles/mha.dir/src/cross_entropy.cu.o : /home/poweruser/junda.feng/cuTransDN
     /home/poweruser/junda.feng/anaconda3/include/curand_lognormal.h \
     /home/poweruser/junda.feng/anaconda3/include/curand_poisson.h \
     /home/poweruser/junda.feng/anaconda3/include/curand_discrete2.h \
-    /home/poweruser/junda.feng/cuTransDNN/include/ls_cub.cuh \
+    /home/poweruser/junda.feng/cuSimpleDNN/include/ls_cub.cuh \
     /home/poweruser/junda.feng/anaconda3/include/cub/cub.cuh \
     /home/poweruser/junda.feng/anaconda3/include/cub/config.cuh \
     /home/poweruser/junda.feng/anaconda3/include/cub/util_arch.cuh \
