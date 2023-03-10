@@ -172,10 +172,9 @@ CMakeFiles/mha.dir/mha.cc.o: /home/poweruser/junda.feng/eigenDNN/mha.cc \
   /usr/include/x86_64-linux-gnu/c++/7/bits/c++io.h \
   /usr/include/c++/7/bits/fstream.tcc \
   /home/poweruser/junda.feng/eigenDNN/include/eigenDNN.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/Core \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/Macros.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/InternalHeaderCheck.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/Core \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/DisableStupidWarnings.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/Macros.h \
   /usr/include/c++/7/cmath \
   /usr/include/math.h \
   /usr/include/x86_64-linux-gnu/bits/math-vector.h \
@@ -186,7 +185,7 @@ CMakeFiles/mha.dir/mha.cc.o: /home/poweruser/junda.feng/eigenDNN/mha.cc \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/ConfigureVectorization.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/ConfigureVectorization.h \
   /usr/lib/gcc/x86_64-linux-gnu/7/include/mmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/7/include/emmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/7/include/xmmintrin.h \
@@ -195,8 +194,10 @@ CMakeFiles/mha.dir/mha.cc.o: /home/poweruser/junda.feng/eigenDNN/mha.cc \
   /usr/include/c++/7/complex \
   /usr/include/c++/7/sstream \
   /usr/include/c++/7/bits/sstream.tcc \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/MKL_support.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/MKL_support.h \
   /usr/include/c++/7/cstddef \
+  /usr/include/c++/7/cassert \
+  /usr/include/assert.h \
   /usr/include/c++/7/functional \
   /usr/include/c++/7/tuple \
   /usr/include/c++/7/utility \
@@ -227,183 +228,171 @@ CMakeFiles/mha.dir/mha.cc.o: /home/poweruser/junda.feng/eigenDNN/mha.cc \
   /usr/include/c++/7/bits/stl_tempbuf.h \
   /usr/include/c++/7/bits/stl_construct.h \
   /usr/include/c++/7/bits/uniform_int_dist.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/Constants.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/Meta.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/Assert.h \
-  /usr/include/c++/7/cassert \
-  /usr/include/assert.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/ForwardDeclarations.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/StaticAssert.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/XprHelper.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/Memory.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/IntegralConstant.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/Serializer.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/SymbolicIndex.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/NumTraits.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/InternalHeaderCheck.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/MathFunctions.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/GenericPacketMath.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/MathFunctionsImpl.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/arch/Default/ConjHelper.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/InternalHeaderCheck.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/arch/Default/Half.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/arch/Default/BFloat16.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/arch/Default/TypeCasting.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctionsFwd.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/InternalHeaderCheck.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/arch/SSE/TypeCasting.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/arch/SSE/MathFunctions.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/arch/SSE/Complex.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/arch/Default/Settings.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/functors/TernaryFunctors.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/InternalHeaderCheck.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/functors/BinaryFunctors.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/functors/UnaryFunctors.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/functors/NullaryFunctors.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/functors/StlFunctors.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/functors/AssignmentFunctors.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/IndexedViewHelper.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/ReshapedHelper.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/ArithmeticSequence.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/IO.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/DenseCoeffsBase.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/DenseBase.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/plugins/BlockMethods.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/plugins/IndexedViewMethods.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/plugins/IndexedViewMethods.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/plugins/ReshapedMethods.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/plugins/ReshapedMethods.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/MatrixBase.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/EigenBase.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Product.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/CoreEvaluators.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/AssignEvaluator.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Assign.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/ArrayBase.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/plugins/ArrayCwiseUnaryOps.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/BlasUtil.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/DenseStorage.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/NestByValue.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/ReturnByValue.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/NoAlias.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/PlainObjectBase.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Matrix.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Array.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/CwiseTernaryOp.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/CwiseBinaryOp.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/CwiseUnaryOp.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/CwiseNullaryOp.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/CwiseUnaryView.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/SelfCwiseBinaryOp.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Dot.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/StableNorm.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Stride.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/MapBase.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Map.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Ref.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Block.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/VectorBlock.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/IndexedView.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Reshaped.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Transpose.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/DiagonalMatrix.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Diagonal.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/DiagonalProduct.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/SkewSymmetricMatrix3.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Redux.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Visitor.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Fuzzy.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Swap.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/CommaInitializer.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/GeneralProduct.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Solve.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Inverse.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/SolverBase.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/PermutationMatrix.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Transpositions.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/TriangularMatrix.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/SelfAdjointView.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/InternalHeaderCheck.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/products/Parallelizer.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/ProductEvaluators.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/products/GeneralMatrixVector.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/SolveTriangular.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/products/SelfadjointMatrixVector.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/products/SelfadjointMatrixMatrix.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/products/SelfadjointProduct.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/products/SelfadjointRank2Update.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/products/TriangularMatrixMatrix.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/products/TriangularSolverMatrix.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/products/TriangularSolverVector.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/BandMatrix.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/CoreIterators.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/ConditionEstimator.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Select.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/VectorwiseOp.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/PartialReduxEvaluator.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Random.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Replicate.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Reverse.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/ArrayWrapper.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/StlIterators.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/GlobalFunctions.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/Tensor \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/Core \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/SpecialFunctions \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/Constants.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/Meta.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/ForwardDeclarations.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/StaticAssert.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/XprHelper.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/Memory.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/IntegralConstant.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/SymbolicIndex.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/NumTraits.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/MathFunctions.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/GenericPacketMath.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/MathFunctionsImpl.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/arch/Default/ConjHelper.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/arch/Default/Half.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/arch/Default/BFloat16.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/arch/Default/TypeCasting.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/arch/Default/GenericPacketMathFunctionsFwd.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/arch/SSE/PacketMath.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/arch/SSE/TypeCasting.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/arch/SSE/MathFunctions.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/arch/SSE/Complex.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/arch/Default/Settings.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/functors/TernaryFunctors.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/functors/BinaryFunctors.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/functors/UnaryFunctors.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/functors/NullaryFunctors.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/functors/StlFunctors.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/functors/AssignmentFunctors.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/IndexedViewHelper.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/ReshapedHelper.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/ArithmeticSequence.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/IO.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/DenseCoeffsBase.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/DenseBase.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/plugins/CommonCwiseUnaryOps.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/plugins/BlockMethods.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/plugins/IndexedViewMethods.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/plugins/IndexedViewMethods.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/plugins/ReshapedMethods.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/plugins/ReshapedMethods.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/MatrixBase.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/plugins/CommonCwiseBinaryOps.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/EigenBase.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Product.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/CoreEvaluators.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/AssignEvaluator.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Assign.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/ArrayBase.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/plugins/ArrayCwiseUnaryOps.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/plugins/ArrayCwiseBinaryOps.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/BlasUtil.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/DenseStorage.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/NestByValue.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/ReturnByValue.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/NoAlias.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/PlainObjectBase.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Matrix.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Array.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/CwiseTernaryOp.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/CwiseBinaryOp.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/CwiseUnaryOp.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/CwiseNullaryOp.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/CwiseUnaryView.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/SelfCwiseBinaryOp.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Dot.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/StableNorm.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Stride.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/MapBase.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Map.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Ref.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Block.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/VectorBlock.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/IndexedView.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Reshaped.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Transpose.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/DiagonalMatrix.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Diagonal.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/DiagonalProduct.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Redux.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Visitor.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Fuzzy.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Swap.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/CommaInitializer.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/GeneralProduct.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Solve.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Inverse.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/SolverBase.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/PermutationMatrix.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Transpositions.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/TriangularMatrix.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/SelfAdjointView.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/products/GeneralBlockPanelKernel.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/products/Parallelizer.h \
+  /usr/include/c++/7/atomic \
+  /usr/include/c++/7/bits/atomic_base.h \
+  /usr/include/c++/7/bits/atomic_lockfree_defines.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/ProductEvaluators.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/products/GeneralMatrixVector.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/products/GeneralMatrixMatrix.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/SolveTriangular.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/products/SelfadjointMatrixVector.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/products/SelfadjointMatrixMatrix.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/products/SelfadjointProduct.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/products/SelfadjointRank2Update.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/products/TriangularMatrixVector.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/products/TriangularMatrixMatrix.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/products/TriangularSolverMatrix.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/products/TriangularSolverVector.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/BandMatrix.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/CoreIterators.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/ConditionEstimator.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/BooleanRedux.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Select.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/VectorwiseOp.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/PartialReduxEvaluator.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Random.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Replicate.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Reverse.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/ArrayWrapper.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/StlIterators.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/GlobalFunctions.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/ReenableStupidWarnings.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/Tensor \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/Core \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/SpecialFunctions \
   /usr/include/c++/7/math.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/Core \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/SpecialFunctions/BesselFunctionsImpl.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/SpecialFunctions/InternalHeaderCheck.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/SpecialFunctions/BesselFunctionsBFloat16.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/SpecialFunctions/BesselFunctionsHalf.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/SpecialFunctions/BesselFunctionsPacketMath.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/SpecialFunctions/BesselFunctionsFunctors.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/SpecialFunctions/BesselFunctionsArrayAPI.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsImpl.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsBFloat16.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsHalf.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsPacketMath.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsFunctors.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsArrayAPI.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/util/CXX11Meta.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/Core \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/DisableStupidWarnings.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/src/SpecialFunctions/BesselFunctionsImpl.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/src/SpecialFunctions/BesselFunctionsBFloat16.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/src/SpecialFunctions/BesselFunctionsHalf.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/src/SpecialFunctions/BesselFunctionsPacketMath.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/src/SpecialFunctions/BesselFunctionsFunctors.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/src/SpecialFunctions/BesselFunctionsArrayAPI.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsImpl.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsBFloat16.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsHalf.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsPacketMath.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsFunctors.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsArrayAPI.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/ReenableStupidWarnings.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/DisableStupidWarnings.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/util/CXX11Meta.h \
   /usr/include/c++/7/vector \
   /usr/include/c++/7/bits/stl_uninitialized.h \
   /usr/include/c++/7/bits/stl_vector.h \
   /usr/include/c++/7/bits/stl_bvector.h \
   /usr/include/c++/7/bits/vector.tcc \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/util/EmulateArray.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/util/CXX11Workarounds.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/util/MaxSizeVector.h \
-  /usr/include/c++/7/atomic \
-  /usr/include/c++/7/bits/atomic_base.h \
-  /usr/include/c++/7/bits/atomic_lockfree_defines.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/util/EmulateArray.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/util/CXX11Workarounds.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/util/MaxSizeVector.h \
   /usr/include/c++/7/chrono \
   /usr/include/c++/7/ratio \
   /usr/include/c++/7/ctime \
   /usr/include/c++/7/bits/parse_numbers.h \
-  /usr/include/c++/7/iterator \
-  /usr/include/c++/7/bits/stream_iterator.h \
-  /usr/include/c++/7/numeric \
-  /usr/include/c++/7/bits/stl_numeric.h \
   /usr/include/c++/7/random \
   /usr/include/c++/7/bits/random.h \
   /usr/include/x86_64-linux-gnu/c++/7/bits/opt_random.h \
   /usr/include/c++/7/bits/random.tcc \
+  /usr/include/c++/7/numeric \
+  /usr/include/c++/7/bits/stl_numeric.h \
   /usr/include/c++/7/thread \
   /usr/include/c++/7/memory \
   /usr/include/c++/7/bits/stl_raw_storage_iter.h \
@@ -415,76 +404,157 @@ CMakeFiles/mha.dir/mha.cc.o: /home/poweruser/junda.feng/eigenDNN/mha.cc \
   /usr/include/c++/7/ext/aligned_buffer.h \
   /usr/include/c++/7/bits/shared_ptr_atomic.h \
   /usr/include/c++/7/backward/auto_ptr.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorMacros.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorForwardDeclarations.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/InternalHeaderCheck.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorMeta.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorFunctors.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorCostModel.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorDeviceDefault.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorDeviceThreadPool.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorDeviceGpu.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorDeviceSycl.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorIndexList.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorDimensionList.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorDimensions.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorInitializer.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorTraits.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorRandom.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorUInt128.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorIntDiv.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorGlobalFunctions.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorIO.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorBase.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorBlock.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorEvaluator.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorExpr.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorReduction.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorReductionGpu.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorArgMax.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorConcatenation.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorContractionMapper.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorContractionBlocking.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorContraction.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorContractionThreadPool.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorContractionGpu.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorConversion.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorConvolution.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorFFT.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorPatch.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorImagePatch.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorVolumePatch.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorBroadcasting.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorChipping.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorInflation.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorLayoutSwap.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorMorphing.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorPadding.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorReverse.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorShuffling.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorStriding.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorCustomOp.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorEvalTo.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorForcedEval.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorGenerator.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorAssign.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorScan.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorTrace.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorExecutor.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorDevice.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorStorage.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/Tensor.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorFixedSize.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorMap.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorRef.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/AutoDiff \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/Core \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/AutoDiff/AutoDiffScalar.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/AutoDiff/InternalHeaderCheck.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/AutoDiff/AutoDiffJacobian.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorMacros.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorForwardDeclarations.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorMeta.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorFunctors.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorCostModel.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorDeviceDefault.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorDeviceThreadPool.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorDeviceGpu.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorDeviceSycl.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorIndexList.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorDimensionList.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorDimensions.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorInitializer.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorTraits.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorRandom.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorUInt128.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorIntDiv.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorGlobalFunctions.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorBase.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorBlock.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorEvaluator.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorExpr.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorReduction.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorReductionGpu.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorArgMax.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorConcatenation.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorContractionMapper.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorContractionBlocking.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorContraction.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorContractionThreadPool.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorContractionGpu.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorConversion.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorConvolution.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorFFT.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorPatch.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorImagePatch.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorVolumePatch.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorBroadcasting.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorChipping.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorInflation.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorLayoutSwap.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorMorphing.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorPadding.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorReverse.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorShuffling.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorStriding.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorCustomOp.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorEvalTo.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorForcedEval.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorGenerator.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorAssign.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorScan.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorTrace.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorExecutor.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorDevice.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorStorage.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/Tensor.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorFixedSize.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorMap.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorRef.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorIO.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/ReenableStupidWarnings.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/AutoDiff \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/DisableStupidWarnings.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/src/AutoDiff/AutoDiffScalar.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/src/AutoDiff/AutoDiffJacobian.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/ReenableStupidWarnings.h \
+  /home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/EigenRand \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/Dense \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/Core \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/LU \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/misc/Kernel.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/misc/Image.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/LU/FullPivLU.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/LU/PartialPivLU.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/LU/Determinant.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/LU/InverseImpl.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/LU/arch/InverseSize4.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/Cholesky \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/Jacobi \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Jacobi/Jacobi.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Cholesky/LLT.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Cholesky/LDLT.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/QR \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/Householder \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Householder/Householder.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Householder/HouseholderSequence.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Householder/BlockHouseholder.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/QR/HouseholderQR.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/QR/FullPivHouseholderQR.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/QR/ColPivHouseholderQR.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/QR/CompleteOrthogonalDecomposition.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/SVD \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/misc/RealSvd2x2.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/SVD/UpperBidiagonalization.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/SVD/SVDBase.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/SVD/JacobiSVD.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/SVD/BDCSVD.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/Geometry \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Geometry/OrthoMethods.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Geometry/EulerAngles.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Geometry/Homogeneous.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Geometry/RotationBase.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Geometry/Rotation2D.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Geometry/Quaternion.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Geometry/AngleAxis.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Geometry/Transform.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Geometry/Translation.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Geometry/Scaling.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Geometry/Hyperplane.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Geometry/ParametrizedLine.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Geometry/AlignedBox.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Geometry/Umeyama.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Geometry/arch/Geometry_SIMD.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/Eigenvalues \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Eigenvalues/Tridiagonalization.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Eigenvalues/RealSchur.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Eigenvalues/HessenbergDecomposition.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Eigenvalues/EigenSolver.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Eigenvalues/RealSchur.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Eigenvalues/SelfAdjointEigenSolver.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Eigenvalues/Tridiagonalization.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Eigenvalues/GeneralizedSelfAdjointEigenSolver.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Eigenvalues/HessenbergDecomposition.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Eigenvalues/ComplexSchur.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Eigenvalues/ComplexEigenSolver.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Eigenvalues/ComplexSchur.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Eigenvalues/RealQZ.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Eigenvalues/RealQZ.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/DisableStupidWarnings.h \
+  /home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/Macro.h \
+  /home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/Core.h \
+  /home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/RandUtils.h \
+  /home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/MorePacketMath.h \
+  /home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/arch/SSE/MorePacketMath.h \
+  /home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/PacketFilter.h \
+  /home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/arch/SSE/PacketFilter.h \
+  /home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/PacketRandomEngine.h \
+  /home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/arch/SSE/RandUtils.h \
+  /home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/CwiseHeteroBinaryOp.h \
+  /home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/Dists/Basic.h \
+  /home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/Dists/Discrete.h \
+  /usr/include/c++/7/iterator \
+  /usr/include/c++/7/bits/stream_iterator.h \
+  /home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/Dists/NormalExp.h \
+  /home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/Dists/GammaPoisson.h \
+  /home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/MvDists/MvNormal.h \
+  /home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/MvDists/Multinomial.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/ReenableStupidWarnings.h \
   /usr/include/c++/7/map \
   /usr/include/c++/7/bits/stl_tree.h \
   /usr/include/c++/7/bits/stl_map.h \
@@ -5764,10 +5834,9 @@ CMakeFiles/mha.dir/src/dropout_kernels.cu.o: /home/poweruser/junda.feng/eigenDNN
 CMakeFiles/mha.dir/src/eigenDNN.cpp.o: /home/poweruser/junda.feng/eigenDNN/src/eigenDNN.cpp \
   /usr/include/stdc-predef.h \
   /home/poweruser/junda.feng/eigenDNN/include/eigenDNN.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/Core \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/Macros.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/InternalHeaderCheck.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/Core \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/DisableStupidWarnings.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/Macros.h \
   /usr/include/c++/7/cmath \
   /usr/include/x86_64-linux-gnu/c++/7/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/7/bits/os_defines.h \
@@ -5825,7 +5894,7 @@ CMakeFiles/mha.dir/src/eigenDNN.cpp.o: /home/poweruser/junda.feng/eigenDNN/src/e
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/alloca.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/ConfigureVectorization.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/ConfigureVectorization.h \
   /usr/lib/gcc/x86_64-linux-gnu/7/include/mmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/7/include/emmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/7/include/xmmintrin.h \
@@ -5949,8 +6018,10 @@ CMakeFiles/mha.dir/src/eigenDNN.cpp.o: /home/poweruser/junda.feng/eigenDNN/src/e
   /usr/include/c++/7/bits/ostream.tcc \
   /usr/include/c++/7/bits/istream.tcc \
   /usr/include/c++/7/bits/sstream.tcc \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/MKL_support.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/MKL_support.h \
   /usr/include/c++/7/cstddef \
+  /usr/include/c++/7/cassert \
+  /usr/include/assert.h \
   /usr/include/c++/7/functional \
   /usr/include/c++/7/tuple \
   /usr/include/c++/7/utility \
@@ -5981,183 +6052,171 @@ CMakeFiles/mha.dir/src/eigenDNN.cpp.o: /home/poweruser/junda.feng/eigenDNN/src/e
   /usr/include/c++/7/bits/stl_tempbuf.h \
   /usr/include/c++/7/bits/stl_construct.h \
   /usr/include/c++/7/bits/uniform_int_dist.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/Constants.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/Meta.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/Assert.h \
-  /usr/include/c++/7/cassert \
-  /usr/include/assert.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/ForwardDeclarations.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/StaticAssert.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/XprHelper.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/Memory.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/IntegralConstant.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/Serializer.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/SymbolicIndex.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/NumTraits.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/InternalHeaderCheck.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/MathFunctions.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/GenericPacketMath.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/MathFunctionsImpl.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/arch/Default/ConjHelper.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/InternalHeaderCheck.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/arch/Default/Half.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/arch/Default/BFloat16.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/arch/Default/TypeCasting.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctionsFwd.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/InternalHeaderCheck.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/arch/SSE/TypeCasting.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/arch/SSE/MathFunctions.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/arch/SSE/Complex.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/arch/Default/Settings.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/functors/TernaryFunctors.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/InternalHeaderCheck.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/functors/BinaryFunctors.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/functors/UnaryFunctors.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/functors/NullaryFunctors.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/functors/StlFunctors.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/functors/AssignmentFunctors.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/IndexedViewHelper.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/ReshapedHelper.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/ArithmeticSequence.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/IO.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/DenseCoeffsBase.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/DenseBase.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/plugins/BlockMethods.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/plugins/IndexedViewMethods.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/plugins/IndexedViewMethods.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/plugins/ReshapedMethods.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/plugins/ReshapedMethods.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/MatrixBase.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/EigenBase.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Product.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/CoreEvaluators.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/AssignEvaluator.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Assign.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/ArrayBase.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/plugins/ArrayCwiseUnaryOps.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/BlasUtil.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/DenseStorage.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/NestByValue.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/ReturnByValue.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/NoAlias.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/PlainObjectBase.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Matrix.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Array.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/CwiseTernaryOp.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/CwiseBinaryOp.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/CwiseUnaryOp.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/CwiseNullaryOp.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/CwiseUnaryView.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/SelfCwiseBinaryOp.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Dot.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/StableNorm.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Stride.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/MapBase.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Map.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Ref.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Block.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/VectorBlock.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/IndexedView.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Reshaped.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Transpose.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/DiagonalMatrix.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Diagonal.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/DiagonalProduct.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/SkewSymmetricMatrix3.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Redux.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Visitor.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Fuzzy.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Swap.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/CommaInitializer.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/GeneralProduct.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Solve.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Inverse.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/SolverBase.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/PermutationMatrix.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Transpositions.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/TriangularMatrix.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/SelfAdjointView.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/InternalHeaderCheck.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/products/Parallelizer.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/ProductEvaluators.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/products/GeneralMatrixVector.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/SolveTriangular.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/products/SelfadjointMatrixVector.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/products/SelfadjointMatrixMatrix.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/products/SelfadjointProduct.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/products/SelfadjointRank2Update.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/products/TriangularMatrixMatrix.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/products/TriangularSolverMatrix.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/products/TriangularSolverVector.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/BandMatrix.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/CoreIterators.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/ConditionEstimator.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Select.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/VectorwiseOp.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/PartialReduxEvaluator.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Random.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Replicate.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Reverse.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/ArrayWrapper.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/StlIterators.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/GlobalFunctions.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/Tensor \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/Core \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/SpecialFunctions \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/Constants.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/Meta.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/ForwardDeclarations.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/StaticAssert.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/XprHelper.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/Memory.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/IntegralConstant.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/SymbolicIndex.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/NumTraits.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/MathFunctions.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/GenericPacketMath.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/MathFunctionsImpl.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/arch/Default/ConjHelper.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/arch/Default/Half.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/arch/Default/BFloat16.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/arch/Default/TypeCasting.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/arch/Default/GenericPacketMathFunctionsFwd.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/arch/SSE/PacketMath.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/arch/SSE/TypeCasting.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/arch/SSE/MathFunctions.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/arch/SSE/Complex.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/arch/Default/Settings.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/functors/TernaryFunctors.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/functors/BinaryFunctors.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/functors/UnaryFunctors.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/functors/NullaryFunctors.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/functors/StlFunctors.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/functors/AssignmentFunctors.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/IndexedViewHelper.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/ReshapedHelper.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/ArithmeticSequence.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/IO.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/DenseCoeffsBase.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/DenseBase.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/plugins/CommonCwiseUnaryOps.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/plugins/BlockMethods.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/plugins/IndexedViewMethods.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/plugins/IndexedViewMethods.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/plugins/ReshapedMethods.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/plugins/ReshapedMethods.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/MatrixBase.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/plugins/CommonCwiseBinaryOps.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/EigenBase.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Product.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/CoreEvaluators.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/AssignEvaluator.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Assign.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/ArrayBase.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/plugins/ArrayCwiseUnaryOps.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/plugins/ArrayCwiseBinaryOps.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/BlasUtil.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/DenseStorage.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/NestByValue.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/ReturnByValue.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/NoAlias.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/PlainObjectBase.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Matrix.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Array.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/CwiseTernaryOp.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/CwiseBinaryOp.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/CwiseUnaryOp.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/CwiseNullaryOp.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/CwiseUnaryView.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/SelfCwiseBinaryOp.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Dot.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/StableNorm.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Stride.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/MapBase.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Map.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Ref.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Block.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/VectorBlock.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/IndexedView.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Reshaped.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Transpose.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/DiagonalMatrix.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Diagonal.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/DiagonalProduct.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Redux.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Visitor.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Fuzzy.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Swap.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/CommaInitializer.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/GeneralProduct.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Solve.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Inverse.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/SolverBase.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/PermutationMatrix.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Transpositions.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/TriangularMatrix.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/SelfAdjointView.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/products/GeneralBlockPanelKernel.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/products/Parallelizer.h \
+  /usr/include/c++/7/atomic \
+  /usr/include/c++/7/bits/atomic_base.h \
+  /usr/include/c++/7/bits/atomic_lockfree_defines.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/ProductEvaluators.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/products/GeneralMatrixVector.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/products/GeneralMatrixMatrix.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/SolveTriangular.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/products/SelfadjointMatrixVector.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/products/SelfadjointMatrixMatrix.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/products/SelfadjointProduct.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/products/SelfadjointRank2Update.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/products/TriangularMatrixVector.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/products/TriangularMatrixMatrix.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/products/TriangularSolverMatrix.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/products/TriangularSolverVector.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/BandMatrix.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/CoreIterators.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/ConditionEstimator.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/BooleanRedux.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Select.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/VectorwiseOp.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/PartialReduxEvaluator.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Random.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Replicate.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Reverse.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/ArrayWrapper.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/StlIterators.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/GlobalFunctions.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/ReenableStupidWarnings.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/Tensor \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/Core \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/SpecialFunctions \
   /usr/include/c++/7/math.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/Core \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/SpecialFunctions/BesselFunctionsImpl.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/SpecialFunctions/InternalHeaderCheck.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/SpecialFunctions/BesselFunctionsBFloat16.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/SpecialFunctions/BesselFunctionsHalf.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/SpecialFunctions/BesselFunctionsPacketMath.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/SpecialFunctions/BesselFunctionsFunctors.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/SpecialFunctions/BesselFunctionsArrayAPI.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsImpl.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsBFloat16.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsHalf.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsPacketMath.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsFunctors.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsArrayAPI.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/util/CXX11Meta.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/Core \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/DisableStupidWarnings.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/src/SpecialFunctions/BesselFunctionsImpl.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/src/SpecialFunctions/BesselFunctionsBFloat16.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/src/SpecialFunctions/BesselFunctionsHalf.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/src/SpecialFunctions/BesselFunctionsPacketMath.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/src/SpecialFunctions/BesselFunctionsFunctors.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/src/SpecialFunctions/BesselFunctionsArrayAPI.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsImpl.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsBFloat16.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsHalf.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsPacketMath.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsFunctors.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsArrayAPI.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/ReenableStupidWarnings.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/DisableStupidWarnings.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/util/CXX11Meta.h \
   /usr/include/c++/7/vector \
   /usr/include/c++/7/bits/stl_uninitialized.h \
   /usr/include/c++/7/bits/stl_vector.h \
   /usr/include/c++/7/bits/stl_bvector.h \
   /usr/include/c++/7/bits/vector.tcc \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/util/EmulateArray.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/util/CXX11Workarounds.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/util/MaxSizeVector.h \
-  /usr/include/c++/7/atomic \
-  /usr/include/c++/7/bits/atomic_base.h \
-  /usr/include/c++/7/bits/atomic_lockfree_defines.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/util/EmulateArray.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/util/CXX11Workarounds.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/util/MaxSizeVector.h \
   /usr/include/c++/7/chrono \
   /usr/include/c++/7/ratio \
   /usr/include/c++/7/ctime \
   /usr/include/c++/7/bits/parse_numbers.h \
-  /usr/include/c++/7/iterator \
-  /usr/include/c++/7/bits/stream_iterator.h \
-  /usr/include/c++/7/numeric \
-  /usr/include/c++/7/bits/stl_numeric.h \
   /usr/include/c++/7/random \
   /usr/include/c++/7/bits/random.h \
   /usr/include/x86_64-linux-gnu/c++/7/bits/opt_random.h \
   /usr/include/c++/7/bits/random.tcc \
+  /usr/include/c++/7/numeric \
+  /usr/include/c++/7/bits/stl_numeric.h \
   /usr/include/c++/7/thread \
   /usr/include/c++/7/memory \
   /usr/include/c++/7/bits/stl_raw_storage_iter.h \
@@ -6169,76 +6228,162 @@ CMakeFiles/mha.dir/src/eigenDNN.cpp.o: /home/poweruser/junda.feng/eigenDNN/src/e
   /usr/include/c++/7/ext/aligned_buffer.h \
   /usr/include/c++/7/bits/shared_ptr_atomic.h \
   /usr/include/c++/7/backward/auto_ptr.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorMacros.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorForwardDeclarations.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/InternalHeaderCheck.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorMeta.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorFunctors.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorCostModel.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorDeviceDefault.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorDeviceThreadPool.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorDeviceGpu.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorDeviceSycl.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorIndexList.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorDimensionList.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorDimensions.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorInitializer.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorTraits.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorRandom.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorUInt128.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorIntDiv.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorGlobalFunctions.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorIO.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorBase.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorBlock.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorEvaluator.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorExpr.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorReduction.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorReductionGpu.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorArgMax.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorConcatenation.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorContractionMapper.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorContractionBlocking.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorContraction.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorContractionThreadPool.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorContractionGpu.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorConversion.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorConvolution.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorFFT.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorPatch.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorImagePatch.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorVolumePatch.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorBroadcasting.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorChipping.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorInflation.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorLayoutSwap.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorMorphing.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorPadding.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorReverse.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorShuffling.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorStriding.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorCustomOp.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorEvalTo.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorForcedEval.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorGenerator.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorAssign.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorScan.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorTrace.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorExecutor.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorDevice.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorStorage.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/Tensor.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorFixedSize.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorMap.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorRef.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/AutoDiff \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/Core \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/AutoDiff/AutoDiffScalar.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/AutoDiff/InternalHeaderCheck.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/AutoDiff/AutoDiffJacobian.h \
-  /home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorMacros.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorForwardDeclarations.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorMeta.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorFunctors.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorCostModel.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorDeviceDefault.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorDeviceThreadPool.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorDeviceGpu.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorDeviceSycl.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorIndexList.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorDimensionList.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorDimensions.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorInitializer.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorTraits.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorRandom.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorUInt128.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorIntDiv.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorGlobalFunctions.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorBase.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorBlock.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorEvaluator.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorExpr.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorReduction.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorReductionGpu.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorArgMax.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorConcatenation.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorContractionMapper.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorContractionBlocking.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorContraction.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorContractionThreadPool.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorContractionGpu.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorConversion.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorConvolution.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorFFT.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorPatch.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorImagePatch.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorVolumePatch.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorBroadcasting.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorChipping.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorInflation.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorLayoutSwap.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorMorphing.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorPadding.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorReverse.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorShuffling.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorStriding.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorCustomOp.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorEvalTo.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorForcedEval.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorGenerator.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorAssign.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorScan.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorTrace.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorExecutor.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorDevice.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorStorage.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/Tensor.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorFixedSize.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorMap.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorRef.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorIO.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/ReenableStupidWarnings.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/AutoDiff \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/DisableStupidWarnings.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/src/AutoDiff/AutoDiffScalar.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/src/AutoDiff/AutoDiffJacobian.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/ReenableStupidWarnings.h \
+  /home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/EigenRand \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/Dense \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/Core \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/LU \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/misc/Kernel.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/misc/Image.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/LU/FullPivLU.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/LU/PartialPivLU.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/LU/Determinant.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/LU/InverseImpl.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/LU/arch/InverseSize4.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/Cholesky \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/Jacobi \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Jacobi/Jacobi.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Cholesky/LLT.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Cholesky/LDLT.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/QR \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/Householder \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Householder/Householder.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Householder/HouseholderSequence.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Householder/BlockHouseholder.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/QR/HouseholderQR.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/QR/FullPivHouseholderQR.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/QR/ColPivHouseholderQR.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/QR/CompleteOrthogonalDecomposition.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/SVD \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/misc/RealSvd2x2.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/SVD/UpperBidiagonalization.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/SVD/SVDBase.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/SVD/JacobiSVD.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/SVD/BDCSVD.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/Geometry \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Geometry/OrthoMethods.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Geometry/EulerAngles.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Geometry/Homogeneous.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Geometry/RotationBase.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Geometry/Rotation2D.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Geometry/Quaternion.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Geometry/AngleAxis.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Geometry/Transform.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Geometry/Translation.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Geometry/Scaling.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Geometry/Hyperplane.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Geometry/ParametrizedLine.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Geometry/AlignedBox.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Geometry/Umeyama.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Geometry/arch/Geometry_SIMD.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/Eigenvalues \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Eigenvalues/Tridiagonalization.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Eigenvalues/RealSchur.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Eigenvalues/HessenbergDecomposition.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Eigenvalues/EigenSolver.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Eigenvalues/RealSchur.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Eigenvalues/SelfAdjointEigenSolver.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Eigenvalues/Tridiagonalization.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Eigenvalues/GeneralizedSelfAdjointEigenSolver.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Eigenvalues/HessenbergDecomposition.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Eigenvalues/ComplexSchur.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Eigenvalues/ComplexEigenSolver.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Eigenvalues/ComplexSchur.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Eigenvalues/RealQZ.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Eigenvalues/RealQZ.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/DisableStupidWarnings.h \
+  /home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/Macro.h \
+  /home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/Core.h \
+  /home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/RandUtils.h \
+  /home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/MorePacketMath.h \
+  /home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/arch/SSE/MorePacketMath.h \
+  /home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/PacketFilter.h \
+  /home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/arch/SSE/PacketFilter.h \
+  /home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/PacketRandomEngine.h \
+  /usr/include/c++/7/fstream \
+  /usr/include/c++/7/bits/codecvt.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/c++io.h \
+  /usr/include/c++/7/bits/fstream.tcc \
+  /home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/arch/SSE/RandUtils.h \
+  /home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/CwiseHeteroBinaryOp.h \
+  /home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/Dists/Basic.h \
+  /home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/Dists/Discrete.h \
+  /usr/include/c++/7/iterator \
+  /usr/include/c++/7/bits/stream_iterator.h \
+  /home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/Dists/NormalExp.h \
+  /home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/Dists/GammaPoisson.h \
+  /home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/MvDists/MvNormal.h \
+  /home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/MvDists/Multinomial.h \
+  /home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/ReenableStupidWarnings.h \
   /usr/include/c++/7/map \
   /usr/include/c++/7/bits/stl_tree.h \
   /usr/include/c++/7/bits/stl_map.h \
@@ -16024,10 +16169,6 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/eigenDNN/src/transformerKernels.cc.cu:
 
-/home/poweruser/junda.feng/eigenDNN/src/tensor.cpp:
-
-/home/poweruser/junda.feng/eigenDNN/src/softmax_kernels.cu:
-
 /home/poweruser/junda.feng/eigenDNN/src/normalize_kernels.cu:
 
 /home/poweruser/junda.feng/eigenDNN/src/node.cpp:
@@ -16042,21 +16183,15 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/eigenDNN/src/layer_normalize.cpp:
 
-/home/poweruser/junda.feng/eigenDNN/include/layer_normalize.h:
-
 /home/poweruser/junda.feng/eigenDNN/include/feed_forward.h:
 
 /home/poweruser/junda.feng/eigenDNN/src/feed_forward.cpp:
 
-/home/poweruser/junda.feng/eigenDNN/include/embKernels.h:
+/home/poweruser/junda.feng/eigenDNN/src/embKernels.cc.cu:
+
+/home/poweruser/junda.feng/anaconda3/include/cooperative_groups/details/partitioning.h:
 
 /home/poweruser/junda.feng/anaconda3/include/cooperative_groups/details/sync.h:
-
-/home/poweruser/junda.feng/anaconda3/include/cooperative_groups/details/helpers.h:
-
-/home/poweruser/junda.feng/eigenDNN/src/dropout_kernels.cu:
-
-/home/poweruser/junda.feng/eigenDNN/src/dropout.cpp:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/iterator/constant_iterator.h:
 
@@ -16086,23 +16221,21 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/tabulate.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/tabulate.inl:
-
 /home/poweruser/junda.feng/anaconda3/include/thrust/tabulate.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/detail/sequence.inl:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/detail/trivial_sequence.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/sort.inl:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/sort.h:
-
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/count.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/adl/count.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/count.inl:
+
+/home/poweruser/junda.feng/eigenDNN/src/softmax.cpp:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/count.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/count.h:
 
@@ -16116,17 +16249,13 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/partition.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/inner_product.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/gather.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/adl/extrema.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/transform_reduce.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/transform_reduce.inl:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/cpp/detail/unique_by_key.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/unique.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/cpp/detail/unique.h:
 
@@ -16150,13 +16279,19 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/merge.h:
 
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/stable_merge_sort.inl:
+
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/reverse.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/reverse.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/reverse.inl:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/reverse.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/detail/reverse.inl:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/sort.inl:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/sort.h:
 
@@ -16166,6 +16301,8 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/cpp/detail/remove.h:
 
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/partition.h:
+
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/cpp/detail/partition.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/merge.inl:
@@ -16174,13 +16311,11 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/merge.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/cpp/detail/merge.h:
-
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/extrema.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/cpp/detail/extrema.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/binary_search.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/cpp/detail/par.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/cpp/execution_policy.h:
 
@@ -16196,8 +16331,6 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/cpp/detail/adjacent_difference.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/adjacent_difference.h:
-
 /home/poweruser/junda.feng/anaconda3/include/thrust/detail/adjacent_difference.inl:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/adjacent_difference.h:
@@ -16210,17 +16343,13 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/swap_ranges.h:
 
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/adl/swap_ranges.h:
+
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/swap_ranges.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/detail/swap.inl:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/core/agent_launcher.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/parallel_for.h:
-
-/home/poweruser/junda.feng/eigenDNN/src/cublas_wrappers.cu:
-
-/usr/include/c++/7/bits/std_mutex.h:
 
 /usr/include/c++/7/mutex:
 
@@ -16233,6 +16362,8 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 /home/poweruser/junda.feng/anaconda3/include/cub/iterator/transform_input_iterator.cuh:
 
 /home/poweruser/junda.feng/anaconda3/include/cub/iterator/cache_modified_output_iterator.cuh:
+
+/home/poweruser/junda.feng/anaconda3/include/cub/iterator/counting_input_iterator.cuh:
 
 /home/poweruser/junda.feng/anaconda3/include/cub/agent/agent_spmv_orig.cuh:
 
@@ -16254,19 +16385,19 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/anaconda3/include/cub/device/dispatch/dispatch_segmented_sort.cuh:
 
+/home/poweruser/junda.feng/anaconda3/include/cub/agent/agent_scan_by_key.cuh:
+
 /home/poweruser/junda.feng/anaconda3/include/cub/device/device_scan.cuh:
 
 /home/poweruser/junda.feng/anaconda3/include/cub/agent/agent_rle.cuh:
 
 /home/poweruser/junda.feng/anaconda3/include/cub/device/dispatch/dispatch_rle.cuh:
 
+/home/poweruser/junda.feng/anaconda3/include/cub/device/device_run_length_encode.cuh:
+
 /home/poweruser/junda.feng/anaconda3/include/cub/iterator/constant_input_iterator.cuh:
 
 /home/poweruser/junda.feng/anaconda3/include/cub/agent/agent_reduce.cuh:
-
-/home/poweruser/junda.feng/anaconda3/include/cub/device/dispatch/dispatch_reduce.cuh:
-
-/home/poweruser/junda.feng/anaconda3/include/cub/iterator/arg_index_input_iterator.cuh:
 
 /home/poweruser/junda.feng/anaconda3/include/cub/device/device_reduce.cuh:
 
@@ -16284,6 +16415,8 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/anaconda3/include/cub/device/dispatch/dispatch_three_way_partition.cuh:
 
+/home/poweruser/junda.feng/anaconda3/include/cub/agent/agent_scan.cuh:
+
 /home/poweruser/junda.feng/anaconda3/include/cub/device/dispatch/dispatch_scan.cuh:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/swap.h:
@@ -16291,6 +16424,12 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 /home/poweruser/junda.feng/anaconda3/include/cub/device/dispatch/dispatch_select_if.cuh:
 
 /home/poweruser/junda.feng/anaconda3/include/cub/device/dispatch/dispatch_histogram.cuh:
+
+/home/poweruser/junda.feng/anaconda3/include/cub/device/device_histogram.cuh:
+
+/home/poweruser/junda.feng/anaconda3/include/cuda_occupancy.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/core/util.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/transform_reduce.h:
 
@@ -16300,10 +16439,6 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/anaconda3/include/cub/block/block_store.cuh:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/get_iterator_value.h:
-
-/home/poweruser/junda.feng/anaconda3/include/cub/block/specializations/block_reduce_warp_reductions.cuh:
-
 /home/poweruser/junda.feng/anaconda3/include/crt/mma.hpp:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/core/triple_chevron_launch.h:
@@ -16312,21 +16447,15 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/anaconda3/include/cub/warp/specializations/warp_reduce_smem.cuh:
 
-/home/poweruser/junda.feng/anaconda3/include/cub/agent/agent_select_if.cuh:
-
-/home/poweruser/junda.feng/anaconda3/include/cub/warp/specializations/warp_reduce_shfl.cuh:
-
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/make_unsigned_special.h:
 
 /home/poweruser/junda.feng/anaconda3/include/cub/warp/warp_reduce.cuh:
 
-/home/poweruser/junda.feng/anaconda3/include/cub/util_math.cuh:
-
 /home/poweruser/junda.feng/anaconda3/include/cub/thread/thread_sort.cuh:
 
-/home/poweruser/junda.feng/anaconda3/include/cub/block/block_merge_sort.cuh:
-
 /home/poweruser/junda.feng/anaconda3/include/cub/block/block_load.cuh:
+
+/home/poweruser/junda.feng/anaconda3/include/cub/block/radix_rank_sort_operations.cuh:
 
 /home/poweruser/junda.feng/anaconda3/include/cub/block/specializations/block_scan_warp_scans.cuh:
 
@@ -16337,6 +16466,8 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 /home/poweruser/junda.feng/anaconda3/include/cub/warp/specializations/warp_scan_shfl.cuh:
 
 /home/poweruser/junda.feng/anaconda3/include/cub/warp/warp_scan.cuh:
+
+/home/poweruser/junda.feng/anaconda3/include/cub/block/specializations/block_scan_raking.cuh:
 
 /home/poweruser/junda.feng/anaconda3/include/cub/block/block_scan.cuh:
 
@@ -16352,9 +16483,9 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/anaconda3/include/cub/util_type.cuh:
 
-/home/poweruser/junda.feng/anaconda3/include/cub/util_ptx.cuh:
-
 /home/poweruser/junda.feng/anaconda3/include/cub/block/block_exchange.cuh:
+
+/home/poweruser/junda.feng/anaconda3/include/cub/block/specializations/block_histogram_sort.cuh:
 
 /home/poweruser/junda.feng/anaconda3/include/cub/block/block_histogram.cuh:
 
@@ -16372,17 +16503,11 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/anaconda3/include/surface_indirect_functions.h:
 
-/home/poweruser/junda.feng/anaconda3/include/texture_indirect_functions.h:
-
 /home/poweruser/junda.feng/anaconda3/include/texture_fetch_functions.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/tabulate.inl:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/cpp/detail/binary_search.h:
-
-/home/poweruser/junda.feng/anaconda3/include/crt/sm_80_rt.h:
-
 /home/poweruser/junda.feng/anaconda3/include/crt/sm_70_rt.h:
+
+/home/poweruser/junda.feng/anaconda3/include/sm_30_intrinsics.hpp:
 
 /home/poweruser/junda.feng/anaconda3/include/cub/device/device_segmented_reduce.cuh:
 
@@ -16398,6 +16523,10 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/anaconda3/include/crt/device_functions.h:
 
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/count.inl:
+
+/home/poweruser/junda.feng/anaconda3/include/cuda_texture_types.h:
+
 /home/poweruser/junda.feng/anaconda3/include/crt/math_functions.hpp:
 
 /home/poweruser/junda.feng/anaconda3/include/crt/math_functions.h:
@@ -16406,13 +16535,9 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/eigenDNN/src/context.cpp:
 
-/home/poweruser/junda.feng/eigenDNN/src/bias_dropout_residual.cpp:
-
 /home/poweruser/junda.feng/eigenDNN/include/bias_add_transform_20314.h:
 
 /home/poweruser/junda.feng/anaconda3/include/curand_discrete2.h:
-
-/home/poweruser/junda.feng/anaconda3/include/curand_poisson.h:
 
 /home/poweruser/junda.feng/anaconda3/include/curand_normal.h:
 
@@ -16422,15 +16547,13 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/anaconda3/include/curand_mtgp32.h:
 
-/home/poweruser/junda.feng/anaconda3/include/sm_35_intrinsics.h:
-
-/home/poweruser/junda.feng/anaconda3/include/curand_mtgp32_kernel.h:
+/home/poweruser/junda.feng/anaconda3/include/curand_mrg32k3a.h:
 
 /home/poweruser/junda.feng/anaconda3/include/curand.h:
 
-/home/poweruser/junda.feng/anaconda3/include/nv/target:
+/home/poweruser/junda.feng/anaconda3/include/nv/detail/__target_macros:
 
-/home/poweruser/junda.feng/anaconda3/include/curand_kernel.h:
+/home/poweruser/junda.feng/anaconda3/include/nv/target:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/extrema.h:
 
@@ -16441,8 +16564,6 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 /home/poweruser/junda.feng/anaconda3/include/curand_lognormal.h:
 
 /home/poweruser/junda.feng/eigenDNN/include/layer.h:
-
-/usr/include/c++/7/stack:
 
 /usr/include/c++/7/bits/stl_queue.h:
 
@@ -16462,7 +16583,9 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/eigenDNN/include/tensor.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/random/detail/normal_distribution.inl:
+/home/poweruser/junda.feng/eigenDNN/include/dropout.h:
+
+/home/poweruser/junda.feng/eigenDNN/include/node.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/random/normal_distribution.h:
 
@@ -16474,37 +16597,27 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/random/detail/uniform_int_distribution.inl:
 
+/home/poweruser/junda.feng/anaconda3/include/thrust/random/uniform_int_distribution.h:
+
 /home/poweruser/junda.feng/anaconda3/include/thrust/random/detail/xor_combine_engine_max.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/random/xor_combine_engine.h:
-
 /home/poweruser/junda.feng/anaconda3/include/thrust/random/detail/subtract_with_carry_engine.inl:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/random/subtract_with_carry_engine.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/random/detail/linear_feedback_shift_engine_wordmask.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/random/linear_feedback_shift_engine.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/random/detail/mod.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/random/detail/random_core_access.h:
-
 /home/poweruser/junda.feng/anaconda3/include/surface_functions.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/random.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/cpp/pointer.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/mr/fancy_pointer_resource.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/mr/new.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/cpp/memory_resource.h:
-
 /home/poweruser/junda.feng/anaconda3/include/thrust/mr/host_memory_resource.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/pointer.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/memory_resource.h:
 
 /home/poweruser/junda.feng/anaconda3/include/cub/block/block_radix_rank.cuh:
 
@@ -16532,13 +16645,13 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/equal.h:
 
-/home/poweruser/junda.feng/anaconda3/include/sm_32_atomic_functions.hpp:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/mismatch.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/mismatch.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/adl/mismatch.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/cpp/detail/find.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/adl/find.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/iterator/detail/transform_iterator.inl:
 
@@ -16549,6 +16662,8 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 /home/poweruser/junda.feng/anaconda3/include/thrust/iterator/detail/counting_iterator.inl:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/iterator/counting_iterator.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/minmax.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/reduce_by_key.h:
 
@@ -16572,10 +16687,6 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/reduce.inl:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/reduce.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/reduce.inl:
-
 /home/poweruser/junda.feng/anaconda3/include/crt/device_double_functions.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/find.h:
@@ -16584,11 +16695,9 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/find.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/mismatch.inl:
-
 /home/poweruser/junda.feng/anaconda3/include/thrust/detail/equal.inl:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/equal.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/vector_base.inl:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/iterator/detail/reverse_iterator.inl:
 
@@ -16612,13 +16721,19 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/scatter.inl:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/scatter.inl:
-
 /home/poweruser/junda.feng/anaconda3/include/thrust/scatter.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/scan_by_key.h:
 
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/cpp/detail/scan_by_key.h:
+
+/home/poweruser/junda.feng/anaconda3/include/sm_61_intrinsics.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/scan_by_key.h:
+
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/adl/scan_by_key.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/cpp/detail/scan.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/core/alignment.h:
 
@@ -16626,19 +16741,21 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/adl/scan.h:
 
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/replace.h:
+
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/replace.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/sequence.inl:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/adl/replace.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/replace.inl:
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/copy_if.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/scan_by_key.inl:
 
 /home/poweruser/junda.feng/anaconda3/include/cub/warp/specializations/warp_scan_smem.cuh:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/iterator/detail/any_assign.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/type_traits/iterator/is_output_iterator.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/detail/scan.inl:
 
@@ -16654,11 +16771,9 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/par.h:
 
-/home/poweruser/junda.feng/anaconda3/include/cub/iterator/discard_output_iterator.cuh:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/temporary_buffer.h:
-
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/temporary_buffer.inl:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/temporary_buffer.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/detail/execute_with_allocator.h:
 
@@ -16675,6 +16790,8 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/cpp/detail/iter_swap.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/iter_swap.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/adl/iter_swap.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/assign_value.h:
 
@@ -16694,13 +16811,9 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/get_value.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/adl/get_value.h:
-
 /home/poweruser/junda.feng/anaconda3/include/thrust/detail/malloc_and_free.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/bad_alloc.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/seq.h:
 
 /home/poweruser/junda.feng/anaconda3/include/sm_32_intrinsics.h:
 
@@ -16710,279 +16823,431 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/adl/malloc_and_free.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/reference.h:
-
 /home/poweruser/junda.feng/anaconda3/include/thrust/detail/pointer.inl:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/products/TriangularMatrixMatrix.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/allocator/tagged_allocator.inl:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/adl/iter_swap.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/products/SelfadjointMatrixMatrix.h:
-
-/home/poweruser/junda.feng/anaconda3/include/cuda_device_runtime_api.h:
-
-/home/poweruser/junda.feng/eigenDNN/src/embKernels.cc.cu:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/products/GeneralMatrixVector.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/products/Parallelizer.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Inverse.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorChipping.h:
-
-/home/poweruser/junda.feng/anaconda3/include/cooperative_groups/details/partitioning.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/DenseStorage.h:
-
-/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/core/util.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/TriangularMatrix.h:
-
-/usr/include/x86_64-linux-gnu/bits/wordsize.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/SolverBase.h:
-
-/home/poweruser/junda.feng/anaconda3/include/curand_mrg32k3a.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Solve.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/cpp/detail/generate.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Fuzzy.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/SkewSymmetricMatrix3.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/DiagonalProduct.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorDeviceDefault.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/arch/Default/BFloat16.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/replace.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Reshaped.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/MapBase.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/adjacent_difference.h:
-
-/home/poweruser/junda.feng/anaconda3/include/texture_types.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/functors/StlFunctors.h:
-
-/usr/include/x86_64-linux-gnu/bits/byteswap-16.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/allocator/tagged_allocator.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/detail/allocator/temporary_allocator.h:
 
-/home/poweruser/junda.feng/anaconda3/include/sm_61_intrinsics.hpp:
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/allocator/fill_construct_range.h:
 
-/usr/include/c++/7/bits/functional_hash.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/allocator/destroy_range.inl:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/CwiseUnaryView.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/uninitialized_fill.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/type_traits/is_call_possible.h:
+/home/poweruser/junda.feng/anaconda3/include/cub/util_deprecated.cuh:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/CwiseNullaryOp.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/uninitialized_fill.h:
 
-/home/poweruser/junda.feng/anaconda3/include/cub/block/specializations/block_histogram_sort.cuh:
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/fill.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Array.h:
+/home/poweruser/junda.feng/anaconda3/include/nv/detail/__preprocessor:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/count.inl:
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/adl/fill.h:
 
-/home/poweruser/junda.feng/anaconda3/include/cuda_texture_types.h:
+/home/poweruser/junda.feng/anaconda3/include/sm_60_atomic_functions.hpp:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorStorage.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/generate.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/partition.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/cpp/detail/generate.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/PlainObjectBase.h:
+/home/poweruser/junda.feng/anaconda3/include/cub/device/dispatch/dispatch_merge_sort.cuh:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/replace.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/generate.h:
 
-/usr/include/c++/7/bits/stl_raw_storage_iter.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/equal.h:
 
-/home/poweruser/junda.feng/anaconda3/include/cub/agent/agent_reduce_by_key.cuh:
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/generate.inl:
 
-/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/fill.h:
+
+/home/poweruser/junda.feng/anaconda3/include/cub/iterator/tex_obj_input_iterator.cuh:
+
+/home/poweruser/junda.feng/anaconda3/include/cub/block/block_radix_sort.cuh:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/fill.inl:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/fill.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/uninitialized_fill.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/uninitialized_fill.inl:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/uninitialized_fill.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/reduce.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/allocator/copy_construct_range.inl:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/detail/allocator/copy_construct_range.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Assign.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/integer_traits.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/iterator/detail/iterator_category_to_system.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/type_traits/is_call_possible.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/adl/find.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/allocator/allocator_traits.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/contiguous_storage.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/iterator/detail/iterator_adaptor_base.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/iterator/iterator_adaptor.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/iterator/detail/tagged_iterator.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/temporary_array.h:
+
+/home/poweruser/junda.feng/anaconda3/include/cub/util_macro.cuh:
+
+/home/poweruser/junda.feng/anaconda3/include/cub/device/dispatch/dispatch_radix_sort.cuh:
+
+/home/poweruser/junda.feng/anaconda3/include/cub/util_compiler.cuh:
+
+/home/poweruser/junda.feng/anaconda3/include/cub/util_arch.cuh:
+
+/home/poweruser/junda.feng/anaconda3/include/sm_35_atomic_functions.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/malloc_and_free.h:
+
+/home/poweruser/junda.feng/anaconda3/include/cub/detail/device_synchronize.cuh:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/error.inl:
+
+/home/poweruser/junda.feng/anaconda3/include/cub/device/dispatch/dispatch_scan_by_key.cuh:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/scan.inl:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/error.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/system_error.inl:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/system_error.h:
+
+/home/poweruser/junda.feng/anaconda3/include/sm_20_atomic_functions.hpp:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/error_category.inl:
 
 /home/poweruser/junda.feng/eigenDNN/src/cuda_util.cu:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Transpose.h:
-
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/error_code.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/reverse.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/system_error.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/plugins/IndexedViewMethods.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/uninitialized_copy.h:
 
-/usr/include/c++/7/bits/stl_vector.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/distance.inl:
 
-/usr/include/c++/7/stdexcept:
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/distance.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorStriding.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/util.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/config/deprecated.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/distance.inl:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/find.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/distance.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/products/TriangularMatrixMatrix.h:
+
+/home/poweruser/junda.feng/eigenDNN/src/transform_kernels.cu:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/products/TriangularMatrixVector.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/products/SelfadjointProduct.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/functional/operators/assignment_operator.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorInflation.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/get_iterator_value.h:
+
+/home/poweruser/junda.feng/anaconda3/include/cub/block/specializations/block_reduce_warp_reductions.cuh:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/products/GeneralMatrixVector.h:
+
+/usr/include/c++/7/bits/atomic_base.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Eigenvalues/GeneralizedSelfAdjointEigenSolver.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/transform.inl:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/products/Parallelizer.h:
+
+/usr/include/x86_64-linux-gnu/bits/locale.h:
+
+/home/poweruser/junda.feng/anaconda3/include/driver_types.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/binary_search.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/products/GeneralBlockPanelKernel.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/cpp/detail/unique_by_key.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/GeneralProduct.h:
+
+/home/poweruser/junda.feng/eigenDNN/include/softmax.h:
+
+/usr/include/c++/7/bits/istream.tcc:
+
+/home/poweruser/junda.feng/anaconda3/include/cuda_bf16.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/copy.inl:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/SelfAdjointView.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Inverse.h:
+
+/home/poweruser/junda.feng/eigenDNN/include/multihead_attention_layer.h:
+
+/usr/include/c++/7/ext/numeric_traits.h:
+
+/home/poweruser/junda.feng/eigenDNN/src/softmax_kernels.cu:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/CommaInitializer.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/detail/functional/composite.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/ReshapedHelper.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/memory.inl:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/functors/NullaryFunctors.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/PermutationMatrix.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/cpp/detail/scan_by_key.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/functors/UnaryFunctors.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/CoreIterators.h:
-
-/usr/include/x86_64-linux-gnu/bits/uio_lim.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctionsFwd.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/ArithmeticSequence.h:
-
-/usr/include/c++/7/iterator:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/SymbolicIndex.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Fuzzy.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/swap_ranges.inl:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/pair.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/mismatch.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/DiagonalProduct.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/IntegralConstant.h:
+/usr/include/c++/7/array:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/Memory.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Transpose.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/iterator/detail/reverse_iterator_base.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/cpp/memory_resource.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Reshaped.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/XprHelper.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/adl/get_value.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/copy_if.inl:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Swap.h:
 
-/home/poweruser/junda.feng/anaconda3/include/driver_functions.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/IndexedView.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/StaticAssert.h:
+/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:
+/home/poweruser/junda.feng/anaconda3/include/cub/util_debug.cuh:
 
-/home/poweruser/junda.feng/anaconda3/include/cub/iterator/cache_modified_input_iterator.cuh:
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/functional/operators.h:
 
-/usr/include/assert.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/VectorBlock.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/vector_base.inl:
+/home/poweruser/junda.feng/anaconda3/include/cub/host/mutex.cuh:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/Assert.h:
+/usr/include/c++/7/bits/basic_string.h:
 
-/home/poweruser/junda.feng/anaconda3/include/cub/block/radix_rank_sort_operations.cuh:
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/alignment.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/Constants.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Map.h:
 
-/usr/include/c++/7/bits/stl_construct.h:
+/home/poweruser/junda.feng/anaconda3/include/texture_indirect_functions.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Stride.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/CwiseUnaryView.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/temporary_buffer.h:
+/home/poweruser/junda.feng/anaconda3/include/device_atomic_functions.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/SpecialFunctions/BesselFunctionsImpl.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/mismatch.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorExecutor.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/internal_functional.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/scan.h:
+/home/poweruser/junda.feng/anaconda3/include/cub/iterator/discard_output_iterator.cuh:
 
-/usr/include/stdlib.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/temporary_buffer.h:
 
-/usr/include/c++/7/algorithm:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Array.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Matrix.h:
+
+/usr/include/memory.h:
+
+/usr/include/c++/7/cmath:
+
+/home/poweruser/junda.feng/anaconda3/include/cooperative_groups/details/helpers.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/NestByValue.h:
+
+/home/poweruser/junda.feng/anaconda3/include/cub/thread/thread_search.cuh:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/iterator/zip_iterator.h:
+
+/home/poweruser/junda.feng/anaconda3/include/curand_kernel.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/plugins/ArrayCwiseBinaryOps.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/ArrayBase.h:
+
+/home/poweruser/junda.feng/anaconda3/include/curand_poisson.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Product.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/plugins/MatrixCwiseBinaryOps.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorContractionMapper.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/plugins/CommonCwiseBinaryOps.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/remove.inl:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/partition.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/config/cpp_dialect.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/MatrixBase.h:
+
+/usr/include/c++/7/bits/std_mutex.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Redux.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/tabulate.inl:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/cpp/detail/binary_search.h:
+
+/home/poweruser/junda.feng/anaconda3/include/crt/sm_80_rt.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Dot.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorChipping.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/type_traits/iterator/is_output_iterator.h:
+
+/home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/Macro.h:
+
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/functors/BinaryFunctors.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/PartialReduxEvaluator.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/functors/TernaryFunctors.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/arch/Default/Settings.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/Core:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/Dense:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/arch/SSE/Complex.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/config/forceinline.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/arch/Default/BFloat16.h:
+
+/home/poweruser/junda.feng/anaconda3/include/cub/block/block_merge_sort.cuh:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/NoAlias.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/cpp/pointer.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/arch/Default/ConjHelper.h:
+
+/home/poweruser/junda.feng/eigenDNN/src/dropout.cpp:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Ref.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/DenseCoeffsBase.h:
+
+/usr/include/stdio.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/sort.inl:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/NumTraits.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/IntegralConstant.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/Memory.h:
+
+/usr/include/c++/7/bits/uniform_int_dist.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/CwiseBinaryOp.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/random/detail/normal_distribution.inl:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorFixedSize.h:
+
+/home/poweruser/junda.feng/anaconda3/include/curand_precalc.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/iterator/reverse_iterator.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/allocator/destroy_range.h:
+
+/home/poweruser/junda.feng/eigenDNN/mha.cc:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/src/SpecialFunctions/BesselFunctionsArrayAPI.h:
 
 /usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/uninitialized_fill.h:
-
-/home/poweruser/junda.feng/anaconda3/include/cub/agent/agent_scan_by_key.cuh:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/products/SelfadjointProduct.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/BlasUtil.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/IndexedView.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/memory_resource.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/EigenBase.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/plugins/BlockMethods.h:
 
 /usr/include/linux/limits.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorDimensionList.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/mismatch.h:
 
 /usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
 
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/allocator/default_construct_range.inl:
+
+/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed/syslimits.h:
+
 /usr/include/c++/7/limits:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/functors/TernaryFunctors.h:
-
-/home/poweruser/junda.feng/anaconda3/include/cuda_occupancy.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/GenericPacketMath.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/contiguous_storage.h:
 
 /usr/include/string.h:
 
 /usr/include/c++/7/cstring:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/CoreEvaluators.h:
+/usr/include/c++/7/deque:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/transform.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Block.h:
 
-/usr/include/stdint.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/copy.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/sequence.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/Constants.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/ProductEvaluators.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/cstdint.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorForwardDeclarations.h:
+/usr/include/c++/7/debug/debug.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/sort.inl:
+
+/usr/include/c++/7/bits/shared_ptr_atomic.h:
 
 /usr/include/c++/7/tuple:
 
 /usr/include/x86_64-linux-gnu/bits/libio.h:
 
-/home/poweruser/junda.feng/anaconda3/include/cub/device/device_histogram.cuh:
+/home/poweruser/junda.feng/anaconda3/include/cub/iterator/cache_modified_input_iterator.cuh:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/MKL_support.h:
+/usr/include/assert.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Eigenvalues/RealSchur.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/plugins/ArrayCwiseUnaryOps.h:
+
+/usr/include/c++/7/cstddef:
+
+/home/poweruser/junda.feng/eigenDNN/src/transform_0213.cpp:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h:
+
+/home/poweruser/junda.feng/eigenDNN/include/bias_dropout_residual.h:
+
+/usr/include/c++/7/sstream:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorDimensions.h:
 
 /usr/include/c++/7/map:
+
+/usr/include/x86_64-linux-gnu/bits/sys_errlist.h:
+
+/usr/include/x86_64-linux-gnu/bits/uio_lim.h:
 
 /usr/include/c++/7/stdlib.h:
 
@@ -16994,25 +17259,11 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
-/usr/include/c++/7/iosfwd:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/SpecialFunctions/BesselFunctionsFunctors.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/SVD/JacobiSVD.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/7/include/mmintrin.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/ConfigureVectorization.h:
-
-/usr/include/x86_64-linux-gnu/sys/select.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/random/discard_block_engine.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/SolveTriangular.h:
-
-/usr/include/c++/7/functional:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/copy.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/MathFunctions.h:
+/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
 
 /usr/include/x86_64-linux-gnu/bits/math-vector.h:
 
@@ -17020,41 +17271,19 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /usr/include/x86_64-linux-gnu/sys/sysmacros.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/ReturnByValue.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/generate.inl:
 
-/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/BlasUtil.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h:
-
-/home/poweruser/junda.feng/anaconda3/include/cub/warp/warp_load.cuh:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/iterator/iterator_categories.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/random/uniform_int_distribution.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/arch/Default/Settings.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/InternalHeaderCheck.h:
-
-/home/poweruser/junda.feng/anaconda3/include/cub/agent/agent_scan.cuh:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/Macros.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorConversion.h:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/uninitialized_fill.inl:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/stable_merge_sort.h:
+/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
 
-/home/poweruser/junda.feng/anaconda3/include/cuda_surface_types.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/for_each.h:
-
-/usr/include/x86_64-linux-gnu/c++/7/bits/os_defines.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/config/host_system.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/Core:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/Macros.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/detail/transform_reduce.inl:
 
@@ -17064,21 +17293,25 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /usr/include/x86_64-linux-gnu/bits/fp-logb.h:
 
-/usr/include/c++/7/numeric:
+/home/poweruser/junda.feng/anaconda3/include/thrust/random/detail/mod.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Diagonal.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/BandMatrix.h:
+
+/usr/include/c++/7/numeric:
 
 /usr/include/c++/7/bits/fstream.tcc:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/iterator/detail/tagged_iterator.h:
-
 /usr/include/x86_64-linux-gnu/c++/7/bits/c++io.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/arch/Default/ConjHelper.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/random/detail/linear_congruential_engine_discard.h:
 
 /home/poweruser/junda.feng/anaconda3/include/vector_functions.hpp:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/PlainObjectBase.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/replace.inl:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorMacros.h:
 
 /usr/include/c++/7/bits/codecvt.h:
 
@@ -17088,11 +17321,11 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /usr/include/endian.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorIO.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Geometry/Quaternion.h:
+
+/usr/include/x86_64-linux-gnu/c++/7/bits/c++locale.h:
 
 /usr/include/c++/7/bits/locale_classes.tcc:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/CommaInitializer.h:
 
 /usr/include/x86_64-linux-gnu/c++/7/bits/ctype_base.h:
 
@@ -17100,27 +17333,19 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/anaconda3/include/crt/host_defines.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/adl/generate.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/products/TriangularSolverMatrix.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/copy_if.inl:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/detail/allocator_aware_execution_policy.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/cstdint.h:
-
-/usr/include/c++/7/debug/debug.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/sort.inl:
-
-/usr/include/c++/7/bits/shared_ptr_atomic.h:
-
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
 /usr/include/c++/7/bits/stl_algo.h:
 
-/usr/include/c++/7/fstream:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/CwiseNullaryOp.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/Meta.h:
+/usr/include/c++/7/fstream:
 
 /home/poweruser/junda.feng/anaconda3/include/cub/agent/agent_histogram.cuh:
 
@@ -17128,9 +17353,9 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
-/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
+/usr/include/c++/7/bits/ptr_traits.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/uninitialized_fill.inl:
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/config/deprecated.h:
 
 /usr/include/pthread.h:
 
@@ -17138,93 +17363,115 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /usr/include/c++/7/debug/assertions.h:
 
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/Householder:
+
 /home/poweruser/junda.feng/anaconda3/include/curand_normal_static.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/find.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
 
-/usr/include/c++/7/bits/functexcept.h:
+/usr/include/c++/7/iosfwd:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/tuple.inl:
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
+
+/usr/include/c++/7/bits/functexcept.h:
 
 /usr/include/c++/7/bits/stl_algobase.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/allocator/tagged_allocator.inl:
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/contiguous_storage.inl:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/NoAlias.h:
+/usr/include/c++/7/bits/concept_check.h:
 
-/usr/include/c++/7/bits/stl_iterator_base_types.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/plugins/MatrixCwiseUnaryOps.h:
 
-/usr/include/c++/7/new:
+/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h:
+/home/poweruser/junda.feng/anaconda3/include/cub/thread/thread_scan.cuh:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/DenseCoeffsBase.h:
+/usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Dot.h:
+/home/poweruser/junda.feng/anaconda3/include/cub/block/specializations/block_reduce_raking.cuh:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/DisableStupidWarnings.h:
+
+/home/poweruser/junda.feng/anaconda3/include/cuComplex.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/error_code.inl:
+
+/usr/include/c++/7/bits/nested_exception.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/sort.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/Geometry:
+
+/home/poweruser/junda.feng/eigenDNN/src/tensor.cpp:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Cholesky/LDLT.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/tabulate.h:
+
+/home/poweruser/junda.feng/anaconda3/include/sm_20_atomic_functions.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/functional/actor.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/tuple.inl:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/util/EmulateArray.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/7/include/mm_malloc.h:
 
 /usr/include/c++/7/bits/hash_bytes.h:
 
 /usr/include/c++/7/bits/cxxabi_init_exception.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/functors/BinaryFunctors.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/7/include/xmmintrin.h:
-
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
+
+/usr/include/x86_64-linux-gnu/sys/select.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/random/discard_block_engine.h:
+
+/usr/include/c++/7/functional:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/copy.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
+
+/usr/include/c++/7/bits/stl_heap.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/set_operations.h:
 
 /usr/include/ctype.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/CwiseTernaryOp.h:
+/usr/include/c++/7/bits/exception_defines.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/reduce.h:
 
 /usr/include/x86_64-linux-gnu/c++/7/bits/basic_file.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/adl/tabulate.h:
-
-/usr/include/x86_64-linux-gnu/bits/local_lim.h:
-
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
 /usr/include/c++/7/initializer_list:
-
-/home/poweruser/junda.feng/anaconda3/include/cub/device/dispatch/dispatch_scan_by_key.cuh:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/scan.inl:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/error.h:
 
 /usr/include/c++/7/bits/stringfwd.h:
 
 /usr/include/c++/7/type_traits:
 
-/home/poweruser/junda.feng/eigenDNN/src/transform_kernels.cu:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorUInt128.h:
-
 /home/poweruser/junda.feng/anaconda3/include/thrust/detail/type_traits/minimum_type.h:
 
-/usr/include/x86_64-linux-gnu/c++/7/bits/c++allocator.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/Serializer.h:
-
 /usr/include/c++/7/ext/alloc_traits.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/equal.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/CwiseUnaryOp.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/detail/device_ptr.inl:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/type_traits/is_trivially_relocatable.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/arch/Default/TypeCasting.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/remove.inl:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/partition.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/config/cpp_dialect.h:
 
 /usr/include/c++/7/complex:
 
@@ -17232,19 +17479,17 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /usr/include/c++/7/bits/stl_tempbuf.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorReverse.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Diagonal.h:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
 /home/poweruser/junda.feng/anaconda3/include/cub/agent/agent_radix_sort_histogram.cuh:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorShuffling.h:
-
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/trivial_copy.h:
 
 /usr/include/c++/7/ext/new_allocator.h:
+
+/home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/MorePacketMath.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/detail/functional/actor.inl:
 
@@ -17254,39 +17499,41 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/eigenDNN/src/bias_act_dropout.cpp:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/temporary_array.h:
+/home/poweruser/junda.feng/anaconda3/include/cub/util_cpp_dialect.cuh:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/cpp/detail/copy.h:
+
+/home/poweruser/junda.feng/eigenDNN/include/feed_forward_layer.h:
+
+/usr/include/wctype.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/par_to_seq.h:
+
+/usr/include/x86_64-linux-gnu/c++/7/bits/c++config.h:
 
 /usr/include/strings.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/VectorBlock.h:
-
 /usr/include/x86_64-linux-gnu/bits/cpu-set.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorLayoutSwap.h:
+/home/poweruser/junda.feng/eigenDNN/src/bias_dropout_residual.cpp:
 
-/home/poweruser/junda.feng/anaconda3/include/cub/util_debug.cuh:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/functional/operators.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/GenericPacketMath.h:
 
 /usr/include/c++/7/utility:
 
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/functors/NullaryFunctors.h:
+
 /usr/include/c++/7/string:
-
-/usr/lib/gcc/x86_64-linux-gnu/7/include/mm_malloc.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/7/include/stdint.h:
-
-/usr/include/c++/7/bits/stl_iterator.h:
 
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 
-/usr/include/c++/7/array:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/ReturnByValue.h:
+
+/home/poweruser/junda.feng/anaconda3/include/cuda_device_runtime_api.h:
 
 /usr/include/c++/7/ostream:
 
 /usr/include/c++/7/math.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/iterator/iterator_traits.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/cpp/detail/reduce_by_key.h:
 
@@ -17296,9 +17543,15 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/anaconda3/include/cublas_v2.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/error.inl:
-
 /usr/include/c++/7/cstdint:
+
+/usr/include/c++/7/bits/stl_iterator_base_types.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorMeta.h:
+
+/usr/include/c++/7/new:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorIO.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/detail/cpp11_required.h:
 
@@ -17312,25 +17565,11 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /usr/include/stdc-predef.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/MatrixBase.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/random/detail/random_core_access.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/type_traits.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/CoreIterators.h:
 
-/home/poweruser/junda.feng/eigenDNN/include/feed_forward_layer.h:
-
-/usr/include/wctype.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h:
-
-/usr/include/memory.h:
-
-/usr/include/c++/7/cmath:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/Tensor:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/AssignEvaluator.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/config/config.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/IO.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/adl/adjacent_difference.h:
 
@@ -17340,9 +17579,11 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /usr/include/sched.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/execute_with_allocator_fwd.h:
-
 /usr/include/x86_64-linux-gnu/c++/7/bits/cpu_defines.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/util/CXX11Meta.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Stride.h:
 
 /usr/include/x86_64-linux-gnu/bits/sysmacros.h:
 
@@ -17350,23 +17591,23 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/detail/raw_pointer_cast.h:
 
-/usr/include/c++/7/bits/exception_defines.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/plugins/ReshapedMethods.h:
-
 /usr/include/c++/7/bits/std_function.h:
-
-/home/poweruser/junda.feng/anaconda3/include/vector_functions.h:
 
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
+/usr/include/limits.h:
+
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/random/xor_combine_engine.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/arch/SSE/TypeCasting.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorGenerator.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/detail/preprocessor.h:
 
 /usr/include/x86_64-linux-gnu/c++/7/bits/atomic_word.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/GeneralProduct.h:
 
 /home/poweruser/junda.feng/anaconda3/include/cub/block/specializations/block_histogram_atomic.cuh:
 
@@ -17374,39 +17615,41 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
-/usr/include/x86_64-linux-gnu/bits/locale.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/iterator/detail/reverse_iterator_base.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/stable_merge_sort.inl:
+/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorConcatenation.h:
-
-/home/poweruser/junda.feng/anaconda3/include/driver_types.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/adl/reverse.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/functors/AssignmentFunctors.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/SVD/BDCSVD.h:
 
 /usr/include/c++/7/bits/refwrap.h:
 
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorScan.h:
+
 /usr/lib/gcc/x86_64-linux-gnu/7/include/stddef.h:
 
-/home/poweruser/junda.feng/eigenDNN/include/multihead_attention_layer.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/XprHelper.h:
 
-/usr/include/c++/7/ext/numeric_traits.h:
+/home/poweruser/junda.feng/anaconda3/include/sm_61_intrinsics.hpp:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/SelfCwiseBinaryOp.h:
+/usr/include/c++/7/bits/functional_hash.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/integer_traits.h:
+/home/poweruser/junda.feng/anaconda3/include/cub/grid/grid_queue.cuh:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/mr/device_memory_resource.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/generate.h:
+
+/usr/include/x86_64-linux-gnu/bits/floatn.h:
 
 /usr/include/c++/7/bits/stl_pair.h:
-
-/usr/include/c++/7/cwctype:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/reference_forward_declaration.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/random/detail/linear_congruential_engine.inl:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Geometry/Transform.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Solve.h:
 
 /usr/include/c++/7/bits/move.h:
 
@@ -17416,15 +17659,13 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /usr/include/c++/7/bits/stl_bvector.h:
 
-/home/poweruser/junda.feng/anaconda3/include/cub/iterator/counting_input_iterator.cuh:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/ConfigureVectorization.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/CwiseBinaryOp.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/random/subtract_with_carry_engine.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Transpositions.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorRandom.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/config/forceinline.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/arch/Default/Half.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/SymbolicIndex.h:
 
 /usr/include/math.h:
 
@@ -17432,7 +17673,11 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /usr/include/c++/7/bits/exception_ptr.h:
 
-/usr/include/x86_64-linux-gnu/bits/wchar.h:
+/usr/include/x86_64-linux-gnu/bits/byteswap-16.h:
+
+/usr/include/c++/7/stdexcept:
+
+/usr/include/c++/7/bits/stl_vector.h:
 
 /usr/include/x86_64-linux-gnu/bits/types.h:
 
@@ -17440,29 +17685,11 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /usr/include/c++/7/ext/atomicity.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/uninitialized_fill.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Jacobi/Jacobi.h:
 
 /usr/include/c++/7/typeinfo:
 
 /usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/type_traits/is_metafunction_defined.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/config/debug.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/temporary_buffer.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/plugins/ArrayCwiseUnaryOps.h:
-
-/usr/include/c++/7/bits/stl_iterator_base_funcs.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/arch/SSE/Complex.h:
-
-/usr/include/c++/7/bits/stl_multiset.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/functional/operators/operator_adaptors.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/ArrayBase.h:
 
 /usr/include/c++/7/bits/stl_function.h:
 
@@ -17474,39 +17701,83 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/temporary_buffer.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/SelfCwiseBinaryOp.h:
+
+/usr/include/x86_64-linux-gnu/asm/errno.h:
+
 /home/poweruser/junda.feng/anaconda3/include/cuda_runtime_api.h:
 
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h:
+
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/internal/copy_cross_system.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorDeviceThreadPool.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/iterator/detail/normal_iterator.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/ReshapedHelper.h:
+
+/home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/CwiseHeteroBinaryOp.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/7/include/stdarg.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/adl/tabulate.h:
+
+/usr/include/x86_64-linux-gnu/bits/local_lim.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/src/SpecialFunctions/BesselFunctionsHalf.h:
 
 /home/poweruser/junda.feng/anaconda3/include/curand_philox4x32_x.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/select_system.h:
 
-/home/poweruser/junda.feng/anaconda3/include/sm_32_intrinsics.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/setjmp.h:
-
 /usr/include/c++/7/ios:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/copy.h:
 
-/home/poweruser/junda.feng/eigenDNN/include/dropout.h:
+/usr/include/c++/7/bits/stl_iterator.h:
 
-/home/poweruser/junda.feng/eigenDNN/include/node.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/ProductEvaluators.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/NumTraits.h:
+/usr/lib/gcc/x86_64-linux-gnu/7/include/stdint.h:
+
+/home/poweruser/junda.feng/eigenDNN/include/declaration.h:
+
+/usr/include/c++/7/bits/localefwd.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/error_condition.inl:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Visitor.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/advance.inl:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/DenseStorage.h:
 
 /home/poweruser/junda.feng/anaconda3/include/vector_types.h:
 
-/usr/include/x86_64-linux-gnu/sys/cdefs.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/seq.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/MathFunctionsImpl.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/arch/Default/TypeCasting.h:
 
 /usr/include/c++/7/bits/exception.h:
 
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/plugins/IndexedViewMethods.h:
+
 /usr/include/x86_64-linux-gnu/bits/timex.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Swap.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/adl/uninitialized_fill.h:
+
+/usr/include/c++/7/bits/alloc_traits.h:
 
 /usr/include/c++/7/bits/locale_facets.tcc:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/adl/generate.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorConvolution.h:
 
 /home/poweruser/junda.feng/anaconda3/include/cooperative_groups.h:
 
@@ -17514,27 +17785,21 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/Tensor.h:
-
 /usr/include/x86_64-linux-gnu/bits/fp-fast.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/functors/UnaryFunctors.h:
 
 /usr/include/c++/7/bits/postypes.h:
 
-/home/poweruser/junda.feng/anaconda3/include/sm_35_atomic_functions.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/scan.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/malloc_and_free.h:
+/usr/include/c++/7/algorithm:
 
-/home/poweruser/junda.feng/anaconda3/include/cub/detail/device_synchronize.cuh:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Select.h:
+/usr/include/stdlib.h:
 
 /usr/include/time.h:
 
 /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/products/SelfadjointMatrixVector.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/CwiseUnaryOp.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/detail/mpl/math.h:
 
@@ -17542,51 +17807,53 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /usr/include/c++/7/bits/stl_numeric.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Map.h:
-
-/usr/include/c++/7/bits/stl_heap.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/fill.h:
-
-/usr/include/x86_64-linux-gnu/bits/typesizes.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/unique_by_key.h:
-
-/usr/include/c++/7/bits/stl_map.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/system_error.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/adl/swap_ranges.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/AssignEvaluator.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/util/IndexedViewHelper.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/MKL_support.h:
 
 /usr/include/x86_64-linux-gnu/c++/7/bits/gthr-default.h:
 
 /usr/include/x86_64-linux-gnu/bits/select.h:
 
-/home/poweruser/junda.feng/anaconda3/include/nv/detail/__target_macros:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/MathFunctionsImpl.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/Eigenvalues:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorEvaluator.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/products/GeneralMatrixMatrix.h:
+
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/stable_primitive_sort.inl:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorArgMax.h:
-
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
-
-/home/poweruser/junda.feng/anaconda3/include/cub/device/dispatch/dispatch_merge_sort.cuh:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/generate.h:
 
 /home/poweruser/junda.feng/anaconda3/include/cub/device/device_segmented_sort.cuh:
 
 /usr/include/c++/7/bits/allocator.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/unique_by_key.h:
+
+/usr/include/c++/7/bits/stl_map.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/ConditionEstimator.h:
+
+/home/poweruser/junda.feng/anaconda3/include/sm_35_intrinsics.h:
+
+/home/poweruser/junda.feng/anaconda3/include/curand_mtgp32_kernel.h:
+
+/home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/RandUtils.h:
+
+/home/poweruser/junda.feng/anaconda3/include/sm_32_atomic_functions.hpp:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/mismatch.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/IndexedViewHelper.h:
+
+/home/poweruser/junda.feng/eigenDNN/include/cublas_wrappers.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/functors/AssignmentFunctors.h:
 
 /usr/include/c++/7/bits/stl_stack.h:
 
@@ -17598,21 +17865,11 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /usr/include/c++/7/bits/range_access.h:
 
-/home/poweruser/junda.feng/anaconda3/include/cub/host/mutex.cuh:
-
-/usr/include/c++/7/bits/basic_string.h:
-
-/home/poweruser/junda.feng/anaconda3/include/cub/iterator/tex_obj_input_iterator.cuh:
-
-/home/poweruser/junda.feng/anaconda3/include/cub/block/block_radix_sort.cuh:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/fill.inl:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Select.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/detail/static_assert.h:
 
 /usr/include/c++/7/istream:
-
-/usr/include/c++/7/chrono:
 
 /usr/include/c++/7/climits:
 
@@ -17622,27 +17879,39 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/transform.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/distance.inl:
-
 /home/poweruser/junda.feng/anaconda3/include/cub/agent/agent_segmented_radix_sort.cuh:
 
 /usr/include/c++/7/bits/ios_base.h:
+
+/home/poweruser/junda.feng/eigenDNN/src/layer.cpp:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/allocator/allocator_traits.inl:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/config/host_device.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/scan.h:
 
 /usr/include/c++/7/bits/streambuf_iterator.h:
 
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/ForwardDeclarations.h:
+
 /usr/include/c++/7/cstdlib:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorBroadcasting.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/type_traits.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/VectorwiseOp.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/arch/SSE/PacketMath.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/config.h:
 
 /usr/include/asm-generic/errno.h:
 
-/home/poweruser/junda.feng/eigenDNN/src/layer.cpp:
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorReduction.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/config/host_device.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/allocator/allocator_traits.inl:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/CoreEvaluators.h:
 
 /usr/include/c++/7/cerrno:
 
@@ -17650,9 +17919,9 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /usr/include/c++/7/bits/basic_string.tcc:
 
-/usr/include/x86_64-linux-gnu/c++/7/bits/c++locale.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorInitializer.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/util/CXX11Workarounds.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/LU/FullPivLU.h:
 
 /usr/include/c++/7/bits/stream_iterator.h:
 
@@ -17662,17 +17931,27 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /usr/include/x86_64-linux-gnu/sys/types.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/adl/equal.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/MapBase.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/NestByValue.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorDeviceDefault.h:
 
-/home/poweruser/junda.feng/anaconda3/include/crt/mma.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Eigenvalues/EigenSolver.h:
 
-/usr/include/stdio.h:
+/home/poweruser/junda.feng/anaconda3/include/cub/agent/agent_reduce_by_key.cuh:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/cpp/detail/scan.h:
+/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorDeviceThreadPool.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorArgMax.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorCustomOp.h:
+
+/home/poweruser/junda.feng/anaconda3/include/sm_32_intrinsics.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/setjmp.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/BooleanRedux.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/CwiseTernaryOp.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/config.h:
 
@@ -17688,12 +17967,6 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /usr/include/c++/7/vector:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/sort.inl:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Block.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/functional/operators/assignment_operator.h:
-
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/set_operations.inl:
 
 /home/poweruser/junda.feng/anaconda3/include/cub/grid/grid_mapping.cuh:
@@ -17702,19 +17975,15 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /usr/include/c++/7/bits/std_abs.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsBFloat16.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/SolverBase.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Visitor.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/cpp/detail/for_each.h:
 
 /home/poweruser/junda.feng/anaconda3/include/cub/block/block_adjacent_difference.cuh:
 
 /home/poweruser/junda.feng/anaconda3/include/cub/agent/agent_sub_warp_merge_sort.cuh:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/products/SelfadjointRank2Update.h:
-
 /usr/include/c++/7/cstdio:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/DiagonalMatrix.h:
 
 /home/poweruser/junda.feng/anaconda3/include/cuda_bf16.hpp:
 
@@ -17722,51 +17991,37 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/alignment.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix.h:
-
-/home/poweruser/junda.feng/anaconda3/include/cub/device/dispatch/dispatch_reduce_by_key.cuh:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/DenseBase.h:
-
-/usr/include/x86_64-linux-gnu/bits/sched.h:
-
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
-
-/usr/include/x86_64-linux-gnu/bits/sys_errlist.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/find.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/distance.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/products/SelfadjointMatrixVector.h:
 
 /usr/include/c++/7/bits/cxxabi_forced.h:
 
 /usr/include/c++/7/bits/streambuf.tcc:
 
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/products/SelfadjointMatrixMatrix.h:
+
 /usr/include/c++/7/atomic:
 
 /usr/include/x86_64-linux-gnu/bits/errno.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorCustomOp.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/unique_by_key.h:
 
 /home/poweruser/junda.feng/anaconda3/include/cub/util_device.cuh:
 
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/functors/StlFunctors.h:
+
 /usr/include/c++/7/cwchar:
 
-/home/poweruser/junda.feng/eigenDNN/include/softmax.h:
+/home/poweruser/junda.feng/eigenDNN/src/dropout_kernels.cu:
 
-/usr/include/c++/7/bits/istream.tcc:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/DiagonalMatrix.h:
 
-/home/poweruser/junda.feng/anaconda3/include/cuda_bf16.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorLayoutSwap.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/copy.inl:
-
-/usr/include/x86_64-linux-gnu/asm/errno.h:
+/home/poweruser/junda.feng/eigenDNN/include/cuda_util.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/unique.h:
 
@@ -17780,7 +18035,27 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/detail/use_default.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/SolveTriangular.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorRef.h:
+
+/home/poweruser/junda.feng/anaconda3/include/cub/agent/agent_select_if.cuh:
+
+/home/poweruser/junda.feng/anaconda3/include/cub/warp/specializations/warp_reduce_shfl.cuh:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Assign.h:
+
+/usr/include/c++/7/bits/stl_iterator_base_funcs.h:
+
+/home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/PacketFilter.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/stable_merge_sort.h:
+
+/home/poweruser/junda.feng/anaconda3/include/cuda_surface_types.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/for_each.h:
+
+/usr/include/x86_64-linux-gnu/c++/7/bits/os_defines.h:
 
 /usr/include/c++/7/clocale:
 
@@ -17788,263 +18063,23 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /usr/include/c++/7/system_error:
 
-/home/poweruser/junda.feng/eigenDNN/include/bias_dropout_residual.h:
-
-/usr/include/c++/7/sstream:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/GlobalFunctions.h:
-
 /usr/include/c++/7/bits/locale_facets.h:
 
 /usr/include/c++/7/bits/algorithmfwd.h:
 
 /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
 
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/scatter.inl:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/arch/Default/GenericPacketMathFunctionsFwd.h:
+
 /usr/include/c++/7/bits/ostream.tcc:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/StableNorm.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/type_traits/is_metafunction_defined.h:
 
-/home/poweruser/junda.feng/anaconda3/include/cub/block/specializations/block_scan_raking.cuh:
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/config/debug.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/products/TriangularSolverMatrix.h:
-
-/home/poweruser/junda.feng/anaconda3/include/device_atomic_functions.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/mismatch.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/internal_functional.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorReductionGpu.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/products/TriangularSolverVector.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/BandMatrix.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/VectorwiseOp.h:
-
-/usr/include/limits.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Random.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/config/simple_defines.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Replicate.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Reverse.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/execute_with_dependencies.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/ArrayWrapper.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/iterator/detail/zip_iterator_base.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/StlIterators.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/allocator/fill_construct_range.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/cpp/detail/par.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/SpecialFunctions:
-
-/usr/include/c++/7/bits/ptr_traits.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/AutoDiff/InternalHeaderCheck.h:
-
-/home/poweruser/junda.feng/eigenDNN/src/transform_0213.cpp:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/SpecialFunctions/InternalHeaderCheck.h:
-
-/home/poweruser/junda.feng/anaconda3/include/cub/block/specializations/block_reduce_raking.cuh:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/SpecialFunctions/BesselFunctionsBFloat16.h:
-
-/home/poweruser/junda.feng/anaconda3/include/cub/device/device_run_length_encode.cuh:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/arch/SSE/TypeCasting.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorDeviceGpu.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/type_traits/logical_metafunctions.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/SpecialFunctions/BesselFunctionsHalf.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/tuple.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsImpl.h:
-
-/home/poweruser/junda.feng/anaconda3/include/cooperative_groups/details/info.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsPacketMath.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/cpp/detail/for_each.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsArrayAPI.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/util/CXX11Meta.h:
-
-/usr/include/c++/7/bits/stl_uninitialized.h:
-
-/usr/include/c++/7/bits/vector.tcc:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/util/EmulateArray.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/util/MaxSizeVector.h:
-
-/usr/include/c++/7/bits/atomic_base.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/transform.inl:
-
-/usr/include/c++/7/ctime:
-
-/usr/include/c++/7/bits/parse_numbers.h:
-
-/usr/include/c++/7/ext/aligned_buffer.h:
-
-/home/poweruser/junda.feng/anaconda3/include/cub/version.cuh:
-
-/usr/include/c++/7/bits/random.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/function.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/for_each.inl:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/type_traits/result_of_adaptable_function.h:
-
-/usr/include/c++/7/bits/random.tcc:
-
-/home/poweruser/junda.feng/eigenDNN/include/common.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/IO.h:
-
-/home/poweruser/junda.feng/anaconda3/include/cuda_fp16.hpp:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsFunctors.h:
-
-/usr/include/c++/7/thread:
-
-/usr/include/c++/7/bits/unique_ptr.h:
-
-/home/poweruser/junda.feng/anaconda3/include/crt/sm_80_rt.hpp:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorContraction.h:
-
-/usr/include/c++/7/bits/shared_ptr.h:
-
-/usr/include/c++/7/bits/shared_ptr_base.h:
-
-/usr/include/c++/7/cctype:
-
-/usr/include/c++/7/backward/auto_ptr.h:
-
-/home/poweruser/junda.feng/anaconda3/include/cub/thread/thread_scan.cuh:
-
-/usr/include/x86_64-linux-gnu/bits/byteswap.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorMacros.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/system_error.inl:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/InternalHeaderCheck.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorMeta.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/remove.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/mismatch.inl:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/iterator/detail/permutation_iterator_base.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/copy.h:
-
-/usr/include/c++/7/cstddef:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorCostModel.h:
-
-/home/poweruser/junda.feng/anaconda3/include/sm_20_atomic_functions.hpp:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/error_category.inl:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorDeviceSycl.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/select_system.inl:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorIndexList.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorDimensionList.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorDimensions.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/par_to_seq.h:
-
-/usr/include/x86_64-linux-gnu/c++/7/bits/c++config.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorInitializer.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorTraits.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/copy_if.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/scan_by_key.inl:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorGlobalFunctions.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorBase.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/advance.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/iterator/detail/device_system_tag.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorEvaluator.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Matrix.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorFFT.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorReduction.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorContractionMapper.h:
-
-/usr/include/c++/7/bits/uniform_int_dist.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorContractionBlocking.h:
-
-/home/poweruser/junda.feng/eigenDNN/src/softmax.cpp:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/count.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorContractionGpu.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorConversion.h:
-
-/usr/include/c++/7/memory:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/cpp/detail/execution_policy.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorConvolution.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/minmax.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorPatch.h:
-
-/home/poweruser/junda.feng/anaconda3/include/cuda_fp16.h:
-
-/home/poweruser/junda.feng/anaconda3/include/sm_30_intrinsics.hpp:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/AutoDiff/AutoDiffScalar.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorImagePatch.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorVolumePatch.h:
-
-/usr/include/alloca.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/config/device_system.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorInflation.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorPadding.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorEvalTo.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/products/SelfadjointRank2Update.h:
 
 /home/poweruser/junda.feng/anaconda3/include/cub/iterator/tex_ref_input_iterator.cuh:
 
@@ -18052,81 +18087,211 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorForcedEval.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/products/TriangularSolverVector.h:
 
-/home/poweruser/junda.feng/anaconda3/include/sm_61_intrinsics.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Random.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/scan_by_key.h:
+/usr/include/c++/7/chrono:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorGenerator.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/src/SpecialFunctions/BesselFunctionsBFloat16.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorAssign.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorScan.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/temporary_array.inl:
-
-/home/poweruser/junda.feng/anaconda3/include/mma.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorTrace.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorDevice.h:
-
-/usr/include/x86_64-linux-gnu/c++/7/bits/opt_random.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorMap.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/AutoDiff/AutoDiffJacobian.h:
-
-/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorRef.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/gather.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/AutoDiff:
-
-/usr/include/c++/7/bits/stl_tree.h:
-
-/usr/include/c++/7/bits/stl_multimap.h:
-
-/home/poweruser/junda.feng/anaconda3/include/cublas_api.h:
-
-/usr/include/c++/7/bits/localefwd.h:
-
-/home/poweruser/junda.feng/eigenDNN/include/declaration.h:
-
-/home/poweruser/junda.feng/anaconda3/include/cuda.h:
-
-/home/poweruser/junda.feng/anaconda3/include/builtin_types.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/functional/operators/logical_operators.h:
-
-/home/poweruser/junda.feng/anaconda3/include/device_types.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/transform.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/arch/SSE/MathFunctions.h:
-
-/home/poweruser/junda.feng/anaconda3/include/surface_types.h:
-
-/home/poweruser/junda.feng/eigenDNN/include/cuda_util.h:
-
-/home/poweruser/junda.feng/anaconda3/include/cuComplex.h:
-
-/home/poweruser/junda.feng/anaconda3/include/cub/agent/agent_three_way_partition.cuh:
-
-/home/poweruser/junda.feng/anaconda3/include/library_types.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/execution_policy.h:
-
-/home/poweruser/junda.feng/anaconda3/include/math_constants.h:
-
-/home/poweruser/junda.feng/eigenDNN/include/cublas_wrappers.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorDeviceSycl.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/transform_reduce.h:
 
 /home/poweruser/junda.feng/anaconda3/include/cuda_runtime.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/pointer.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Reverse.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/type_traits/result_of_adaptable_function.h:
+
+/usr/include/c++/7/bits/random.tcc:
+
+/home/poweruser/junda.feng/eigenDNN/include/common.h:
+
+/home/poweruser/junda.feng/anaconda3/include/cuda_fp16.hpp:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/ArrayWrapper.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/StlIterators.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorDevice.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/ReenableStupidWarnings.h:
+
+/home/poweruser/junda.feng/anaconda3/include/crt/sm_80_rt.hpp:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/Tensor:
+
+/home/poweruser/junda.feng/anaconda3/include/cub/device/dispatch/dispatch_reduce_by_key.cuh:
+
+/usr/include/x86_64-linux-gnu/bits/sched.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/src/SpecialFunctions/BesselFunctionsImpl.h:
+
+/home/poweruser/junda.feng/anaconda3/include/cub/util_ptx.cuh:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/src/SpecialFunctions/BesselFunctionsPacketMath.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/EigenBase.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/src/SpecialFunctions/BesselFunctionsFunctors.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Geometry/Hyperplane.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsImpl.h:
+
+/usr/include/x86_64-linux-gnu/bits/wchar.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsBFloat16.h:
+
+/home/poweruser/junda.feng/anaconda3/include/cub/util_math.cuh:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/SpecialFunctions:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsHalf.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/config/host_system.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsFunctors.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/cpp/detail/merge.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsArrayAPI.h:
+
+/usr/include/c++/7/stack:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorContractionBlocking.h:
+
+/usr/include/c++/7/bits/stl_uninitialized.h:
+
+/home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/Core.h:
+
+/usr/include/c++/7/bits/vector.tcc:
+
+/home/poweruser/junda.feng/anaconda3/include/cub/iterator/arg_index_input_iterator.cuh:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/util/CXX11Workarounds.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/reference.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorMap.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/util/MaxSizeVector.h:
+
+/usr/include/c++/7/ctime:
+
+/usr/include/c++/7/bits/parse_numbers.h:
+
+/usr/include/x86_64-linux-gnu/c++/7/bits/opt_random.h:
+
+/usr/include/c++/7/thread:
+
+/home/poweruser/junda.feng/anaconda3/include/vector_functions.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/SVD/UpperBidiagonalization.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/replace.h:
+
+/usr/include/c++/7/bits/stl_raw_storage_iter.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/arch/SSE/MathFunctions.h:
+
+/usr/include/c++/7/bits/unique_ptr.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/misc/Kernel.h:
+
+/usr/include/x86_64-linux-gnu/c++/7/bits/c++allocator.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Eigenvalues/Tridiagonalization.h:
+
+/usr/include/c++/7/bits/shared_ptr.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorEvalTo.h:
+
+/usr/include/c++/7/bits/shared_ptr_base.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorPadding.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/memory.inl:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorForwardDeclarations.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorFunctors.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/Tensor.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/reduce.inl:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/MathFunctions.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorCostModel.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/iterator/iterator_facade.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorDeviceGpu.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/allocator/default_construct_range.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/Meta.h:
+
+/usr/include/c++/7/bits/atomic_lockfree_defines.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/functional.h:
+
+/usr/include/stdint.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorIndexList.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Replicate.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/iterator/detail/zip_iterator_base.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/generate.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/StableNorm.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorTraits.h:
+
+/usr/include/c++/7/random:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/config/global_workarounds.h:
+
+/home/poweruser/junda.feng/eigenDNN/src/cublas_wrappers.cu:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorIntDiv.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/device_vector.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/raw_reference_cast.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/unique.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorGlobalFunctions.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorBase.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorBlock.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorExpr.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/iterator/permutation_iterator.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/type_traits/has_member_function.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/QR/CompleteOrthogonalDecomposition.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorContractionThreadPool.h:
+
+/home/poweruser/junda.feng/anaconda3/include/cuda_fp16.h:
+
+/home/poweruser/junda.feng/anaconda3/include/cub/device/dispatch/dispatch_reduce.cuh:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorContractionGpu.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/detail/find.inl:
 
@@ -18140,25 +18305,283 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/scatter.h:
 
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/PermutationMatrix.h:
+
 /home/poweruser/junda.feng/anaconda3/include/thrust/iterator/detail/iterator_facade_category.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/config.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/iterator/iterator_traits.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorFFT.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorPatch.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorImagePatch.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorVolumePatch.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/reduce.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorBroadcasting.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/internal/copy_device_to_device.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/parallel_for.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorMorphing.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorShuffling.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/SVD:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorForcedEval.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorTrace.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/swap_ranges.inl:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/type_traits/pointer_traits.h:
+
+/home/poweruser/junda.feng/anaconda3/include/sm_30_intrinsics.h:
+
+/usr/include/c++/7/bits/ostream_insert.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/iterator/detail/zip_iterator.inl:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsPacketMath.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorExecutor.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/src/AutoDiff/AutoDiffScalar.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/src/AutoDiff/AutoDiffJacobian.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/execute_with_dependencies.h:
+
+/home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/EigenRand:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/LU:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/guarded_driver_types.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/LU/Determinant.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/LU/arch/InverseSize4.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Geometry/RotationBase.h:
+
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/LU/InverseImpl.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/adjacent_difference.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/Cholesky:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/Jacobi:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/sequence.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Cholesky/LLT.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/version.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/QR:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/mismatch.inl:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Householder/BlockHouseholder.h:
+
+/usr/include/c++/7/bits/stl_construct.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/DenseBase.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Householder/Householder.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/QR/FullPivHouseholderQR.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/iterator/detail/any_system_tag.h:
+
+/home/poweruser/junda.feng/eigenDNN/include/layer_normalize.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/QR/ColPivHouseholderQR.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/adl/equal.h:
+
+/home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/PacketRandomEngine.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/misc/RealSvd2x2.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/cpp/detail/sort.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/detail/config/compiler.h:
 
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/inner_product.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/SVD/SVDBase.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/config/config.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/GlobalFunctions.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Geometry/OrthoMethods.h:
+
+/usr/include/alloca.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/config/device_system.h:
+
+/home/poweruser/junda.feng/eigenDNN/include/embKernels.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Geometry/EulerAngles.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Geometry/Homogeneous.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/Transpositions.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Geometry/AngleAxis.h:
+
+/home/poweruser/junda.feng/anaconda3/include/crt/mma.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Geometry/Translation.h:
+
+/usr/include/c++/7/cctype:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/ArithmeticSequence.h:
+
+/usr/include/c++/7/backward/auto_ptr.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Geometry/Scaling.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/select_system.inl:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/adl/reverse.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Geometry/ParametrizedLine.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Geometry/AlignedBox.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Geometry/arch/Geometry_SIMD.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Eigenvalues/HessenbergDecomposition.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorReductionGpu.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/type_deduction.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/errno.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Geometry/Umeyama.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/functional/argument.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorUInt128.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Eigenvalues/ComplexSchur.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/tuple.h:
+
+/usr/include/c++/7/ext/aligned_buffer.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Eigenvalues/ComplexEigenSolver.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Eigenvalues/SelfAdjointEigenSolver.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Eigenvalues/RealQZ.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/tabulate.inl:
+
+/home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/arch/SSE/MorePacketMath.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/7/include/xmmintrin.h:
+
+/home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/arch/SSE/RandUtils.h:
+
+/home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/Dists/Basic.h:
+
+/home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/Dists/Discrete.h:
+
+/usr/include/c++/7/iterator:
+
+/home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/Dists/NormalExp.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/sort.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/find.inl:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/type_traits/function_traits.h:
+
+/home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/Dists/GammaPoisson.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/TriangularMatrix.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/LU/PartialPivLU.h:
+
+/home/poweruser/junda.feng/anaconda3/include/device_types.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorStriding.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/transform.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/reference_forward_declaration.h:
+
+/usr/include/c++/7/cwctype:
+
+/home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/MvDists/MvNormal.h:
+
+/home/poweruser/junda.feng/anaconda3/include/cooperative_groups/details/info.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/arch/Default/Half.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Geometry/Rotation2D.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/QR/HouseholderQR.h:
+
+/home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/MvDists/Multinomial.h:
+
+/usr/include/c++/7/bits/stl_tree.h:
+
+/usr/include/c++/7/bits/stl_multimap.h:
+
+/home/poweruser/junda.feng/anaconda3/include/cublas_api.h:
+
+/home/poweruser/junda.feng/anaconda3/include/cuda.h:
+
+/home/poweruser/junda.feng/anaconda3/include/builtin_types.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/functional/operators/logical_operators.h:
+
+/home/poweruser/junda.feng/anaconda3/include/surface_types.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/adjacent_difference.h:
+
+/home/poweruser/junda.feng/anaconda3/include/texture_types.h:
+
+/home/poweruser/junda.feng/anaconda3/include/cub/agent/agent_three_way_partition.cuh:
+
+/home/poweruser/junda.feng/anaconda3/include/library_types.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/execution_policy.h:
+
+/home/poweruser/junda.feng/anaconda3/include/math_constants.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/copy_if.inl:
+
+/home/poweruser/junda.feng/anaconda3/include/driver_functions.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/temporary_array.inl:
+
+/home/poweruser/junda.feng/anaconda3/include/mma.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/remove.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/mismatch.inl:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/iterator/detail/permutation_iterator_base.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/copy.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/config/simple_defines.h:
+
 /home/poweruser/junda.feng/anaconda3/include/thrust/detail/config/exec_check_disable.h:
-
-/usr/include/c++/7/random:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/config/global_workarounds.h:
-
-/usr/include/c++/7/bits/concept_check.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/contiguous_storage.inl:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/detail/overlapped_copy.h:
 
@@ -18172,15 +18595,13 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/detail/execution_policy.h:
 
-/usr/include/c++/7/deque:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/copy.h:
-
 /home/poweruser/junda.feng/anaconda3/include/thrust/detail/type_traits/has_trivial_assign.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/iterator/detail/minimum_system.h:
 
 /home/poweruser/junda.feng/anaconda3/include/cub/block/block_discontinuity.cuh:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/misc/Image.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/detail/type_traits/has_nested_type.h:
 
@@ -18190,9 +18611,11 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/transform.inl:
 
+/home/poweruser/junda.feng/anaconda3/include/thrust/iterator/detail/device_system_tag.h:
+
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/terminate.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/ConditionEstimator.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorContraction.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/execution_policy.h:
 
@@ -18200,15 +18623,15 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/detail/functional/placeholder.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/iterator/detail/any_system_tag.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/AutoDiff:
 
 /home/poweruser/junda.feng/anaconda3/include/cub/util_namespace.cuh:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/type_deduction.h:
+/usr/include/c++/7/bits/random.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/errno.h:
+/home/poweruser/junda.feng/anaconda3/include/cub/version.cuh:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/functional/argument.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/execute_with_allocator_fwd.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/detail/integer_math.h:
 
@@ -18218,35 +18641,17 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/detail/dependencies_aware_execution_policy.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsHalf.h:
-
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/select_system_exists.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/util.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/distance.inl:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/adjacent_difference.inl:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/plugins/BlockMethods.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorConcatenation.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/tag.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/copy.inl:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/tabulate.h:
-
-/home/poweruser/junda.feng/anaconda3/include/sm_20_atomic_functions.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/functional/actor.h:
-
-/home/poweruser/junda.feng/anaconda3/include/cub/device/dispatch/dispatch_radix_sort.cuh:
-
-/home/poweruser/junda.feng/anaconda3/include/cub/util_compiler.cuh:
-
 /home/poweruser/junda.feng/anaconda3/include/thrust/detail/swap.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/PartialReduxEvaluator.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/detail/pair.inl:
 
@@ -18256,21 +18661,9 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/detail/functional/value.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/device_vector.h:
+/usr/include/c++/7/bits/stl_multiset.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/raw_reference_cast.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/swap_ranges.inl:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/type_traits/pointer_traits.h:
-
-/home/poweruser/junda.feng/anaconda3/include/sm_30_intrinsics.h:
-
-/usr/include/c++/7/bits/ostream_insert.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/iterator/detail/zip_iterator.inl:
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/functional/operators/operator_adaptors.h:
 
 /usr/include/c++/7/cassert:
 
@@ -18280,15 +18673,17 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/iterator/detail/host_system_tag.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/equal.h:
+/usr/include/c++/7/memory:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/generate.inl:
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/cpp/detail/execution_policy.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/fill.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/iterator/detail/iterator_traits.inl:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/iterator/iterator_adaptor.h:
+/home/poweruser/junda.feng/anaconda3/include/cub/warp/warp_load.cuh:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/iterator/iterator_categories.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/iterator/detail/iterator_category_with_system_and_traversal.h:
 
@@ -18296,9 +18691,17 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/iterator/detail/universal_categories.h:
 
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/allocator/fill_construct_range.inl:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/iterator/detail/iterator_category_to_traversal.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/iterator/detail/iterator_category_to_system.h:
+
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Householder/HouseholderSequence.h:
+
 /home/poweruser/junda.feng/anaconda3/include/thrust/detail/tuple_meta_transform.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Product.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/Core/util/StaticAssert.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/type_traits/integer_sequence.h:
 
@@ -18308,17 +18711,17 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/iterator/detail/tuple_of_iterator_references.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/sort.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/find.inl:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/type_traits/function_traits.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/type_traits/logical_metafunctions.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/detail/functional.inl:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/functional/operators/arithmetic_operators.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/plugins/ReshapedMethods.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/Eigen/src/plugins/CommonCwiseUnaryOps.h:
+
+/home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand/arch/SSE/PacketFilter.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/functional/operators/arithmetic_operators.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/detail/functional/operators/relational_operators.h:
 
@@ -18336,7 +18739,13 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/scan_by_key.h:
 
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorReverse.h:
+
 /home/poweruser/junda.feng/anaconda3/include/thrust/detail/memory_wrapper.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/memory.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/transform.h:
 
 /usr/include/c++/7/iostream:
 
@@ -18346,19 +18755,17 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/for_each.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorRandom.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/for_each.inl:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/detail/function.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/for_each.h:
 
-/home/poweruser/junda.feng/anaconda3/include/cub/thread/thread_search.cuh:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/iterator/zip_iterator.h:
-
 /home/poweruser/junda.feng/anaconda3/include/thrust/advance.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/advance.inl:
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/advance.h:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/iterator/iterator_facade.h:
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/advance.inl:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/equal.inl:
 
@@ -18368,154 +18775,28 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o: /home/poweruser/junda.feng/ei
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/iterator/detail/minimum_category.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorExpr.h:
-
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/adl/transform.h:
 
 /home/poweruser/junda.feng/anaconda3/include/cub/config.cuh:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorFunctors.h:
-
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/cpp/detail/transform.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/transform.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/adl/copy.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/copy.inl:
 
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/general_copy.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorAssign.h:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorFixedSize.h:
+/home/poweruser/junda.feng/eigenDNN/eigen/unsupported/Eigen/CXX11/src/Tensor/TensorStorage.h:
+
+/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/general_copy.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/guarded_cuda_runtime_api.h:
 
 /home/poweruser/junda.feng/anaconda3/include/sm_20_intrinsics.hpp:
 
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorIntDiv.h:
-
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/copy.h:
 
 /home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/cross_system.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/internal/copy_device_to_device.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/distance.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorBlock.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/uninitialized_copy.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/SpecialFunctions/BesselFunctionsPacketMath.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system_error.h:
-
-/home/poweruser/junda.feng/anaconda3/include/nv/detail/__preprocessor:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorMorphing.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/adl/fill.h:
-
-/usr/include/c++/7/bits/nested_exception.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/error_code.inl:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/advance.inl:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/error_condition.inl:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/guarded_driver_types.h:
-
-/home/poweruser/junda.feng/anaconda3/include/cub/util_arch.cuh:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/cpp/detail/copy.h:
-
-/home/poweruser/junda.feng/anaconda3/include/cub/util_cpp_dialect.cuh:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Ref.h:
-
-/home/poweruser/junda.feng/anaconda3/include/cub/util_macro.cuh:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/iterator/detail/iterator_adaptor_base.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/7/include/stdarg.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/iterator/detail/normal_iterator.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/allocator/allocator_traits.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/iterator/permutation_iterator.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/Redux.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/type_traits/has_member_function.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/reduce.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/allocator/copy_construct_range.inl:
-
-/usr/include/c++/7/bits/atomic_lockfree_defines.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/functional.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/allocator/default_construct_range.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed/syslimits.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/allocator/default_construct_range.inl:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/uninitialized_fill.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/src/SpecialFunctions/BesselFunctionsArrayAPI.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/uninitialized_fill.inl:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/fill.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/generate.h:
-
-/home/poweruser/junda.feng/anaconda3/include/cub/grid/grid_queue.cuh:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/mr/device_memory_resource.h:
-
-/usr/include/x86_64-linux-gnu/bits/floatn.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/generate.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/generic/generate.inl:
-
-/home/poweruser/junda.feng/anaconda3/include/sm_60_atomic_functions.hpp:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/generate.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/cuda/detail/fill.h:
-
-/usr/include/c++/7/bits/alloc_traits.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/adl/uninitialized_fill.h:
-
-/home/poweruser/junda.feng/anaconda3/include/cub/util_deprecated.cuh:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/system/detail/sequential/uninitialized_fill.h:
-
-/home/poweruser/junda.feng/anaconda3/include/curand_precalc.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/iterator/reverse_iterator.h:
-
-/home/poweruser/junda.feng/eigenDNN/mha.cc:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/allocator/destroy_range.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/allocator/destroy_range.inl:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/iterator/detail/iterator_category_to_traversal.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/allocator/fill_construct_range.inl:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/Eigen/src/Core/SelfAdjointView.h:
-
-/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorContractionThreadPool.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/detail/allocator/tagged_allocator.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/transform.h:
-
-/home/poweruser/junda.feng/anaconda3/include/thrust/memory.h:

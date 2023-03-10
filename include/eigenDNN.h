@@ -1,7 +1,7 @@
 #include <Eigen/Core>
 #include <Eigen/CXX11/Tensor>
 #include <Eigen/AutoDiff>
-#include <EigenRand>
+#include <random>
 #include <functional>
 #include <numeric>
 #include <utility>
@@ -157,21 +157,19 @@ eidnnStatus_t eidnnRestoreDropoutDescriptor(
 
 
 
-template <typename Derived>
 eidnnStatus_t eidnnDropoutForward(
     eidnnHandle_t                       handle,
     const eidnnDropoutDescriptor_t      dropoutDesc,
-    const TensorBase<Derived>          &x,
-    TensorBase<Derived>                &y,
+    const Tensor<float, 4>         &x,
+    Tensor<float, 4>               &y,
     void                               *reserveSpace,
     size_t                              reserveSpaceSizeInBytes);
 
-template <typename Derived>
 eidnnStatus_t eidnnDropoutBackward(
     eidnnHandle_t                   handle,
     const eidnnDropoutDescriptor_t  dropoutDesc,
-    const TensorBase<Derived>        &dy,
-    TensorBase<Derived>              &dx,
+    const Tensor<float, 4>       &dy,
+    Tensor<float, 4>             &dx,
     void                           *reserveSpace,
     size_t                          reserveSpaceSizeInBytes);
 }

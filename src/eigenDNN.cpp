@@ -68,4 +68,61 @@ eidnnStatus_t eidnnSoftmaxBackward(eidnnHandle_t handle,
   return EIDNN_STATUS_SUCCESS;
 }
 
+
+eidnnStatus_t eidnnDropoutForward(
+    eidnnHandle_t                       handle,
+    const eidnnDropoutDescriptor_t      dropoutDesc,
+    const Tensor<float, 4>         &x,
+    Tensor<float, 4>               &y,
+    void                               *reserveSpace,
+    size_t                              reserveSpaceSizeInBytes)
+{
+  float rate = 0.5;
+  std::mt19937 mt1(2023);
+  std::binomial_distribution<int> distribution(1, rate);
+  Tensor<float, 4> dropout_mask(x.dimensions());
+
+  for(int b=0; b<y.dimension(0); b++){
+    for(int h=0; h<y.dimension(1); h++){
+      for(int src=0; src<y.dimension(2); src++){
+        for(int trg=0; trg<y.dimension(3); trg++){
+          dropout_mask(b, h, src, trg) = distribution(mt1);
+        }
+      }
+    }
+  }
+  
+  y = x*dropout_mask*(1.0f/(1-rate));
+
+  return EIDNN_STATUS_SUCCESS;
+}
+
+eidnnStatus_t eidnnDropoutBackward(
+    eidnnHandle_t                   handle,
+    const eidnnDropoutDescriptor_t  dropoutDesc,
+    const Tensor<float, 4>       &dy,
+    Tensor<float, 4>             &dx,
+    void                           *reserveSpace,
+    size_t                          reserveSpaceSizeInBytes)
+{
+  float rate = 0.5;
+  std::mt19937 mt1(2023);
+  std::binomial_distribution<int> distribution(1, rate);
+  Tensor<float, 4> dropout_mask(dx.dimensions());
+
+  for(int b=0; b<dy.dimension(0); b++){
+    for(int h=0; h<dy.dimension(1); h++){
+      for(int src=0; src<dy.dimension(2); src++){
+        for(int trg=0; trg<dy.dimension(3); trg++){
+          dropout_mask(b, h, src, trg) = distribution(mt1);
+        }
+      }
+    }
+  }
+  
+  dx = dy*dropout_mask*(1.0f/(1-rate));
+
+  return EIDNN_STATUS_SUCCESS;
+}
+
 }
