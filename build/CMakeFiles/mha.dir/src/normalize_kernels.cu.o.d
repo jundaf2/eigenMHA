@@ -1,4 +1,4 @@
-CMakeFiles/mha.dir/src/normalize_kernels.cu.o : /home/poweruser/junda.feng/cuSimpleDNN/src/normalize_kernels.cu \
+CMakeFiles/mha.dir/src/normalize_kernels.cu.o : /home/poweruser/junda.feng/eigenDNN/src/normalize_kernels.cu \
     /usr/include/stdc-predef.h \
     /home/poweruser/junda.feng/anaconda3/include/cuda_runtime.h \
     /home/poweruser/junda.feng/anaconda3/include/crt/host_config.h \
@@ -225,11 +225,11 @@ CMakeFiles/mha.dir/src/normalize_kernels.cu.o : /home/poweruser/junda.feng/cuSim
     /usr/include/c++/7/bits/invoke.h \
     /usr/include/c++/7/bits/std_function.h \
     /usr/include/c++/7/bits/refwrap.h \
-    /home/poweruser/junda.feng/cuSimpleDNN/include/block_reduce.h \
+    /home/poweruser/junda.feng/eigenDNN/include/block_reduce.h \
     /home/poweruser/junda.feng/anaconda3/include/cuda.h \
     /home/poweruser/junda.feng/anaconda3/include/cuda_fp16.h \
     /home/poweruser/junda.feng/anaconda3/include/cuda_fp16.hpp \
-    /home/poweruser/junda.feng/cuSimpleDNN/include/kernels.h \
+    /home/poweruser/junda.feng/eigenDNN/include/kernels.h \
     /home/poweruser/junda.feng/anaconda3/include/curand_kernel.h \
     /home/poweruser/junda.feng/anaconda3/include/nv/target \
     /home/poweruser/junda.feng/anaconda3/include/nv/detail/__target_macros \

@@ -1,7 +1,7 @@
 CMakeFiles/mha.dir/src/layer.cpp.o: \
- /home/poweruser/junda.feng/cuSimpleDNN/src/layer.cpp \
+ /home/poweruser/junda.feng/eigenDNN/src/layer.cpp \
  /usr/include/stdc-predef.h \
- /home/poweruser/junda.feng/cuSimpleDNN/include/layer.h \
+ /home/poweruser/junda.feng/eigenDNN/include/layer.h \
  /usr/include/c++/7/iostream \
  /usr/include/x86_64-linux-gnu/c++/7/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/7/bits/os_defines.h \
@@ -139,7 +139,7 @@ CMakeFiles/mha.dir/src/layer.cpp.o: \
  /usr/include/c++/7/utility /usr/include/c++/7/bits/stl_relops.h \
  /usr/include/c++/7/array /usr/include/c++/7/bits/uses_allocator.h \
  /usr/include/c++/7/bits/invoke.h /usr/include/c++/7/bits/stl_multimap.h \
- /home/poweruser/junda.feng/cuSimpleDNN/include/declaration.h \
+ /home/poweruser/junda.feng/eigenDNN/include/declaration.h \
  /usr/include/c++/7/memory /usr/include/c++/7/bits/stl_construct.h \
  /usr/include/c++/7/bits/stl_uninitialized.h \
  /usr/include/c++/7/bits/stl_tempbuf.h \
@@ -183,7 +183,7 @@ CMakeFiles/mha.dir/src/layer.cpp.o: \
  /home/poweruser/junda.feng/anaconda3/include/surface_types.h \
  /home/poweruser/junda.feng/anaconda3/include/texture_types.h \
  /home/poweruser/junda.feng/anaconda3/include/cuda_device_runtime_api.h \
- /home/poweruser/junda.feng/cuSimpleDNN/include/cuda_util.h \
+ /home/poweruser/junda.feng/eigenDNN/include/cuda_util.h \
  /home/poweruser/junda.feng/anaconda3/include/cublas_v2.h \
  /home/poweruser/junda.feng/anaconda3/include/cublas_api.h \
  /home/poweruser/junda.feng/anaconda3/include/cuComplex.h \
@@ -202,7 +202,7 @@ CMakeFiles/mha.dir/src/layer.cpp.o: \
  /home/poweruser/junda.feng/anaconda3/include/math_constants.h \
  /usr/include/c++/7/vector /usr/include/c++/7/bits/stl_vector.h \
  /usr/include/c++/7/bits/stl_bvector.h /usr/include/c++/7/bits/vector.tcc \
- /home/poweruser/junda.feng/cuSimpleDNN/include/cublas_wrappers.h \
+ /home/poweruser/junda.feng/eigenDNN/include/cublas_wrappers.h \
  /usr/include/assert.h \
  /home/poweruser/junda.feng/anaconda3/include/cuda_runtime.h \
  /home/poweruser/junda.feng/anaconda3/include/crt/host_config.h \
@@ -589,14 +589,14 @@ CMakeFiles/mha.dir/src/layer.cpp.o: \
  /home/poweruser/junda.feng/anaconda3/include/thrust/random/normal_distribution.h \
  /home/poweruser/junda.feng/anaconda3/include/thrust/random/detail/normal_distribution_base.h \
  /home/poweruser/junda.feng/anaconda3/include/thrust/random/detail/normal_distribution.inl \
- /home/poweruser/junda.feng/cuSimpleDNN/include/context.h \
+ /home/poweruser/junda.feng/eigenDNN/include/context.h \
  /usr/include/c++/7/queue /usr/include/c++/7/deque \
  /usr/include/c++/7/bits/stl_deque.h /usr/include/c++/7/bits/deque.tcc \
  /usr/include/c++/7/bits/stl_heap.h /usr/include/c++/7/bits/stl_queue.h \
  /usr/include/c++/7/stack /usr/include/c++/7/bits/stl_stack.h \
- /home/poweruser/junda.feng/cuSimpleDNN/include/manager.h \
+ /home/poweruser/junda.feng/eigenDNN/include/manager.h \
  /usr/include/c++/7/algorithm /usr/include/c++/7/bits/stl_algo.h \
  /usr/include/c++/7/bits/algorithmfwd.h \
  /usr/include/c++/7/bits/uniform_int_dist.h \
- /home/poweruser/junda.feng/cuSimpleDNN/include/node.h \
- /home/poweruser/junda.feng/cuSimpleDNN/include/tensor.h
+ /home/poweruser/junda.feng/eigenDNN/include/node.h \
+ /home/poweruser/junda.feng/eigenDNN/include/tensor.h

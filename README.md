@@ -24,6 +24,7 @@ Currently, it focuses on
 ### MatMul
 
 ### Softmax
+http://www.adeveloperdiary.com/data-science/deep-learning/neural-network-with-softmax-in-python/
 * [cudnnSoftmaxForward()](https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnSoftmaxForward)
 * [cudnnSoftmaxBackward()](https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnSoftmaxBackward)
 

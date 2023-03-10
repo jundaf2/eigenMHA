@@ -1,4 +1,4 @@
-CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o : /home/poweruser/junda.feng/cuSimpleDNN/src/transformerKernels.cc.cu \
+CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o : /home/poweruser/junda.feng/eigenDNN/src/transformerKernels.cc.cu \
     /usr/include/stdc-predef.h \
     /home/poweruser/junda.feng/anaconda3/include/cuda_runtime.h \
     /home/poweruser/junda.feng/anaconda3/include/crt/host_config.h \
@@ -225,7 +225,7 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o : /home/poweruser/junda.feng/c
     /usr/include/c++/7/bits/invoke.h \
     /usr/include/c++/7/bits/std_function.h \
     /usr/include/c++/7/bits/refwrap.h \
-    /home/poweruser/junda.feng/cuSimpleDNN/include/transformerKernels.h \
+    /home/poweruser/junda.feng/eigenDNN/include/transformerKernels.h \
     /home/poweruser/junda.feng/anaconda3/include/cuda.h \
     /home/poweruser/junda.feng/anaconda3/include/cuda_fp16.h \
     /home/poweruser/junda.feng/anaconda3/include/cuda_fp16.hpp \
@@ -517,7 +517,7 @@ CMakeFiles/mha.dir/src/transformerKernels.cc.cu.o : /home/poweruser/junda.feng/c
     /usr/include/c++/7/ctime \
     /usr/include/c++/7/bits/parse_numbers.h \
     /usr/include/c++/7/bits/std_mutex.h \
-    /home/poweruser/junda.feng/cuSimpleDNN/include/common.h \
+    /home/poweruser/junda.feng/eigenDNN/include/common.h \
     /home/poweruser/junda.feng/anaconda3/include/cooperative_groups.h \
     /home/poweruser/junda.feng/anaconda3/include/cooperative_groups/details/info.h \
     /home/poweruser/junda.feng/anaconda3/include/cooperative_groups/details/driver_abi.h \

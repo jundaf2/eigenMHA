@@ -1,9 +1,9 @@
 CMakeFiles/mha.dir/src/multihead_attention_layer.cpp.o: \
- /home/poweruser/junda.feng/cuSimpleDNN/src/multihead_attention_layer.cpp \
+ /home/poweruser/junda.feng/eigenDNN/src/multihead_attention_layer.cpp \
  /usr/include/stdc-predef.h \
- /home/poweruser/junda.feng/cuSimpleDNN/include/multihead_attention_layer.h \
- /home/poweruser/junda.feng/cuSimpleDNN/include/bias_act_dropout.h \
- /home/poweruser/junda.feng/cuSimpleDNN/include/declaration.h \
+ /home/poweruser/junda.feng/eigenDNN/include/multihead_attention_layer.h \
+ /home/poweruser/junda.feng/eigenDNN/include/bias_act_dropout.h \
+ /home/poweruser/junda.feng/eigenDNN/include/declaration.h \
  /usr/include/c++/7/memory /usr/include/c++/7/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/7/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/7/bits/os_defines.h \
@@ -179,7 +179,7 @@ CMakeFiles/mha.dir/src/multihead_attention_layer.cpp.o: \
  /home/poweruser/junda.feng/anaconda3/include/surface_types.h \
  /home/poweruser/junda.feng/anaconda3/include/texture_types.h \
  /home/poweruser/junda.feng/anaconda3/include/cuda_device_runtime_api.h \
- /home/poweruser/junda.feng/cuSimpleDNN/include/cuda_util.h \
+ /home/poweruser/junda.feng/eigenDNN/include/cuda_util.h \
  /home/poweruser/junda.feng/anaconda3/include/cublas_v2.h \
  /home/poweruser/junda.feng/anaconda3/include/cublas_api.h \
  /home/poweruser/junda.feng/anaconda3/include/cuComplex.h \
@@ -199,7 +199,7 @@ CMakeFiles/mha.dir/src/multihead_attention_layer.cpp.o: \
  /usr/include/c++/7/iostream /usr/include/c++/7/vector \
  /usr/include/c++/7/bits/stl_vector.h \
  /usr/include/c++/7/bits/stl_bvector.h /usr/include/c++/7/bits/vector.tcc \
- /home/poweruser/junda.feng/cuSimpleDNN/include/cublas_wrappers.h \
+ /home/poweruser/junda.feng/eigenDNN/include/cublas_wrappers.h \
  /usr/include/assert.h \
  /home/poweruser/junda.feng/anaconda3/include/cuda_runtime.h \
  /home/poweruser/junda.feng/anaconda3/include/crt/host_config.h \
@@ -586,22 +586,22 @@ CMakeFiles/mha.dir/src/multihead_attention_layer.cpp.o: \
  /home/poweruser/junda.feng/anaconda3/include/thrust/random/normal_distribution.h \
  /home/poweruser/junda.feng/anaconda3/include/thrust/random/detail/normal_distribution_base.h \
  /home/poweruser/junda.feng/anaconda3/include/thrust/random/detail/normal_distribution.inl \
- /home/poweruser/junda.feng/cuSimpleDNN/include/node.h \
- /home/poweruser/junda.feng/cuSimpleDNN/include/tensor.h \
- /home/poweruser/junda.feng/cuSimpleDNN/include/manager.h \
+ /home/poweruser/junda.feng/eigenDNN/include/node.h \
+ /home/poweruser/junda.feng/eigenDNN/include/tensor.h \
+ /home/poweruser/junda.feng/eigenDNN/include/manager.h \
  /usr/include/c++/7/map /usr/include/c++/7/bits/stl_tree.h \
  /usr/include/c++/7/bits/stl_map.h /usr/include/c++/7/bits/stl_multimap.h \
  /usr/include/c++/7/algorithm /usr/include/c++/7/bits/stl_algo.h \
  /usr/include/c++/7/bits/algorithmfwd.h \
  /usr/include/c++/7/bits/stl_heap.h \
  /usr/include/c++/7/bits/uniform_int_dist.h \
- /home/poweruser/junda.feng/cuSimpleDNN/include/context.h \
+ /home/poweruser/junda.feng/eigenDNN/include/context.h \
  /usr/include/c++/7/queue /usr/include/c++/7/deque \
  /usr/include/c++/7/bits/stl_deque.h /usr/include/c++/7/bits/deque.tcc \
  /usr/include/c++/7/bits/stl_queue.h /usr/include/c++/7/stack \
  /usr/include/c++/7/bits/stl_stack.h \
- /home/poweruser/junda.feng/cuSimpleDNN/include/layer.h \
- /home/poweruser/junda.feng/cuSimpleDNN/include/kernels.h \
+ /home/poweruser/junda.feng/eigenDNN/include/layer.h \
+ /home/poweruser/junda.feng/eigenDNN/include/kernels.h \
  /home/poweruser/junda.feng/anaconda3/include/curand_kernel.h \
  /home/poweruser/junda.feng/anaconda3/include/nv/target \
  /home/poweruser/junda.feng/anaconda3/include/nv/detail/__target_macros \
@@ -621,11 +621,11 @@ CMakeFiles/mha.dir/src/multihead_attention_layer.cpp.o: \
  /home/poweruser/junda.feng/anaconda3/include/curand_lognormal.h \
  /home/poweruser/junda.feng/anaconda3/include/curand_poisson.h \
  /home/poweruser/junda.feng/anaconda3/include/curand_discrete2.h \
- /home/poweruser/junda.feng/cuSimpleDNN/include/bias_add_transform_20314.h \
- /home/poweruser/junda.feng/cuSimpleDNN/include/bias_dropout_residual.h \
- /home/poweruser/junda.feng/cuSimpleDNN/include/dropout.h \
- /home/poweruser/junda.feng/cuSimpleDNN/include/feed_forward.h \
- /home/poweruser/junda.feng/cuSimpleDNN/include/layer_normalize.h \
- /home/poweruser/junda.feng/cuSimpleDNN/include/softmax.h \
- /home/poweruser/junda.feng/cuSimpleDNN/include/strided_batch_gemm.h \
- /home/poweruser/junda.feng/cuSimpleDNN/include/transform_0213.h
+ /home/poweruser/junda.feng/eigenDNN/include/bias_add_transform_20314.h \
+ /home/poweruser/junda.feng/eigenDNN/include/bias_dropout_residual.h \
+ /home/poweruser/junda.feng/eigenDNN/include/dropout.h \
+ /home/poweruser/junda.feng/eigenDNN/include/feed_forward.h \
+ /home/poweruser/junda.feng/eigenDNN/include/layer_normalize.h \
+ /home/poweruser/junda.feng/eigenDNN/include/softmax.h \
+ /home/poweruser/junda.feng/eigenDNN/include/strided_batch_gemm.h \
+ /home/poweruser/junda.feng/eigenDNN/include/transform_0213.h

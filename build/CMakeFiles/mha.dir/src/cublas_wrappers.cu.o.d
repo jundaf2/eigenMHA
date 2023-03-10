@@ -1,4 +1,4 @@
-CMakeFiles/mha.dir/src/cublas_wrappers.cu.o : /home/poweruser/junda.feng/cuSimpleDNN/src/cublas_wrappers.cu \
+CMakeFiles/mha.dir/src/cublas_wrappers.cu.o : /home/poweruser/junda.feng/eigenDNN/src/cublas_wrappers.cu \
     /usr/include/stdc-predef.h \
     /home/poweruser/junda.feng/anaconda3/include/cuda_runtime.h \
     /home/poweruser/junda.feng/anaconda3/include/crt/host_config.h \
@@ -225,7 +225,7 @@ CMakeFiles/mha.dir/src/cublas_wrappers.cu.o : /home/poweruser/junda.feng/cuSimpl
     /usr/include/c++/7/bits/invoke.h \
     /usr/include/c++/7/bits/std_function.h \
     /usr/include/c++/7/bits/refwrap.h \
-    /home/poweruser/junda.feng/cuSimpleDNN/include/cublas_wrappers.h \
+    /home/poweruser/junda.feng/eigenDNN/include/cublas_wrappers.h \
     /home/poweruser/junda.feng/anaconda3/include/cublas_v2.h \
     /home/poweruser/junda.feng/anaconda3/include/cublas_api.h \
     /home/poweruser/junda.feng/anaconda3/include/cuComplex.h \

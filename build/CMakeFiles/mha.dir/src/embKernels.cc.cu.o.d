@@ -1,4 +1,4 @@
-CMakeFiles/mha.dir/src/embKernels.cc.cu.o : /home/poweruser/junda.feng/cuSimpleDNN/src/embKernels.cc.cu \
+CMakeFiles/mha.dir/src/embKernels.cc.cu.o : /home/poweruser/junda.feng/eigenDNN/src/embKernels.cc.cu \
     /usr/include/stdc-predef.h \
     /home/poweruser/junda.feng/anaconda3/include/cuda_runtime.h \
     /home/poweruser/junda.feng/anaconda3/include/crt/host_config.h \
@@ -225,8 +225,8 @@ CMakeFiles/mha.dir/src/embKernels.cc.cu.o : /home/poweruser/junda.feng/cuSimpleD
     /usr/include/c++/7/bits/invoke.h \
     /usr/include/c++/7/bits/std_function.h \
     /usr/include/c++/7/bits/refwrap.h \
-    /home/poweruser/junda.feng/cuSimpleDNN/include/common.h \
+    /home/poweruser/junda.feng/eigenDNN/include/common.h \
     /home/poweruser/junda.feng/anaconda3/include/cuda.h \
     /home/poweruser/junda.feng/anaconda3/include/cuda_fp16.h \
     /home/poweruser/junda.feng/anaconda3/include/cuda_fp16.hpp \
-    /home/poweruser/junda.feng/cuSimpleDNN/include/embKernels.h
+    /home/poweruser/junda.feng/eigenDNN/include/embKernels.h

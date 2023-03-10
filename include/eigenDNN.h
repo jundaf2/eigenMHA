@@ -106,20 +106,18 @@ typedef enum {
 } eidnnSoftmaxMode_t;
 
 
-template <typename Derived>
 eidnnStatus_t eidnnSoftmaxForward(eidnnHandle_t handle,
                     eidnnSoftmaxAlgorithm_t algo,
                     eidnnSoftmaxMode_t mode,
-                    const TensorBase<Derived>&x,
-                    TensorBase<Derived>&y);
+                    const Tensor<float, 4>& x,
+                    Tensor<float, 4>& y);
 
-template <typename Derived>
 eidnnStatus_t eidnnSoftmaxBackward(eidnnHandle_t handle,
                      eidnnSoftmaxAlgorithm_t algo,
                      eidnnSoftmaxMode_t mode,
-                     const TensorBase<Derived>& y,
-                     const TensorBase<Derived>& dy,
-                     TensorBase<Derived>& x);
+                     const Tensor<float, 4>& y,
+                     const Tensor<float, 4>& dy,
+                     Tensor<float, 4>& dx);
 
 
 

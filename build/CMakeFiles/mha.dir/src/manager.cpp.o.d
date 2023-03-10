@@ -1,7 +1,7 @@
 CMakeFiles/mha.dir/src/manager.cpp.o: \
- /home/poweruser/junda.feng/cuSimpleDNN/src/manager.cpp \
+ /home/poweruser/junda.feng/eigenDNN/src/manager.cpp \
  /usr/include/stdc-predef.h \
- /home/poweruser/junda.feng/cuSimpleDNN/include/manager.h \
+ /home/poweruser/junda.feng/eigenDNN/include/manager.h \
  /usr/include/c++/7/string \
  /usr/include/x86_64-linux-gnu/c++/7/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/7/bits/os_defines.h \
@@ -160,7 +160,7 @@ CMakeFiles/mha.dir/src/manager.cpp.o: \
  /usr/include/c++/7/bits/algorithmfwd.h \
  /usr/include/c++/7/bits/stl_heap.h \
  /usr/include/c++/7/bits/uniform_int_dist.h /usr/include/c++/7/limits \
- /home/poweruser/junda.feng/cuSimpleDNN/include/declaration.h \
+ /home/poweruser/junda.feng/eigenDNN/include/declaration.h \
  /usr/include/c++/7/thread /usr/include/c++/7/chrono \
  /usr/include/c++/7/ratio /usr/include/c++/7/ctime \
  /usr/include/c++/7/bits/parse_numbers.h /usr/include/c++/7/fstream \
@@ -190,7 +190,7 @@ CMakeFiles/mha.dir/src/manager.cpp.o: \
  /home/poweruser/junda.feng/anaconda3/include/surface_types.h \
  /home/poweruser/junda.feng/anaconda3/include/texture_types.h \
  /home/poweruser/junda.feng/anaconda3/include/cuda_device_runtime_api.h \
- /home/poweruser/junda.feng/cuSimpleDNN/include/cuda_util.h \
+ /home/poweruser/junda.feng/eigenDNN/include/cuda_util.h \
  /home/poweruser/junda.feng/anaconda3/include/cublas_v2.h \
  /home/poweruser/junda.feng/anaconda3/include/cublas_api.h \
  /home/poweruser/junda.feng/anaconda3/include/cuComplex.h \
@@ -207,7 +207,7 @@ CMakeFiles/mha.dir/src/manager.cpp.o: \
  /home/poweruser/junda.feng/anaconda3/include/cuda_bf16.hpp \
  /home/poweruser/junda.feng/anaconda3/include/library_types.h \
  /home/poweruser/junda.feng/anaconda3/include/math_constants.h \
- /home/poweruser/junda.feng/cuSimpleDNN/include/cublas_wrappers.h \
+ /home/poweruser/junda.feng/eigenDNN/include/cublas_wrappers.h \
  /usr/include/assert.h \
  /home/poweruser/junda.feng/anaconda3/include/cuda_runtime.h \
  /home/poweruser/junda.feng/anaconda3/include/crt/host_config.h \

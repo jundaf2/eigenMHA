@@ -1,4 +1,4 @@
-CMakeFiles/mha.dir/src/embedding_kernels.cu.o : /home/poweruser/junda.feng/cuSimpleDNN/src/embedding_kernels.cu \
+CMakeFiles/mha.dir/src/embedding_kernels.cu.o : /home/poweruser/junda.feng/eigenDNN/src/embedding_kernels.cu \
     /usr/include/stdc-predef.h \
     /home/poweruser/junda.feng/anaconda3/include/cuda_runtime.h \
     /home/poweruser/junda.feng/anaconda3/include/crt/host_config.h \
@@ -230,7 +230,7 @@ CMakeFiles/mha.dir/src/embedding_kernels.cu.o : /home/poweruser/junda.feng/cuSim
     /usr/include/c++/7/limits \
     /usr/include/c++/7/ctime \
     /usr/include/c++/7/bits/parse_numbers.h \
-    /home/poweruser/junda.feng/cuSimpleDNN/include/kernels.h \
+    /home/poweruser/junda.feng/eigenDNN/include/kernels.h \
     /home/poweruser/junda.feng/anaconda3/include/cuda.h \
     /home/poweruser/junda.feng/anaconda3/include/cuda_fp16.h \
     /home/poweruser/junda.feng/anaconda3/include/cuda_fp16.hpp \
