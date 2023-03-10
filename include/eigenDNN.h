@@ -1,13 +1,13 @@
 #include <Eigen/Core>
 #include <Eigen/CXX11/Tensor>
 #include <Eigen/AutoDiff>
+#include <EigenRand>
 #include <functional>
 #include <numeric>
 #include <utility>
 #include <vector>
 #include <map>
 #include <memory>
-
 
 namespace eigenDNN{
 

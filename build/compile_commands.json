@@ -1,31 +1,31 @@
 [
 {
   "directory": "/home/poweruser/junda.feng/eigenDNN/build",
-  "command": "/usr/bin/c++  -I/home/poweruser/junda.feng/eigenDNN/SYSTEM -I/home/poweruser/junda.feng/eigenDNN -I/home/poweruser/junda.feng/eigenDNN/fmha -I/home/poweruser/junda.feng/eigenDNN/include -I/home/poweruser/junda.feng/eigenDNN/eigen3 -I/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported -isystem /home/poweruser/junda.feng/anaconda3/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -o CMakeFiles/mha.dir/mha.cc.o -c /home/poweruser/junda.feng/eigenDNN/mha.cc",
+  "command": "/usr/bin/c++  -I/home/poweruser/junda.feng/eigenDNN/SYSTEM -I/home/poweruser/junda.feng/eigenDNN -I/home/poweruser/junda.feng/eigenDNN/fmha -I/home/poweruser/junda.feng/eigenDNN/include -I/home/poweruser/junda.feng/eigenDNN/eigen -I/home/poweruser/junda.feng/eigenDNN/eigen/unsupported -I/home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand -isystem /home/poweruser/junda.feng/anaconda3/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -o CMakeFiles/mha.dir/mha.cc.o -c /home/poweruser/junda.feng/eigenDNN/mha.cc",
   "file": "/home/poweruser/junda.feng/eigenDNN/mha.cc",
   "output": "CMakeFiles/mha.dir/mha.cc.o"
 },
 {
   "directory": "/home/poweruser/junda.feng/eigenDNN/build",
-  "command": "/usr/bin/c++  -I/home/poweruser/junda.feng/eigenDNN/SYSTEM -I/home/poweruser/junda.feng/eigenDNN -I/home/poweruser/junda.feng/eigenDNN/fmha -I/home/poweruser/junda.feng/eigenDNN/include -I/home/poweruser/junda.feng/eigenDNN/eigen3 -I/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported -isystem /home/poweruser/junda.feng/anaconda3/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -o CMakeFiles/mha.dir/src/bias_act_dropout.cpp.o -c /home/poweruser/junda.feng/eigenDNN/src/bias_act_dropout.cpp",
+  "command": "/usr/bin/c++  -I/home/poweruser/junda.feng/eigenDNN/SYSTEM -I/home/poweruser/junda.feng/eigenDNN -I/home/poweruser/junda.feng/eigenDNN/fmha -I/home/poweruser/junda.feng/eigenDNN/include -I/home/poweruser/junda.feng/eigenDNN/eigen -I/home/poweruser/junda.feng/eigenDNN/eigen/unsupported -I/home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand -isystem /home/poweruser/junda.feng/anaconda3/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -o CMakeFiles/mha.dir/src/bias_act_dropout.cpp.o -c /home/poweruser/junda.feng/eigenDNN/src/bias_act_dropout.cpp",
   "file": "/home/poweruser/junda.feng/eigenDNN/src/bias_act_dropout.cpp",
   "output": "CMakeFiles/mha.dir/src/bias_act_dropout.cpp.o"
 },
 {
   "directory": "/home/poweruser/junda.feng/eigenDNN/build",
-  "command": "/usr/bin/c++  -I/home/poweruser/junda.feng/eigenDNN/SYSTEM -I/home/poweruser/junda.feng/eigenDNN -I/home/poweruser/junda.feng/eigenDNN/fmha -I/home/poweruser/junda.feng/eigenDNN/include -I/home/poweruser/junda.feng/eigenDNN/eigen3 -I/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported -isystem /home/poweruser/junda.feng/anaconda3/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -o CMakeFiles/mha.dir/src/bias_add_transform_20314.cpp.o -c /home/poweruser/junda.feng/eigenDNN/src/bias_add_transform_20314.cpp",
+  "command": "/usr/bin/c++  -I/home/poweruser/junda.feng/eigenDNN/SYSTEM -I/home/poweruser/junda.feng/eigenDNN -I/home/poweruser/junda.feng/eigenDNN/fmha -I/home/poweruser/junda.feng/eigenDNN/include -I/home/poweruser/junda.feng/eigenDNN/eigen -I/home/poweruser/junda.feng/eigenDNN/eigen/unsupported -I/home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand -isystem /home/poweruser/junda.feng/anaconda3/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -o CMakeFiles/mha.dir/src/bias_add_transform_20314.cpp.o -c /home/poweruser/junda.feng/eigenDNN/src/bias_add_transform_20314.cpp",
   "file": "/home/poweruser/junda.feng/eigenDNN/src/bias_add_transform_20314.cpp",
   "output": "CMakeFiles/mha.dir/src/bias_add_transform_20314.cpp.o"
 },
 {
   "directory": "/home/poweruser/junda.feng/eigenDNN/build",
-  "command": "/usr/bin/c++  -I/home/poweruser/junda.feng/eigenDNN/SYSTEM -I/home/poweruser/junda.feng/eigenDNN -I/home/poweruser/junda.feng/eigenDNN/fmha -I/home/poweruser/junda.feng/eigenDNN/include -I/home/poweruser/junda.feng/eigenDNN/eigen3 -I/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported -isystem /home/poweruser/junda.feng/anaconda3/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -o CMakeFiles/mha.dir/src/bias_dropout_residual.cpp.o -c /home/poweruser/junda.feng/eigenDNN/src/bias_dropout_residual.cpp",
+  "command": "/usr/bin/c++  -I/home/poweruser/junda.feng/eigenDNN/SYSTEM -I/home/poweruser/junda.feng/eigenDNN -I/home/poweruser/junda.feng/eigenDNN/fmha -I/home/poweruser/junda.feng/eigenDNN/include -I/home/poweruser/junda.feng/eigenDNN/eigen -I/home/poweruser/junda.feng/eigenDNN/eigen/unsupported -I/home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand -isystem /home/poweruser/junda.feng/anaconda3/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -o CMakeFiles/mha.dir/src/bias_dropout_residual.cpp.o -c /home/poweruser/junda.feng/eigenDNN/src/bias_dropout_residual.cpp",
   "file": "/home/poweruser/junda.feng/eigenDNN/src/bias_dropout_residual.cpp",
   "output": "CMakeFiles/mha.dir/src/bias_dropout_residual.cpp.o"
 },
 {
   "directory": "/home/poweruser/junda.feng/eigenDNN/build",
-  "command": "/usr/bin/c++  -I/home/poweruser/junda.feng/eigenDNN/SYSTEM -I/home/poweruser/junda.feng/eigenDNN -I/home/poweruser/junda.feng/eigenDNN/fmha -I/home/poweruser/junda.feng/eigenDNN/include -I/home/poweruser/junda.feng/eigenDNN/eigen3 -I/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported -isystem /home/poweruser/junda.feng/anaconda3/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -o CMakeFiles/mha.dir/src/context.cpp.o -c /home/poweruser/junda.feng/eigenDNN/src/context.cpp",
+  "command": "/usr/bin/c++  -I/home/poweruser/junda.feng/eigenDNN/SYSTEM -I/home/poweruser/junda.feng/eigenDNN -I/home/poweruser/junda.feng/eigenDNN/fmha -I/home/poweruser/junda.feng/eigenDNN/include -I/home/poweruser/junda.feng/eigenDNN/eigen -I/home/poweruser/junda.feng/eigenDNN/eigen/unsupported -I/home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand -isystem /home/poweruser/junda.feng/anaconda3/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -o CMakeFiles/mha.dir/src/context.cpp.o -c /home/poweruser/junda.feng/eigenDNN/src/context.cpp",
   "file": "/home/poweruser/junda.feng/eigenDNN/src/context.cpp",
   "output": "CMakeFiles/mha.dir/src/context.cpp.o"
 },
@@ -49,7 +49,7 @@
 },
 {
   "directory": "/home/poweruser/junda.feng/eigenDNN/build",
-  "command": "/usr/bin/c++  -I/home/poweruser/junda.feng/eigenDNN/SYSTEM -I/home/poweruser/junda.feng/eigenDNN -I/home/poweruser/junda.feng/eigenDNN/fmha -I/home/poweruser/junda.feng/eigenDNN/include -I/home/poweruser/junda.feng/eigenDNN/eigen3 -I/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported -isystem /home/poweruser/junda.feng/anaconda3/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -o CMakeFiles/mha.dir/src/dropout.cpp.o -c /home/poweruser/junda.feng/eigenDNN/src/dropout.cpp",
+  "command": "/usr/bin/c++  -I/home/poweruser/junda.feng/eigenDNN/SYSTEM -I/home/poweruser/junda.feng/eigenDNN -I/home/poweruser/junda.feng/eigenDNN/fmha -I/home/poweruser/junda.feng/eigenDNN/include -I/home/poweruser/junda.feng/eigenDNN/eigen -I/home/poweruser/junda.feng/eigenDNN/eigen/unsupported -I/home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand -isystem /home/poweruser/junda.feng/anaconda3/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -o CMakeFiles/mha.dir/src/dropout.cpp.o -c /home/poweruser/junda.feng/eigenDNN/src/dropout.cpp",
   "file": "/home/poweruser/junda.feng/eigenDNN/src/dropout.cpp",
   "output": "CMakeFiles/mha.dir/src/dropout.cpp.o"
 },
@@ -61,7 +61,7 @@
 },
 {
   "directory": "/home/poweruser/junda.feng/eigenDNN/build",
-  "command": "/usr/bin/c++  -I/home/poweruser/junda.feng/eigenDNN/SYSTEM -I/home/poweruser/junda.feng/eigenDNN -I/home/poweruser/junda.feng/eigenDNN/fmha -I/home/poweruser/junda.feng/eigenDNN/include -I/home/poweruser/junda.feng/eigenDNN/eigen3 -I/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported -isystem /home/poweruser/junda.feng/anaconda3/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -o CMakeFiles/mha.dir/src/eigenDNN.cpp.o -c /home/poweruser/junda.feng/eigenDNN/src/eigenDNN.cpp",
+  "command": "/usr/bin/c++  -I/home/poweruser/junda.feng/eigenDNN/SYSTEM -I/home/poweruser/junda.feng/eigenDNN -I/home/poweruser/junda.feng/eigenDNN/fmha -I/home/poweruser/junda.feng/eigenDNN/include -I/home/poweruser/junda.feng/eigenDNN/eigen -I/home/poweruser/junda.feng/eigenDNN/eigen/unsupported -I/home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand -isystem /home/poweruser/junda.feng/anaconda3/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -o CMakeFiles/mha.dir/src/eigenDNN.cpp.o -c /home/poweruser/junda.feng/eigenDNN/src/eigenDNN.cpp",
   "file": "/home/poweruser/junda.feng/eigenDNN/src/eigenDNN.cpp",
   "output": "CMakeFiles/mha.dir/src/eigenDNN.cpp.o"
 },
@@ -79,13 +79,13 @@
 },
 {
   "directory": "/home/poweruser/junda.feng/eigenDNN/build",
-  "command": "/usr/bin/c++  -I/home/poweruser/junda.feng/eigenDNN/SYSTEM -I/home/poweruser/junda.feng/eigenDNN -I/home/poweruser/junda.feng/eigenDNN/fmha -I/home/poweruser/junda.feng/eigenDNN/include -I/home/poweruser/junda.feng/eigenDNN/eigen3 -I/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported -isystem /home/poweruser/junda.feng/anaconda3/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -o CMakeFiles/mha.dir/src/feed_forward.cpp.o -c /home/poweruser/junda.feng/eigenDNN/src/feed_forward.cpp",
+  "command": "/usr/bin/c++  -I/home/poweruser/junda.feng/eigenDNN/SYSTEM -I/home/poweruser/junda.feng/eigenDNN -I/home/poweruser/junda.feng/eigenDNN/fmha -I/home/poweruser/junda.feng/eigenDNN/include -I/home/poweruser/junda.feng/eigenDNN/eigen -I/home/poweruser/junda.feng/eigenDNN/eigen/unsupported -I/home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand -isystem /home/poweruser/junda.feng/anaconda3/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -o CMakeFiles/mha.dir/src/feed_forward.cpp.o -c /home/poweruser/junda.feng/eigenDNN/src/feed_forward.cpp",
   "file": "/home/poweruser/junda.feng/eigenDNN/src/feed_forward.cpp",
   "output": "CMakeFiles/mha.dir/src/feed_forward.cpp.o"
 },
 {
   "directory": "/home/poweruser/junda.feng/eigenDNN/build",
-  "command": "/usr/bin/c++  -I/home/poweruser/junda.feng/eigenDNN/SYSTEM -I/home/poweruser/junda.feng/eigenDNN -I/home/poweruser/junda.feng/eigenDNN/fmha -I/home/poweruser/junda.feng/eigenDNN/include -I/home/poweruser/junda.feng/eigenDNN/eigen3 -I/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported -isystem /home/poweruser/junda.feng/anaconda3/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -o CMakeFiles/mha.dir/src/feed_forward_layer.cpp.o -c /home/poweruser/junda.feng/eigenDNN/src/feed_forward_layer.cpp",
+  "command": "/usr/bin/c++  -I/home/poweruser/junda.feng/eigenDNN/SYSTEM -I/home/poweruser/junda.feng/eigenDNN -I/home/poweruser/junda.feng/eigenDNN/fmha -I/home/poweruser/junda.feng/eigenDNN/include -I/home/poweruser/junda.feng/eigenDNN/eigen -I/home/poweruser/junda.feng/eigenDNN/eigen/unsupported -I/home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand -isystem /home/poweruser/junda.feng/anaconda3/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -o CMakeFiles/mha.dir/src/feed_forward_layer.cpp.o -c /home/poweruser/junda.feng/eigenDNN/src/feed_forward_layer.cpp",
   "file": "/home/poweruser/junda.feng/eigenDNN/src/feed_forward_layer.cpp",
   "output": "CMakeFiles/mha.dir/src/feed_forward_layer.cpp.o"
 },
@@ -97,31 +97,31 @@
 },
 {
   "directory": "/home/poweruser/junda.feng/eigenDNN/build",
-  "command": "/usr/bin/c++  -I/home/poweruser/junda.feng/eigenDNN/SYSTEM -I/home/poweruser/junda.feng/eigenDNN -I/home/poweruser/junda.feng/eigenDNN/fmha -I/home/poweruser/junda.feng/eigenDNN/include -I/home/poweruser/junda.feng/eigenDNN/eigen3 -I/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported -isystem /home/poweruser/junda.feng/anaconda3/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -o CMakeFiles/mha.dir/src/layer.cpp.o -c /home/poweruser/junda.feng/eigenDNN/src/layer.cpp",
+  "command": "/usr/bin/c++  -I/home/poweruser/junda.feng/eigenDNN/SYSTEM -I/home/poweruser/junda.feng/eigenDNN -I/home/poweruser/junda.feng/eigenDNN/fmha -I/home/poweruser/junda.feng/eigenDNN/include -I/home/poweruser/junda.feng/eigenDNN/eigen -I/home/poweruser/junda.feng/eigenDNN/eigen/unsupported -I/home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand -isystem /home/poweruser/junda.feng/anaconda3/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -o CMakeFiles/mha.dir/src/layer.cpp.o -c /home/poweruser/junda.feng/eigenDNN/src/layer.cpp",
   "file": "/home/poweruser/junda.feng/eigenDNN/src/layer.cpp",
   "output": "CMakeFiles/mha.dir/src/layer.cpp.o"
 },
 {
   "directory": "/home/poweruser/junda.feng/eigenDNN/build",
-  "command": "/usr/bin/c++  -I/home/poweruser/junda.feng/eigenDNN/SYSTEM -I/home/poweruser/junda.feng/eigenDNN -I/home/poweruser/junda.feng/eigenDNN/fmha -I/home/poweruser/junda.feng/eigenDNN/include -I/home/poweruser/junda.feng/eigenDNN/eigen3 -I/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported -isystem /home/poweruser/junda.feng/anaconda3/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -o CMakeFiles/mha.dir/src/layer_normalize.cpp.o -c /home/poweruser/junda.feng/eigenDNN/src/layer_normalize.cpp",
+  "command": "/usr/bin/c++  -I/home/poweruser/junda.feng/eigenDNN/SYSTEM -I/home/poweruser/junda.feng/eigenDNN -I/home/poweruser/junda.feng/eigenDNN/fmha -I/home/poweruser/junda.feng/eigenDNN/include -I/home/poweruser/junda.feng/eigenDNN/eigen -I/home/poweruser/junda.feng/eigenDNN/eigen/unsupported -I/home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand -isystem /home/poweruser/junda.feng/anaconda3/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -o CMakeFiles/mha.dir/src/layer_normalize.cpp.o -c /home/poweruser/junda.feng/eigenDNN/src/layer_normalize.cpp",
   "file": "/home/poweruser/junda.feng/eigenDNN/src/layer_normalize.cpp",
   "output": "CMakeFiles/mha.dir/src/layer_normalize.cpp.o"
 },
 {
   "directory": "/home/poweruser/junda.feng/eigenDNN/build",
-  "command": "/usr/bin/c++  -I/home/poweruser/junda.feng/eigenDNN/SYSTEM -I/home/poweruser/junda.feng/eigenDNN -I/home/poweruser/junda.feng/eigenDNN/fmha -I/home/poweruser/junda.feng/eigenDNN/include -I/home/poweruser/junda.feng/eigenDNN/eigen3 -I/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported -isystem /home/poweruser/junda.feng/anaconda3/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -o CMakeFiles/mha.dir/src/manager.cpp.o -c /home/poweruser/junda.feng/eigenDNN/src/manager.cpp",
+  "command": "/usr/bin/c++  -I/home/poweruser/junda.feng/eigenDNN/SYSTEM -I/home/poweruser/junda.feng/eigenDNN -I/home/poweruser/junda.feng/eigenDNN/fmha -I/home/poweruser/junda.feng/eigenDNN/include -I/home/poweruser/junda.feng/eigenDNN/eigen -I/home/poweruser/junda.feng/eigenDNN/eigen/unsupported -I/home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand -isystem /home/poweruser/junda.feng/anaconda3/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -o CMakeFiles/mha.dir/src/manager.cpp.o -c /home/poweruser/junda.feng/eigenDNN/src/manager.cpp",
   "file": "/home/poweruser/junda.feng/eigenDNN/src/manager.cpp",
   "output": "CMakeFiles/mha.dir/src/manager.cpp.o"
 },
 {
   "directory": "/home/poweruser/junda.feng/eigenDNN/build",
-  "command": "/usr/bin/c++  -I/home/poweruser/junda.feng/eigenDNN/SYSTEM -I/home/poweruser/junda.feng/eigenDNN -I/home/poweruser/junda.feng/eigenDNN/fmha -I/home/poweruser/junda.feng/eigenDNN/include -I/home/poweruser/junda.feng/eigenDNN/eigen3 -I/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported -isystem /home/poweruser/junda.feng/anaconda3/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -o CMakeFiles/mha.dir/src/multihead_attention_layer.cpp.o -c /home/poweruser/junda.feng/eigenDNN/src/multihead_attention_layer.cpp",
+  "command": "/usr/bin/c++  -I/home/poweruser/junda.feng/eigenDNN/SYSTEM -I/home/poweruser/junda.feng/eigenDNN -I/home/poweruser/junda.feng/eigenDNN/fmha -I/home/poweruser/junda.feng/eigenDNN/include -I/home/poweruser/junda.feng/eigenDNN/eigen -I/home/poweruser/junda.feng/eigenDNN/eigen/unsupported -I/home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand -isystem /home/poweruser/junda.feng/anaconda3/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -o CMakeFiles/mha.dir/src/multihead_attention_layer.cpp.o -c /home/poweruser/junda.feng/eigenDNN/src/multihead_attention_layer.cpp",
   "file": "/home/poweruser/junda.feng/eigenDNN/src/multihead_attention_layer.cpp",
   "output": "CMakeFiles/mha.dir/src/multihead_attention_layer.cpp.o"
 },
 {
   "directory": "/home/poweruser/junda.feng/eigenDNN/build",
-  "command": "/usr/bin/c++  -I/home/poweruser/junda.feng/eigenDNN/SYSTEM -I/home/poweruser/junda.feng/eigenDNN -I/home/poweruser/junda.feng/eigenDNN/fmha -I/home/poweruser/junda.feng/eigenDNN/include -I/home/poweruser/junda.feng/eigenDNN/eigen3 -I/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported -isystem /home/poweruser/junda.feng/anaconda3/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -o CMakeFiles/mha.dir/src/node.cpp.o -c /home/poweruser/junda.feng/eigenDNN/src/node.cpp",
+  "command": "/usr/bin/c++  -I/home/poweruser/junda.feng/eigenDNN/SYSTEM -I/home/poweruser/junda.feng/eigenDNN -I/home/poweruser/junda.feng/eigenDNN/fmha -I/home/poweruser/junda.feng/eigenDNN/include -I/home/poweruser/junda.feng/eigenDNN/eigen -I/home/poweruser/junda.feng/eigenDNN/eigen/unsupported -I/home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand -isystem /home/poweruser/junda.feng/anaconda3/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -o CMakeFiles/mha.dir/src/node.cpp.o -c /home/poweruser/junda.feng/eigenDNN/src/node.cpp",
   "file": "/home/poweruser/junda.feng/eigenDNN/src/node.cpp",
   "output": "CMakeFiles/mha.dir/src/node.cpp.o"
 },
@@ -133,7 +133,7 @@
 },
 {
   "directory": "/home/poweruser/junda.feng/eigenDNN/build",
-  "command": "/usr/bin/c++  -I/home/poweruser/junda.feng/eigenDNN/SYSTEM -I/home/poweruser/junda.feng/eigenDNN -I/home/poweruser/junda.feng/eigenDNN/fmha -I/home/poweruser/junda.feng/eigenDNN/include -I/home/poweruser/junda.feng/eigenDNN/eigen3 -I/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported -isystem /home/poweruser/junda.feng/anaconda3/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -o CMakeFiles/mha.dir/src/softmax.cpp.o -c /home/poweruser/junda.feng/eigenDNN/src/softmax.cpp",
+  "command": "/usr/bin/c++  -I/home/poweruser/junda.feng/eigenDNN/SYSTEM -I/home/poweruser/junda.feng/eigenDNN -I/home/poweruser/junda.feng/eigenDNN/fmha -I/home/poweruser/junda.feng/eigenDNN/include -I/home/poweruser/junda.feng/eigenDNN/eigen -I/home/poweruser/junda.feng/eigenDNN/eigen/unsupported -I/home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand -isystem /home/poweruser/junda.feng/anaconda3/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -o CMakeFiles/mha.dir/src/softmax.cpp.o -c /home/poweruser/junda.feng/eigenDNN/src/softmax.cpp",
   "file": "/home/poweruser/junda.feng/eigenDNN/src/softmax.cpp",
   "output": "CMakeFiles/mha.dir/src/softmax.cpp.o"
 },
@@ -145,19 +145,19 @@
 },
 {
   "directory": "/home/poweruser/junda.feng/eigenDNN/build",
-  "command": "/usr/bin/c++  -I/home/poweruser/junda.feng/eigenDNN/SYSTEM -I/home/poweruser/junda.feng/eigenDNN -I/home/poweruser/junda.feng/eigenDNN/fmha -I/home/poweruser/junda.feng/eigenDNN/include -I/home/poweruser/junda.feng/eigenDNN/eigen3 -I/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported -isystem /home/poweruser/junda.feng/anaconda3/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -o CMakeFiles/mha.dir/src/strided_batch_gemm.cpp.o -c /home/poweruser/junda.feng/eigenDNN/src/strided_batch_gemm.cpp",
+  "command": "/usr/bin/c++  -I/home/poweruser/junda.feng/eigenDNN/SYSTEM -I/home/poweruser/junda.feng/eigenDNN -I/home/poweruser/junda.feng/eigenDNN/fmha -I/home/poweruser/junda.feng/eigenDNN/include -I/home/poweruser/junda.feng/eigenDNN/eigen -I/home/poweruser/junda.feng/eigenDNN/eigen/unsupported -I/home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand -isystem /home/poweruser/junda.feng/anaconda3/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -o CMakeFiles/mha.dir/src/strided_batch_gemm.cpp.o -c /home/poweruser/junda.feng/eigenDNN/src/strided_batch_gemm.cpp",
   "file": "/home/poweruser/junda.feng/eigenDNN/src/strided_batch_gemm.cpp",
   "output": "CMakeFiles/mha.dir/src/strided_batch_gemm.cpp.o"
 },
 {
   "directory": "/home/poweruser/junda.feng/eigenDNN/build",
-  "command": "/usr/bin/c++  -I/home/poweruser/junda.feng/eigenDNN/SYSTEM -I/home/poweruser/junda.feng/eigenDNN -I/home/poweruser/junda.feng/eigenDNN/fmha -I/home/poweruser/junda.feng/eigenDNN/include -I/home/poweruser/junda.feng/eigenDNN/eigen3 -I/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported -isystem /home/poweruser/junda.feng/anaconda3/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -o CMakeFiles/mha.dir/src/tensor.cpp.o -c /home/poweruser/junda.feng/eigenDNN/src/tensor.cpp",
+  "command": "/usr/bin/c++  -I/home/poweruser/junda.feng/eigenDNN/SYSTEM -I/home/poweruser/junda.feng/eigenDNN -I/home/poweruser/junda.feng/eigenDNN/fmha -I/home/poweruser/junda.feng/eigenDNN/include -I/home/poweruser/junda.feng/eigenDNN/eigen -I/home/poweruser/junda.feng/eigenDNN/eigen/unsupported -I/home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand -isystem /home/poweruser/junda.feng/anaconda3/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -o CMakeFiles/mha.dir/src/tensor.cpp.o -c /home/poweruser/junda.feng/eigenDNN/src/tensor.cpp",
   "file": "/home/poweruser/junda.feng/eigenDNN/src/tensor.cpp",
   "output": "CMakeFiles/mha.dir/src/tensor.cpp.o"
 },
 {
   "directory": "/home/poweruser/junda.feng/eigenDNN/build",
-  "command": "/usr/bin/c++  -I/home/poweruser/junda.feng/eigenDNN/SYSTEM -I/home/poweruser/junda.feng/eigenDNN -I/home/poweruser/junda.feng/eigenDNN/fmha -I/home/poweruser/junda.feng/eigenDNN/include -I/home/poweruser/junda.feng/eigenDNN/eigen3 -I/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported -isystem /home/poweruser/junda.feng/anaconda3/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -o CMakeFiles/mha.dir/src/transform_0213.cpp.o -c /home/poweruser/junda.feng/eigenDNN/src/transform_0213.cpp",
+  "command": "/usr/bin/c++  -I/home/poweruser/junda.feng/eigenDNN/SYSTEM -I/home/poweruser/junda.feng/eigenDNN -I/home/poweruser/junda.feng/eigenDNN/fmha -I/home/poweruser/junda.feng/eigenDNN/include -I/home/poweruser/junda.feng/eigenDNN/eigen -I/home/poweruser/junda.feng/eigenDNN/eigen/unsupported -I/home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand -isystem /home/poweruser/junda.feng/anaconda3/include  -no-pie -lpthread -fPIE -Wno-unknown-pragmas -o CMakeFiles/mha.dir/src/transform_0213.cpp.o -c /home/poweruser/junda.feng/eigenDNN/src/transform_0213.cpp",
   "file": "/home/poweruser/junda.feng/eigenDNN/src/transform_0213.cpp",
   "output": "CMakeFiles/mha.dir/src/transform_0213.cpp.o"
 },

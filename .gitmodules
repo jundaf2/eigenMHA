@@ -4,3 +4,12 @@
 [submodule "cutlass"]
 	path = cutlass
 	url = https://github.com/NVIDIA/cutlass.git
+[submodule "googletest"]
+	path = googletest
+	url = https://github.com/google/googletest
+[submodule "EigenRand"]
+	path = EigenRand
+	url = https://github.com/bab2min/EigenRand
+[submodule "eigen"]
+	path = eigen
+	url = https://gitlab.com/libeigen/eigen.git

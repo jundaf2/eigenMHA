@@ -2,6 +2,9 @@
 To clone this repo, use
 ```
 git clone --recursive
+
+cd ./eigen
+git checkout 3.4   # use eigen 3.4 required by EigenRand
 ```
 
 ## Introduction

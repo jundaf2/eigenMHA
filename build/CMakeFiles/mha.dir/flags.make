@@ -11,7 +11,7 @@ CUDA_FLAGS = -ccbin=/usr/bin/c++ -gencode code=sm_86,arch=compute_86 --expt-exte
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/poweruser/junda.feng/eigenDNN/SYSTEM -I/home/poweruser/junda.feng/eigenDNN -I/home/poweruser/junda.feng/eigenDNN/fmha -I/home/poweruser/junda.feng/eigenDNN/include -I/home/poweruser/junda.feng/eigenDNN/eigen3 -I/home/poweruser/junda.feng/eigenDNN/eigen3/unsupported -isystem /home/poweruser/junda.feng/anaconda3/include
+CXX_INCLUDES = -I/home/poweruser/junda.feng/eigenDNN/SYSTEM -I/home/poweruser/junda.feng/eigenDNN -I/home/poweruser/junda.feng/eigenDNN/fmha -I/home/poweruser/junda.feng/eigenDNN/include -I/home/poweruser/junda.feng/eigenDNN/eigen -I/home/poweruser/junda.feng/eigenDNN/eigen/unsupported -I/home/poweruser/junda.feng/eigenDNN/EigenRand/EigenRand -isystem /home/poweruser/junda.feng/anaconda3/include
 
 CXX_FLAGS =  -no-pie -lpthread -fPIE -Wno-unknown-pragmas
 
