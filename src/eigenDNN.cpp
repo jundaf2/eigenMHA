@@ -71,28 +71,28 @@ eidnnStatus_t eidnnSoftmaxBackward(eidnnHandle_t handle,
 
 eidnnStatus_t eidnnDropoutForward(
     eidnnHandle_t                       handle,
-    const eidnnDropoutDescriptor_t      dropoutDesc,
+    eidnnDropoutDescriptor_t      &dropoutDesc,
     const Tensor<float, 4>         &x,
-    Tensor<float, 4>               &y,
-    void                               *reserveSpace,
-    size_t                              reserveSpaceSizeInBytes)
+    Tensor<float, 4>               &y)
 {
-  float rate = 0.5;
-  std::mt19937 mt1(2023);
-  std::binomial_distribution<int> distribution(1, rate);
-  Tensor<float, 4> dropout_mask(x.dimensions());
+  float dropout_rate;
+  unsigned long long seed;
 
-  for(int b=0; b<y.dimension(0); b++){
-    for(int h=0; h<y.dimension(1); h++){
-      for(int src=0; src<y.dimension(2); src++){
-        for(int trg=0; trg<y.dimension(3); trg++){
-          dropout_mask(b, h, src, trg) = distribution(mt1);
-        }
-      }
-    }
-  }
+  std::tie(dropout_rate,std::ignore,std::ignore,seed) = dropoutDesc;
+  void* &reserveSpace = std::get<1>(dropoutDesc);
+  size_t &reserveSpaceSizeInBytes = std::get<2>(dropoutDesc);
+
+  reserveSpaceSizeInBytes = x.size()*sizeof(std::remove_const<typename std::remove_reference<decltype(x)>::type>::type::Scalar);
+  reserveSpace = malloc(reserveSpaceSizeInBytes);
   
-  y = x*dropout_mask*(1.0f/(1-rate));
+std::cout << "reserveSpaceSizeInBytes : " << reserveSpaceSizeInBytes << std::endl;
+  std::mt19937 mt1(seed);
+  std::binomial_distribution<int> distribution(1, (1-dropout_rate));
+
+  for(size_t i=0; i<x.size() ; i++) (reinterpret_cast<float *>(reserveSpace))[i] = (1.0f/(1-dropout_rate))*distribution(mt1);
+  TensorMap<const Tensor<float, 4>> dropout_mask(reinterpret_cast<float *>(reserveSpace), x.dimensions());
+  
+  y = x*dropout_mask;
 
   return EIDNN_STATUS_SUCCESS;
 }
@@ -101,26 +101,18 @@ eidnnStatus_t eidnnDropoutBackward(
     eidnnHandle_t                   handle,
     const eidnnDropoutDescriptor_t  dropoutDesc,
     const Tensor<float, 4>       &dy,
-    Tensor<float, 4>             &dx,
-    void                           *reserveSpace,
-    size_t                          reserveSpaceSizeInBytes)
+    Tensor<float, 4>             &dx)
 {
-  float rate = 0.5;
-  std::mt19937 mt1(2023);
-  std::binomial_distribution<int> distribution(1, rate);
-  Tensor<float, 4> dropout_mask(dx.dimensions());
+  void *reserveSpace;
+  size_t reserveSpaceSizeInBytes;
+  float dropout_rate;
+  unsigned long long seed;
 
-  for(int b=0; b<dy.dimension(0); b++){
-    for(int h=0; h<dy.dimension(1); h++){
-      for(int src=0; src<dy.dimension(2); src++){
-        for(int trg=0; trg<dy.dimension(3); trg++){
-          dropout_mask(b, h, src, trg) = distribution(mt1);
-        }
-      }
-    }
-  }
+  std::tie(dropout_rate,reserveSpace,reserveSpaceSizeInBytes,seed) = dropoutDesc;
+
+  TensorMap<const Tensor<float, 4>> dropout_mask(reinterpret_cast<float *>(reserveSpace), dx.dimensions());
   
-  dx = dy*dropout_mask*(1.0f/(1-rate));
+  dx = dy*dropout_mask;
 
   return EIDNN_STATUS_SUCCESS;
 }

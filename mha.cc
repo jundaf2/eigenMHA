@@ -4,7 +4,7 @@
 
 using namespace std;
 
-void test_eidnnLinearForward(unsigned batch_size,unsigned n_heads,unsigned seq_len,unsigned head_size,unsigned hidden_size,float dropout_rate){
+void test_eidnnLinearForward(unsigned batch_size,unsigned n_heads,unsigned seq_len,unsigned head_size,unsigned hidden_size,float dropout_rate, void* saved_states){
   using namespace Eigen;
   eigenDNN::eidnnHandle_t handle;
 
@@ -20,7 +20,7 @@ void test_eidnnLinearForward(unsigned batch_size,unsigned n_heads,unsigned seq_l
   cout << "q_out: " << endl << q_out << endl;
 }
 
-void test_eidnnLinearBackward(unsigned batch_size,unsigned n_heads,unsigned seq_len,unsigned head_size,unsigned hidden_size,float dropout_rate){
+void test_eidnnLinearBackward(unsigned batch_size,unsigned n_heads,unsigned seq_len,unsigned head_size,unsigned hidden_size,float dropout_rate, void* saved_states){
   using namespace Eigen;
   eigenDNN::eidnnHandle_t handle;
 
@@ -44,7 +44,7 @@ void test_eidnnLinearBackward(unsigned batch_size,unsigned n_heads,unsigned seq_
 }
 
 
-void test_eidnnSoftmaxForward(unsigned batch_size,unsigned n_heads,unsigned seq_len,unsigned head_size,unsigned hidden_size,float dropout_rate){
+void test_eidnnSoftmaxForward(unsigned batch_size,unsigned n_heads,unsigned seq_len,unsigned head_size,unsigned hidden_size,float dropout_rate, void* saved_states){
   using namespace Eigen;
   eigenDNN::eidnnHandle_t handle;
 
@@ -59,7 +59,7 @@ void test_eidnnSoftmaxForward(unsigned batch_size,unsigned n_heads,unsigned seq_
   cout << "s_out: " << endl << s_out << endl;
 }
 
-void test_eidnnSoftmaxBackward(unsigned batch_size,unsigned n_heads,unsigned seq_len,unsigned head_size,unsigned hidden_size,float dropout_rate){
+void test_eidnnSoftmaxBackward(unsigned batch_size,unsigned n_heads,unsigned seq_len,unsigned head_size,unsigned hidden_size,float dropout_rate, void* saved_states){
   using namespace Eigen;
   eigenDNN::eidnnHandle_t handle;
 
@@ -80,7 +80,7 @@ void test_eidnnSoftmaxBackward(unsigned batch_size,unsigned n_heads,unsigned seq
 }
 
 
-void test_eidnnDropoutForward(unsigned batch_size,unsigned n_heads,unsigned seq_len,unsigned head_size,unsigned hidden_size,float dropout_rate){
+void test_eidnnDropoutForwardBackward(unsigned batch_size,unsigned n_heads,unsigned seq_len,unsigned head_size,unsigned hidden_size,float dropout_rate, void* saved_states){
   using namespace Eigen;
   eigenDNN::eidnnHandle_t handle;
 
@@ -90,19 +90,12 @@ void test_eidnnDropoutForward(unsigned batch_size,unsigned n_heads,unsigned seq_
   do_out.setConstant(0);
   do_in.setConstant(1);
 
-  eigenDNN::eidnnDropoutDescriptor_t dropoutDesc;
-  void *reserveSpace;
-  size_t reserveSpaceSizeInBytes;
+  eigenDNN::eidnnDropoutDescriptor_t dropoutDesc = make_tuple(dropout_rate,saved_states,0,2023);
   
-  eigenDNN::eidnnDropoutForward(handle, dropoutDesc, do_in, do_out, reserveSpace, reserveSpaceSizeInBytes);
+  eigenDNN::eidnnDropoutForward(handle, dropoutDesc, do_in, do_out);
   cout << "do_in: " << endl << do_in << endl;
   cout << "do_out: " << endl << do_out << endl;
-}
 
-
-void test_eidnnDropoutBackward(unsigned batch_size,unsigned n_heads,unsigned seq_len,unsigned head_size,unsigned hidden_size,float dropout_rate){
-  using namespace Eigen;
-  eigenDNN::eidnnHandle_t handle;
 
   Tensor<float, 4> do_in_grad(batch_size, n_heads, seq_len, seq_len);
   Tensor<float, 4> do_out_grad(batch_size, n_heads, seq_len, seq_len);
@@ -110,11 +103,7 @@ void test_eidnnDropoutBackward(unsigned batch_size,unsigned n_heads,unsigned seq
   do_in_grad.setConstant(0);
   do_out_grad.setConstant(1);
 
-  eigenDNN::eidnnDropoutDescriptor_t dropoutDesc;
-  void *reserveSpace;
-  size_t reserveSpaceSizeInBytes;
-  
-  eigenDNN::eidnnDropoutForward(handle, dropoutDesc, do_out_grad, do_in_grad, reserveSpace, reserveSpaceSizeInBytes);
+  eigenDNN::eidnnDropoutBackward(handle, dropoutDesc, do_out_grad, do_in_grad);
   cout << "do_out_grad: " << endl << do_out_grad << endl;
   cout << "do_in_grad: " << endl << do_in_grad << endl;
 }
@@ -127,12 +116,12 @@ int main(int argc, char* argv[]) {
   unsigned head_size = 2;
   unsigned hidden_size = head_size*n_heads;
   float dropout_rate = 0.1;
+  void* saved_states;
   
-  test_eidnnLinearForward(batch_size,n_heads,seq_len,head_size,hidden_size,dropout_rate);
-  test_eidnnLinearBackward(batch_size,n_heads,seq_len,head_size,hidden_size,dropout_rate);
-  test_eidnnSoftmaxForward(batch_size,n_heads,seq_len,head_size,hidden_size,dropout_rate);
-  test_eidnnSoftmaxBackward(batch_size,n_heads,seq_len,head_size,hidden_size,dropout_rate);
-  test_eidnnDropoutForward(batch_size,n_heads,seq_len,head_size,hidden_size,dropout_rate);
-  test_eidnnDropoutBackward(batch_size,n_heads,seq_len,head_size,hidden_size,dropout_rate);
+  test_eidnnLinearForward(batch_size,n_heads,seq_len,head_size,hidden_size,dropout_rate,saved_states);
+  test_eidnnLinearBackward(batch_size,n_heads,seq_len,head_size,hidden_size,dropout_rate,saved_states);
+  test_eidnnSoftmaxForward(batch_size,n_heads,seq_len,head_size,hidden_size,dropout_rate,saved_states);
+  test_eidnnSoftmaxBackward(batch_size,n_heads,seq_len,head_size,hidden_size,dropout_rate,saved_states);
+  test_eidnnDropoutForwardBackward(batch_size,n_heads,seq_len,head_size,hidden_size,dropout_rate,saved_states);
   return 0;
 }

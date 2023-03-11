@@ -8,6 +8,8 @@
 #include <vector>
 #include <map>
 #include <memory>
+#include <typeinfo>
+#include <utility>
 
 namespace eigenDNN{
 
@@ -159,17 +161,13 @@ eidnnStatus_t eidnnRestoreDropoutDescriptor(
 
 eidnnStatus_t eidnnDropoutForward(
     eidnnHandle_t                       handle,
-    const eidnnDropoutDescriptor_t      dropoutDesc,
+    eidnnDropoutDescriptor_t      &dropoutDesc,
     const Tensor<float, 4>         &x,
-    Tensor<float, 4>               &y,
-    void                               *reserveSpace,
-    size_t                              reserveSpaceSizeInBytes);
+    Tensor<float, 4>               &y);
 
 eidnnStatus_t eidnnDropoutBackward(
     eidnnHandle_t                   handle,
     const eidnnDropoutDescriptor_t  dropoutDesc,
     const Tensor<float, 4>       &dy,
-    Tensor<float, 4>             &dx,
-    void                           *reserveSpace,
-    size_t                          reserveSpaceSizeInBytes);
+    Tensor<float, 4>             &dx);
 }
