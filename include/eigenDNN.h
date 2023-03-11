@@ -170,4 +170,49 @@ eidnnStatus_t eidnnDropoutBackward(
     const eidnnDropoutDescriptor_t  dropoutDesc,
     const Tensor<float, 4>       &dy,
     Tensor<float, 4>             &dx);
+
+eidnnStatus_t eidnnStridedBatchGemm(
+    eidnnHandle_t handle,
+    int m,
+    int n,
+    int k,
+    float alpha,
+    float beta,
+    const float *A, 
+    const float *B, 
+    float *C,
+    int stride_A, 
+    int stride_B, 
+    int stride_C,
+    int batch);
+
+eidnnStatus_t eidnnStridedBatchGemmForward(
+    eidnnHandle_t handle,
+    int m,
+    int n,
+    int k,
+    float alpha,
+    float beta,
+    const float *A, 
+    const float *B, 
+    float *C,
+    int stride_A, 
+    int stride_B, 
+    int stride_C,
+    int batch);
+
+eidnnStatus_t eidnnStridedBatchGemmBackward(
+    eidnnHandle_t handle,
+    int m,
+    int n,
+    int k,
+    float alpha,
+    float beta,
+    const float *A, 
+    const float *d_C, 
+    float *d_B,
+    int stride_A, 
+    int stride_B, 
+    int stride_C,
+    int batch);
 }
