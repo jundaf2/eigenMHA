@@ -202,4 +202,13 @@ eidnnStatus_t eidnnStridedBatchGemmBackward(
     const Tensor<float, 4> &A, 
     const Tensor<float, 4> &d_C, 
     Tensor<float, 4> &d_B);
+
+
+eidnnStatus_t eidnnMSELoss(
+    eidnnHandle_t handle,
+    const Tensor<float, 3> &output, 
+    const Tensor<float, 3> &target,
+    Tensor<float, 0> &loss,
+    Tensor<float, 3> &d_loss);
+
 }

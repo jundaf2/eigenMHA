@@ -22,6 +22,19 @@ Currently, it focuses on
 <center>Which part will we implement in the transformer model.</center>
 
 ## Notes
+### MSE Loss Function
+<center><img src="./figures/MSE Loss.PNG" ...></center>
+<center> MSE Loss.</center>
+
+```
+eidnnStatus_t eidnnMSELoss(
+    eidnnHandle_t handle,
+    const Tensor<float, 3> &output, 
+    const Tensor<float, 3> &target,
+    Tensor<float, 0> &loss,
+    Tensor<float, 3> &d_loss);
+```
+
 ### Linear
 ```
 eidnnStatus_t eidnnLinearForward(eidnnHandle_t handle,

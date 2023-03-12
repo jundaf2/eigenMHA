@@ -143,7 +143,26 @@ void test_eidnnMatMulForwardBackward(unsigned batch_size,unsigned n_heads,unsign
   cout << "c_grad: " << endl << c_grad << endl;
 }
 
+void test_eidnnMSELoss(unsigned batch_size,unsigned n_heads,unsigned seq_len,unsigned head_size,unsigned hidden_size,float dropout_rate, void* saved_states){
+  using namespace Eigen;
+  eigenDNN::eidnnHandle_t handle;
 
+  Tensor<float, 3> output(batch_size, seq_len, hidden_size);
+  Tensor<float, 3> target(batch_size, seq_len, hidden_size);
+  Tensor<float, 0> loss;
+  Tensor<float, 3> d_loss(batch_size, seq_len, hidden_size);
+
+  output.setConstant(1);
+  target.setConstant(0.5);
+  loss.setConstant(0);
+  d_loss.setConstant(0);
+
+  eigenDNN::eidnnMSELoss(handle, output, target, loss, d_loss);
+  cout << "output: " << endl << output << endl;
+  cout << "target: " << endl << target << endl;
+  cout << "loss: " << endl << loss << endl;
+  cout << "d_loss: " << endl << d_loss << endl;
+}
 
 int main(int argc, char* argv[]) {
   unsigned batch_size = 2;
@@ -160,5 +179,6 @@ int main(int argc, char* argv[]) {
   test_eidnnSoftmaxBackward(batch_size,n_heads,seq_len,head_size,hidden_size,dropout_rate,saved_states);
   test_eidnnDropoutForwardBackward(batch_size,n_heads,seq_len,head_size,hidden_size,dropout_rate,saved_states);
   test_eidnnMatMulForwardBackward(batch_size,n_heads,seq_len,head_size,hidden_size,dropout_rate,saved_states);
+  test_eidnnMSELoss(batch_size,n_heads,seq_len,head_size,hidden_size,dropout_rate,saved_states);
   return 0;
 }
