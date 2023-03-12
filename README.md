@@ -42,7 +42,10 @@ eidnnStatus_t eidnnLinearBackward(eidnnHandle_t handle,
 ```
 
 ### MatMul
-$ C = \beta * C + \alpha*Op_c(MatMul(Op_a(A),Op_b(B))) $, where $Op_m(M)$ is whether to transpose matrix $M$ or not in the forward pass.
+
+$$ C = \beta * C + \alpha*Op_c(MatMul(Op_a(A),Op_b(B))) $$
+
+, where $Op_m(M)$ is whether to transpose matrix $M$ or not in the forward pass.
 
 ```
 eidnnStatus_t eidnnStridedBatchGemmForward(
