@@ -24,6 +24,8 @@ eidnnStatus_t eidnnLinearBackward(eidnnHandle_t handle,
                      Tensor<float, 3>& dx,
                      Tensor<float, 2>& dw)
 {
+  dx.setZero();
+  dw.setZero();
   for(int b=0; b<x.dimension(0); b++){
     dx.chip(b,0) += dy.chip(b,0).contract(w, array<IndexPair<int>,1>({IndexPair<int>(1, 0)}));
     dw += dy.chip(b,0).contract(x.chip(b,0), array<IndexPair<int>,1>({IndexPair<int>(0, 0)}));
