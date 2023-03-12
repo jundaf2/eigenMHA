@@ -109,6 +109,42 @@ void test_eidnnDropoutForwardBackward(unsigned batch_size,unsigned n_heads,unsig
 }
 
 
+void test_eidnnMatMulForwardBackward(unsigned batch_size,unsigned n_heads,unsigned seq_len,unsigned head_size,unsigned hidden_size,float dropout_rate, void* saved_states){
+  using namespace Eigen;
+  eigenDNN::eidnnHandle_t handle;
+
+  Tensor<float, 4> a(batch_size, n_heads, seq_len, head_size); 
+  Tensor<float, 4> b(batch_size, n_heads, seq_len, head_size);
+  Tensor<float, 4> c(batch_size, n_heads, seq_len, seq_len);
+
+  
+  Tensor<float, 4> a_grad(batch_size, n_heads, seq_len, head_size);
+  Tensor<float, 4> b_grad(batch_size, n_heads, seq_len, head_size);
+  Tensor<float, 4> c_grad(batch_size, n_heads, seq_len, seq_len); 
+
+
+  c.setConstant(0);
+  a.setConstant(1);
+  b.setConstant(1);
+
+  a_grad.setConstant(0);
+  b_grad.setConstant(0);
+  c_grad.setConstant(1);
+  
+  eigenDNN::eidnnStridedBatchGemmForward(handle, 1, 0, false, true, false, a, b, c);
+  cout << "a: " << endl << a << endl;
+  cout << "b: " << endl << b << endl;
+  cout << "c: " << endl << c << endl;
+
+  eigenDNN::eidnnStridedBatchGemmBackward(handle,  1, 0, true, false, false, b, c_grad, a_grad);
+  eigenDNN::eidnnStridedBatchGemmBackward(handle,  1, 0, false, false, true, a, c_grad, b_grad);
+  cout << "a_grad: " << endl << a_grad << endl;
+  cout << "b_grad: " << endl << b_grad << endl;
+  cout << "c_grad: " << endl << c_grad << endl;
+}
+
+
+
 int main(int argc, char* argv[]) {
   unsigned batch_size = 2;
   unsigned n_heads = 2;
@@ -123,5 +159,6 @@ int main(int argc, char* argv[]) {
   test_eidnnSoftmaxForward(batch_size,n_heads,seq_len,head_size,hidden_size,dropout_rate,saved_states);
   test_eidnnSoftmaxBackward(batch_size,n_heads,seq_len,head_size,hidden_size,dropout_rate,saved_states);
   test_eidnnDropoutForwardBackward(batch_size,n_heads,seq_len,head_size,hidden_size,dropout_rate,saved_states);
+  test_eidnnMatMulForwardBackward(batch_size,n_heads,seq_len,head_size,hidden_size,dropout_rate,saved_states);
   return 0;
 }

@@ -117,4 +117,58 @@ eidnnStatus_t eidnnDropoutBackward(
   return EIDNN_STATUS_SUCCESS;
 }
 
+eidnnStatus_t eidnnStridedBatchGemm(
+    eidnnHandle_t handle,
+    float alpha,
+    float beta,
+    bool trans_A,
+    bool trans_B,
+    const Tensor<float, 4> &A, 
+    const Tensor<float, 4> &B, 
+    Tensor<float, 4> &C)
+{
+  for(int b=0; b<A.dimension(0); b++){
+    for(int h=0; h<A.dimension(1); h++){
+      C.chip(b,0).chip(h,0) = beta*C.chip(b,0).chip(h,0) + alpha*A.chip(b,0).chip(h,0).contract(B.chip(b,0).chip(h,0), array<IndexPair<int>,1>({IndexPair<int>(trans_A?0:1, trans_B?1:0)}));
+    }
+  }
+  return EIDNN_STATUS_SUCCESS;
+}
+
+eidnnStatus_t eidnnStridedBatchGemmForward(
+    eidnnHandle_t handle,
+    float alpha,
+    float beta,
+    bool trans_A,
+    bool trans_B,
+    bool trans_C,
+    const Tensor<float, 4> &A, 
+    const Tensor<float, 4> &B, 
+    Tensor<float, 4> &C)
+{
+  if(!trans_C)
+    eidnnStridedBatchGemm(handle,alpha,beta,trans_A,trans_B,A,B,C);
+  else
+    eidnnStridedBatchGemm(handle,alpha,beta,!trans_A,!trans_B,B,A,C);
+  return EIDNN_STATUS_SUCCESS;
+}
+
+eidnnStatus_t eidnnStridedBatchGemmBackward(
+    eidnnHandle_t handle,
+    float alpha,
+    float beta,
+    bool trans_A,
+    bool trans_d_C,
+    bool trans_d_B,
+    const Tensor<float, 4> &A, 
+    const Tensor<float, 4> &d_C, 
+    Tensor<float, 4> &d_B)
+{
+  if(trans_d_B)
+    eidnnStridedBatchGemm(handle,alpha,beta,!trans_d_C,trans_A,d_C,A,d_B); // d_B
+  else
+    eidnnStridedBatchGemm(handle,alpha,beta,trans_d_C,trans_A,d_C,A,d_B); // d_A
+  return EIDNN_STATUS_SUCCESS;
+}
+
 }

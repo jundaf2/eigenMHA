@@ -173,46 +173,33 @@ eidnnStatus_t eidnnDropoutBackward(
 
 eidnnStatus_t eidnnStridedBatchGemm(
     eidnnHandle_t handle,
-    int m,
-    int n,
-    int k,
     float alpha,
     float beta,
-    const float *A, 
-    const float *B, 
-    float *C,
-    int stride_A, 
-    int stride_B, 
-    int stride_C,
-    int batch);
+    bool trans_A,
+    bool trans_B,
+    const Tensor<float, 4> &A, 
+    const Tensor<float, 4> &B, 
+    Tensor<float, 4> &C);
 
 eidnnStatus_t eidnnStridedBatchGemmForward(
     eidnnHandle_t handle,
-    int m,
-    int n,
-    int k,
     float alpha,
     float beta,
-    const float *A, 
-    const float *B, 
-    float *C,
-    int stride_A, 
-    int stride_B, 
-    int stride_C,
-    int batch);
+    bool trans_A,
+    bool trans_B,
+    bool trans_C,
+    const Tensor<float, 4> &A, 
+    const Tensor<float, 4> &B, 
+    Tensor<float, 4> &C);
 
 eidnnStatus_t eidnnStridedBatchGemmBackward(
     eidnnHandle_t handle,
-    int m,
-    int n,
-    int k,
     float alpha,
     float beta,
-    const float *A, 
-    const float *d_C, 
-    float *d_B,
-    int stride_A, 
-    int stride_B, 
-    int stride_C,
-    int batch);
+    bool trans_A,
+    bool trans_d_C,
+    bool trans_d_B,
+    const Tensor<float, 4> &A, 
+    const Tensor<float, 4> &d_C, 
+    Tensor<float, 4> &d_B);
 }
