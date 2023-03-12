@@ -1,4 +1,4 @@
-# cuSimpleDNN -- An Open-source Toy DL Library with cuDNN interfaces.
+# eigenDNN -- An Open-source Toy DL Testing Framework.
 To clone this repo, use
 ```
 git clone --recursive
@@ -8,9 +8,9 @@ git checkout 3.4   # use eigen 3.4 required by EigenRand
 ```
 
 ## Introduction
-This repo mainly focuses on rewriting the cuDNN library to train and inference Deep Neural Networks. 
-* eigenDNN: a CPU version that serves as the ground truth for GPU implementation.
-* cudaDNN: a GPU version that takes advantages of LightSeq and Flash-Attention 
+This eigenDNN mainly focuses on providing a testing framework for libraries that train and inference Deep Neural Networks. 
+* Eigen serves as the computation library that generates ground truth for GPU implementations.
+* Googletest serves as the verification framwork.
 
 Currently, it focuses on
 
