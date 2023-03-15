@@ -42,6 +42,7 @@ libtorch
 │ ├─THNN
 │ └─torch
 ├─lib
+│ ├─libc10.so
 │ ├─libtorch.so
 │ └─libtorch_cpu.so
 └─share
