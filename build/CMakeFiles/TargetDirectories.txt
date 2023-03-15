@@ -1,3 +1,0 @@
-/home/poweruser/junda.feng/eigenDNN/build/CMakeFiles/mha.dir
-/home/poweruser/junda.feng/eigenDNN/build/CMakeFiles/edit_cache.dir
-/home/poweruser/junda.feng/eigenDNN/build/CMakeFiles/rebuild_cache.dir

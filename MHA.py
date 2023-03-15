@@ -3,13 +3,13 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 # assume 1 head and 1 batch
-batch_size = 1
-n_heads = 4
-seq_len = 128
-head_size = 64
+batch_size = 2
+n_heads = 2
+seq_len = 2
+head_size = 4
 hidden_size = head_size*n_heads  
 
-dropout_rate = 0.1
+dropout_rate = 0
 
 class MHA(nn.Module):
 
@@ -21,6 +21,7 @@ class MHA(nn.Module):
         self.dropout = nn.Dropout(dropout_rate)
         self.softmax  = nn.Softmax(dim=-1)
         self.o_w = nn.Linear(hidden_size, hidden_size)  
+        torch.manual_seed(2023)
     def forward(self, Q_in, K_in, V_in, mask):
         Q = self.q_w(Q_in).view(batch_size, seq_len, n_heads, head_size).permute(0, 2, 1, 3)
         K = self.k_w(K_in).view(batch_size, seq_len, n_heads, head_size).permute(0, 2, 1, 3)
@@ -40,10 +41,14 @@ mask = torch.zeros([batch_size, seq_len],dtype=torch.float32, requires_grad=Fals
 
 # Model
 mha = MHA()
-output = mha(Q, K, V, mask)
+# init parameters
+# for name, param in mha.named_parameters():
+#     if param.requires_grad:
+#         # print(name, param.data)
+#         param.data.fill_(2)
 
-# print("output:",output)
-print("output.shape:",output.shape)
+torch.onnx.export(mha, (Q, K, V, mask), 'mha.onnx')
+output = mha(Q, K, V, mask)
 
 # print("Initial Model Weights:")
 # for name, param in mha.named_parameters():
@@ -52,13 +57,14 @@ print("output.shape:",output.shape)
 
 # Loss
 criterion = nn.MSELoss() # nn.L1Loss(reduction='sum')
-loss = criterion(output, torch.zeros(output.shape,dtype=torch.float32, requires_grad=False))
+target = 0.5*torch.ones(output.shape,dtype=torch.float32, requires_grad=False)
+loss = criterion(output, target)
 loss.backward()
 
-# print("Gradients of Model Weights:")
-# for name, param in mha.named_parameters():
-#     if param.requires_grad:
-#         print(name, param.grad)
+print("Gradients of Model Weights:")
+for name, param in mha.named_parameters():
+    if param.requires_grad:
+        print(name, param.grad)
         
 # BP
 lr = 1
@@ -74,3 +80,4 @@ optimizer.step()
 print("param name:",[name for (name, param) in mha.named_parameters()])
 print("param is_leaf:",[param.is_leaf for (name, param) in mha.named_parameters()])
 print("param grad_fn:",[param.grad_fn for (name, param) in mha.named_parameters()])
+

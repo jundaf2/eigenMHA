@@ -84,6 +84,7 @@ typedef enum {
 eidnnStatus_t eidnnLinearForward(eidnnHandle_t handle,
                     const Tensor<float, 3>& x,
                     const Tensor<float, 2>& w,
+                    const Tensor<float, 1>& bias,
                     Tensor<float, 3>& y);
 
 eidnnStatus_t eidnnLinearBackward(eidnnHandle_t handle,
@@ -91,7 +92,8 @@ eidnnStatus_t eidnnLinearBackward(eidnnHandle_t handle,
                      const Tensor<float, 3>& x,
                      const Tensor<float, 2>& w,
                      Tensor<float, 3>& dx,
-                     Tensor<float, 2>& dw);
+                     Tensor<float, 2>& dw,
+                     Tensor<float, 1>& dbias);
 
 /*
  *  softmax
@@ -197,10 +199,12 @@ eidnnStatus_t eidnnStridedBatchGemmBackward(
     float alpha,
     float beta,
     bool trans_A,
-    bool trans_d_C,
-    bool trans_d_B,
+    bool trans_B,
+    bool trans_C,
     const Tensor<float, 4> &A, 
-    const Tensor<float, 4> &d_C, 
+    const Tensor<float, 4> &B, 
+    const Tensor<float, 4> &d_C,
+    Tensor<float, 4> &d_A,
     Tensor<float, 4> &d_B);
 
 

@@ -17,7 +17,7 @@ enable_language(C CXX CUDA)
 
 # Prohibit in-source build
 if (${PROJECT_SOURCE_DIR} STREQUAL ${PROJECT_BINARY_DIR})
-    message(FATAL_ERROR "cuTransDNN does not support in-source CMake builds at this time.")
+    message(FATAL_ERROR " does not support in-source CMake builds at this time.")
 endif (${PROJECT_SOURCE_DIR} STREQUAL ${PROJECT_BINARY_DIR})
 
 
@@ -25,13 +25,15 @@ set(SRC_FILES_DIR ${PROJECT_SOURCE_DIR}/src)
 set(HDR_FILES_DIR ${PROJECT_SOURCE_DIR}/include)
 set(EIGEN_FILES_DIR ${PROJECT_SOURCE_DIR}/eigen)
 set(EIGEN_UNSUPPORTED_FILES_DIR ${PROJECT_SOURCE_DIR}/eigen/unsupported)
-set(EIGEN_RAND_FILES_DIR ${PROJECT_SOURCE_DIR}/EigenRand/EigenRand)
-set(CUTLASS_HDR_FILES_DIR ${PROJECT_SOURCE_DIR})
 set(FMHA_HDR_FILES_DIR ${PROJECT_SOURCE_DIR}/fmha)
+set(Torch_DIR ${PROJECT_SOURCE_DIR}/libtorch/share/cmake/Torch)
+set(Torch_INC ${PROJECT_SOURCE_DIR}/libtorch/include)
 
 ### Find Required Libs ###
 find_package(CUDA REQUIRED)
 find_package(CUDAToolkit)
+find_package(Torch REQUIRED)
+include_directories(${Torch_INC})
 
 # Find CUDA ARCH VERSION
 include(FindCUDA/select_compute_arch)
@@ -71,7 +73,7 @@ message(STATUS "Using CUDA architecture: ${CUDA_ARCH}")
 set(CUDA_FLAGS "-ccbin=${CMAKE_CXX_COMPILER} ${CUDA_FLAGS}")
 set(CMAKE_CUDA_HOST_LINK_LAUNCHER ${CMAKE_CXX_COMPILER})
 set(CMAKE_CUDA_FLAGS "${CUDA_FLAGS}" CACHE STRING "CUDA flags set for cuTransDNN" FORCE)
-SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -no-pie -lpthread")
+SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${TORCH_CXX_FLAGS} -no-pie -lpthread")
 
 
 # Headers and sources
@@ -88,22 +90,9 @@ endforeach()
 
 add_compile_options(-Wno-unknown-pragmas)
 
-
-# if (NOT $ENV{CUTLASS_LIB_DIR})
-#   set(CUTLASS_LIB_DIR /usr/lib/x86_64-linux-gnu)
-# else()
-#   set(CUTLASS_LIB_DIR $ENV{CUTLASS_LIB_DIR})
-# endif()
-# string(REPLACE ":" ";" LIBRARY_DIRS $ENV{LD_LIBRARY_PATH})
-# find_library(CUTLASS_LIB cutlass HINTS ${CUTLASS_LIB_DIR} ${LIBRARY_DIRS} PATH_SUFFIXES lib lib64)
-
-
-
 add_executable(mha ${ALL_SRC})
-target_include_directories(mha PRIVATE ${COMMON_HEADER_DIRS} SYSTEM ${CUDA_INCLUDE_DIRS} ${CUTLASS_HDR_FILES_DIR} ${FMHA_HDR_FILES_DIR} ${HDR_FILES_DIR} ${EIGEN_FILES_DIR} ${EIGEN_UNSUPPORTED_FILES_DIR} ${EIGEN_RAND_FILES_DIR})
+target_include_directories(mha PRIVATE ${COMMON_HEADER_DIRS} SYSTEM ${CUDA_INCLUDE_DIRS} ${FMHA_HDR_FILES_DIR} ${HDR_FILES_DIR} ${EIGEN_FILES_DIR} ${EIGEN_UNSUPPORTED_FILES_DIR} ${TORCH_INCLUDES})
 target_link_directories(mha PRIVATE ${COMMON_LIB_DIRS})
-target_link_libraries(mha PRIVATE ${CUDA_LIBRARIES} CUDA::cublas CUDA::cublasLt ${Protobuf_LIBRARIES} ${HDF5_LIBRARIES})  #  CUDA::cublas_static CUDA::cublasLt_static
-# if(${CUTLASS_LIB})
-# target_link_libraries(mha PUBLIC ${CUTLASS_LIB})
-# endif()
+target_link_libraries(mha PRIVATE ${CUDA_LIBRARIES} CUDA::cublas CUDA::cublasLt ${Protobuf_LIBRARIES} ${HDF5_LIBRARIES} ${TORCH_LIBRARIES})  #  CUDA::cublas_static CUDA::cublasLt_static
+
 set_target_properties(mha PROPERTIES POSITION_INDEPENDENT_CODE ON)

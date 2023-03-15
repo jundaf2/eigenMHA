@@ -5,10 +5,60 @@ git clone --recursive
 
 cd ./eigen
 git checkout 3.4   # use eigen 3.4 required by EigenRand
-```
 
+git clone https://github.com/pytorch/pytorch --recursive && cd pytorch
+git submodule sync
+git submodule update --init --recursive
+
+cd pytorch
+export USE_CUDA=False
+export BUILD_TEST=False
+python ./tools/build_libtorch.py
+
+```
+Copy the following folders to `libtorch/include`
+- `pytorch/torch/include/torch`
+- `pytorch/torch/include/caffe2`
+- `pytorch/torch/include/c10`
+- `pytorch/torch/include/ATen`
+- `pytorch/torch/include/TH*`
+
+Copy the following shared library to  `libtorch/lib`. 
+- `pytorch/build/lib/libtorch.so`
+- `pytorch/build/lib/libtorch_cpu.so`
+- `pytorch/build/lib/libc10.so`
+
+Copy `pytorch/torch/share/cmake` to  `libtorch/share`. 
+
+Finally, you will get the libtorch subdirectory as follows.
+```
+libtorch
+├─include
+│ ├─ATen
+│ ├─c10
+│ ├─caffe2
+│ ├─TH
+│ ├─THCUNN
+│ ├─THNN
+│ └─torch
+├─lib
+│ ├─libtorch.so
+│ └─libtorch_cpu.so
+└─share
+  └─cmake
+```
+In short, you can use the following cli command to do the above operations. In the folder (project source folder) where `/pytorch` locates,
+```
+mkdir libtorch && mkdir libtorch/lib && mkdir libtorch/include && mkdir libtorch/share
+cp -r pytorch/torch/include/torch pytorch/torch/include/caffe2 pytorch/torch/include/c10 pytorch/torch/include/ATen pytorch/torch/include/TH* libtorch/include
+cp pytorch/build/lib/libtorch.so pytorch/build/lib/libtorch_cpu.so pytorch/build/lib/libc10.so libtorch/lib
+cp -r pytorch/torch/share/cmake libtorch/share
+```
 ## Introduction
-This eigenDNN mainly focuses on providing a testing framework for libraries that train and inference Deep Neural Networks. 
+nnTest mainly focuses on providing a testing framework for train and inference Deep Neural Networks using YOUR OWN LIBRARY.
+
+eigenDNN
+* libtorch (built from pytorch directly) serves as the computation library that generates ground truth for your own library implementation.
 * Eigen serves as the computation library that generates ground truth for GPU implementations.
 * Googletest serves as the verification framwork.
 
@@ -23,8 +73,12 @@ Currently, it focuses on
 
 ## Notes
 ### MSE Loss Function
+
+Loss function, as the origin of DL system, is a basic component inside a DL system.
+
 <center><img src="./figures/MSE Loss.PNG" ...></center>
 <center> MSE Loss.</center>
+
 
 ```
 eidnnStatus_t eidnnMSELoss(
@@ -36,12 +90,16 @@ eidnnStatus_t eidnnMSELoss(
 ```
 
 ### Linear
+cuDNN has no specific APIs for linear layer.
+
+In eiDNN, we have
+
 ```
 eidnnStatus_t eidnnLinearForward(eidnnHandle_t handle,
-                    const Tensor<float, 3>& x, // input data
-                    const Tensor<float, 2>& w, // input weight
-                    Tensor<float, 3>& y
-                    );
+                    const Tensor<float, 3>& x, // data
+                    const Tensor<float, 2>& w, // weight
+                    const Tensor<float, 1>& bias, // bias
+                    Tensor<float, 3>& y);
 ```
 
 ```
@@ -52,6 +110,14 @@ eidnnStatus_t eidnnLinearBackward(eidnnHandle_t handle,
                      Tensor<float, 3>& dx, // gradient of input data
                      Tensor<float, 2>& dw // accumulated gradient of input weight
                      );
+eidnnStatus_t eidnnLinearBackward(eidnnHandle_t handle,
+                     const Tensor<float, 3>& dy,
+                     const Tensor<float, 3>& x,
+                     const Tensor<float, 2>& w,
+                     Tensor<float, 3>& dx, // gradient of input data
+                     Tensor<float, 2>& dw, // accumulated gradient of weight
+                     Tensor<float, 1>& dbias // accumulated gradient of bias
+                     );
 ```
 
 ### MatMul
@@ -59,6 +125,10 @@ eidnnStatus_t eidnnLinearBackward(eidnnHandle_t handle,
 $$ C = \beta * C + \alpha*Op_c(MatMul(Op_a(A),Op_b(B))) $$
 
 , where $Op_m(M)$ is whether to transpose matrix $M$ or not in the forward pass.
+
+cuDNN has no specific APIs for matrix-multiply operation.
+
+In eiDNN, we have
 
 ```
 eidnnStatus_t eidnnStridedBatchGemmForward(
@@ -78,17 +148,23 @@ eidnnStatus_t eidnnStridedBatchGemmBackward(
     eidnnHandle_t handle,
     float alpha,
     float beta,
-    bool trans_A, // Op_a or Op_b
-    bool trans_d_C, // Op_c
-    bool trans_d_B, // Op_b or Op_a
-    const Tensor<float, 4> &A, // A or B
+    bool trans_A, // Op_a
+    bool trans_B, // Op_b
+    bool trans_C, // Op_c
+    const Tensor<float, 4> &A, // A
+    const Tensor<float, 4> &B, // B
     const Tensor<float, 4> &d_C, // gradient of C
-    Tensor<float, 4> &d_B // gradient of B or A
+    Tensor<float, 4> &d_A, // gradient of A
+    Tensor<float, 4> &d_B // gradient of B
     );
 ```
 ### Softmax
+cuDNN has the following APIs for softmax operation.
 * [cudnnSoftmaxForward()](https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnSoftmaxForward)
 * [cudnnSoftmaxBackward()](https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnSoftmaxBackward)
+
+In eiDNN, we have
+
 ```
 eidnnStatus_t eidnnSoftmaxForward(eidnnHandle_t handle,
                     eidnnSoftmaxAlgorithm_t algo,
@@ -107,6 +183,7 @@ eidnnStatus_t eidnnSoftmaxBackward(eidnnHandle_t handle,
 ```
 
 ### Dropout
+cuDNN has the following APIs for dropout operation.
 * [cudnnCreateDropoutDescriptor()]()
 * [cudnnDestroyDropoutDescriptor()]()
 * [cudnnDropoutGetStatesSize()]()
@@ -116,6 +193,9 @@ eidnnStatus_t eidnnSoftmaxBackward(eidnnHandle_t handle,
 * [cudnnRestoreDropoutDescriptor()]()
 * [cudnnSetDropoutDescriptor()]()
 * [cudnnDropoutBackward()]()
+
+In eiDNN, we have
+
 ```
 // dropout rate, 
 // pointer to memory space of states (allocated by forward pass), 
@@ -142,6 +222,7 @@ eidnnStatus_t eidnnDropoutBackward(
 ```
 
 ### Multi-head Attention
+cuDNN has the following APIs for MHA operations
 * [cudnnCreateAttnDescriptor()]()
 * [cudnnSetAttnDescriptor()]()
 * [cudnnGetAttnDescriptor()]()
@@ -152,4 +233,5 @@ eidnnStatus_t eidnnDropoutBackward(
 * [cudnnMultiHeadAttnForward()]()
 * [cudnnMultiHeadAttnBackwardData()]()
 * [cudnnMultiHeadAttnBackwardWeights()]()
+In eiDNN, we have
 

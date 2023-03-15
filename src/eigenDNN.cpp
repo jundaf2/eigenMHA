@@ -9,10 +9,12 @@ namespace eigenDNN{
 eidnnStatus_t eidnnLinearForward(eidnnHandle_t handle,
                     const Tensor<float, 3>& x,
                     const Tensor<float, 2>& w,
+                    const Tensor<float, 1>& bias,
                     Tensor<float, 3>& y)
 {
   for(int b=0; b<x.dimension(0); b++){
-    y.chip(b,0) = x.chip(b,0).contract(w, array<IndexPair<int>,1>({IndexPair<int>(1, 0)}));
+    Tensor<float, 2> xw = x.chip(b,0).contract(w, Eigen::array<IndexPair<int>,1>({IndexPair<int>(1, 0)}));
+    y.chip(b,0) = xw + bias.reshape(Eigen::array<Index, 2>({1, bias.dimension(0)})).broadcast(Eigen::array<Index, 2>({xw.dimension(0),1}));
   }
   return EIDNN_STATUS_SUCCESS;
 }
@@ -22,13 +24,16 @@ eidnnStatus_t eidnnLinearBackward(eidnnHandle_t handle,
                      const Tensor<float, 3>& x,
                      const Tensor<float, 2>& w,
                      Tensor<float, 3>& dx,
-                     Tensor<float, 2>& dw)
+                     Tensor<float, 2>& dw,
+                     Tensor<float, 1>& dbias)
 {
   dx.setZero();
   dw.setZero();
+  dbias.setZero();
   for(int b=0; b<x.dimension(0); b++){
-    dx.chip(b,0) += dy.chip(b,0).contract(w, array<IndexPair<int>,1>({IndexPair<int>(1, 0)}));
-    dw += dy.chip(b,0).contract(x.chip(b,0), array<IndexPair<int>,1>({IndexPair<int>(0, 0)}));
+    dx.chip(b,0) += dy.chip(b,0).contract(w, Eigen::array<IndexPair<int>,1>({IndexPair<int>(1, 0)}));
+    dw += dy.chip(b,0).contract(x.chip(b,0), Eigen::array<IndexPair<int>,1>({IndexPair<int>(0, 0)}));
+    dbias += dy.chip(b,0).sum(Eigen::array<Index, 1>({0}));
   }
   return EIDNN_STATUS_SUCCESS;
 }
@@ -40,8 +45,19 @@ eidnnStatus_t eidnnSoftmaxForward(eidnnHandle_t handle,
                     const Tensor<float, 4>& x,
                     Tensor<float, 4>& y)
 {
-  auto exp_max = (x - x.maximum(array<Index, 1>({3})).broadcast(array<Index, 4>({1,1,x.dimension(3)})).reshape(x.dimensions())).exp();
-  y =  exp_max / exp_max.sum(array<Index, 1>({3})).broadcast(array<Index, 4>({1,1,x.dimension(3)})).reshape(x.dimensions());
+  int s_len = y.dimension(3);
+  for(int b=0; b<y.dimension(0); b++){
+    for(int h=0; h<y.dimension(1); h++){
+      for(int s=0; s<y.dimension(2); s++){
+        const Tensor<float, 1> x_ten = x.chip(b,0).chip(h,0).chip(s,0);
+        const Tensor<float, 1> x_exp_max = (x_ten - x_ten.maximum().reshape(Eigen::array<Index, 1>({1})).broadcast(Eigen::array<Index, 1>({s_len}))).exp();
+        const Tensor<float, 1> y_ten = x_exp_max / x_exp_max.sum().reshape(Eigen::array<Index, 1>({1})).broadcast(Eigen::array<Index, 1>({s_len}));
+        y.chip(b,0).chip(h,0).chip(s,0) = y_ten;
+      }
+    }
+  }
+  // const Tensor<float, 4> exp_max = (x - x.maximum(Eigen::array<Index, 1>({3})).broadcast(Eigen::array<Index, 3>({1,1,s_len})).reshape(Eigen::array<Index, 4>({x.dimension(0),x.dimension(1),x.dimension(3),x.dimension(2)})).shuffle(Eigen::array<int, 4>({0,1,3,2}))).exp();
+  // y =  exp_max / exp_max.sum(Eigen::array<Index, 1>({3})).broadcast(Eigen::array<Index, 3>({1,1,s_len})).reshape(Eigen::array<Index, 4>({x.dimension(0),x.dimension(1),x.dimension(3),x.dimension(2)})).shuffle(Eigen::array<int, 4>({0,1,3,2}));
   return EIDNN_STATUS_SUCCESS;
 }
 
@@ -131,7 +147,7 @@ eidnnStatus_t eidnnStridedBatchGemm(
 {
   for(int b=0; b<A.dimension(0); b++){
     for(int h=0; h<A.dimension(1); h++){
-      C.chip(b,0).chip(h,0) = beta*C.chip(b,0).chip(h,0) + alpha*A.chip(b,0).chip(h,0).contract(B.chip(b,0).chip(h,0), array<IndexPair<int>,1>({IndexPair<int>(trans_A?0:1, trans_B?1:0)}));
+      C.chip(b,0).chip(h,0) = beta*C.chip(b,0).chip(h,0) + alpha*A.chip(b,0).chip(h,0).contract(B.chip(b,0).chip(h,0), Eigen::array<IndexPair<int>,1>({IndexPair<int>(trans_A?0:1, trans_B?1:0)}));
     }
   }
   return EIDNN_STATUS_SUCCESS;
@@ -160,16 +176,24 @@ eidnnStatus_t eidnnStridedBatchGemmBackward(
     float alpha,
     float beta,
     bool trans_A,
-    bool trans_d_C,
-    bool trans_d_B,
+    bool trans_B,
+    bool trans_C,
     const Tensor<float, 4> &A, 
-    const Tensor<float, 4> &d_C, 
+    const Tensor<float, 4> &B, 
+    const Tensor<float, 4> &d_C,
+    Tensor<float, 4> &d_A,
     Tensor<float, 4> &d_B)
 {
-  if(trans_d_B)
-    eidnnStridedBatchGemm(handle,alpha,beta,!trans_d_C,trans_A,d_C,A,d_B); // d_B
+  if(!trans_A)
+    eidnnStridedBatchGemm(handle,alpha,beta,trans_C,!trans_B,d_C,B,d_A);
   else
-    eidnnStridedBatchGemm(handle,alpha,beta,trans_d_C,trans_A,d_C,A,d_B); // d_A
+    eidnnStridedBatchGemm(handle,alpha,beta,trans_B,!trans_C,B,d_C,d_A);
+
+  if(!trans_B)
+    eidnnStridedBatchGemm(handle,alpha,beta,!trans_A,trans_C,A,d_C,d_B);
+  else
+    eidnnStridedBatchGemm(handle,alpha,beta,!trans_C,trans_A,d_C,A,d_B);
+
   return EIDNN_STATUS_SUCCESS;
 }
 
