@@ -20,7 +20,7 @@ if (${PROJECT_SOURCE_DIR} STREQUAL ${PROJECT_BINARY_DIR})
     message(FATAL_ERROR " does not support in-source CMake builds at this time.")
 endif (${PROJECT_SOURCE_DIR} STREQUAL ${PROJECT_BINARY_DIR})
 
-
+set(COMMON_FILES_DIR ${PROJECT_SOURCE_DIR}/common)
 set(SRC_FILES_DIR ${PROJECT_SOURCE_DIR}/src)
 set(HDR_FILES_DIR ${PROJECT_SOURCE_DIR}/include)
 set(EIGEN_FILES_DIR ${PROJECT_SOURCE_DIR}/eigen)
@@ -82,15 +82,16 @@ file(GLOB_RECURSE HEADERS "${HDR_FILES_DIR}/*")
 set(MAIN_FILE ${PROJECT_SOURCE_DIR}/mha.cc)
 
 # Declaring the files
-set(ALL_SRC ${HEADERS} ${MAIN_FILE} ${SOURCES})
+set(ALL_SRC ${HEADERS} ${MAIN_FILE} ${SOURCES} ${COMMON_FILES_DIR})
 foreach(FNAME IN LISTS ALL_SRC)
     message(${FNAME})
 endforeach()
 
 add_compile_options(-Wno-unknown-pragmas)
 
+include(CTest)
 add_executable(mha ${ALL_SRC})
-target_include_directories(mha PRIVATE ${COMMON_HEADER_DIRS} SYSTEM ${CUDA_INCLUDE_DIRS} ${FMHA_HDR_FILES_DIR} ${HDR_FILES_DIR} ${EIGEN_FILES_DIR} ${EIGEN_UNSUPPORTED_FILES_DIR} ${TORCH_INCLUDES})
+target_include_directories(mha PRIVATE ${COMMON_HEADER_DIRS} SYSTEM ${CUDA_INCLUDE_DIRS} ${FMHA_HDR_FILES_DIR} ${HDR_FILES_DIR} ${EIGEN_FILES_DIR} ${EIGEN_UNSUPPORTED_FILES_DIR} ${TORCH_INCLUDES} ${COMMON_FILES_DIR})
 target_link_directories(mha PRIVATE ${COMMON_LIB_DIRS})
 target_link_libraries(mha PRIVATE ${CUDA_LIBRARIES} CUDA::cublas CUDA::cublasLt ${Protobuf_LIBRARIES} ${HDF5_LIBRARIES} ${TORCH_LIBRARIES})  #  CUDA::cublas_static CUDA::cublasLt_static
 

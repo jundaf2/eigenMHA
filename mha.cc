@@ -2,174 +2,10 @@
 #include <fstream>
 #include "eigenDNN.h"
 #include "torch/torch.h"
+#include "catch.hpp"
+#include "dnn_test.h"
 
 using namespace std;
-
-void test_eidnnLinearForward(unsigned batch_size,unsigned n_heads,unsigned seq_len,unsigned head_size,unsigned hidden_size,float dropout_rate, void* saved_states){
-  using namespace Eigen;
-  eigenDNN::eidnnHandle_t handle;
-
-  Eigen::Tensor<float, 2> q_weight(hidden_size, hidden_size); 
-  Eigen::Tensor<float, 1> q_bias(hidden_size); 
-  Eigen::Tensor<float, 3> q_in(batch_size, seq_len, hidden_size);
-  Eigen::Tensor<float, 3> q_out(batch_size, seq_len, hidden_size);
-
-  q_out.setConstant(0);
-  q_weight.setConstant(1);
-  q_bias.setConstant(1);
-  q_in.setConstant(1);
-  
-  eigenDNN::eidnnLinearForward(handle, q_in, q_weight, q_bias, q_out);
-  cout << "q_out: " << endl << q_out << endl;
-}
-
-void test_eidnnLinearBackward(unsigned batch_size,unsigned n_heads,unsigned seq_len,unsigned head_size,unsigned hidden_size,float dropout_rate, void* saved_states){
-  using namespace Eigen;
-  eigenDNN::eidnnHandle_t handle;
-
-  Eigen::Tensor<float, 3> q_out_grad(batch_size, seq_len, hidden_size);
-  Eigen::Tensor<float, 3> q_in(batch_size, seq_len, hidden_size);
-  Eigen::Tensor<float, 2> q_weight(hidden_size, hidden_size); 
-  Eigen::Tensor<float, 1> q_bias(hidden_size); 
-
-  Eigen::Tensor<float, 3> q_in_grad(batch_size, seq_len, hidden_size);
-  Eigen::Tensor<float, 2> q_weight_grad(hidden_size, hidden_size); 
-  Eigen::Tensor<float, 1> q_bias_grad(hidden_size); 
-
-  q_in_grad.setConstant(0);
-  q_weight_grad.setConstant(0);
-
-  q_out_grad.setConstant(1);
-  q_in.setConstant(1);
-  q_weight.setConstant(1);
-  q_bias.setConstant(1);
-  
-  eigenDNN::eidnnLinearBackward(handle, q_out_grad, q_in, q_weight, q_in_grad, q_weight_grad, q_bias_grad);
-  cout << "q_in_grad: " << endl << q_in_grad << endl;
-  cout << "q_weight_grad: " << endl << q_weight_grad << endl;
-}
-
-
-void test_eidnnSoftmaxForward(unsigned batch_size,unsigned n_heads,unsigned seq_len,unsigned head_size,unsigned hidden_size,float dropout_rate, void* saved_states){
-  using namespace Eigen;
-  eigenDNN::eidnnHandle_t handle;
-
-  Eigen::Tensor<float, 4> s_in(batch_size, n_heads, seq_len, seq_len);
-  Eigen::Tensor<float, 4> s_out(batch_size, n_heads, seq_len, seq_len);
-
-  s_out.setConstant(0);
-  s_in.setRandom();
-  
-  eigenDNN::eidnnSoftmaxForward(handle, eigenDNN::eidnnSoftmaxAlgorithm_t::EIDNN_SOFTMAX_ACCURATE, eigenDNN::eidnnSoftmaxMode_t::EIDNN_SOFTMAX_MODE_INSTANCE, s_in, s_out);
-  cout << "s_in: " << endl << s_in << endl;
-  cout << "s_out: " << endl << s_out << endl;
-}
-
-void test_eidnnSoftmaxBackward(unsigned batch_size,unsigned n_heads,unsigned seq_len,unsigned head_size,unsigned hidden_size,float dropout_rate, void* saved_states){
-  using namespace Eigen;
-  eigenDNN::eidnnHandle_t handle;
-
-  Eigen::Tensor<float, 4> s_in_grad(batch_size, n_heads, seq_len, seq_len);
-  Eigen::Tensor<float, 4> s_out(batch_size, n_heads, seq_len, seq_len);
-  Eigen::Tensor<float, 4> s_out_grad(batch_size, n_heads, seq_len, seq_len);
-
-  s_in_grad.setConstant(0);
-
-  s_out_grad.setConstant(0.1);
-  s_out.setRandom();
-  
-  eigenDNN::eidnnSoftmaxBackward(handle, eigenDNN::eidnnSoftmaxAlgorithm_t::EIDNN_SOFTMAX_ACCURATE, eigenDNN::eidnnSoftmaxMode_t::EIDNN_SOFTMAX_MODE_INSTANCE, s_out, s_out_grad, s_in_grad);
-  cout << "s_out_grad: " << endl << s_out_grad << endl;
-  cout << "s_out: " << endl << s_out << endl;
-  cout << "s_in_grad: " << endl << s_in_grad << endl;
-  
-}
-
-
-void test_eidnnDropoutForwardBackward(unsigned batch_size,unsigned n_heads,unsigned seq_len,unsigned head_size,unsigned hidden_size,float dropout_rate, void* saved_states){
-  using namespace Eigen;
-  eigenDNN::eidnnHandle_t handle;
-
-  Eigen::Tensor<float, 4> do_in(batch_size, n_heads, seq_len, seq_len);
-  Eigen::Tensor<float, 4> do_out(batch_size, n_heads, seq_len, seq_len);
-
-  do_out.setConstant(0);
-  do_in.setConstant(1);
-
-  eigenDNN::eidnnDropoutDescriptor_t dropoutDesc = make_tuple(dropout_rate,saved_states,0,2023);
-  
-  eigenDNN::eidnnDropoutForward(handle, dropoutDesc, do_in, do_out);
-  cout << "do_in: " << endl << do_in << endl;
-  cout << "do_out: " << endl << do_out << endl;
-
-
-  Eigen::Tensor<float, 4> do_in_grad(batch_size, n_heads, seq_len, seq_len);
-  Eigen::Tensor<float, 4> do_out_grad(batch_size, n_heads, seq_len, seq_len);
-
-  do_in_grad.setConstant(0);
-  do_out_grad.setConstant(1);
-
-  eigenDNN::eidnnDropoutBackward(handle, dropoutDesc, do_out_grad, do_in_grad);
-  cout << "do_out_grad: " << endl << do_out_grad << endl;
-  cout << "do_in_grad: " << endl << do_in_grad << endl;
-}
-
-
-void test_eidnnMatMulForwardBackward(unsigned batch_size,unsigned n_heads,unsigned seq_len,unsigned head_size,unsigned hidden_size,float dropout_rate, void* saved_states){
-  using namespace Eigen;
-  eigenDNN::eidnnHandle_t handle;
-
-  Eigen::Tensor<float, 4> a(batch_size, n_heads, seq_len, head_size); 
-  Eigen::Tensor<float, 4> b(batch_size, n_heads, seq_len, head_size);
-  Eigen::Tensor<float, 4> c(batch_size, n_heads, seq_len, seq_len);
-
-  
-  Eigen::Tensor<float, 4> a_grad(batch_size, n_heads, seq_len, head_size);
-  Eigen::Tensor<float, 4> b_grad(batch_size, n_heads, seq_len, head_size);
-  Eigen::Tensor<float, 4> c_grad(batch_size, n_heads, seq_len, seq_len); 
-
-
-  c.setConstant(0);
-  a.setConstant(1);
-  b.setConstant(1);
-
-  a_grad.setConstant(0);
-  b_grad.setConstant(0);
-  c_grad.setConstant(1);
-  
-  eigenDNN::eidnnStridedBatchGemmForward(handle, 1, 0, false, true, false, a, b, c);
-  cout << "a: " << endl << a << endl;
-  cout << "b: " << endl << b << endl;
-  cout << "c: " << endl << c << endl;
-
-  eigenDNN::eidnnStridedBatchGemmBackward(handle,  1, 0, false, true, false, a, b, c_grad, a_grad, b_grad);
-  cout << "a_grad: " << endl << a_grad << endl;
-  cout << "b_grad: " << endl << b_grad << endl;
-  cout << "c_grad: " << endl << c_grad << endl;
-}
-
-void test_eidnnMSELoss(unsigned batch_size,unsigned n_heads,unsigned seq_len,unsigned head_size,unsigned hidden_size,float dropout_rate, void* saved_states){
-  using namespace Eigen;
-  eigenDNN::eidnnHandle_t handle;
-
-  Eigen::Tensor<float, 3> output(batch_size, seq_len, hidden_size);
-  Eigen::Tensor<float, 3> target(batch_size, seq_len, hidden_size);
-  Eigen::Tensor<float, 0> loss;
-  Eigen::Tensor<float, 3> d_loss(batch_size, seq_len, hidden_size);
-
-  output.setConstant(1);
-  target.setConstant(0.5);
-  loss.setConstant(0);
-  d_loss.setConstant(0);
-
-  eigenDNN::eidnnMSELoss(handle, output, target, loss, d_loss);
-  cout << "output: " << endl << output << endl;
-  cout << "target: " << endl << target << endl;
-  cout << "loss: " << endl << loss << endl;
-  cout << "d_loss: " << endl << d_loss << endl;
-}
-
-
 
 
 void test_eigen_mha(unsigned batch_size,unsigned n_heads,unsigned seq_len,unsigned head_size,unsigned hidden_size,float dropout_rate, void* saved_states){
@@ -363,7 +199,7 @@ struct MHA : torch::nn::Module {
     torch::Tensor Q = q_w->forward(Q_in).view({batch_size, seq_len, n_heads, head_size}).permute({0, 2, 1, 3});
     torch::Tensor K = k_w->forward(K_in).view({batch_size, seq_len, n_heads, head_size}).permute({0, 2, 1, 3});
     torch::Tensor V = v_w->forward(V_in).view({batch_size, seq_len, n_heads, head_size}).permute({0, 2, 1, 3});
-    torch::Tensor S = torch::matmul(Q, K.permute({0, 1, 3, 2})) / torch::sqrt(torch::tensor(head_size)) - (1.0 - mask.unsqueeze(1).unsqueeze(2).to(torch::kFloat32)) * 10000.0;
+    torch::Tensor S = torch::matmul(Q, K.permute({0, 1, 3, 2})) / torch::sqrt(torch::tensor(head_size)); // - (1.0 - mask.unsqueeze(1).unsqueeze(2).to(torch::kFloat32)) * 10000.0;
     torch::Tensor P = softmax(S);
     P = dropout(P);
     torch::Tensor O = torch::matmul(P, V).permute({0, 2, 1, 3}).contiguous().view({batch_size, seq_len, hidden_size});
@@ -380,19 +216,22 @@ struct MHA : torch::nn::Module {
 
 void test_torch_mha(unsigned batch_size,unsigned n_heads,unsigned seq_len,unsigned head_size,unsigned hidden_size,float dropout_rate, void* saved_states){
   auto mha = std::make_shared<MHA>(batch_size,n_heads,seq_len,head_size,dropout_rate);
-
+  auto options = torch::TensorOptions().dtype(torch::kFloat32).layout(torch::kStrided).device(torch::kCPU).requires_grad(true);
   // Input Data
-  torch::Tensor Q_in = torch::randn({batch_size, seq_len, hidden_size});
-  torch::Tensor K_in = torch::randn({batch_size, seq_len, hidden_size});
-  torch::Tensor V_in = torch::randn({batch_size, seq_len, hidden_size});
-  torch::Tensor mask = torch::randn({batch_size, seq_len});
+  torch::Tensor Q_in = torch::randn({batch_size, seq_len, hidden_size}, options);
+  torch::Tensor K_in = torch::randn({batch_size, seq_len, hidden_size}, options);
+  torch::Tensor V_in = torch::randn({batch_size, seq_len, hidden_size}, options);
+  torch::Tensor mask = torch::randn({batch_size, seq_len}, options);  // unrelated to gradients
 
   torch::Tensor O_out = mha->forward(Q_in, K_in, V_in, mask);
 
   torch::Tensor target = 0.5*torch::ones(O_out.sizes());
   torch::Tensor loss = torch::mse_loss(target, O_out);
   loss.backward();
-  cout << O_out << endl;
+  cout << mha->o_w->weight << endl;
+  cout << mha->o_w->bias << endl;
+  cout << mha->o_w->weight.grad() << endl;
+  cout << mha->o_w->bias.grad() << endl;
 }
 
 int main(int argc, char* argv[]) {
@@ -404,15 +243,18 @@ int main(int argc, char* argv[]) {
   float dropout_rate = 0;
   void* saved_states;
   
-  // test_eidnnLinearForward(batch_size,n_heads,seq_len,head_size,hidden_size,dropout_rate,saved_states);
-  // test_eidnnLinearBackward(batch_size,n_heads,seq_len,head_size,hidden_size,dropout_rate,saved_states);
-  // test_eidnnSoftmaxForward(batch_size,n_heads,seq_len,head_size,hidden_size,dropout_rate,saved_states);
-  // test_eidnnSoftmaxBackward(batch_size,n_heads,seq_len,head_size,hidden_size,dropout_rate,saved_states);
-  // test_eidnnDropoutForwardBackward(batch_size,n_heads,seq_len,head_size,hidden_size,dropout_rate,saved_states);
-  // test_eidnnMatMulForwardBackward(batch_size,n_heads,seq_len,head_size,hidden_size,dropout_rate,saved_states);
-  // test_eidnnMSELoss(batch_size,n_heads,seq_len,head_size,hidden_size,dropout_rate,saved_states);
   test_eigen_mha(batch_size,n_heads,seq_len,head_size,hidden_size,dropout_rate,saved_states);
   test_torch_mha(batch_size,n_heads,seq_len,head_size,hidden_size,dropout_rate,saved_states);
+
+  std::vector<torch::jit::IValue> inputs;
+
+  torch::jit::IValue cate = torch::ones(( 1, 1, 1 ));
+  std::cout << "cate: " << cate << std::endl;
+
+  torch::Tensor temp = torch::randn({ 1, 3, 11705 });
+  std::cout << "temp size: " << temp.sizes() << " temp 0: " << temp[0][0][0] << std::endl;
+  inputs.push_back(temp);
+  inputs.push_back(cate);
 
   return 0;
 }
