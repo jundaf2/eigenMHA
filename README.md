@@ -61,7 +61,18 @@ nnTest mainly focuses on providing a testing framework for train and inference D
 eigenDNN
 * libtorch (built from pytorch directly) serves as the computation library that generates ground truth for your own library implementation.
 * Eigen serves as the computation library that generates ground truth for GPU implementations.
-* Googletest serves as the verification framwork.
+
+
+What is to be initialized:
+* weights
+* input data
+* target data
+
+What is to be tested:
+* forward result of the network output
+* forward result of the potential intermediate variables
+* backward gradients of the weights
+* backward gradients of potential intermediate variables 
 
 Currently, it focuses on
 
