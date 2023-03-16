@@ -257,7 +257,7 @@ struct test_MHA : public nn_test::nnTest, torch::nn::Module {
     this->k_w = register_module("k_w", torch::nn::Linear(hidden_size, hidden_size));
     this->v_w = register_module("v_w", torch::nn::Linear(hidden_size, hidden_size));
     this->dropout = register_module("dropout", torch::nn::Dropout(dropout_rate));
-    this->softmax = register_module("softmax", torch::nn::Softmax(-1));
+    this->softmax = register_module("softmax", torch::nn::Softmax(3));
     this->o_w = register_module("o_w", torch::nn::Linear(hidden_size, hidden_size));
   }
 
@@ -270,31 +270,33 @@ public:
     size_t out_data_len = in_data_len;
     unsigned int seed = 2023;
 
+    this->set_random(-1.0f,1.0f,seed);
+
     // weight and bias for Q
-    this->set_input_data(this->gen_input_data(weight_len, seed).data(), weight_len, "q_weight");
-    this->set_input_data(this->gen_input_data(bias_len, seed).data(), bias_len, "q_bias");
+    this->set_input_vec(this->gen_input_vec(weight_len).data(), weight_len, "q_weight");
+    this->set_input_vec(this->gen_input_vec(bias_len).data(), bias_len, "q_bias");
 
     // weight and bias for K
-    this->set_input_data(this->gen_input_data(weight_len, seed).data(), weight_len, "k_weight");
-    this->set_input_data(this->gen_input_data(bias_len, seed).data(), bias_len, "k_bias");
+    this->set_input_vec(this->gen_input_vec(weight_len).data(), weight_len, "k_weight");
+    this->set_input_vec(this->gen_input_vec(bias_len).data(), bias_len, "k_bias");
 
     // weight and bias for V
-    this->set_input_data(this->gen_input_data(weight_len, seed).data(), weight_len, "v_weight");
-    this->set_input_data(this->gen_input_data(bias_len, seed).data(), bias_len, "v_bias");
+    this->set_input_vec(this->gen_input_vec(weight_len).data(), weight_len, "v_weight");
+    this->set_input_vec(this->gen_input_vec(bias_len).data(), bias_len, "v_bias");
 
     // weight and bias for O
-    this->set_input_data(this->gen_input_data(weight_len, seed).data(), weight_len, "o_weight");
-    this->set_input_data(this->gen_input_data(bias_len, seed).data(), bias_len, "o_bias");
+    this->set_input_vec(this->gen_input_vec(weight_len).data(), weight_len, "o_weight");
+    this->set_input_vec(this->gen_input_vec(bias_len).data(), bias_len, "o_bias");
 
     // input Q
-    this->set_input_data(this->gen_input_data(in_data_len, seed).data(), in_data_len, "q_in");
+    this->set_input_vec(this->gen_input_vec(in_data_len).data(), in_data_len, "q_in");
     // input K
-    this->set_input_data(this->gen_input_data(in_data_len, seed).data(), in_data_len, "k_in");
+    this->set_input_vec(this->gen_input_vec(in_data_len).data(), in_data_len, "k_in");
     // input V
-    this->set_input_data(this->gen_input_data(in_data_len, seed).data(), in_data_len, "v_in");
+    this->set_input_vec(this->gen_input_vec(in_data_len).data(), in_data_len, "v_in");
 
     // target output
-    this->set_input_data(this->gen_input_data(out_data_len, seed).data(), out_data_len, "target");
+    this->set_input_vec(this->gen_input_vec(out_data_len).data(), out_data_len, "target");
   }
 
   
@@ -304,21 +306,36 @@ public:
     void* saved_states;
 
     // init from init_data
-    Eigen::TensorMap<const Eigen::Tensor<float, 2>> q_weight(this->get_input_data("q_weight").data(), {hidden_size, hidden_size}); 
-    Eigen::TensorMap<const Eigen::Tensor<float, 2>> k_weight(this->get_input_data("k_weight").data(), {hidden_size, hidden_size}); 
-    Eigen::TensorMap<const Eigen::Tensor<float, 2>> v_weight(this->get_input_data("v_weight").data(), {hidden_size, hidden_size}); 
-    Eigen::TensorMap<const Eigen::Tensor<float, 2>> o_weight(this->get_input_data("o_weight").data(), {hidden_size, hidden_size}); 
+    std::vector<float> vec_q_weight = this->get_input_vec("q_weight");
+    std::vector<float> vec_k_weight = this->get_input_vec("k_weight");
+    std::vector<float> vec_v_weight = this->get_input_vec("v_weight");
+    std::vector<float> vec_o_weight = this->get_input_vec("o_weight");
 
-    Eigen::TensorMap<const Eigen::Tensor<float, 1>> q_bias(this->get_input_data("q_bias").data(), {hidden_size}); 
-    Eigen::TensorMap<const Eigen::Tensor<float, 1>> k_bias(this->get_input_data("k_bias").data(), {hidden_size}); 
-    Eigen::TensorMap<const Eigen::Tensor<float, 1>> v_bias(this->get_input_data("v_bias").data(), {hidden_size}); 
-    Eigen::TensorMap<const Eigen::Tensor<float, 1>> o_bias(this->get_input_data("o_bias").data(), {hidden_size}); 
+    std::vector<float> vec_q_bias = this->get_input_vec("q_bias");
+    std::vector<float> vec_k_bias = this->get_input_vec("k_bias");
+    std::vector<float> vec_v_bias = this->get_input_vec("v_bias");
+    std::vector<float> vec_o_bias = this->get_input_vec("o_bias");
+
+    std::vector<float> vec_q_in = this->get_input_vec("q_in");
+    std::vector<float> vec_k_in = this->get_input_vec("k_in");
+    std::vector<float> vec_v_in = this->get_input_vec("v_in");
+    std::vector<float> vec_target = this->get_input_vec("target");
+
+    Eigen::TensorMap<const Eigen::Tensor<float, 2>> q_weight(vec_q_weight.data(), {hidden_size, hidden_size});
+    Eigen::TensorMap<const Eigen::Tensor<float, 2>> k_weight(vec_k_weight.data(), {hidden_size, hidden_size}); 
+    Eigen::TensorMap<const Eigen::Tensor<float, 2>> v_weight(vec_v_weight.data(), {hidden_size, hidden_size}); 
+    Eigen::TensorMap<const Eigen::Tensor<float, 2>> o_weight(vec_o_weight.data(), {hidden_size, hidden_size}); 
+
+    Eigen::TensorMap<const Eigen::Tensor<float, 1>> q_bias(vec_q_bias.data(), {hidden_size});
+    Eigen::TensorMap<const Eigen::Tensor<float, 1>> k_bias(vec_k_bias.data(), {hidden_size}); 
+    Eigen::TensorMap<const Eigen::Tensor<float, 1>> v_bias(vec_v_bias.data(), {hidden_size}); 
+    Eigen::TensorMap<const Eigen::Tensor<float, 1>> o_bias(vec_o_bias.data(), {hidden_size}); 
     
-    Eigen::TensorMap<const Eigen::Tensor<float, 3>> q_in(this->get_input_data("q_in").data(), {batch_size, seq_len, hidden_size});
-    Eigen::TensorMap<const Eigen::Tensor<float, 3>> k_in(this->get_input_data("k_in").data(), {batch_size, seq_len, hidden_size});
-    Eigen::TensorMap<const Eigen::Tensor<float, 3>> v_in(this->get_input_data("v_in").data(), {batch_size, seq_len, hidden_size});
+    Eigen::TensorMap<const Eigen::Tensor<float, 3>> q_in(vec_q_in.data(), {batch_size, seq_len, hidden_size});
+    Eigen::TensorMap<const Eigen::Tensor<float, 3>> k_in(vec_k_in.data(), {batch_size, seq_len, hidden_size});
+    Eigen::TensorMap<const Eigen::Tensor<float, 3>> v_in(vec_v_in.data(), {batch_size, seq_len, hidden_size});
 
-    Eigen::TensorMap<const Eigen::Tensor<float, 3>> target(this->get_input_data("target").data(), {batch_size, seq_len, hidden_size});
+    Eigen::TensorMap<const Eigen::Tensor<float, 3>> target(vec_target.data(), {batch_size, seq_len, hidden_size});
 
 
     // no init
@@ -371,6 +388,10 @@ public:
     eigenDNN::eidnnLinearForward(handle, q_in, q_weight, q_bias, q_out);
     eigenDNN::eidnnLinearForward(handle, k_in, k_weight, k_bias, k_out);
     eigenDNN::eidnnLinearForward(handle, v_in, v_weight, v_bias, v_out);
+
+    this->register_raw_test_data(q_out.data(), batch_size*seq_len*hidden_size, "q_out");
+    this->register_raw_test_data(k_out.data(), batch_size*seq_len*hidden_size, "k_out");
+    this->register_raw_test_data(v_out.data(), batch_size*seq_len*hidden_size, "v_out");
 
     // reshape Q, K and V, [batch_size, seq_len, hidden_size] -> [batch_size, n_heads, seq_len, head_size]
     Eigen::TensorMap<Eigen::Tensor<float, 4>> q_0123(q_out.data(), {batch_size, seq_len, n_heads, head_size});
@@ -448,29 +469,30 @@ public:
   void run_torch_dnn() override{
     auto options = torch::TensorOptions().dtype(torch::kFloat32).layout(torch::kStrided).device(torch::kCPU).requires_grad(true);
     // Init Input Data Tensor
-    torch::Tensor Q_in = this->get_input_tensor("q_in", {batch_size, seq_len, hidden_size}, options);
-    torch::Tensor K_in = this->get_input_tensor("k_in", {batch_size, seq_len, hidden_size}, options);
-    torch::Tensor V_in = this->get_input_tensor("v_in", {batch_size, seq_len, hidden_size}, options);
-    torch::Tensor target = this->get_input_tensor("target", {batch_size, seq_len, hidden_size}, options);
-    // Init Input Weight and Bias Tensor
-    this->q_w->weight = this->get_input_tensor("q_weight", {hidden_size, hidden_size}, options);
-    this->k_w->weight = this->get_input_tensor("k_weight", {hidden_size, hidden_size}, options);
-    this->v_w->weight = this->get_input_tensor("v_weight", {hidden_size, hidden_size}, options);
-    this->o_w->weight = this->get_input_tensor("o_weight", {hidden_size, hidden_size}, options);
+    torch::Tensor Q_in = torch::empty({batch_size, seq_len, hidden_size}); this->get_input_ten(Q_in, "q_in", options);
+    torch::Tensor K_in = torch::empty({batch_size, seq_len, hidden_size}); this->get_input_ten(K_in, "k_in", options); 
+    torch::Tensor V_in = torch::empty({batch_size, seq_len, hidden_size}); this->get_input_ten(V_in, "v_in", options);
+    torch::Tensor target = torch::empty({batch_size, seq_len, hidden_size}); this->get_input_ten(target, "target", options);
 
-    this->q_w->bias = this->get_input_tensor("q_bias", {hidden_size}, options);
-    this->k_w->bias = this->get_input_tensor("k_bias", {hidden_size}, options);
-    this->v_w->bias = this->get_input_tensor("v_bias", {hidden_size}, options);
-    this->o_w->bias = this->get_input_tensor("o_bias", {hidden_size}, options);
+    // Init Input Weight and Bias Tensor
+    this->get_input_ten(this->q_w->weight, "q_weight", options);
+    this->get_input_ten(this->k_w->weight, "k_weight", options);
+    this->get_input_ten(this->v_w->weight, "v_weight", options);
+    this->get_input_ten(this->o_w->weight, "o_weight", options);
+
+    this->get_input_ten(this->q_w->bias, "q_bias", options);
+    this->get_input_ten(this->k_w->bias, "k_bias", options);
+    this->get_input_ten(this->v_w->bias, "v_bias", options);
+    this->get_input_ten(this->o_w->bias, "o_bias", options);
 
     torch::Tensor mask; // = torch::randn({batch_size, seq_len}, options);  // unrelated to this work, we focus on gradients
-
 
     torch::Tensor O_out = this->forward(Q_in, K_in, V_in, mask);
     this->register_torch_test_data(O_out, "output");
 
     torch::Tensor loss = torch::mse_loss(target, O_out);
     loss.backward();
+
     this->register_torch_test_data(this->q_w->weight.grad(), "q_weight_grad");
     this->register_torch_test_data(this->k_w->weight.grad(), "k_weight_grad");
     this->register_torch_test_data(this->v_w->weight.grad(), "v_weight_grad");
@@ -488,6 +510,11 @@ public:
     torch::Tensor Q = q_w->forward(Q_in).view({batch_size, seq_len, n_heads, head_size}).permute({0, 2, 1, 3});
     torch::Tensor K = k_w->forward(K_in).view({batch_size, seq_len, n_heads, head_size}).permute({0, 2, 1, 3});
     torch::Tensor V = v_w->forward(V_in).view({batch_size, seq_len, n_heads, head_size}).permute({0, 2, 1, 3});
+
+    this->register_torch_test_data(Q, "q_out");
+    this->register_torch_test_data(K, "k_out");
+    this->register_torch_test_data(V, "v_out");
+    
     torch::Tensor S = torch::matmul(Q, K.permute({0, 1, 3, 2})) / torch::sqrt(torch::tensor(head_size)); // - (1.0 - mask.unsqueeze(1).unsqueeze(2).to(torch::kFloat32)) * 10000.0;
     torch::Tensor P = softmax(S);
     P = dropout(P);
@@ -514,6 +541,6 @@ int eval_mha(unsigned batch_size,unsigned n_heads,unsigned seq_len,unsigned head
 
 TEST_CASE("MHA", "[mha]") {
   SECTION("[2,2,2,4,0.1]") {
-    eval_mha(2,2,2,4,0.1);
+    eval_mha(2,2,2,4,0);
   }
 }

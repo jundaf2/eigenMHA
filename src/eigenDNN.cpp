@@ -103,7 +103,7 @@ eidnnStatus_t eidnnDropoutForward(
   reserveSpaceSizeInBytes = x.size()*sizeof(std::remove_const<typename std::remove_reference<decltype(x)>::type>::type::Scalar);
   reserveSpace = malloc(reserveSpaceSizeInBytes);
   
-std::cout << "reserveSpaceSizeInBytes : " << reserveSpaceSizeInBytes << std::endl;
+// std::cout << "reserveSpaceSizeInBytes : " << reserveSpaceSizeInBytes << std::endl;
   std::mt19937 mt1(seed);
   std::binomial_distribution<int> distribution(1, (1-dropout_rate));
 
