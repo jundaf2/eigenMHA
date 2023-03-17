@@ -143,7 +143,7 @@ cuDNN has no specific APIs for matrix-multiply operation.
 In eiDNN, we have
 
 ```
-eidnnStatus_t eidnnStridedBatchGemmForward(
+eidnnStatus_t eidnnStridedBatchedGemmForward(
     eidnnHandle_t handle,
     float alpha,
     float beta,
@@ -156,7 +156,7 @@ eidnnStatus_t eidnnStridedBatchGemmForward(
 ```
 
 ```
-eidnnStatus_t eidnnStridedBatchGemmBackward(
+eidnnStatus_t eidnnStridedBatchedGemmBackward(
     eidnnHandle_t handle,
     float alpha,
     float beta,

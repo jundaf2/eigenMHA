@@ -8,17 +8,16 @@
 #include <memory>
 #include <string>
 #include <type_traits>
+#include <unordered_map>
 #include "catch.hpp"
 #include "fmt.hpp"
 #include "utils.hpp"
-#include "json.hpp"
 #include "clara.hpp"
 #include "torch/torch.h"
 
 
 namespace nn_test {
 class nnTest {
-  using json = nlohmann::json;
   private:
     std::function<bool(float,float,float)> NEAR2 = [](float a, float b, float prec) -> bool { return ((a != a && b != b) 
       || (a == std::numeric_limits<typename std::remove_reference<decltype(a)>::type>::infinity() 
@@ -33,10 +32,13 @@ class nnTest {
     std::mt19937 rng; //{std::random_device{}()};
     std::uniform_real_distribution<float> uf_distribution;
 
+    int print_el_num = 64;
+
   protected:
-    json torch_test_data_bank;
-    json raw_test_data_bank;
-    json input_data_bank;
+    std::unordered_map<std::string,std::vector<float>> torch_test_data_bank;
+    std::unordered_map<std::string,std::vector<float>> raw_test_data_bank;
+    std::unordered_map<std::string,std::vector<float>> input_data_bank;
+
 
     void register_torch_test_data(const torch::Tensor& x, std::string name){
       torch::Tensor x_c = x.to(torch::kCPU).contiguous();
@@ -55,7 +57,13 @@ class nnTest {
     }
 
     std::vector<float> get_input_vec(std::string name){
-      std::vector<float> vec (input_data_bank[name].get<std::vector<float>>());
+      std::vector<float> vec;
+      if (input_data_bank.find(name) != input_data_bank.end()){
+        vec = input_data_bank[name];
+      }
+      else{
+        std::cout << ANSI_COLOR_RED << name << " not found" << ANSI_COLOR_RESET << std::endl;
+      }
       return vec;
     }
 
@@ -64,26 +72,35 @@ class nnTest {
         ten.data_ptr<float>()[i] = this->get_input_vec(name).data()[i];
     }
 
-    void set_random(float rand_min, float rand_max, unsigned int random_seed){
+    void set_random_seed(unsigned int random_seed){
       rng = std::mt19937(random_seed);
-      uf_distribution = std::uniform_real_distribution<float>(rand_min, rand_max);
     }
 
-    std::vector<float> gen_input_vec(size_t len){
+    std::vector<float> gen_rand_input(float rand_min, float rand_max, size_t len){
+      
+      uf_distribution = std::uniform_real_distribution<float>(rand_min, rand_max);
+
       std::vector<float> vec(len);
-      std::generate(std::begin(vec), std::end(vec), [&]{return uf_distribution(rng);} ); // 1
+      std::generate(std::begin(vec), std::end(vec), [&]{return uf_distribution(rng);} ); 
       return vec;
     }
 
-    void print_vec(const std::vector<float> outv, std::string outn, int start, int end) {
+    std::vector<float> gen_constant_input(float c, size_t len){
+      std::vector<float> vec(len);
+      std::generate(std::begin(vec), std::end(vec), [&]{return c;} ); 
+      return vec;
+    }
+
+    void print_vec(const std::vector<float> outv, std::string outn, int start) {
       std::cout << outn << ": ";
-      std::copy(outv.begin() + start, outv.begin() + end, std::ostream_iterator<float>(std::cout, ", "));
+      std::copy(outv.begin() + start, outv.begin() + start + print_el_num, std::ostream_iterator<float>(std::cout, ", "));
       std::cout << std::endl;
     }
 
-    std::string print_vec(const std::vector<float> outv, int start, int end) {
+    std::string print_str_vec(const std::vector<float> outv, int start) {
       std::stringstream ss;
-      std::copy(outv.begin() + start, outv.begin() + (outv.size()>end?end:outv.size()), std::ostream_iterator<float>(ss, ", "));
+      std::ostream_iterator<float> sout(ss, ", ");
+      std::copy(outv.begin() + start, outv.begin() + (outv.size()>(print_el_num+start)?(print_el_num+start):outv.size()), sout);
       ss << std::endl;
       return ss.str();
     }
@@ -92,9 +109,9 @@ class nnTest {
       std::cout << name << ": " << x << std::endl;
     }
 
-    void print_json_bank(json j, std::string bank_name){
-      for (auto it = j.begin(); it != j.end(); ++it) {
-        fmt::print("{}  {}  =  {}\n", bank_name,  it.key(), it.value());
+    void print_data_bank(std::unordered_map<std::string,std::vector<float>> data_bank, std::string bank_name){
+      for (auto it = data_bank.begin(); it != data_bank.end(); ++it) {
+        fmt::print(std::string(ANSI_COLOR_CYAN) + "** {}  {}" + ANSI_COLOR_RESET + "  =  {}\n", bank_name,  it->first, it->second);
       }
     }
 
@@ -103,12 +120,14 @@ class nnTest {
     virtual void run_torch_dnn() = 0;
     virtual void run_my_dnn() = 0;
 
+    void set_print_el_num(int n) {print_el_num = n;}
+
     void verify() {
       ASSERT(torch_test_data_bank.size() == raw_test_data_bank.size(), "test data and verify data should have the same number of entries", __LINE__);
 
       std::string error_name_list;
-      for(auto& [name, data_vec] : raw_test_data_bank.items()) {
-        if(!torch_test_data_bank.contains(name)){
+      for(auto& [name, data_vec] : raw_test_data_bank) {
+        if(torch_test_data_bank.find(name)==torch_test_data_bank.end()){
           error_name_list += "  ";
           error_name_list += name;
           error_name_list += "\n";
@@ -116,17 +135,18 @@ class nnTest {
       }
       ASSERT(error_name_list.empty(), "verify data and test data should have the same set of entries", __LINE__);
 
-      // print_json_bank(input_data_bank, "input_data_bank");
-
-        // INFO("raw_test_data_bank: \n" << raw_test_data_bank.dump());
-        // INFO("torch_test_data_bank: \n" << torch_test_data_bank.dump());
-      for(auto& [name, data_vec] : raw_test_data_bank.items()){
+      // print_data_bank(raw_test_data_bank, "raw_test_data_bank");
+      // print_data_bank(torch_test_data_bank, "torch_test_data_bank");
+      
+      for(auto it = raw_test_data_bank.begin(); it != raw_test_data_bank.end(); ++it){
+        std::string name = it->first;
+        std::vector<float> data_vec = it->second;
         SECTION("The results must match for " + (ANSI_COLOR_CYAN + name + ANSI_COLOR_RESET)) {
           bool is_near2 = true;
           for (int i = 0; i < data_vec.size(); i++) {
             is_near2 &= NEAR2(data_vec[i], torch_test_data_bank[name][i], 1e-3);
           }
-          INFO(ANSI_COLOR_RED "* Your DNN: " ANSI_COLOR_RESET << print_vec(data_vec,0,64) << ANSI_COLOR_GREEN " \n * Torch DNN: " ANSI_COLOR_RESET << print_vec(torch_test_data_bank[name],0,64));
+          INFO(ANSI_COLOR_RED "* Your DNN: " ANSI_COLOR_RESET << print_str_vec(data_vec,0) << ANSI_COLOR_GREEN " \n * Torch DNN: " ANSI_COLOR_RESET << print_str_vec(torch_test_data_bank[name],0));
           CHECK(is_near2);
         }
       }      

@@ -173,7 +173,7 @@ eidnnStatus_t eidnnDropoutBackward(
     const Tensor<float, 4>       &dy,
     Tensor<float, 4>             &dx);
 
-eidnnStatus_t eidnnStridedBatchGemm(
+eidnnStatus_t eidnnStridedBatchedGemm(
     eidnnHandle_t handle,
     float alpha,
     float beta,
@@ -183,7 +183,7 @@ eidnnStatus_t eidnnStridedBatchGemm(
     const Tensor<float, 4> &B, 
     Tensor<float, 4> &C);
 
-eidnnStatus_t eidnnStridedBatchGemmForward(
+eidnnStatus_t eidnnStridedBatchedGemmForward(
     eidnnHandle_t handle,
     float alpha,
     float beta,
@@ -194,7 +194,7 @@ eidnnStatus_t eidnnStridedBatchGemmForward(
     const Tensor<float, 4> &B, 
     Tensor<float, 4> &C);
 
-eidnnStatus_t eidnnStridedBatchGemmBackward(
+eidnnStatus_t eidnnStridedBatchedGemmBackward(
     eidnnHandle_t handle,
     float alpha,
     float beta,

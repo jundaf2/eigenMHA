@@ -13,8 +13,10 @@ eidnnStatus_t eidnnLinearForward(eidnnHandle_t handle,
                     Tensor<float, 3>& y)
 {
   for(int b=0; b<x.dimension(0); b++){
-    Tensor<float, 2> xw = x.chip(b,0).contract(w, Eigen::array<IndexPair<int>,1>({IndexPair<int>(1, 0)}));
-    y.chip(b,0) = xw + bias.reshape(Eigen::array<Index, 2>({1, bias.dimension(0)})).broadcast(Eigen::array<Index, 2>({xw.dimension(0),1}));
+    Tensor<float, 2> wt = w.shuffle(Eigen::array<int, 2>({1,0}));
+    Tensor<float, 2> x_mat = x.chip(b,0);
+    Tensor<float, 2> x_max_w = x_mat.contract(wt, Eigen::array<IndexPair<int>,1>({IndexPair<int>(1, 0)}));
+    y.chip(b,0) = x_max_w + bias.reshape(Eigen::array<Index, 2>({1, bias.dimension(0)})).broadcast(Eigen::array<Index, 2>({x_max_w.dimension(0),1}));
   }
   return EIDNN_STATUS_SUCCESS;
 }
@@ -31,9 +33,11 @@ eidnnStatus_t eidnnLinearBackward(eidnnHandle_t handle,
   dw.setZero();
   dbias.setZero();
   for(int b=0; b<x.dimension(0); b++){
-    dx.chip(b,0) += dy.chip(b,0).contract(w, Eigen::array<IndexPair<int>,1>({IndexPair<int>(1, 0)}));
-    dw += dy.chip(b,0).contract(x.chip(b,0), Eigen::array<IndexPair<int>,1>({IndexPair<int>(0, 0)}));
-    dbias += dy.chip(b,0).sum(Eigen::array<Index, 1>({0}));
+    Tensor<float, 2> dy_mat = dy.chip(b,0);
+    Tensor<float, 2> x_mat = x.chip(b,0);
+    dx.chip(b,0) += dy_mat.contract(w, Eigen::array<IndexPair<int>,1>({IndexPair<int>(1, 0)}));
+    dw += dy_mat.contract(x_mat, Eigen::array<IndexPair<int>,1>({IndexPair<int>(0, 0)}));
+    dbias += dy_mat.sum(Eigen::array<Index, 1>({0}));
   }
   return EIDNN_STATUS_SUCCESS;
 }
@@ -74,11 +78,15 @@ eidnnStatus_t eidnnSoftmaxBackward(eidnnHandle_t handle,
       for(int s=0; s<y.dimension(2); s++){
         const Tensor<float, 1> y_ten = y.chip(b,0).chip(h,0).chip(s,0);
         const Tensor<float, 1> dy_ten = dy.chip(b,0).chip(h,0).chip(s,0);
+
         Map<const VectorXf> y_vec(y_ten.data(), s_len);
         Map<const VectorXf> dy_vec(dy_ten.data(), s_len);
+
         MatrixXf dydx_mat = static_cast<MatrixXf>(y_vec.matrix().asDiagonal()) - static_cast<MatrixXf>(y_vec*y_vec.transpose());
         VectorXf dx_vec = dydx_mat * dy_vec;
+
         TensorMap<const Tensor<float, 1>> dx_ten(dx_vec.data(), s_len);
+
         dx.chip(b,0).chip(h,0).chip(s,0) = dx_ten;
       }
     }
@@ -132,10 +140,12 @@ eidnnStatus_t eidnnDropoutBackward(
   
   dx = dy*dropout_mask;
 
+  free(reserveSpace);
+
   return EIDNN_STATUS_SUCCESS;
 }
 
-eidnnStatus_t eidnnStridedBatchGemm(
+eidnnStatus_t eidnnStridedBatchedGemm(
     eidnnHandle_t handle,
     float alpha,
     float beta,
@@ -147,13 +157,15 @@ eidnnStatus_t eidnnStridedBatchGemm(
 {
   for(int b=0; b<A.dimension(0); b++){
     for(int h=0; h<A.dimension(1); h++){
-      C.chip(b,0).chip(h,0) = beta*C.chip(b,0).chip(h,0) + alpha*A.chip(b,0).chip(h,0).contract(B.chip(b,0).chip(h,0), Eigen::array<IndexPair<int>,1>({IndexPair<int>(trans_A?0:1, trans_B?1:0)}));
+      const Tensor<float, 2> A_mat = A.chip(b,0).chip(h,0);
+      const Tensor<float, 2> B_mat = B.chip(b,0).chip(h,0);
+      C.chip(b,0).chip(h,0) = beta*C.chip(b,0).chip(h,0) + alpha*A_mat.contract(B_mat, Eigen::array<IndexPair<int>,1>({IndexPair<int>(trans_A?0:1, trans_B?1:0)}));
     }
   }
   return EIDNN_STATUS_SUCCESS;
 }
 
-eidnnStatus_t eidnnStridedBatchGemmForward(
+eidnnStatus_t eidnnStridedBatchedGemmForward(
     eidnnHandle_t handle,
     float alpha,
     float beta,
@@ -165,13 +177,13 @@ eidnnStatus_t eidnnStridedBatchGemmForward(
     Tensor<float, 4> &C)
 {
   if(!trans_C)
-    eidnnStridedBatchGemm(handle,alpha,beta,trans_A,trans_B,A,B,C);
+    eidnnStridedBatchedGemm(handle,alpha,beta,trans_A,trans_B,A,B,C);
   else
-    eidnnStridedBatchGemm(handle,alpha,beta,!trans_A,!trans_B,B,A,C);
+    eidnnStridedBatchedGemm(handle,alpha,beta,!trans_A,!trans_B,B,A,C);
   return EIDNN_STATUS_SUCCESS;
 }
 
-eidnnStatus_t eidnnStridedBatchGemmBackward(
+eidnnStatus_t eidnnStridedBatchedGemmBackward(
     eidnnHandle_t handle,
     float alpha,
     float beta,
@@ -185,14 +197,14 @@ eidnnStatus_t eidnnStridedBatchGemmBackward(
     Tensor<float, 4> &d_B)
 {
   if(!trans_A)
-    eidnnStridedBatchGemm(handle,alpha,beta,trans_C,!trans_B,d_C,B,d_A);
+    eidnnStridedBatchedGemm(handle,alpha,beta,trans_C,!trans_B,d_C,B,d_A);
   else
-    eidnnStridedBatchGemm(handle,alpha,beta,trans_B,!trans_C,B,d_C,d_A);
+    eidnnStridedBatchedGemm(handle,alpha,beta,trans_B,!trans_C,B,d_C,d_A);
 
   if(!trans_B)
-    eidnnStridedBatchGemm(handle,alpha,beta,!trans_A,trans_C,A,d_C,d_B);
+    eidnnStridedBatchedGemm(handle,alpha,beta,!trans_A,trans_C,A,d_C,d_B);
   else
-    eidnnStridedBatchGemm(handle,alpha,beta,!trans_C,trans_A,d_C,A,d_B);
+    eidnnStridedBatchedGemm(handle,alpha,beta,!trans_C,trans_A,d_C,A,d_B);
 
   return EIDNN_STATUS_SUCCESS;
 }
