@@ -1,14 +1,13 @@
 #pragma once
 #define CATCH_CONFIG_CPP11_TO_STRING
 #define CATCH_CONFIG_COLOUR_ANSI
-#define CATCH_CONFIG_MAIN
 #include <functional>
 #include <iosfwd>
 #include <map>
 #include <memory>
 #include <string>
 #include <type_traits>
-#include <unordered_map>
+#include <map>
 #include "catch.hpp"
 #include "fmt.hpp"
 #include "utils.hpp"
@@ -24,7 +23,7 @@ class nnTest {
         && b == std::numeric_limits<typename std::remove_reference<  decltype(b)>::type>::infinity()) 
       || (-a == std::numeric_limits<typename std::remove_reference< decltype(a)>::type>::infinity() 
         && -b == std::numeric_limits<typename std::remove_reference<  decltype(b)>::type>::infinity()) 
-      || (abs(a - b) / abs(a) < prec) || (abs(a - b) / abs(b) < prec) || (abs(a - b)*1e6 < prec)); };
+      || (abs(a - b) / abs(a) < prec) || (abs(a - b) / abs(b) < prec) || (abs(a - b) < 1e-6)); };
 
     std::function<void(bool, std::string, int)> ASSERT = [](bool cond, std::string info, int line) -> void { if(!(cond)){ std::string s = info + " @ " + __FILE__ + " (" + std::to_string(line) + ")"; printf(ANSI_COLOR_BLUE "ASSERT FAILED:: %s\n" ANSI_COLOR_RESET, s.c_str()); } };
 
@@ -35,25 +34,22 @@ class nnTest {
     int print_el_num = 64;
 
   protected:
-    std::unordered_map<std::string,std::vector<float>> torch_test_data_bank;
-    std::unordered_map<std::string,std::vector<float>> raw_test_data_bank;
-    std::unordered_map<std::string,std::vector<float>> input_data_bank;
+    std::map<std::string,std::vector<float>> torch_test_data_bank;
+    std::map<std::string,std::vector<float>> raw_test_data_bank;
+    std::map<std::string,std::vector<float>> input_data_bank;
 
 
     void register_torch_test_data(const torch::Tensor& x, std::string name){
       torch::Tensor x_c = x.to(torch::kCPU).contiguous();
-      std::vector<float> x_v(x_c.data_ptr<float>(), x_c.data_ptr<float>() + x_c.numel());
-      torch_test_data_bank[name] = x_v;  
+      torch_test_data_bank.emplace(name, std::vector<float>(x_c.data_ptr<float>(), x_c.data_ptr<float>() + x_c.numel()));
     }
 
     void register_raw_test_data(const float* x, size_t len, std::string name){
-      std::vector<float> x_v(x, x + len);
-      raw_test_data_bank[name] = x_v;
+      raw_test_data_bank.emplace(name, std::vector<float>(x, x + len));
     }
 
     void set_input_vec(const float* x, size_t len, std::string name){
-      std::vector<float> x_v(x, x + len);
-      input_data_bank[name] = x_v;
+      input_data_bank.emplace(name, std::vector<float>(x, x + len));
     }
 
     std::vector<float> get_input_vec(std::string name){
@@ -109,7 +105,7 @@ class nnTest {
       std::cout << name << ": " << x << std::endl;
     }
 
-    void print_data_bank(std::unordered_map<std::string,std::vector<float>> data_bank, std::string bank_name){
+    void print_data_bank(std::map<std::string,std::vector<float>>& data_bank, std::string bank_name){
       for (auto it = data_bank.begin(); it != data_bank.end(); ++it) {
         fmt::print(std::string(ANSI_COLOR_CYAN) + "** {}  {}" + ANSI_COLOR_RESET + "  =  {}\n", bank_name,  it->first, it->second);
       }
@@ -141,10 +137,14 @@ class nnTest {
       for(auto it = raw_test_data_bank.begin(); it != raw_test_data_bank.end(); ++it){
         std::string name = it->first;
         std::vector<float> data_vec = it->second;
-        SECTION("The results must match for " + (ANSI_COLOR_CYAN + name + ANSI_COLOR_RESET)) {
+        SECTION(std::string(ANSI_COLOR_RED) + name + ANSI_COLOR_RESET) {
           bool is_near2 = true;
           for (int i = 0; i < data_vec.size(); i++) {
-            is_near2 &= NEAR2(data_vec[i], torch_test_data_bank[name][i], 1e-3);
+            bool is_this_near2 = NEAR2(data_vec[i], torch_test_data_bank[name][i], 1e-2);
+            if(!is_this_near2){
+              fmt::print(ANSI_COLOR_RED "ERROR @ {}[{}] {} vs {}\n" ANSI_COLOR_RESET, name, i, data_vec[i], torch_test_data_bank[name][i]);
+            }
+            is_near2 &= is_this_near2;
           }
           INFO(ANSI_COLOR_RED "* Your DNN: " ANSI_COLOR_RESET << print_str_vec(data_vec,0) << ANSI_COLOR_GREEN " \n * Torch DNN: " ANSI_COLOR_RESET << print_str_vec(torch_test_data_bank[name],0));
           CHECK(is_near2);

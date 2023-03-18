@@ -41,34 +41,34 @@ public:
     size_t in_data_len = batch_size*seq_len*hidden_size;
     size_t out_data_len = in_data_len;
     unsigned int seed = 2023;
-
+    float rand_range = 10;
     this->set_random_seed(seed);
-    this->set_print_el_num(120);
+    this->set_print_el_num(500);
     // weight and bias for Q
-    this->set_input_vec(this->gen_rand_input(-1,1,weight_len).data(), weight_len, "q_weight");
-    this->set_input_vec(this->gen_rand_input(-1,1,bias_len).data(), bias_len, "q_bias");
+    this->set_input_vec(this->gen_rand_input(-rand_range,rand_range,weight_len).data(), weight_len, "q_weight");
+    this->set_input_vec(this->gen_rand_input(-rand_range,rand_range,bias_len).data(), bias_len, "q_bias");
 
     // weight and bias for K
-    this->set_input_vec(this->gen_rand_input(-1,1,weight_len).data(), weight_len, "k_weight");
-    this->set_input_vec(this->gen_rand_input(-1,1,bias_len).data(), bias_len, "k_bias");
+    this->set_input_vec(this->gen_rand_input(-rand_range,rand_range,weight_len).data(), weight_len, "k_weight");
+    this->set_input_vec(this->gen_rand_input(-rand_range,rand_range,bias_len).data(), bias_len, "k_bias");
 
     // weight and bias for V
-    this->set_input_vec(this->gen_rand_input(-1,1,weight_len).data(), weight_len, "v_weight");
-    this->set_input_vec(this->gen_rand_input(-1,1,bias_len).data(), bias_len, "v_bias");
+    this->set_input_vec(this->gen_rand_input(-rand_range,rand_range,weight_len).data(), weight_len, "v_weight");
+    this->set_input_vec(this->gen_rand_input(-rand_range,rand_range,bias_len).data(), bias_len, "v_bias");
 
     // weight and bias for O
-    this->set_input_vec(this->gen_rand_input(-1,1,weight_len).data(), weight_len, "o_weight");
-    this->set_input_vec(this->gen_rand_input(-1,1,bias_len).data(), bias_len, "o_bias");
+    this->set_input_vec(this->gen_rand_input(-rand_range,rand_range,weight_len).data(), weight_len, "o_weight");
+    this->set_input_vec(this->gen_rand_input(-rand_range,rand_range,bias_len).data(), bias_len, "o_bias");
 
     // input Q
-    this->set_input_vec(this->gen_rand_input(-1,1,in_data_len).data(), in_data_len, "q_in");
+    this->set_input_vec(this->gen_rand_input(-rand_range,rand_range,in_data_len).data(), in_data_len, "q_in");
     // input K
-    this->set_input_vec(this->gen_rand_input(-1,1,in_data_len).data(), in_data_len, "k_in");
+    this->set_input_vec(this->gen_rand_input(-rand_range,rand_range,in_data_len).data(), in_data_len, "k_in");
     // input V
-    this->set_input_vec(this->gen_rand_input(-1,1,in_data_len).data(), in_data_len, "v_in");
+    this->set_input_vec(this->gen_rand_input(-rand_range,rand_range,in_data_len).data(), in_data_len, "v_in");
 
     // target output
-    this->set_input_vec(this->gen_rand_input(-1,1,out_data_len).data(), out_data_len, "target");
+    this->set_input_vec(this->gen_rand_input(-rand_range,rand_range,out_data_len).data(), out_data_len, "target");
   }
 
   
@@ -177,8 +177,6 @@ public:
     k = k_0123.shuffle(Eigen::array<int, 4>({0,2,1,3}));
     v = v_0123.shuffle(Eigen::array<int, 4>({0,2,1,3}));
 
-    Eigen::Tensor<float, 4, Eigen::RowMajor> q_row = q.swap_layout().shuffle(Eigen::array<int, 4>({3,2,1,0}));
-
     // S = Q*K^T, forward
     eigenDNN::eidnnStridedBatchedGemmForward(handle, 1.0f/sqrtf(head_size), 0, false, true, false, q, k, s); 
 
@@ -186,6 +184,7 @@ public:
     eigenDNN::eidnnSoftmaxForward(handle, eigenDNN::eidnnSoftmaxAlgorithm_t::EIDNN_SOFTMAX_ACCURATE, eigenDNN::eidnnSoftmaxMode_t::EIDNN_SOFTMAX_MODE_INSTANCE, s, p);
 
     // P = dropout(P), forward
+
     eigenDNN::eidnnDropoutDescriptor_t dropoutDesc = make_tuple(dropout_rate,saved_states,0,2023);
     eigenDNN::eidnnDropoutForward(handle, dropoutDesc, p, p);
     
@@ -198,24 +197,11 @@ public:
     Eigen::TensorMap<Eigen::Tensor<float, 3, Eigen::RowMajor>> o_in_row(o_0213_row.data(), {batch_size, seq_len, hidden_size});
     o_in = o_in_row.swap_layout().shuffle(Eigen::array<int, 3>({2,1,0}));
 
-        
-    this->register_raw_test_data(o_0213_row.data(), batch_size*seq_len*hidden_size, "o_0213"); 
-
     // Linear Layer for O, forward
     eigenDNN::eidnnLinearForward(handle, o_in, o_weight, o_bias, o_out);
 
-    Eigen::Tensor<float, 3, Eigen::RowMajor> o_in_rrow = o_in.swap_layout().shuffle(Eigen::array<int, 3>({2,1,0}));
-    this->register_raw_test_data(o_in_rrow.data(), batch_size*seq_len*hidden_size, "o_in"); 
-
-    Eigen::Tensor<float, 2, Eigen::RowMajor> o_weight_row = o_weight.swap_layout().shuffle(Eigen::array<int, 2>({1,0}));
-    this->register_raw_test_data(o_weight_row.data(), hidden_size*hidden_size, "o_weight"); 
-
-    Eigen::Tensor<float, 1, Eigen::RowMajor> o_bias_row = o_bias.swap_layout().shuffle(Eigen::array<int, 1>({0}));
-    this->register_raw_test_data(o_bias_row.data(), hidden_size, "o_bias"); 
-
     Eigen::Tensor<float, 3, Eigen::RowMajor> o_out_row = o_out.swap_layout().shuffle(Eigen::array<int, 3>({2,1,0}));
     this->register_raw_test_data(o_out_row.data(), batch_size*seq_len*hidden_size, "output"); 
-    
     // MSE Loss
     eigenDNN::eidnnMSELoss(handle, o_out, target, loss, d_loss);
     
@@ -225,12 +211,10 @@ public:
 
     // reshape O, [batch_size, seq_len, hidden_size] -> [batch_size, n_heads, seq_len, head_size]
     Eigen::Tensor<float, 3, Eigen::RowMajor> o_in_grad_row = o_in_grad.swap_layout().shuffle(Eigen::array<int, 3>({2,1,0}));
-    this->register_raw_test_data(o_in_grad_row.data(), batch_size*seq_len*hidden_size, "o_in_grad"); 
-
     Eigen::TensorMap<Eigen::Tensor<float, 4, Eigen::RowMajor>> o_in_grad_0123_row(o_in_grad_row.data(), {batch_size, seq_len, n_heads, head_size});
     Eigen::Tensor<float, 4> o_in_grad_0123 = o_in_grad_0123_row.swap_layout().shuffle(Eigen::array<int, 4>({3,2,1,0}));
     o_grad = o_in_grad_0123.shuffle(Eigen::array<int, 4>({0,2,1,3}));
-    
+
     // O=P*V backward
     eigenDNN::eidnnStridedBatchedGemmBackward(handle,  1, 0, false, false, false, p, v, o_grad, p_grad, v_grad);
 
@@ -240,8 +224,16 @@ public:
     // P = softmax(S), backward
     eigenDNN::eidnnSoftmaxBackward(handle, eigenDNN::eidnnSoftmaxAlgorithm_t::EIDNN_SOFTMAX_ACCURATE, eigenDNN::eidnnSoftmaxMode_t::EIDNN_SOFTMAX_MODE_INSTANCE, p, p_grad, s_grad);
 
+    Eigen::Tensor<float, 4, Eigen::RowMajor> s_grad_row = s_grad.swap_layout().shuffle(Eigen::array<int, 4>({3,2,1,0}));
+    this->register_raw_test_data(s_grad_row.data(), batch_size*seq_len*seq_len*n_heads, "s_grad"); 
+
     // S = Q*K^T, backward
     eigenDNN::eidnnStridedBatchedGemmBackward(handle,  1.0f/sqrtf(head_size), 0, false, true, false, q, k, s_grad, q_grad, k_grad); 
+
+    Eigen::Tensor<float, 4, Eigen::RowMajor> q_grad_row = q_grad.swap_layout().shuffle(Eigen::array<int, 4>({3,2,1,0}));
+    this->register_raw_test_data(q_grad_row.data(), batch_size*seq_len*head_size*n_heads, "q_grad"); 
+    Eigen::Tensor<float, 4, Eigen::RowMajor> k_grad_row = k_grad.swap_layout().shuffle(Eigen::array<int, 4>({3,2,1,0}));
+    this->register_raw_test_data(k_grad_row.data(), batch_size*seq_len*head_size*n_heads, "k_grad"); 
 
     // reshape Q, K and V, [batch_size, n_heads, seq_len, head_size] -> [batch_size, seq_len, hidden_size] 
     Eigen::Tensor<float, 4> q_grad_0213 = q_grad.shuffle(Eigen::array<int, 4>({0,2,1,3}));
@@ -250,12 +242,12 @@ public:
     Eigen::Tensor<float, 4, Eigen::RowMajor> q_grad_0213_row = q_grad_0213.swap_layout().shuffle(Eigen::array<int, 4>({3,2,1,0}));
     Eigen::Tensor<float, 4, Eigen::RowMajor> k_grad_0213_row = k_grad_0213.swap_layout().shuffle(Eigen::array<int, 4>({3,2,1,0}));
     Eigen::Tensor<float, 4, Eigen::RowMajor> v_grad_0213_row = v_grad_0213.swap_layout().shuffle(Eigen::array<int, 4>({3,2,1,0}));
-    Eigen::TensorMap<Eigen::Tensor<float, 3, Eigen::RowMajor>> q_in_grad_row(q_grad_0213_row.data(), {batch_size, seq_len, hidden_size});
-    Eigen::TensorMap<Eigen::Tensor<float, 3, Eigen::RowMajor>> k_in_grad_row(k_grad_0213_row.data(), {batch_size, seq_len, hidden_size});
-    Eigen::TensorMap<Eigen::Tensor<float, 3, Eigen::RowMajor>> v_in_grad_row(v_grad_0213_row.data(), {batch_size, seq_len, hidden_size});
-    q_in_grad = q_in_grad_row.swap_layout().shuffle(Eigen::array<int, 3>({2,1,0}));
-    k_in_grad = k_in_grad_row.swap_layout().shuffle(Eigen::array<int, 3>({2,1,0}));
-    v_in_grad = v_in_grad_row.swap_layout().shuffle(Eigen::array<int, 3>({2,1,0}));
+    Eigen::TensorMap<Eigen::Tensor<float, 3, Eigen::RowMajor>> q_out_grad_row(q_grad_0213_row.data(), {batch_size, seq_len, hidden_size});
+    Eigen::TensorMap<Eigen::Tensor<float, 3, Eigen::RowMajor>> k_out_grad_row(k_grad_0213_row.data(), {batch_size, seq_len, hidden_size});
+    Eigen::TensorMap<Eigen::Tensor<float, 3, Eigen::RowMajor>> v_out_grad_row(v_grad_0213_row.data(), {batch_size, seq_len, hidden_size});
+    q_out_grad = q_out_grad_row.swap_layout().shuffle(Eigen::array<int, 3>({2,1,0}));
+    k_out_grad = k_out_grad_row.swap_layout().shuffle(Eigen::array<int, 3>({2,1,0}));
+    v_out_grad = v_out_grad_row.swap_layout().shuffle(Eigen::array<int, 3>({2,1,0}));
 
     // Linear Layer for Q, K and V, backward
     eigenDNN::eidnnLinearBackward(handle, q_out_grad, q_in, q_weight, q_in_grad, q_weight_grad, q_bias_grad);
@@ -321,31 +313,30 @@ public:
     this->register_torch_test_data(this->k_w->bias.grad(), "k_bias_grad");
     this->register_torch_test_data(this->v_w->bias.grad(), "v_bias_grad");
     this->register_torch_test_data(this->o_w->bias.grad(), "o_bias_grad");
-    this->register_torch_test_data(O.grad(), "o_in_grad");
+
+    this->register_torch_test_data(this->S.grad(), "s_grad");
+    this->register_torch_test_data(this->Q.grad(), "q_grad");
+    this->register_torch_test_data(this->K.grad(), "k_grad");
   }
 
-  torch::Tensor O;
   // Implement the MHA's algorithm.
   torch::Tensor forward(torch::Tensor Q_in, torch::Tensor K_in, torch::Tensor V_in, torch::Tensor mask) {
-    torch::Tensor Q = q_w->forward(Q_in).view({batch_size, seq_len, n_heads, head_size}).permute({0, 2, 1, 3});
-    torch::Tensor K = k_w->forward(K_in).view({batch_size, seq_len, n_heads, head_size}).permute({0, 2, 1, 3});
-    torch::Tensor V = v_w->forward(V_in).view({batch_size, seq_len, n_heads, head_size}).permute({0, 2, 1, 3});
-    torch::Tensor S = torch::matmul(Q, K.permute({0, 1, 3, 2})) / torch::sqrt(torch::tensor(head_size)); // - (1.0 - mask.unsqueeze(1).unsqueeze(2).to(torch::kFloat32)) * 10000.0;
-    torch::Tensor P = softmax(S);
+    Q = q_w->forward(Q_in).view({batch_size, seq_len, n_heads, head_size}).permute({0, 2, 1, 3});
+    K = k_w->forward(K_in).view({batch_size, seq_len, n_heads, head_size}).permute({0, 2, 1, 3});
+    V = v_w->forward(V_in).view({batch_size, seq_len, n_heads, head_size}).permute({0, 2, 1, 3});
+    S = torch::matmul(Q, K.permute({0, 1, 3, 2})) / torch::sqrt(torch::tensor(head_size)); // - (1.0 - mask.unsqueeze(1).unsqueeze(2).to(torch::kFloat32)) * 10000.0;
+    P = softmax(S);
+    Q.retain_grad();
+    K.retain_grad();
+    S.retain_grad();
     P = dropout(P);
-     O = torch::matmul(P, V).permute({0, 2, 1, 3}).contiguous().view({batch_size, seq_len, hidden_size});
-    O.retain_grad();
+    O = torch::matmul(P, V).permute({0, 2, 1, 3}).contiguous().view({batch_size, seq_len, hidden_size});
     torch::Tensor O_out = o_w(O).view({batch_size, seq_len, hidden_size});
-
-    this->register_torch_test_data(torch::matmul(P, V).permute({0, 2, 1, 3}), "o_0213");
-
-    this->register_torch_test_data(O, "o_in");
-    this->register_torch_test_data(this->o_w->weight, "o_weight");
-    this->register_torch_test_data(this->o_w->bias, "o_bias");
     return O_out;
   }
 
 private:
+  torch::Tensor Q, K, V, S, P, O;
   torch::nn::Linear q_w{nullptr}, k_w{nullptr}, v_w{nullptr}, o_w{nullptr};
   torch::nn::Dropout dropout{nullptr}; // (0.5, is_training())
   torch::nn::Softmax softmax{nullptr}; // (3)
@@ -364,5 +355,8 @@ int eval_mha(unsigned batch_size,unsigned n_heads,unsigned seq_len,unsigned head
 TEST_CASE("MHA", "[mha]") {
   SECTION("[2,3,4,5,0]") {
     eval_mha(2,3,4,5,0);
+  }
+  SECTION("[4,5,6,7,0]") {
+    eval_mha(4,5,6,7,0);
   }
 }

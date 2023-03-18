@@ -16,7 +16,7 @@ eidnnStatus_t eidnnLinearForward(eidnnHandle_t handle,
     Tensor<float, 2> wt = w.shuffle(Eigen::array<int, 2>({1,0}));
     Tensor<float, 2> x_mat = x.chip(b,0);
     Tensor<float, 2> x_max_w = x_mat.contract(wt, Eigen::array<IndexPair<int>,1>({IndexPair<int>(1, 0)}));
-    y.chip(b,0) = x_max_w + bias.reshape(Eigen::array<Index, 2>({1, bias.dimension(0)})).broadcast(Eigen::array<Index, 2>({x_max_w.dimension(0),1}));
+    y.chip(b,0) = x_max_w + bias.reshape(Eigen::array<Index, 2>({1, bias.dimension(0)})).broadcast(Eigen::array<Index, 2>({x_max_w.dimension(0),1})).eval();
   }
   return EIDNN_STATUS_SUCCESS;
 }
@@ -35,9 +35,9 @@ eidnnStatus_t eidnnLinearBackward(eidnnHandle_t handle,
   for(int b=0; b<x.dimension(0); b++){
     Tensor<float, 2> dy_mat = dy.chip(b,0);
     Tensor<float, 2> x_mat = x.chip(b,0);
-    dx.chip(b,0) += dy_mat.contract(w, Eigen::array<IndexPair<int>,1>({IndexPair<int>(1, 0)}));
-    dw += dy_mat.contract(x_mat, Eigen::array<IndexPair<int>,1>({IndexPair<int>(0, 0)}));
-    dbias += dy_mat.sum(Eigen::array<Index, 1>({0}));
+    dx.chip(b,0) += (dy_mat.contract(w, Eigen::array<IndexPair<int>,1>({IndexPair<int>(1, 0)}))).eval();
+    dw += (dy_mat.contract(x_mat, Eigen::array<IndexPair<int>,1>({IndexPair<int>(0, 0)}))).eval();
+    dbias += (dy_mat.sum(Eigen::array<Index, 1>({0}))).eval();
   }
   return EIDNN_STATUS_SUCCESS;
 }
@@ -157,9 +157,11 @@ eidnnStatus_t eidnnStridedBatchedGemm(
 {
   for(int b=0; b<A.dimension(0); b++){
     for(int h=0; h<A.dimension(1); h++){
-      const Tensor<float, 2> A_mat = A.chip(b,0).chip(h,0);
-      const Tensor<float, 2> B_mat = B.chip(b,0).chip(h,0);
-      C.chip(b,0).chip(h,0) = beta*C.chip(b,0).chip(h,0) + alpha*A_mat.contract(B_mat, Eigen::array<IndexPair<int>,1>({IndexPair<int>(trans_A?0:1, trans_B?1:0)}));
+      const Tensor<float, 2> A_mat = A.slice(std::array<long,4>({b,h,0,0}), std::array<long,4>({1,1,A.dimension(2),A.dimension(3)})).reshape(std::array<long,2>({A.dimension(2),A.dimension(3)}));
+      const Tensor<float, 2> B_mat = B.slice(std::array<long,4>({b,h,0,0}), std::array<long,4>({1,1,B.dimension(2),B.dimension(3)})).reshape(std::array<long,2>({B.dimension(2),B.dimension(3)}));
+      Tensor<float, 2> C_mat = B.slice(std::array<long,4>({b,h,0,0}), std::array<long,4>({1,1,C.dimension(2),C.dimension(3)})).reshape(std::array<long,2>({C.dimension(2), C.dimension(3)}));
+      C_mat = beta*C_mat.eval() + alpha*A_mat.contract(B_mat, Eigen::array<IndexPair<int>,1>({IndexPair<int>(trans_A?0:1, trans_B?1:0)}));
+      C.chip(b,0).chip(h,0) = C_mat;
     }
   }
   return EIDNN_STATUS_SUCCESS;
