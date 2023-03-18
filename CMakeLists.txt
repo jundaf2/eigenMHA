@@ -11,7 +11,7 @@ set(CMAKE_CUDA_EXTENSIONS OFF)
 
 set(DEFAULT_BUILD_TYPE "Release")
 
-project(nnTest LANGUAGES C CXX CUDA)
+project(eigenDNN LANGUAGES C CXX CUDA)
 set(${PROJECT_NAME}_VERSION 0.0.0)
 enable_language(C CXX CUDA)
 
