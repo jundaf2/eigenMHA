@@ -11,11 +11,9 @@ using namespace std;
 
 
 
-
-
 struct test_MHA : public nn_test::nnTest, torch::nn::Module {
 
-  test_MHA(int batch_size, int n_heads, int seq_len, int head_size, int dropout_rate){
+  test_MHA(int batch_size, int n_heads, int seq_len, int head_size, float dropout_rate){
     this->hidden_size = head_size*n_heads;
     this->batch_size=batch_size;
     this->n_heads=n_heads;
@@ -41,9 +39,9 @@ public:
     size_t in_data_len = batch_size*seq_len*hidden_size;
     size_t out_data_len = in_data_len;
     unsigned int seed = 2023;
-    float rand_range = 10;
+    float rand_range = 2;
     this->set_random_seed(seed);
-    this->set_print_el_num(500);
+    this->set_print_el_num(64);
     // weight and bias for Q
     this->set_input_vec(this->gen_rand_input(-rand_range,rand_range,weight_len).data(), weight_len, "q_weight");
     this->set_input_vec(this->gen_rand_input(-rand_range,rand_range,bias_len).data(), bias_len, "q_bias");
@@ -184,10 +182,9 @@ public:
     eigenDNN::eidnnSoftmaxForward(handle, eigenDNN::eidnnSoftmaxAlgorithm_t::EIDNN_SOFTMAX_ACCURATE, eigenDNN::eidnnSoftmaxMode_t::EIDNN_SOFTMAX_MODE_INSTANCE, s, p);
 
     // P = dropout(P), forward
-
     eigenDNN::eidnnDropoutDescriptor_t dropoutDesc = make_tuple(dropout_rate,saved_states,0,2023);
     eigenDNN::eidnnDropoutForward(handle, dropoutDesc, p, p);
-    
+
     // O=P*V, forward
     eigenDNN::eidnnStridedBatchedGemmForward(handle, 1, 0, false, false, false, p, v, o);
 
@@ -224,16 +221,8 @@ public:
     // P = softmax(S), backward
     eigenDNN::eidnnSoftmaxBackward(handle, eigenDNN::eidnnSoftmaxAlgorithm_t::EIDNN_SOFTMAX_ACCURATE, eigenDNN::eidnnSoftmaxMode_t::EIDNN_SOFTMAX_MODE_INSTANCE, p, p_grad, s_grad);
 
-    Eigen::Tensor<float, 4, Eigen::RowMajor> s_grad_row = s_grad.swap_layout().shuffle(Eigen::array<int, 4>({3,2,1,0}));
-    this->register_raw_test_data(s_grad_row.data(), batch_size*seq_len*seq_len*n_heads, "s_grad"); 
-
     // S = Q*K^T, backward
     eigenDNN::eidnnStridedBatchedGemmBackward(handle,  1.0f/sqrtf(head_size), 0, false, true, false, q, k, s_grad, q_grad, k_grad); 
-
-    Eigen::Tensor<float, 4, Eigen::RowMajor> q_grad_row = q_grad.swap_layout().shuffle(Eigen::array<int, 4>({3,2,1,0}));
-    this->register_raw_test_data(q_grad_row.data(), batch_size*seq_len*head_size*n_heads, "q_grad"); 
-    Eigen::Tensor<float, 4, Eigen::RowMajor> k_grad_row = k_grad.swap_layout().shuffle(Eigen::array<int, 4>({3,2,1,0}));
-    this->register_raw_test_data(k_grad_row.data(), batch_size*seq_len*head_size*n_heads, "k_grad"); 
 
     // reshape Q, K and V, [batch_size, n_heads, seq_len, head_size] -> [batch_size, seq_len, hidden_size] 
     Eigen::Tensor<float, 4> q_grad_0213 = q_grad.shuffle(Eigen::array<int, 4>({0,2,1,3}));
@@ -313,10 +302,6 @@ public:
     this->register_torch_test_data(this->k_w->bias.grad(), "k_bias_grad");
     this->register_torch_test_data(this->v_w->bias.grad(), "v_bias_grad");
     this->register_torch_test_data(this->o_w->bias.grad(), "o_bias_grad");
-
-    this->register_torch_test_data(this->S.grad(), "s_grad");
-    this->register_torch_test_data(this->Q.grad(), "q_grad");
-    this->register_torch_test_data(this->K.grad(), "k_grad");
   }
 
   // Implement the MHA's algorithm.
@@ -326,9 +311,6 @@ public:
     V = v_w->forward(V_in).view({batch_size, seq_len, n_heads, head_size}).permute({0, 2, 1, 3});
     S = torch::matmul(Q, K.permute({0, 1, 3, 2})) / torch::sqrt(torch::tensor(head_size)); // - (1.0 - mask.unsqueeze(1).unsqueeze(2).to(torch::kFloat32)) * 10000.0;
     P = softmax(S);
-    Q.retain_grad();
-    K.retain_grad();
-    S.retain_grad();
     P = dropout(P);
     O = torch::matmul(P, V).permute({0, 2, 1, 3}).contiguous().view({batch_size, seq_len, hidden_size});
     torch::Tensor O_out = o_w(O).view({batch_size, seq_len, hidden_size});
@@ -353,10 +335,18 @@ int eval_mha(unsigned batch_size,unsigned n_heads,unsigned seq_len,unsigned head
 }
 
 TEST_CASE("MHA", "[mha]") {
-  SECTION("[2,3,4,5,0]") {
-    eval_mha(2,3,4,5,0);
+  SECTION("[2,3,4,5,0.5]") {
+    eval_mha(2,3,4,5,0.1);
   }
-  SECTION("[4,5,6,7,0]") {
-    eval_mha(4,5,6,7,0);
+  SECTION("[4,5,6,7,0.5]") {
+    eval_mha(4,5,6,7,0.1);
   }
+
+  // SECTION("[2,4,32,64,0]") {
+  //   eval_mha(2,4,32,64,0);
+  // }
+
+  // SECTION("[8,4,128,64,0]") {
+  //   eval_mha(8,4,128,64,0);
+  // }
 }

@@ -60,8 +60,6 @@ eidnnStatus_t eidnnSoftmaxForward(eidnnHandle_t handle,
       }
     }
   }
-  // const Tensor<float, 4> exp_max = (x - x.maximum(Eigen::array<Index, 1>({3})).broadcast(Eigen::array<Index, 3>({1,1,s_len})).reshape(Eigen::array<Index, 4>({x.dimension(0),x.dimension(1),x.dimension(3),x.dimension(2)})).shuffle(Eigen::array<int, 4>({0,1,3,2}))).exp();
-  // y =  exp_max / exp_max.sum(Eigen::array<Index, 1>({3})).broadcast(Eigen::array<Index, 3>({1,1,s_len})).reshape(Eigen::array<Index, 4>({x.dimension(0),x.dimension(1),x.dimension(3),x.dimension(2)})).shuffle(Eigen::array<int, 4>({0,1,3,2}));
   return EIDNN_STATUS_SUCCESS;
 }
 
@@ -117,7 +115,6 @@ eidnnStatus_t eidnnDropoutForward(
 
   for(size_t i=0; i<x.size() ; i++) (reinterpret_cast<float *>(reserveSpace))[i] = (1.0f/(1-dropout_rate))*distribution(mt1);
   TensorMap<const Tensor<float, 4>> dropout_mask(reinterpret_cast<float *>(reserveSpace), x.dimensions());
-  
   y = x*dropout_mask;
 
   return EIDNN_STATUS_SUCCESS;

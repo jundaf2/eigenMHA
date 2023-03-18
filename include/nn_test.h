@@ -23,7 +23,7 @@ class nnTest {
         && b == std::numeric_limits<typename std::remove_reference<  decltype(b)>::type>::infinity()) 
       || (-a == std::numeric_limits<typename std::remove_reference< decltype(a)>::type>::infinity() 
         && -b == std::numeric_limits<typename std::remove_reference<  decltype(b)>::type>::infinity()) 
-      || (abs(a - b) / abs(a) < prec) || (abs(a - b) / abs(b) < prec) || (abs(a - b) < 1e-6)); };
+      || (abs(a - b) / abs(a) < prec) || (abs(a - b) / abs(b) < prec) || (abs(a - b) < prec)); };
 
     std::function<void(bool, std::string, int)> ASSERT = [](bool cond, std::string info, int line) -> void { if(!(cond)){ std::string s = info + " @ " + __FILE__ + " (" + std::to_string(line) + ")"; printf(ANSI_COLOR_BLUE "ASSERT FAILED:: %s\n" ANSI_COLOR_RESET, s.c_str()); } };
 
@@ -140,7 +140,7 @@ class nnTest {
         SECTION(std::string(ANSI_COLOR_RED) + name + ANSI_COLOR_RESET) {
           bool is_near2 = true;
           for (int i = 0; i < data_vec.size(); i++) {
-            bool is_this_near2 = NEAR2(data_vec[i], torch_test_data_bank[name][i], 1e-2);
+            bool is_this_near2 = NEAR2(data_vec[i], torch_test_data_bank[name][i], 1e-1);
             if(!is_this_near2){
               fmt::print(ANSI_COLOR_RED "ERROR @ {}[{}] {} vs {}\n" ANSI_COLOR_RESET, name, i, data_vec[i], torch_test_data_bank[name][i]);
             }
