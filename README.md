@@ -22,10 +22,45 @@ As for how to install nnTest (based on LibTorch and CATCH2) for verification, se
 * [cudnnMultiHeadAttnBackwardData()](https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnMultiHeadAttnBackwardData)
 * [cudnnMultiHeadAttnBackwardWeights()](https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnMultiHeadAttnBackwardWeights)
 
-## What is MHA in Training Library?
-1. Q K V obtained from embedding
+
+## The MHAs in this repo
+1. a pytorch MHA in `mha.py`
+2. a libtorch MHA in `mha.cc`
+3. an eigen MHA in `mha.cc` and `./src/eigenDNN.cpp` (with headers in `./inlcude/eigenDNN.h`)
+
+## What are the variables MHA in a Training Library?
+
+<center><img src="./figures/attention_train.png" ...></center>
+
+1. Q, K, V input embeddings
+
+$$
+\mathbf{Q}_{in} \quad  \mathbf{K}_{in} \quad  \mathbf{V}_{in}
+$$
+
 2. Weights and bias for the linear layer of Q K V and O.
+
+$$
+\mathbf{W}_{Q} \quad \mathbf{b}_{Q}
+$$
+
+$$
+\mathbf{W}_{K} \quad \mathbf{b}_{K}
+$$
+
+$$
+\mathbf{W}_{V} \quad \mathbf{b}_{V}
+$$
+
+$$
+\mathbf{W}_{O} \quad \mathbf{b}_{O}
+$$
+
 3. Gradients for the matrices, weights and intermeidate matrices
+
+$$
+\mathbf{W}_{Q} \quad \mathbf{b}_{Q}
+$$
 
 ### Forward Pass of MHA
 $$
@@ -65,93 +100,90 @@ $$
 loss = MSELoss(\mathbf{O}_{out},\mathbf{O}_{target})
 $$
 
+MSELoss will also gives 
+
+$$ \mathbf{grad\\_O}_{out} $$
+
+, the gradient of  
+
+$$ \mathbf{O}_{out} $$
+
 ### Backward Pass of MHA
 
-MSELoss will also gives $$\mathbf{grad_O}_{out}$$, the gradient of $$\mathbf{O}_{out}$$
-
 $$
-\mathbf{grad\_O} = \mathbf{grad_O}_{out}*\mathbf{W}_{O}
+\mathbf{grad\\_O} = \mathbf{grad\\_O}_{out}*\mathbf{W}_{O}
 $$
 
 $$
-\mathbf{grad\_W}_{O} = \mathbf{grad_O}_{out}^T*\mathbf{O}
+\mathbf{grad\\_W}_{O} = \mathbf{grad\\_O}_{out}^T*\mathbf{O}
 $$
 
 $$
-\mathbf{grad_b}_{O} = colsum(\mathbf{grad_O}_{out})
+\mathbf{grad\\_b}_{O} = colsum(\mathbf{grad\\_O}_{out})
 $$
 
 $$
-\mathbf{grad_P} = \mathbf{grad_O}*\mathbf{V}^T
+\mathbf{grad\\_P} = \mathbf{grad\\_O}*\mathbf{V}^T
 $$
 
 $$
-\mathbf{grad_V} = \mathbf{P}^T*\mathbf{grad_O}
+\mathbf{grad\\_V} = \mathbf{P}^T*\mathbf{grad\\_O}
 $$
 
 $$
-\mathbf{grad_P} = DropoutBWD(\mathbf{grad_P})
+\mathbf{grad\\_P} = DropoutBWD(\mathbf{grad\\_P})
 $$
 
 $$
-\mathbf{grad_S} = SoftmaxBWD(\mathbf{P},\mathbf{grad_P})*\frac{1}{\sqrt{d}}
+\mathbf{grad\\_S} = SoftmaxBWD(\mathbf{P},\mathbf{grad\\_P})*\frac{1}{\sqrt{d}}
 $$
 
 $$
-\mathbf{grad_Q} = \mathbf{grad_S}*\mathbf{K}
+\mathbf{grad\\_Q} = \mathbf{grad\\_S}*\mathbf{K}
 $$
 
 $$
-\mathbf{grad_K} = \mathbf{grad_S}^T*\mathbf{Q}
+\mathbf{grad\\_K} = \mathbf{grad\\_S}^T*\mathbf{Q}
 $$
 
 $$
-\mathbf{grad_Q}_{in} = \mathbf{grad_Q}*\mathbf{W}_{Q}
+\mathbf{grad\\_Q}_{in} = \mathbf{grad\\_Q}*\mathbf{W}_{Q}
 $$
 
 $$
-\mathbf{grad_W}_{Q} = \mathbf{grad_Q}^T*\mathbf{Q}_{in}
+\mathbf{grad\\_W}_{Q} = \mathbf{grad\\_Q}^T*\mathbf{Q}_{in}
 $$
 
 $$
-\mathbf{grad_b}_{Q} = colsum(\mathbf{grad_Q})
+\mathbf{grad\\_b}_{Q} = colsum(\mathbf{grad\\_Q})
 $$
 
 $$
-\mathbf{grad_K}_{in} = \mathbf{grad_K}*\mathbf{W}_{K}
+\mathbf{grad\\_K}_{in} = \mathbf{grad\\_K}*\mathbf{W}_{K}
 $$
 
 $$
-\mathbf{grad_W}_{K} = \mathbf{grad_K}^T*\mathbf{K}_{in}
+\mathbf{grad\\_W}_{K} = \mathbf{grad\\_K}^T*\mathbf{K}_{in}
 $$
 
 $$
-\mathbf{grad_b}_{K} = colsum(\mathbf{grad_K})
+\mathbf{grad\\_b}_{K} = colsum(\mathbf{grad\\_K})
 $$
 
 $$
-\mathbf{grad_V}_{in} = \mathbf{grad_V}*\mathbf{W}_{V}
+\mathbf{grad\\_V}_{in} = \mathbf{grad\\_V}*\mathbf{W}_{V}
 $$
 
 $$
-\mathbf{grad_W}_{V} = \mathbf{grad_V}^T*\mathbf{V}_{in}
+\mathbf{grad\\_W}_{V} = \mathbf{grad\\_V}^T*\mathbf{V}_{in}
 $$
 
 $$
-\mathbf{grad_b}_{V} = colsum(\mathbf{grad_V})
+\mathbf{grad\\_b}_{V} = colsum(\mathbf{grad\\_V})
 $$
 
-<center><img src="./figures/attention_train.png" ...></center>
-
-
-
-
-### The MHAs in this repo
-1. a pytorch MHA in `mha.py`
-2. a libtorch MHA in `mha.cc`
-3. an eigen MHA in `mha.cc` and `./src/eigenDNN.cpp` (with headers in `./inlcude/eigenDNN.h`)
   
-## Notes
+## The components of the MHA Training Library
 ### MSE Loss Function
 
 Loss function, as the origin of DL system, is a basic component inside a DL system.
