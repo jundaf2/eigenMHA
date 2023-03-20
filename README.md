@@ -27,24 +27,31 @@ As for how to install nnTest (based on LibTorch and CATCH2) for verification, se
 1. Q K V obtained from embedding
 2. Weights and bias for the linear layer of Q K V and O.
 3. Gradients for the matrices, weights and intermeidate matrices
+
 $$
 \mathbf{Q} = \mathbf{Q}_{in}*\mathbf{W}_{Q}+\mathbf{b}_{Q}
 $$
+
 $$
 \mathbf{K} = \mathbf{K}_{in}*\mathbf{W}_{K}+\mathbf{b}_{K}
 $$
+
 $$
 \mathbf{V} = \mathbf{V}_{in}*\mathbf{W}_{V}+\mathbf{b}_{V}
 $$
+
 $$
 \mathbf{S} = \mathbf{Q}*\mathbf{K}^T
 $$
+
 $$
 \mathbf{P} = Softmax(Mask(\mathbf{S}))
 $$
+
 $$
 \mathbf{O}=\mathbf{P}*\mathbf{V}
 $$
+
 $$
 \mathbf{O}_out = \mathbf{O}*\mathbf{W}_{O}+\mathbf{b}_{O}
 $$
