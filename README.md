@@ -22,12 +22,12 @@ As for how to install nnTest (based on LibTorch and CATCH2) for verification, se
 * [cudnnMultiHeadAttnBackwardData()](https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnMultiHeadAttnBackwardData)
 * [cudnnMultiHeadAttnBackwardWeights()](https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnMultiHeadAttnBackwardWeights)
 
-## Project Structure
-### What is MHA in Training Library?
+## What is MHA in Training Library?
 1. Q K V obtained from embedding
 2. Weights and bias for the linear layer of Q K V and O.
 3. Gradients for the matrices, weights and intermeidate matrices
 
+### Forward Pass of MHA
 $$
 \mathbf{Q} = \mathbf{Q}_{in}*\mathbf{W}_{Q}+\mathbf{b}_{Q}
 $$
@@ -45,7 +45,11 @@ $$
 $$
 
 $$
-\mathbf{P} = Softmax(Mask(\mathbf{S}))
+\mathbf{P} = SoftmaxFWD(Mask(\mathbf{S}*\frac{1}{\sqrt{d}}))
+$$
+
+$$
+\mathbf{P} = DropoutFWD(\mathbf{P})
 $$
 
 $$
@@ -53,7 +57,87 @@ $$
 $$
 
 $$
-\mathbf{O}_out = \mathbf{O}*\mathbf{W}_{O}+\mathbf{b}_{O}
+\mathbf{O}_{out} = \mathbf{O}*\mathbf{W}_{O}+\mathbf{b}_{O}
+$$
+
+### MSE Loss
+$$
+loss = MSELoss(\mathbf{O}_{out},\mathbf{O}_{target})
+$$
+
+### Backward Pass of MHA
+MSELoss will also gives $\mathbf{grad_O}_{out}$ the gradient of $\mathbf{O}_{out}$
+
+$$
+\mathbf{grad_O} = \mathbf{grad_O}_{out}*\mathbf{W}_{O}
+$$
+
+$$
+\mathbf{grad_W}_{O} = \mathbf{grad_O}_{out}^T*\mathbf{O}
+$$
+
+$$
+\mathbf{grad_b}_{O} = colsum(\mathbf{grad_O}_{out})
+$$
+
+$$
+\mathbf{grad_P} = \mathbf{grad_O}*\mathbf{V}^T
+$$
+
+$$
+\mathbf{grad_V} = \mathbf{P}^T*\mathbf{grad_O}
+$$
+
+$$
+\mathbf{grad_P} = DropoutBWD(\mathbf{grad_P})
+$$
+
+$$
+\mathbf{grad_S} = SoftmaxBWD(\mathbf{P},\mathbf{grad_P})*\frac{1}{\sqrt{d}}
+$$
+
+$$
+\mathbf{grad_Q} = \mathbf{grad_S}*\mathbf{K}
+$$
+
+$$
+\mathbf{grad_K} = \mathbf{grad_S}^T*\mathbf{Q}
+$$
+
+$$
+\mathbf{grad_Q}_{in} = \mathbf{grad_Q}*\mathbf{W}_{Q}
+$$
+
+$$
+\mathbf{grad_W}_{Q} = \mathbf{grad_Q}^T*\mathbf{Q}_{in}
+$$
+
+$$
+\mathbf{grad_b}_{Q} = colsum(\mathbf{grad_Q})
+$$
+
+$$
+\mathbf{grad_K}_{in} = \mathbf{grad_K}*\mathbf{W}_{K}
+$$
+
+$$
+\mathbf{grad_W}_{K} = \mathbf{grad_K}^T*\mathbf{K}_{in}
+$$
+
+$$
+\mathbf{grad_b}_{K} = colsum(\mathbf{grad_K})
+$$
+
+$$
+\mathbf{grad_V}_{in} = \mathbf{grad_V}*\mathbf{W}_{V}
+$$
+
+$$
+\mathbf{grad_W}_{V} = \mathbf{grad_V}^T*\mathbf{V}_{in}
+$$
+
+$$
+\mathbf{grad_b}_{V} = colsum(\mathbf{grad_V})
 $$
 
 <center><img src="./figures/attention_train.png" ...></center>
