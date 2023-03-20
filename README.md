@@ -11,22 +11,43 @@ As for how to install nnTest (based on LibTorch and CATCH2) for verification, se
 
 ## Introduction
  In this repo, we use Eigen3 to implement the forward and backward of Multi-head Attention in Transformer models. To be concrete, this eigenMHA (eigenDNN) does what the cuDNN does in the following APIs for MHA operations.
-* [cudnnCreateAttnDescriptor()]()
-* [cudnnSetAttnDescriptor()]()
-* [cudnnGetAttnDescriptor()]()
-* [cudnnSetAttnDescriptor()]()
-* [cudnnDestroyAttnDescriptor()]()
-* [cudnnGetMultiHeadAttnBuffers()]()
-* [cudnnGetMultiHeadAttnWeights()]()
-* [cudnnMultiHeadAttnForward()]()
-* [cudnnMultiHeadAttnBackwardData()]()
-* [cudnnMultiHeadAttnBackwardWeights()]()
+* [cudnnCreateAttnDescriptor()](https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnCreateAttnDescriptor)
+* [cudnnSetAttnDescriptor()](https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnSetAttnDescriptor)
+* [cudnnGetAttnDescriptor()](https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnGetAttnDescriptor)
+* [cudnnSetAttnDescriptor()](https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnSetAttnDescriptor)
+* [cudnnDestroyAttnDescriptor()](https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnDestroyAttnDescriptor)
+* [cudnnGetMultiHeadAttnBuffers()](https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnGetMultiHeadAttnBuffers)
+* [cudnnGetMultiHeadAttnWeights()](https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnGetMultiHeadAttnWeights)
+* [cudnnMultiHeadAttnForward()](https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnMultiHeadAttnForward)
+* [cudnnMultiHeadAttnBackwardData()](https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnMultiHeadAttnBackwardData)
+* [cudnnMultiHeadAttnBackwardWeights()](https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnMultiHeadAttnBackwardWeights)
 
 ## Project Structure
 ### What is MHA in Training Library?
 1. Q K V obtained from embedding
 2. Weights and bias for the linear layer of Q K V and O.
 3. Gradients for the matrices, weights and intermeidate matrices
+$$
+\mathbf{Q} = \mathbf{Q}_{in}*\mathbf{W}_{Q}+\mathbf{b}_{Q}
+$$
+$$
+\mathbf{K} = \mathbf{K}_{in}*\mathbf{W}_{K}+\mathbf{b}_{K}
+$$
+$$
+\mathbf{V} = \mathbf{V}_{in}*\mathbf{W}_{V}+\mathbf{b}_{V}
+$$
+$$
+\mathbf{S} = \mathbf{Q}*\mathbf{K}^T
+$$
+$$
+\mathbf{P} = Softmax(Mask(\mathbf{S}))
+$$
+$$
+\mathbf{O}=\mathbf{P}*\mathbf{V}
+$$
+$$
+\mathbf{O}_out = \mathbf{O}*\mathbf{W}_{O}+\mathbf{b}_{O}
+$$
 
 <center><img src="./figures/attention_train.png" ...></center>
 
