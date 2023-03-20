@@ -1,88 +1,43 @@
-# eigenDNN -- An Open-source Toy DL Testing Framework.
+# eigenMHA (eigenDNN) -- Multi-head Attention Inference and Training implemented by Eigen.
 To clone this repo, use
 ```
 git clone --recursive
-
-cd ./eigen
-git checkout 3.4   # use eigen 3.4 required by EigenRand
-
-git clone https://github.com/pytorch/pytorch --recursive && cd pytorch
-git submodule sync
-git submodule update --init --recursive
-
-cd pytorch
-export USE_CUDA=False
-export BUILD_TEST=False
-python ./tools/build_libtorch.py
-
 ```
-Copy the following folders to `libtorch/include`
-- `pytorch/torch/include/torch`
-- `pytorch/torch/include/caffe2`
-- `pytorch/torch/include/c10`
-- `pytorch/torch/include/ATen`
-- `pytorch/torch/include/TH*`
+As for how to install nnTest (based on LibTorch and CATCH2) for verification, see https://github.com/jundaf2/dnn-test-framework  [nnTest mainly focuses on providing a testing framework to train and inference Deep Neural Networks using YOUR OWN LIBRARY].
 
-Copy the following shared library to  `libtorch/lib`. 
-- `pytorch/build/lib/libtorch.so`
-- `pytorch/build/lib/libtorch_cpu.so`
-- `pytorch/build/lib/libc10.so`
-
-Copy `pytorch/torch/share/cmake` to  `libtorch/share`. 
-
-Finally, you will get the libtorch subdirectory as follows.
-```
-libtorch
-├─include
-│ ├─ATen
-│ ├─c10
-│ ├─caffe2
-│ ├─TH
-│ ├─THCUNN
-│ ├─THNN
-│ └─torch
-├─lib
-│ ├─libc10.so
-│ ├─libtorch.so
-│ └─libtorch_cpu.so
-└─share
-  └─cmake
-```
-In short, you can use the following cli command to do the above operations. In the folder (project source folder) where `/pytorch` locates,
-```
-mkdir libtorch && mkdir libtorch/lib && mkdir libtorch/include && mkdir libtorch/share
-cp -r pytorch/torch/include/torch pytorch/torch/include/caffe2 pytorch/torch/include/c10 pytorch/torch/include/ATen pytorch/torch/include/TH* libtorch/include
-cp pytorch/build/lib/libtorch.so pytorch/build/lib/libtorch_cpu.so pytorch/build/lib/libc10.so libtorch/lib
-cp -r pytorch/torch/share/cmake libtorch/share
-```
-## Introduction
-nnTest mainly focuses on providing a testing framework for train and inference Deep Neural Networks using YOUR OWN LIBRARY.
-
-eigenDNN
-* libtorch (built from pytorch directly) serves as the computation library that generates ground truth for your own library implementation.
-* Eigen serves as the computation library that generates ground truth for GPU implementations.
-
-
-What is to be initialized:
-* weights
-* input data
-* target data
-
-What is to be tested:
-* forward result of the network output
-* forward result of the potential intermediate variables
-* backward gradients of the weights
-* backward gradients of potential intermediate variables 
-
-Currently, it focuses on
-
-* Forward and backward of Multi-Head Attention (MHA).
-  * with a pytorch `mha.py` that illustrates the multi-head attention our eigenDNN / cuTransDNN implements
-  
 
 <center><img src="./figures/MHA.png" ...></center>
 <center>Which part will we implement in the transformer model.</center>
 
+## Introduction
+ In this repo, we use Eigen3 to implement the forward and backward of Multi-head Attention in Transformer models. To be concrete, this eigenMHA (eigenDNN) does what the cuDNN does in the following APIs for MHA operations.
+* [cudnnCreateAttnDescriptor()]()
+* [cudnnSetAttnDescriptor()]()
+* [cudnnGetAttnDescriptor()]()
+* [cudnnSetAttnDescriptor()]()
+* [cudnnDestroyAttnDescriptor()]()
+* [cudnnGetMultiHeadAttnBuffers()]()
+* [cudnnGetMultiHeadAttnWeights()]()
+* [cudnnMultiHeadAttnForward()]()
+* [cudnnMultiHeadAttnBackwardData()]()
+* [cudnnMultiHeadAttnBackwardWeights()]()
+
+## Project Structure
+### What is MHA in Training Library?
+1. Q K V obtained from embedding
+2. Weights and bias for the linear layer of Q K V and O.
+3. Gradients for the matrices, weights and intermeidate matrices
+
+<center><img src="./figures/attention_train.png" ...></center>
+
+
+
+
+### The MHAs in this repo
+1. a pytorch MHA in `mha.py`
+2. a libtorch MHA in `mha.cc`
+3. an eigen MHA in `mha.cc` and `./src/eigenDNN.cpp` (with headers in `./inlcude/eigenDNN.h`)
+  
 ## Notes
 ### MSE Loss Function
 
@@ -232,18 +187,3 @@ eidnnStatus_t eidnnDropoutBackward(
     Tensor<float, 4>             &dx // gradient of dropout input data
     );
 ```
-
-### Multi-head Attention
-cuDNN has the following APIs for MHA operations
-* [cudnnCreateAttnDescriptor()]()
-* [cudnnSetAttnDescriptor()]()
-* [cudnnGetAttnDescriptor()]()
-* [cudnnSetAttnDescriptor()]()
-* [cudnnDestroyAttnDescriptor()]()
-* [cudnnGetMultiHeadAttnBuffers()]()
-* [cudnnGetMultiHeadAttnWeights()]()
-* [cudnnMultiHeadAttnForward()]()
-* [cudnnMultiHeadAttnBackwardData()]()
-* [cudnnMultiHeadAttnBackwardWeights()]()
-In eiDNN, we have
-
