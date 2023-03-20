@@ -66,14 +66,15 @@ loss = MSELoss(\mathbf{O}_{out},\mathbf{O}_{target})
 $$
 
 ### Backward Pass of MHA
-MSELoss will also gives $\mathbf{grad_O}_{out}$ the gradient of $\mathbf{O}_{out}$
+
+MSELoss will also gives $$\mathbf{grad_O}_{out}$$, the gradient of $$\mathbf{O}_{out}$$
 
 $$
-\mathbf{grad_O} = \mathbf{grad_O}_{out}*\mathbf{W}_{O}
+\mathbf{grad\_O} = \mathbf{grad_O}_{out}*\mathbf{W}_{O}
 $$
 
 $$
-\mathbf{grad_W}_{O} = \mathbf{grad_O}_{out}^T*\mathbf{O}
+\mathbf{grad\_W}_{O} = \mathbf{grad_O}_{out}^T*\mathbf{O}
 $$
 
 $$
