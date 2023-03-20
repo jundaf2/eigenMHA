@@ -28,9 +28,11 @@ As for how to install nnTest (based on LibTorch and CATCH2) for verification, se
 2. a libtorch MHA in `mha.cc`
 3. an eigen MHA in `mha.cc` and `./src/eigenDNN.cpp` (with headers in `./inlcude/eigenDNN.h`)
 
-## What are the variables MHA in a Training Library?
+## What are the variables of MHA in a Training Library?
 
 <center><img src="./figures/attention_train.png" ...></center>
+
+### Forward Pass of MHA
 
 1. Q, K, V input embeddings
 
@@ -56,13 +58,16 @@ $$
 \mathbf{W}_{O} \quad \mathbf{b}_{O}
 $$
 
-3. Gradients for the matrices, weights and intermeidate matrices
+3. Intermediate variables
+4. Output and target
 
 $$
-\mathbf{W}_{Q} \quad \mathbf{b}_{Q}
+\mathbf{O}_{out}\quad\mathbf{O}_{target}
 $$
 
-### Forward Pass of MHA
+
+The equations of MHA forward pass are as follows,
+
 $$
 \mathbf{Q} = \mathbf{Q}_{in}*\mathbf{W}_{Q}+\mathbf{b}_{Q}
 $$
@@ -109,6 +114,39 @@ $$ \mathbf{grad\\_O}_{out} $$
 $$ \mathbf{O}_{out} $$
 
 ### Backward Pass of MHA
+
+1. Gradients for output (from LayerNorm)
+
+$$
+\mathbf{grad\\_O}_{out}
+$$
+
+2. Gradients for the intermediate variables
+3. Gradients for the forward input
+
+$$ 
+\mathbf{grad\\_Q}_{in} \quad \mathbf{grad\\_K}_{in} \quad \mathbf{grad\\_V}_{in}
+$$
+
+4. Gradients of the weights and biases
+
+$$
+\mathbf{grad\\_W}_{Q} \quad \mathbf{grad\\_v}_{Q}
+$$
+
+$$
+\mathbf{grad\\_W}_{K} \quad \mathbf{grad\\_v}_{K}
+$$
+
+$$
+\mathbf{grad\\_W}_{V} \quad \mathbf{grad\\_v}_{V}
+$$
+
+$$
+\mathbf{grad\\_W}_{O} \quad \mathbf{grad\\_v}_{O}
+$$
+
+The equations of MHA backward pass are as follows,
 
 $$
 \mathbf{grad\\_O} = \mathbf{grad\\_O}_{out}*\mathbf{W}_{O}
@@ -204,7 +242,7 @@ eidnnStatus_t eidnnMSELoss(
 ### Linear
 cuDNN has no specific APIs for linear layer.
 
-In eiDNN, we have
+In eigenDNN, we have
 
 ```
 eidnnStatus_t eidnnLinearForward(eidnnHandle_t handle,
@@ -240,7 +278,7 @@ $$ C = \beta * C + \alpha*Op_c(MatMul(Op_a(A),Op_b(B))) $$
 
 cuDNN has no specific APIs for matrix-multiply operation.
 
-In eiDNN, we have
+In eigenDNN, we have
 
 ```
 eidnnStatus_t eidnnStridedBatchedGemmForward(
@@ -275,7 +313,7 @@ cuDNN has the following APIs for softmax operation.
 * [cudnnSoftmaxForward()](https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnSoftmaxForward)
 * [cudnnSoftmaxBackward()](https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnSoftmaxBackward)
 
-In eiDNN, we have
+In eigenDNN, we have
 
 ```
 eidnnStatus_t eidnnSoftmaxForward(eidnnHandle_t handle,
@@ -306,7 +344,7 @@ cuDNN has the following APIs for dropout operation.
 * [cudnnSetDropoutDescriptor()]()
 * [cudnnDropoutBackward()]()
 
-In eiDNN, we have
+In eigenDNN, we have
 
 ```
 // dropout rate, 
