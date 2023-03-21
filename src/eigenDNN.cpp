@@ -156,9 +156,9 @@ eidnnStatus_t eidnnStridedBatchedGemm(
     for(int h=0; h<A.dimension(1); h++){
       const Tensor<float, 2> A_mat = A.slice(std::array<long,4>({b,h,0,0}), std::array<long,4>({1,1,A.dimension(2),A.dimension(3)})).reshape(std::array<long,2>({A.dimension(2),A.dimension(3)}));
       const Tensor<float, 2> B_mat = B.slice(std::array<long,4>({b,h,0,0}), std::array<long,4>({1,1,B.dimension(2),B.dimension(3)})).reshape(std::array<long,2>({B.dimension(2),B.dimension(3)}));
-      Tensor<float, 2> C_mat = B.slice(std::array<long,4>({b,h,0,0}), std::array<long,4>({1,1,C.dimension(2),C.dimension(3)})).reshape(std::array<long,2>({C.dimension(2), C.dimension(3)}));
-      C_mat = beta*C_mat.eval() + alpha*A_mat.contract(B_mat, Eigen::array<IndexPair<int>,1>({IndexPair<int>(trans_A?0:1, trans_B?1:0)}));
-      C.chip(b,0).chip(h,0) = C_mat;
+      Tensor<float, 2> C_mat = C.slice(std::array<long,4>({b,h,0,0}), std::array<long,4>({1,1,C.dimension(2),C.dimension(3)})).reshape(std::array<long,2>({C.dimension(2), C.dimension(3)}));
+      Tensor<float, 2> C_mat_new = beta*C_mat.eval() + alpha*A_mat.contract(B_mat, Eigen::array<IndexPair<int>,1>({IndexPair<int>(trans_A?0:1, trans_B?1:0)}));
+      C.chip(b,0).chip(h,0) = C_mat_new;
     }
   }
   return EIDNN_STATUS_SUCCESS;

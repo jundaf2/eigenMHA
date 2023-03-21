@@ -49,7 +49,7 @@ add_compile_options(-Wno-unknown-pragmas)
 
 include(CTest)
 add_executable(mha ${ALL_SRC})
-target_include_directories(mha PRIVATE ${COMMON_HEADER_DIRS} SYSTEM ${HDR_FILES_DIR} ${EIGEN_FILES_DIR} ${EIGEN_UNSUPPORTED_FILES_DIR} ${TORCH_INCLUDES} ${COMMON_FILES_DIR})
+target_include_directories(mha PRIVATE SYSTEM ${HDR_FILES_DIR} ${EIGEN_FILES_DIR} ${EIGEN_UNSUPPORTED_FILES_DIR} ${TORCH_INCLUDES} ${COMMON_FILES_DIR})
 target_link_libraries(mha PRIVATE ${TORCH_LIBRARIES})  #  CUDA::cublas_static CUDA::cublasLt_static
 
 set_target_properties(mha PROPERTIES POSITION_INDEPENDENT_CODE ON)

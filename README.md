@@ -1,10 +1,17 @@
 # eigenMHA (eigenDNN) -- Multi-head Attention Inference and Training implemented by Eigen.
-To clone this repo, use
+To clone this repo, 
 ```
-git clone --recursive
+git clone --recursive https://github.com/jundaf2/eigenMHA
+cd eigenMHA
+git clone https://gitlab.com/libeigen/eigen  # clone eigen if necessary
 ```
-As for how to install nnTest (based on LibTorch and CATCH2) for verification, see https://github.com/jundaf2/dnn-test-framework  [nnTest mainly focuses on providing a testing framework to train and inference Deep Neural Networks using YOUR OWN LIBRARY].
-
+To make and run the project, first install LibTorch for necessary verification, see https://github.com/jundaf2/dnn-test-framework  [nnTest mainly focuses on providing a testing framework to train and inference Deep Neural Networks using YOUR OWN LIBRARY]. And then,
+```
+mkdir build && cd build
+cmake ..
+make -j4
+./mha
+```
 
 <center><img src="./figures/MHA.png" ...></center>
 <center>Which part will we implement in the transformer model.</center>

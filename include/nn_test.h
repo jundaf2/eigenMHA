@@ -145,9 +145,11 @@ class nnTest {
         std::vector<float> data_vec = it->second;
         SECTION(std::string(ANSI_COLOR_RED) + name + ANSI_COLOR_RESET) {
           bool is_near2 = true;
+          size_t count = 0;
           for (int i = 0; i < data_vec.size(); i++) {
             bool is_this_near2 = NEAR2(data_vec[i], torch_test_data_bank[name][i], 1e-1);
-            if(!is_this_near2){
+            if(!is_this_near2 && count<print_el_num){
+              count++;
               fmt::print(ANSI_COLOR_RED "ERROR @ {}[{}] {} vs {}\n" ANSI_COLOR_RESET, name, i, data_vec[i], torch_test_data_bank[name][i]);
             }
             is_near2 &= is_this_near2;
