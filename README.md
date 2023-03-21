@@ -33,7 +33,7 @@ git checkout torch
 ```
 git checkout cudnn
 ```
-To be concrete, this eigenMHA (eigenDNN) does what the cuDNN does in the following APIs for MHA operations.
+To be more specific, this eigenMHA (eigenDNN) does what the cuDNN does in the following APIs for MHA operations.
 * [cudnnCreateAttnDescriptor()](https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnCreateAttnDescriptor)
 * [cudnnSetAttnDescriptor()](https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnSetAttnDescriptor)
 * [cudnnGetAttnDescriptor()](https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnGetAttnDescriptor)
@@ -44,8 +44,6 @@ To be concrete, this eigenMHA (eigenDNN) does what the cuDNN does in the followi
 * [cudnnMultiHeadAttnForward()](https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnMultiHeadAttnForward)
 * [cudnnMultiHeadAttnBackwardData()](https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnMultiHeadAttnBackwardData)
 * [cudnnMultiHeadAttnBackwardWeights()](https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnMultiHeadAttnBackwardWeights)
-
-
 
 
 ## What are the variables of MHA in a Training Library?
