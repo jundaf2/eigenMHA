@@ -33,6 +33,9 @@ git checkout torch
 ```
 git checkout cudnn
 ```
+
+To install cuDNN, see https://developer.nvidia.com/rdp/cudnn-download and https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html#installlinux-tar
+
 To be more specific, this eigenMHA (eigenDNN) does what the cuDNN does in the following APIs for MHA operations.
 * [cudnnCreateAttnDescriptor()](https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnCreateAttnDescriptor)
 * [cudnnSetAttnDescriptor()](https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnSetAttnDescriptor)
