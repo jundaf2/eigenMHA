@@ -258,13 +258,6 @@ eidnnStatus_t eidnnLinearBackward(eidnnHandle_t handle,
                      const Tensor<float, 3>& x,
                      const Tensor<float, 2>& w,
                      Tensor<float, 3>& dx, // gradient of input data
-                     Tensor<float, 2>& dw // accumulated gradient of input weight
-                     );
-eidnnStatus_t eidnnLinearBackward(eidnnHandle_t handle,
-                     const Tensor<float, 3>& dy,
-                     const Tensor<float, 3>& x,
-                     const Tensor<float, 2>& w,
-                     Tensor<float, 3>& dx, // gradient of input data
                      Tensor<float, 2>& dw, // accumulated gradient of weight
                      Tensor<float, 1>& dbias // accumulated gradient of bias
                      );
