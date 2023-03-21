@@ -17,7 +17,23 @@ make -j4
 <center>Which part will we implement in the transformer model.</center>
 
 ## Introduction
- In this repo, we use Eigen3 to implement the forward and backward of Multi-head Attention in Transformer models. To be concrete, this eigenMHA (eigenDNN) does what the cuDNN does in the following APIs for MHA operations.
+ In this repo, we use Eigen3 to implement the forward and backward of Multi-head Attention in Transformer models. Basically, this repo has two branches -- `torch` and `cudnn`. 
+
+## The MHAs in this repo
+1. a pytorch MHA in `mha.py` that illustrates the MHA module we implement
+2. an eigen MHA in `mha.cc` in both branches (with sources in `./src/eigenDNN.cpp` and headers in `./inlcude/eigenDNN.h`)
+3. a libtorch MHA in the `torch` branch as a comparison to the eigenMHA
+4. a cudnn MHA in the `cudnn` branch as a comparison to the eigenMHA
+
+### branch `torch`
+```
+git checkout torch
+```
+### branch `cudnn`
+```
+git checkout cudnn
+```
+To be concrete, this eigenMHA (eigenDNN) does what the cuDNN does in the following APIs for MHA operations.
 * [cudnnCreateAttnDescriptor()](https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnCreateAttnDescriptor)
 * [cudnnSetAttnDescriptor()](https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnSetAttnDescriptor)
 * [cudnnGetAttnDescriptor()](https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnGetAttnDescriptor)
@@ -30,10 +46,7 @@ make -j4
 * [cudnnMultiHeadAttnBackwardWeights()](https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnMultiHeadAttnBackwardWeights)
 
 
-## The MHAs in this repo
-1. a pytorch MHA in `mha.py`
-2. a libtorch MHA in `mha.cc`
-3. an eigen MHA in `mha.cc` and `./src/eigenDNN.cpp` (with headers in `./inlcude/eigenDNN.h`)
+
 
 ## What are the variables of MHA in a Training Library?
 
