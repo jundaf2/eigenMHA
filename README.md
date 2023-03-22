@@ -152,19 +152,19 @@ $$
 4. Gradients of the weights and biases
 
 $$
-\mathbf{grad\\_W}_{Q} \quad \mathbf{grad\\_v}_{Q}
+\mathbf{grad\\_W}_{Q} \quad \mathbf{grad\\_b}_{Q}
 $$
 
 $$
-\mathbf{grad\\_W}_{K} \quad \mathbf{grad\\_v}_{K}
+\mathbf{grad\\_W}_{K} \quad \mathbf{grad\\_b}_{K}
 $$
 
 $$
-\mathbf{grad\\_W}_{V} \quad \mathbf{grad\\_v}_{V}
+\mathbf{grad\\_W}_{V} \quad \mathbf{grad\\_b}_{V}
 $$
 
 $$
-\mathbf{grad\\_W}_{O} \quad \mathbf{grad\\_v}_{O}
+\mathbf{grad\\_W}_{O} \quad \mathbf{grad\\_b}_{O}
 $$
 
 The equations of MHA backward pass are as follows,
