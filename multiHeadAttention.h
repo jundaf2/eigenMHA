@@ -79,10 +79,8 @@ struct testOpts {
     int attnProjOsize;
     int attnSeqLenQ;
     int attnSeqLenK;
-    int attnDataLayout;
     int attnResLink;
     int attnProjBias;
-    int attnSweep;
 };
 
 struct attnConfig {
@@ -106,7 +104,6 @@ struct attnConfig {
     int batchSize;      // batch size for Q, R, K, V, O buffers
     bool resLink;       // enable/disable residual connections
     bool projBias;      // enable/disable residual connections
-    int sweep;          // sweep all time-steps in inference mode
     int randSeed;       // random number generator seed
 
     unsigned attnMode;  // Attention Mode parameter

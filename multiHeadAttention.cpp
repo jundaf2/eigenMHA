@@ -181,7 +181,6 @@ void MultiheadAttentionTest<IS_TRAINING, T_ELEM, T_MATH>::setup(testOpts &opts) 
     mainCfg.seqLenK     = opts.attnSeqLenK;
     mainCfg.resLink     = opts.attnResLink == 0 ? false : true;
     mainCfg.projBias    = opts.attnProjBias == 0 ? false : true;
-    mainCfg.sweep       = opts.attnSweep;
     mainCfg.dataType    = cudnnDataType_t(opts.attnDataType);
     mainCfg.compPrec    = cudnnDataType_t(opts.attnCompPrec);
 
@@ -471,7 +470,6 @@ void MultiheadAttentionTest<IS_TRAINING, T_ELEM, T_MATH>::testgen(attnConfig *te
     printf("#### attnSeqLenK     = %d\n", testCfg->seqLenK);
     printf("#### attnResLink     = %d\n", testCfg->resLink);
     printf("#### attnProjBias    = %d\n", testCfg->projBias);
-    printf("#### attnSweep       = %d\n", testCfg->sweep);
 
     for (size_t i = 0; i < qBatches; ++i) {
         printf("sequence_length_q[idx=%lu]=%d\n", i, qSeqArray[i]);
