@@ -3,11 +3,13 @@
 #include "eigenDNN.h"
 #define CATCH_CONFIG_MAIN
 #include "catch.hpp"
+#include "multiHeadAttention.h"
 
 using namespace std;
 
-struct test_MHA {
+class test_MHA {
 
+public:
   test_MHA(int batch_size, int n_heads, int seq_len_q, int seq_len_k, int head_size, float dropout_rate){
     this->hidden_size = head_size*n_heads;
     this->batch_size=batch_size;
@@ -19,7 +21,6 @@ struct test_MHA {
 
   }
 
-public:
   void init_data() {
     
     size_t weight_len = hidden_size*hidden_size;
@@ -32,7 +33,7 @@ public:
   }
 
   
-  void run_my_dnn(){
+  void run_eigen_dnn(){
     using namespace Eigen;
     eigenDNN::eidnnHandle_t handle;
     void* saved_states;
@@ -230,7 +231,48 @@ public:
   }
 
   void run_cudnn_dnn(){
+    // for comparison, you have to set beamsize=1, randgeo=0, dropout=0
+    testOpts opts;
 
+    // Default test parameters to be overwritten by user cmd line options.
+    opts.attnTrain       = 0;
+    opts.attnDataType    = CUDNN_DATA_FLOAT;
+    opts.attnCompPrec    = CUDNN_DATA_FLOAT;
+    opts.attnQueryMap    = 0;
+    opts.attnNumHeads    = 2;
+    opts.attnBeamSize    = 3;
+    opts.attnSmScaler    = 1.0;
+    opts.attnDropoutRate = 0.0;
+    opts.attnQsize       = 32;
+    opts.attnKsize       = 32;
+    opts.attnVsize       = 32;
+    opts.attnProjQsize   = 8;
+    opts.attnProjKsize   = 8;
+    opts.attnProjVsize   = 8;
+    opts.attnProjOsize   = 8;
+    opts.attnSeqLenQ     = 24;
+    opts.attnSeqLenK     = 20;
+    opts.attnBatchSize   = 4;
+    opts.attnDataLayout  = 0;
+    opts.attnResLink     = 0;
+    opts.attnProjBias    = 0;
+    opts.attnSweep       = 0;
+
+    if(opts.attnTrain == 0)
+    {
+      MultiheadAttentionTest<false, float,  float> attnTest;
+      attnTest.setup(opts);
+      attnTest.run();
+      attnTest.teardown();
+    }
+    else if(opts.attnTrain == 1){
+      MultiheadAttentionTest<true, float,  float> attnTest;
+      attnTest.setup(opts);
+      attnTest.run();
+      attnTest.teardown();
+    }
+    printf("\nTest DONE\n\n");
+    fflush(stdout);
   }
 
 
@@ -243,6 +285,8 @@ private:
 
 int eval_mha(unsigned batch_size,unsigned n_heads,unsigned seq_len_q,unsigned seq_len_k,unsigned head_size,float dropout_rate){
   test_MHA test_mha(batch_size,n_heads,seq_len_q,seq_len_k,head_size,dropout_rate);
+  test_mha.run_cudnn_dnn();
+  test_mha.run_eigen_dnn();
 }
 
 TEST_CASE("MHA", "[mha]") {

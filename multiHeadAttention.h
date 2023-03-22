@@ -85,7 +85,6 @@ struct testOpts {
     int attnSweep;
     int attnRandGeom;
     int attnRandSeed;
-    int attnFileDump;
 };
 
 struct attnConfig {
@@ -112,7 +111,6 @@ struct attnConfig {
     int sweep;          // sweep all time-steps in inference mode
     int randGeom;       // randomize poblem dimensions
     int randSeed;       // random number generator seed
-    int fileDump;       // save single sentence data to file
 
     unsigned attnMode;  // Attention Mode parameter
 

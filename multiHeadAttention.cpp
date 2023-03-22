@@ -32,6 +32,7 @@
 #include <errno.h>
 #include "multiHeadAttention.h"
 
+
 #define COUNTOF(arr) int(sizeof(arr) / sizeof(arr[0]))
 #define INIT_MEAN    0.0
 #define INIT_VAR     0.5
@@ -82,23 +83,6 @@ void initBuffer(T_ELEM *image, size_t imageSize, double mean, double var) {
     }
 }
 
-void saveMeta(const char *fName, bool isTraining, attnConfig *testCfg) {
-    FILE *fp = fopen(fName, "w");
-    if (fp == NULL) {
-        const char *reason = (errno ? strerror(errno) : "unknown reason");
-        fprintf(stderr, "ERROR: failed to open '%s' file (%s)\n\n", fName, reason);
-        exit(-1);
-    }
-
-    fprintf(fp, "# train_mode, attn_heads, softmax_scaler, residuals\n");
-    fprintf(fp, "%d %d %.16e %d\n", isTraining, testCfg->numHeads, testCfg->smScaler, testCfg->resLink);
-
-    if (fclose(fp) != 0) {
-        const char *reason = (errno ? strerror(errno) : "unknown reason");
-        fprintf(stderr, "ERROR: failed to write to '%s' file (%s)\n\n", fName, reason);
-        exit(-1);
-    }
-}
 
 template <typename T_ELEM>
 void saveWeights(const char *fName, int dimA[3], int strideA[3], T_ELEM *weightAddr) {
@@ -120,108 +104,6 @@ void saveWeights(const char *fName, int dimA[3], int strideA[3], T_ELEM *weightA
             }
             fprintf(fp, "\n");
         }
-    }
-
-    if (fclose(fp) != 0) {
-        const char *reason = (errno ? strerror(errno) : "unknown reason");
-        fprintf(stderr, "ERROR: failed to write to '%s' file (%s)\n\n", fName, reason);
-        exit(-1);
-    }
-}
-
-template <typename T_ELEM>
-void saveAllParams(cudnnHandle_t handle, cudnnAttnDescriptor_t desc, bool isGgrad, size_t paramSize, void *paramBuf) {
-    static cudnnMultiHeadAttnWeightKind_t wKind[WGROUP_COUNT] = {
-        CUDNN_MH_ATTN_Q_WEIGHTS, CUDNN_MH_ATTN_K_WEIGHTS, CUDNN_MH_ATTN_V_WEIGHTS, CUDNN_MH_ATTN_O_WEIGHTS};
-
-    static const char * baseName[WGROUP_COUNT] = { "wq.dat", "wk.dat", "wv.dat", "wo.dat" };
-
-    cudnnTensorDescriptor_t weightDesc = NULL;
-    int nbDims, dimA[3], strideA[3];
-    cudnnDataType_t dataTypeUnsed;
-    char fileName[64];
-
-    CHECK_CUDNN_ERR(cudnnCreateTensorDescriptor(&weightDesc));
-
-    for (int i = 0; i < WGROUP_COUNT; i++) {
-        T_ELEM *weightAddr = NULL;
-        CHECK_CUDNN_ERR(cudnnGetMultiHeadAttnWeights(
-            handle, desc, wKind[i], paramSize, paramBuf, weightDesc, (void **)&weightAddr));
-
-        CHECK_CUDNN_ERR(cudnnGetTensorNdDescriptor(weightDesc, 3, &dataTypeUnsed, &nbDims, dimA, strideA));
-
-        // cudnnGetMultiHeadAttnWeights() reports a wrong stride in ealier 
-        // cuDNN versions for input projection weight tensors.
-        if (cudnnGetVersion() < 7602 && wKind[i] != CUDNN_MH_ATTN_O_WEIGHTS) {
-            strideA[2] = dimA[0] * dimA[1];
-        }
-
-        if (nbDims != 3) {
-            fprintf(stderr, "ERROR: weight tensor descriptor should have 3 dimensions, not %d\n\n", nbDims);
-            exit(-1);
-        }
-
-        sprintf(fileName, "%s%s", isGgrad ? "d" : "", baseName[i]);
-        saveWeights<T_ELEM>(fileName, dimA, strideA, weightAddr);
-    }
-
-    cudnnDestroyTensorDescriptor(weightDesc);
-}
-
-template <typename T_ELEM>
-void saveData(const char *fName, int batch, int beam, int nDims, int dimA[4], cudnnSeqDataAxis_t ordA[4], T_ELEM *dataBuf) {
-    if (nDims != 4) {
-        fprintf(stderr, "ERROR: unexpected number of dimensions %d!=4 in seqdata\n\n", nDims);
-        exit(-1);
-    }
-
-    if (batch < 0 || batch >= dimA[CUDNN_SEQDATA_BATCH_DIM]) {
-        fprintf(stderr, "ERROR: invalid batch=%d for file dump\n\n", batch);
-        exit(-1);
-    }
-
-    if (beam < 0 || beam >= dimA[CUDNN_SEQDATA_BEAM_DIM]) {
-        fprintf(stderr, "ERROR: invalid beam=%d for file dump\n\n", beam);
-        exit(-1);
-    }
-
-    FILE *fp = fopen(fName, "w");
-    if (fp == NULL) {
-        const char *reason = (errno ? strerror(errno) : "unknown reason");
-        fprintf(stderr, "ERROR: failed to open '%s' file (%s)\n\n", fName, reason);
-        exit(-1);
-    }
-
-    // The length of embedding vector (same as CUDNN_SEQDATA_VECT_DIM).
-    int veclen = dimA[nDims - 1];
-
-    // Actual strides in memory (layout dependent).
-    size_t strA[4] = {0};
-
-    // Compute strides from dimensions (SeqData is a packed container).
-    strA[nDims - 1] = 1;
-    size_t stride   = veclen;
-    for (int i = nDims - 2; i >= 0; i--) {
-        if (ordA[i] < nDims - 1 && strA[ordA[i]] == 0) {
-            strA[ordA[i]] = stride;
-            stride *= dimA[ordA[i]];
-        } else {
-            fprintf(stderr, "ERROR: invalid re-order index ordA[i=%d]=%d\n\n", i, ordA[i]);
-            exit(-1);
-        }
-    }
-
-    // Number of decimal digits when saving as text.
-    int decDigs = (sizeof(T_ELEM) == sizeof(double) ? 16 : 8);
-
-    // Write one full sentence (all time-steps for the given batch/beam).
-    size_t base = size_t(batch) * strA[CUDNN_SEQDATA_BATCH_DIM] + size_t(beam) * strA[CUDNN_SEQDATA_BEAM_DIM];
-    for (int vect = 0; vect < veclen; vect++) {
-        for (int time = 0; time < dimA[CUDNN_SEQDATA_TIME_DIM]; time++) {
-            size_t idx = size_t(time) * strA[CUDNN_SEQDATA_TIME_DIM] + size_t(vect) * strA[CUDNN_SEQDATA_VECT_DIM];
-            fprintf(fp, " % -.*e", decDigs, double(dataBuf[base + idx]));
-        }
-        fprintf(fp, "\n");
     }
 
     if (fclose(fp) != 0) {
@@ -304,7 +186,6 @@ void MultiheadAttentionTest<IS_TRAINING, T_ELEM, T_MATH>::setup(testOpts &opts) 
     mainCfg.randSeed    = opts.attnRandSeed;
     mainCfg.dataType    = cudnnDataType_t(opts.attnDataType);
     mainCfg.compPrec    = cudnnDataType_t(opts.attnCompPrec);
-    mainCfg.fileDump    = opts.attnFileDump != 0 ? 1 : 0;
 
     if (opts.attnQueryMap == 0) {
         mainCfg.attnMode = (mainCfg.attnMode | CUDNN_ATTN_QUERYMAP_ALL_TO_ONE);
@@ -329,32 +210,6 @@ void MultiheadAttentionTest<IS_TRAINING, T_ELEM, T_MATH>::setup(testOpts &opts) 
         exit(-1);
     }
 
-    if (mainCfg.fileDump != 0) {
-        if (mainCfg.batchSize > 1) {
-            fprintf(stderr, "ERROR: -attnFileDump%d requires -attnBatchSize=1\n\n", opts.attnFileDump);
-            exit(-1);
-        }
-
-        if (mainCfg.beamSize > 1) {
-            fprintf(stderr, "ERROR: -attnFileDump%d requires -attnBeamSize=1\n\n", opts.attnFileDump);
-            exit(-1);
-        }
-
-        if (mainCfg.randGeom != 0) {
-            fprintf(stderr, "ERROR: -attnFileDump%d requires -attnRandGeom=0\n\n", opts.attnFileDump);
-            exit(-1);
-        }
-
-        if (mainCfg.projBias != 0) {
-            fprintf(stderr, "ERROR: -attnFileDump%d requires -attnProjBias=0\n\n", opts.attnFileDump);
-            exit(-1);
-        }
-
-        if (IS_TRAINING && mainCfg.dropoutRate > 0.0) {
-            fprintf(stderr, "ERROR: -attnFileDump%d requires -attnDropoutRate=0\n\n", opts.attnFileDump);
-            exit(-1);
-        }
-    }
 
     int qProjLen = mainCfg.qLength();
     int kProjLen = mainCfg.kLength();
@@ -635,37 +490,21 @@ void MultiheadAttentionTest<IS_TRAINING, T_ELEM, T_MATH>::testgen(attnConfig *te
     // Set random number generator seed.
     srand48(testCfg->randSeed);
 
-    // No problem size randomization when the RNG seed is zero.
-    if (testCfg->randGeom != 0) {
-        for (size_t i = 0; i < qBatches; ++i) {
-            qSeqArray[i] = randRangeInt(1, testCfg->seqLenQ);
-        }
-
-        for (size_t i = 0; i < kBatches; ++i) {
-            kSeqArray[i] = randRangeInt(1, testCfg->seqLenK);
-        }
-
-        // Set the random size of attention window in all time-steps.
-        for (int i = 0; i < testCfg->seqLenQ; ++i) {
-            loWinIdx[i] = randRangeInt(0, testCfg->seqLenK - 1);
-            hiWinIdx[i] = randRangeInt(loWinIdx[i], testCfg->seqLenK);
-        }
-    } else {
-        // Fixed lengths for all sequences in a batch.
-        for (size_t i = 0; i < qBatches; ++i) {
-            qSeqArray[i] = testCfg->seqLenQ;
-        }
-
-        for (size_t i = 0; i < kBatches; ++i) {
-            kSeqArray[i] = testCfg->seqLenK;
-        }
-
-        // Set the maximum attention window in all time-steps.
-        for (int i = 0; i < testCfg->seqLenQ; ++i) {
-            loWinIdx[i] = 0;
-            hiWinIdx[i] = testCfg->seqLenK;
-        }
+    // Fixed lengths for all sequences in a batch.
+    for (size_t i = 0; i < qBatches; ++i) {
+        qSeqArray[i] = testCfg->seqLenQ;
     }
+
+    for (size_t i = 0; i < kBatches; ++i) {
+        kSeqArray[i] = testCfg->seqLenK;
+    }
+
+    // Set the maximum attention window in all time-steps.
+    for (int i = 0; i < testCfg->seqLenQ; ++i) {
+        loWinIdx[i] = 0;
+        hiWinIdx[i] = testCfg->seqLenK;
+    }
+    
 
     const char standardAxes[CUDNN_SEQDATA_DIM_COUNT] = {'T', 'N', 'B', 'V'};
     char dataAxes[CUDNN_SEQDATA_DIM_COUNT];
@@ -697,7 +536,6 @@ void MultiheadAttentionTest<IS_TRAINING, T_ELEM, T_MATH>::testgen(attnConfig *te
     printf("#### attnSweep       = %d\n", testCfg->sweep);
     printf("#### attnRandGeom    = %d\n", testCfg->randGeom);
     printf("#### attnRandSeed    = %d\n", testCfg->randSeed);
-    printf("#### attnFileDump    = %d\n\n", testCfg->fileDump);
 
     for (size_t i = 0; i < qBatches; ++i) {
         printf("sequence_length_q[idx=%lu]=%d\n", i, qSeqArray[i]);
@@ -864,26 +702,6 @@ void MultiheadAttentionTest<IS_TRAINING, T_ELEM, T_MATH>::run() {
         CHECK_CUDA_ERR(cudaMemcpy(devDO, hostDO, oNmbElem * sizeof(devO[0]), cudaMemcpyHostToDevice));
     }
 
-    if (testCfg.fileDump) {
-        cudnnSeqDataAxis_t ordA[CUDNN_SEQDATA_DIM_COUNT];
-        int nbDims;
-
-        saveMeta("meta.dat", IS_TRAINING, &testCfg);
-
-        CHECK_CUDNN_ERR(cudnnGetSeqDataDescriptor(q_desc, NULL, &nbDims, CUDNN_SEQDATA_DIM_COUNT, dimA, ordA, NULL, 0, NULL, NULL));
-        saveData<T_ELEM>("q.dat", 0, 0, nbDims, dimA, ordA, hostQ);
-        CHECK_CUDNN_ERR(cudnnGetSeqDataDescriptor(k_desc, NULL, &nbDims, CUDNN_SEQDATA_DIM_COUNT, dimA, ordA, NULL, 0, NULL, NULL));
-        saveData<T_ELEM>("k.dat", 0, 0, nbDims, dimA, ordA, hostK);
-        CHECK_CUDNN_ERR(cudnnGetSeqDataDescriptor(v_desc, NULL, &nbDims, CUDNN_SEQDATA_DIM_COUNT, dimA, ordA, NULL, 0, NULL, NULL));
-        saveData<T_ELEM>("v.dat", 0, 0, nbDims, dimA, ordA, hostV);
-
-        if (IS_TRAINING) {
-            CHECK_CUDNN_ERR(cudnnGetSeqDataDescriptor(o_desc, NULL, &nbDims, CUDNN_SEQDATA_DIM_COUNT, dimA, ordA, NULL, 0, NULL, NULL));
-            saveData<T_ELEM>("dout.dat", 0, 0, nbDims, dimA, ordA, hostDO);
-        }
-
-        saveAllParams<T_ELEM>(handle, attn_desc, false, sizeWeights, hostW);
-    }
 
     double start = seconds();
 
@@ -966,58 +784,30 @@ void MultiheadAttentionTest<IS_TRAINING, T_ELEM, T_MATH>::run() {
             fprintf(stderr, "ERROR: non-zero reserve buffer size in inference mode\n\n");
             exit(-1);
         }
-        if (testCfg.sweep == 0) {
-            // Explicit looping through all time-steps in the inference mode.
-            for (int currIdx = 0; currIdx < testCfg.seqLenQ; ++currIdx) {
-                printf("Calling cudnnMultiHeadAttnForward(currIdx = %d)\n", currIdx);
-                CHECK_CUDNN_ERR(cudnnMultiHeadAttnForward(handle,
-                                                          attn_desc,
-                                                          currIdx,
-                                                          loWinIdx,
-                                                          hiWinIdx,
-                                                          devQSeqArray,
-                                                          devKSeqArray,
-                                                          q_desc,
-                                                          devQ,
-                                                          mainCfg.resLink ? devQ : NULL,
-                                                          k_desc,
-                                                          devK,
-                                                          v_desc,
-                                                          devV,
-                                                          o_desc,
-                                                          devO,
-                                                          sizeWeights,
-                                                          sizeWeights > 0 ? devW : NULL,
-                                                          sizeWkspace,
-                                                          devWkspace,
-                                                          0,
-                                                          NULL));
-            }
-        } else {
-            printf("Calling cudnnMultiHeadAttnForward(currIdx = -1)\n");
-            CHECK_CUDNN_ERR(cudnnMultiHeadAttnForward(handle,
-                                                      attn_desc,
-                                                      -1,
-                                                      loWinIdx,
-                                                      hiWinIdx,
-                                                      devQSeqArray,
-                                                      devKSeqArray,
-                                                      q_desc,
-                                                      devQ,
-                                                      mainCfg.resLink ? devQ : NULL,
-                                                      k_desc,
-                                                      devK,
-                                                      v_desc,
-                                                      devV,
-                                                      o_desc,
-                                                      devO,
-                                                      sizeWeights,
-                                                      sizeWeights > 0 ? devW : NULL,
-                                                      sizeWkspace,
-                                                      devWkspace,
-                                                      0,
-                                                      NULL));
-        }
+
+        printf("Calling cudnnMultiHeadAttnForward(currIdx = -1)\n");
+        CHECK_CUDNN_ERR(cudnnMultiHeadAttnForward(handle,
+                                                    attn_desc,
+                                                    -1,
+                                                    loWinIdx,
+                                                    hiWinIdx,
+                                                    devQSeqArray,
+                                                    devKSeqArray,
+                                                    q_desc,
+                                                    devQ,
+                                                    mainCfg.resLink ? devQ : NULL,
+                                                    k_desc,
+                                                    devK,
+                                                    v_desc,
+                                                    devV,
+                                                    o_desc,
+                                                    devO,
+                                                    sizeWeights,
+                                                    sizeWeights > 0 ? devW : NULL,
+                                                    sizeWkspace,
+                                                    devWkspace,
+                                                    0,
+                                                    NULL));
     }
 
     CHECK_CUDA_ERR(cudaDeviceSynchronize());
@@ -1029,198 +819,18 @@ void MultiheadAttentionTest<IS_TRAINING, T_ELEM, T_MATH>::run() {
     // Copy forward output to host.
     CHECK_CUDA_ERR(cudaMemcpy(hostO, devO, oNmbElem * sizeof(devO[0]), cudaMemcpyDeviceToHost));
 
-    if (testCfg.fileDump) {
-        cudnnSeqDataAxis_t ordA[CUDNN_SEQDATA_DIM_COUNT];
-        int nbDims;
+    if (IS_TRAINING) {
+        CHECK_CUDA_ERR(cudaMemcpy(hostDQ, devDQ, sizeof(devDQ[0]) * qNmbElem, cudaMemcpyDeviceToHost));
+        CHECK_CUDA_ERR(cudaMemcpy(hostDK, devDK, sizeof(devDK[0]) * kNmbElem, cudaMemcpyDeviceToHost));
+        CHECK_CUDA_ERR(cudaMemcpy(hostDV, devDV, sizeof(devDV[0]) * vNmbElem, cudaMemcpyDeviceToHost));
 
-        CHECK_CUDNN_ERR(cudnnGetSeqDataDescriptor(o_desc, NULL, &nbDims, CUDNN_SEQDATA_DIM_COUNT, dimA, ordA, NULL, 0, NULL, NULL));
-        saveData<T_ELEM>("out.dat", 0, 0, nbDims, dimA, ordA, hostO);
-
-        if (IS_TRAINING) {
-            CHECK_CUDA_ERR(cudaMemcpy(hostDQ, devDQ, sizeof(devDQ[0]) * qNmbElem, cudaMemcpyDeviceToHost));
-            CHECK_CUDA_ERR(cudaMemcpy(hostDK, devDK, sizeof(devDK[0]) * kNmbElem, cudaMemcpyDeviceToHost));
-            CHECK_CUDA_ERR(cudaMemcpy(hostDV, devDV, sizeof(devDV[0]) * vNmbElem, cudaMemcpyDeviceToHost));
-
-            CHECK_CUDNN_ERR(cudnnGetSeqDataDescriptor(q_desc, NULL, &nbDims, CUDNN_SEQDATA_DIM_COUNT, dimA, ordA, NULL, 0, NULL, NULL));
-            saveData<T_ELEM>("dq.dat", 0, 0, nbDims, dimA, ordA, hostDQ);
-
-            CHECK_CUDNN_ERR(cudnnGetSeqDataDescriptor(k_desc, NULL, &nbDims, CUDNN_SEQDATA_DIM_COUNT, dimA, ordA, NULL, 0, NULL, NULL));
-            saveData<T_ELEM>("dk.dat", 0, 0, nbDims, dimA, ordA, hostDK);
-
-            CHECK_CUDNN_ERR(cudnnGetSeqDataDescriptor(v_desc, NULL, &nbDims, CUDNN_SEQDATA_DIM_COUNT, dimA, ordA, NULL, 0, NULL, NULL));
-            saveData<T_ELEM>("dv.dat", 0, 0, nbDims, dimA, ordA, hostDV);
-
-            // Copy wgrad results to host
-            if (sizeWeights > 0) {
-                CHECK_CUDA_ERR(cudaMemcpy(hostDW, devDW, sizeWeights, cudaMemcpyDeviceToHost));
-                saveAllParams<T_ELEM>(handle, attn_desc, true, sizeWeights, hostDW);
-            }
+        // Copy wgrad results to host
+        if (sizeWeights > 0) {
+            CHECK_CUDA_ERR(cudaMemcpy(hostDW, devDW, sizeWeights, cudaMemcpyDeviceToHost));
         }
     }
+    
 }
 
-template <bool IS_TRAINING, typename T_ELEM, typename T_MATH>
-void doTest(testOpts &opts) {
-    MultiheadAttentionTest<IS_TRAINING, T_ELEM, T_MATH> attnTest;
-    attnTest.setup(opts);
-    attnTest.run();
-    attnTest.teardown();
-    printf("\nTest DONE\n\n");
-    fflush(stdout);
-}
-
-static char * baseFile(char *fname) {
-    char *base;
-    for (base = fname; *fname != '\0'; fname++) {
-        if (*fname == '/' || *fname == '\\') {
-            base = fname + 1;
-        }
-    }
-    return base;
-}
-
-static void parseAttnParameters(int argc, char **argv, testOpts *opts) {
-    struct cmdParams {
-        const char  *name;
-        const char  *fmt;
-        size_t      offs;
-        const char  *desc;
-    } param[] = {
-        { "attnTrain",       "%d",  offsetof(testOpts, attnTrain),       "selects API mode (0-inference, 1-training)"     },
-        { "attnDataType",    "%d",  offsetof(testOpts, attnDataType),    "selects data format (0-FP16, 1-FP32, 2-FP64)"   },
-        { "attnCompPrec",    "%d",  offsetof(testOpts, attnCompPrec),    "selects math format (0-FP16, 1-FP32, 2-FP64)"   },
-        { "attnNumHeads",    "%d",  offsetof(testOpts, attnNumHeads),    "number of attenton heads"                       },
-        { "attnBatchSize",   "%d",  offsetof(testOpts, attnBatchSize),   "batch size for Q, R, K, V and O arguments"      },
-        { "attnBeamSize",    "%d",  offsetof(testOpts, attnBeamSize),    "number of sentence candidates in Q, R inputs"   },
-        { "attnSmScaler",    "%lg", offsetof(testOpts, attnSmScaler),    "softmax smoothing or sharpening coefficient"    },
-        { "attnDropoutRate", "%g",  offsetof(testOpts, attnDropoutRate), "dropout rate settings applied during training"  },
-        { "attnQsize",       "%d",  offsetof(testOpts, attnQsize),       "original vector length for 'queries'"           },
-        { "attnKsize",       "%d",  offsetof(testOpts, attnKsize),       "original vector length for 'keys'"              },
-        { "attnVsize",       "%d",  offsetof(testOpts, attnVsize),       "original vector length for 'values'"            },
-        { "attnProjQsize",   "%d",  offsetof(testOpts, attnProjQsize),   "length of 'queries' vector after projection"    },
-        { "attnProjKsize",   "%d",  offsetof(testOpts, attnProjKsize),   "length of 'keys' vector after projection"       },
-        { "attnProjVsize",   "%d",  offsetof(testOpts, attnProjVsize),   "length of 'values' vector after projection"     },
-        { "attnProjOsize",   "%d",  offsetof(testOpts, attnProjOsize),   "length of 'output' vector after projection"     },
-        { "attnSeqLenQ",     "%d",  offsetof(testOpts, attnSeqLenQ),     "largest sequence length for Q, R, O arguments"  },
-        { "attnSeqLenK",     "%d",  offsetof(testOpts, attnSeqLenK),     "largest sequence length for K, V arguments"     },
-        { "attnDataLayout",  "%d",  offsetof(testOpts, attnDataLayout),  "data layout for Q, K, V, O inputs"              },
-        { "attnResLink",     "%d",  offsetof(testOpts, attnResLink),     "enable/disable residual connections"            },
-        { "attnProjBias",    "%d",  offsetof(testOpts, attnProjBias),    "enable/disable projection biases"               },
-        { "attnSweep",       "%d",  offsetof(testOpts, attnSweep),       "sweep all time-steps in one inference API call" },
-        { "attnRandGeom",    "%d",  offsetof(testOpts, attnRandGeom),    "randomize attention task dimensions"            },
-        { "attnRandSeed",    "%d",  offsetof(testOpts, attnRandSeed),    "seed for the random number generator"           },
-        { "attnFileDump",    "%d",  offsetof(testOpts, attnFileDump),    "dump weights/data to file for single sentence"  },
-    };
-
-    if (argc == 1) {
-        printf("This is the cuDNN multi-head attention API test.\n\n");
-        printf("Usage: ./%s [OPTIONS]\n\nProgram options:\n\n", baseFile(*argv));
-
-        for (int i = 0; i < COUNTOF(param); i++) {
-            char buf[64];
-            sprintf(buf, "-%s<%s>", param[i].name, param[i].fmt);
-            printf("%-20s - %s\n", buf, param[i].desc);
-        }
-        printf("\n");
-
-        exit(-1);
-    }
-
-    while (argc > 1) {
-        argc--;
-        argv++;
-
-        int i;
-
-        for (i = 0; i < COUNTOF(param); i++) {
-            const char *pname = param[i].name;
-            size_t plen = strlen(pname);
-            if (strncmp(*argv + 1, pname, plen) == 0) {
-                int count = sscanf(*argv + plen + 1, param[i].fmt, (char*)opts + param[i].offs);
-                if (count != 1) {
-                    fprintf(stderr, "ERROR: missing numerical argument in option '%s'\n\n", *argv);
-                    exit(-1);
-                }
-                break;
-            }
-        }
-
-        if (i >= COUNTOF(param)) {
-            fprintf(stderr, "ERROR: unknown switch '%s'\n\n", *argv);
-            exit(-1);
-        }
-    }
-}
-
-typedef void (*do_test_fp) (testOpts &opts);
-
-// int main(int argc, char **argv) {
-//     testOpts opts;
-
-//     printf("Executing: %s", baseFile(argv[0]));
-//     for (int i = 1; i < argc; i++) {
-//         printf(" %s", argv[i]);
-//     }
-//     printf("\n\n");
-
-//     // Default test parameters to be overwritten by user cmd line options.
-//     opts.attnTrain       = 0;
-//     opts.attnDataType    = CUDNN_DATA_FLOAT;
-//     opts.attnCompPrec    = CUDNN_DATA_FLOAT;
-//     opts.attnQueryMap    = 0;
-//     opts.attnNumHeads    = 2;
-//     opts.attnBeamSize    = 3;
-//     opts.attnSmScaler    = 1.0;
-//     opts.attnDropoutRate = 0.0;
-//     opts.attnQsize       = 32;
-//     opts.attnKsize       = 32;
-//     opts.attnVsize       = 32;
-//     opts.attnProjQsize   = 8;
-//     opts.attnProjKsize   = 8;
-//     opts.attnProjVsize   = 8;
-//     opts.attnProjOsize   = 8;
-//     opts.attnSeqLenQ     = 24;
-//     opts.attnSeqLenK     = 20;
-//     opts.attnBatchSize   = 4;
-//     opts.attnDataLayout  = 0;
-//     opts.attnResLink     = 0;
-//     opts.attnProjBias    = 0;
-//     opts.attnSweep       = 0;
-//     opts.attnRandGeom    = 0;
-//     opts.attnRandSeed    = 1234;
-//     opts.attnFileDump    = 0;
-
-//     parseAttnParameters(argc, argv, &opts);
-
-//     static do_test_fp func_arr[] = {
-//         doTest<false, float,  float >,
-//         doTest<true,  float,  float >,
-//     };
-
-//     int func_idx = -1;
-
-//     if (opts.attnDataType == CUDNN_DATA_HALF) {
-//         if (opts.attnCompPrec == CUDNN_DATA_HALF) {
-//             func_idx = 0;
-//         } else if (opts.attnCompPrec == CUDNN_DATA_FLOAT){
-//             func_idx = 2;
-//         }
-//     } else if (opts.attnDataType == CUDNN_DATA_FLOAT && opts.attnCompPrec == CUDNN_DATA_FLOAT) {
-//         func_idx = 4;
-//     } else if (opts.attnDataType == CUDNN_DATA_DOUBLE && opts.attnCompPrec == CUDNN_DATA_DOUBLE) {
-//         func_idx = 6;
-//     }
-
-//     if (func_idx < 0) {
-//         fprintf(stderr, "ERROR: -attnDataType%d and -attnCompPrec%d are not supported\n\n", opts.attnDataType, opts.attnCompPrec);
-//         exit(-1);
-//     }
-
-//     func_idx += (opts.attnTrain == 0 ? 0 : 1);
-
-//     // Any error will cause the program to terminate with a non-zero exit code.
-//     func_arr[func_idx](opts);
-
-//     return 0;
-// }
-
+template class MultiheadAttentionTest<false, float, float>;
+template class MultiheadAttentionTest<true, float, float>;
