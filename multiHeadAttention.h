@@ -83,14 +83,12 @@ struct testOpts {
     int attnResLink;
     int attnProjBias;
     int attnSweep;
-    int attnRandGeom;
-    int attnRandSeed;
 };
 
 struct attnConfig {
-    attnConfig() { memset(this, 0, sizeof(*this)); }  // sets queryMap=ALL_TO_ONE
+    attnConfig() { memset(this, 0, sizeof(*this)); } 
 
-    cudnnAttnQueryMap_t queryMap;  // queryMap mode
+    cudnnAttnQueryMap_t queryMap = CUDNN_ATTN_QUERYMAP_ALL_TO_ONE;
 
     int numHeads;       // number of attention heads
     int beamSize;       // number of candidates of the same sentence
@@ -109,7 +107,6 @@ struct attnConfig {
     bool resLink;       // enable/disable residual connections
     bool projBias;      // enable/disable residual connections
     int sweep;          // sweep all time-steps in inference mode
-    int randGeom;       // randomize poblem dimensions
     int randSeed;       // random number generator seed
 
     unsigned attnMode;  // Attention Mode parameter
@@ -121,9 +118,6 @@ struct attnConfig {
     // Query and key sequence lengths (for each batch/beam sentence).
     int *qSeqLen;
     int *kSeqLen;
-
-    int dataLayout;                                        // data layout, map to one of 6 possible dataAxes
-    cudnnSeqDataAxis_t dataAxes[CUDNN_SEQDATA_DIM_COUNT];  // data order for T, N, and B dim
 
     cudnnDataType_t dataType;  // data type for Q,K,V inputs, weights, output
     cudnnDataType_t compPrec;  // compute precision
@@ -150,9 +144,6 @@ struct attnConfig {
 
     size_t kvTokens() {
         size_t t = size_t(this->seqLenK) * this->batchSize;
-        if (this->queryMap == CUDNN_ATTN_QUERYMAP_ONE_TO_ONE) {
-            t *= this->beamSize;
-        }
         return t;
     }
 
@@ -197,7 +188,7 @@ struct attnConfig {
     }
 
     size_t kSeqLenCount() {
-        return this->batchSize * (this->queryMap == CUDNN_ATTN_QUERYMAP_ONE_TO_ONE ? this->beamSize : 1);
+        return this->batchSize * 1;
     }
 };
 

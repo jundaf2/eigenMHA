@@ -182,19 +182,9 @@ void MultiheadAttentionTest<IS_TRAINING, T_ELEM, T_MATH>::setup(testOpts &opts) 
     mainCfg.resLink     = opts.attnResLink == 0 ? false : true;
     mainCfg.projBias    = opts.attnProjBias == 0 ? false : true;
     mainCfg.sweep       = opts.attnSweep;
-    mainCfg.randGeom    = opts.attnRandGeom != 0 ? 1 : 0;
-    mainCfg.randSeed    = opts.attnRandSeed;
     mainCfg.dataType    = cudnnDataType_t(opts.attnDataType);
     mainCfg.compPrec    = cudnnDataType_t(opts.attnCompPrec);
 
-    if (opts.attnQueryMap == 0) {
-        mainCfg.attnMode = (mainCfg.attnMode | CUDNN_ATTN_QUERYMAP_ALL_TO_ONE);
-    } else if (opts.attnQueryMap == 1) {
-        mainCfg.attnMode = (mainCfg.attnMode | CUDNN_ATTN_QUERYMAP_ONE_TO_ONE);
-    } else {
-        fprintf(stderr, "ERROR: wrong -attnQueryMap value\n\n");
-        exit(-1);
-    }
 
     if (opts.attnProjBias == 0) {
         mainCfg.attnMode = (mainCfg.attnMode | CUDNN_ATTN_DISABLE_PROJ_BIASES);
@@ -215,51 +205,6 @@ void MultiheadAttentionTest<IS_TRAINING, T_ELEM, T_MATH>::setup(testOpts &opts) 
     int kProjLen = mainCfg.kLength();
     int outLen   = mainCfg.oLength();
 
-    mainCfg.dataLayout = opts.attnDataLayout;
-
-    switch (mainCfg.dataLayout) {
-        case 0:  // dataAxes = [T, N, B]
-            mainCfg.dataAxes[0] = CUDNN_SEQDATA_TIME_DIM;
-            mainCfg.dataAxes[1] = CUDNN_SEQDATA_BATCH_DIM;
-            mainCfg.dataAxes[2] = CUDNN_SEQDATA_BEAM_DIM;
-            break;
-
-        case 1:  // dataAxes = [T, B, N]
-            mainCfg.dataAxes[0] = CUDNN_SEQDATA_TIME_DIM;
-            mainCfg.dataAxes[1] = CUDNN_SEQDATA_BEAM_DIM;
-            mainCfg.dataAxes[2] = CUDNN_SEQDATA_BATCH_DIM;
-            break;
-
-        case 2:  // dataAxes = [N, T, B]
-            mainCfg.dataAxes[0] = CUDNN_SEQDATA_BATCH_DIM;
-            mainCfg.dataAxes[1] = CUDNN_SEQDATA_TIME_DIM;
-            mainCfg.dataAxes[2] = CUDNN_SEQDATA_BEAM_DIM;
-            break;
-
-        case 3:  // dataAxes = [N, B, T]
-            mainCfg.dataAxes[0] = CUDNN_SEQDATA_BATCH_DIM;
-            mainCfg.dataAxes[1] = CUDNN_SEQDATA_BEAM_DIM;
-            mainCfg.dataAxes[2] = CUDNN_SEQDATA_TIME_DIM;
-            break;
-
-        case 4:  // dataAxes = [B, T, N]
-            mainCfg.dataAxes[0] = CUDNN_SEQDATA_BEAM_DIM;
-            mainCfg.dataAxes[1] = CUDNN_SEQDATA_TIME_DIM;
-            mainCfg.dataAxes[2] = CUDNN_SEQDATA_BATCH_DIM;
-            break;
-
-        case 5:  // dataAxes = [B, N, T]
-            mainCfg.dataAxes[0] = CUDNN_SEQDATA_BEAM_DIM;
-            mainCfg.dataAxes[1] = CUDNN_SEQDATA_BATCH_DIM;
-            mainCfg.dataAxes[2] = CUDNN_SEQDATA_TIME_DIM;
-            break;
-
-        default:
-            fprintf(stderr, "ERROR: wrong -attnDataLayout%d option\n\n", opts.attnDataLayout);
-            exit(-1);
-    }
-
-    mainCfg.dataAxes[3] = CUDNN_SEQDATA_VECT_DIM;
 
     CHECK_CUDNN_ERR(cudnnCreate(&handle));
     CHECK_CUDNN_ERR(cudnnCreateAttnDescriptor(&attn_desc));
@@ -506,12 +451,6 @@ void MultiheadAttentionTest<IS_TRAINING, T_ELEM, T_MATH>::testgen(attnConfig *te
     }
     
 
-    const char standardAxes[CUDNN_SEQDATA_DIM_COUNT] = {'T', 'N', 'B', 'V'};
-    char dataAxes[CUDNN_SEQDATA_DIM_COUNT];
-    for (int ii = 0; ii < CUDNN_SEQDATA_DIM_COUNT; ++ii) {
-        dataAxes[ii] = standardAxes[testCfg->dataAxes[ii]];
-    }
-
     printf("Test parameters:\n\n");
     printf("#### attnTrain       = %d (%s)\n", IS_TRAINING, IS_TRAINING ? "training" : "inference");
     printf("#### attnDataType    = %d (FP%d)\n", testCfg->dataType, int(8*sizeof(T_ELEM)));
@@ -530,12 +469,9 @@ void MultiheadAttentionTest<IS_TRAINING, T_ELEM, T_MATH>::testgen(attnConfig *te
     printf("#### attnProjOsize   = %d%s\n", testCfg->oProjSize, testCfg->oProjSize ? "" : " (no O weights)");
     printf("#### attnSeqLenQ     = %d\n", testCfg->seqLenQ);
     printf("#### attnSeqLenK     = %d\n", testCfg->seqLenK);
-    printf("#### attnDataLayout  = %d (%c,%c,%c,%c)\n", testCfg->dataLayout, dataAxes[0], dataAxes[1], dataAxes[2], dataAxes[3]);
     printf("#### attnResLink     = %d\n", testCfg->resLink);
     printf("#### attnProjBias    = %d\n", testCfg->projBias);
     printf("#### attnSweep       = %d\n", testCfg->sweep);
-    printf("#### attnRandGeom    = %d\n", testCfg->randGeom);
-    printf("#### attnRandSeed    = %d\n", testCfg->randSeed);
 
     for (size_t i = 0; i < qBatches; ++i) {
         printf("sequence_length_q[idx=%lu]=%d\n", i, qSeqArray[i]);
@@ -619,8 +555,14 @@ void MultiheadAttentionTest<IS_TRAINING, T_ELEM, T_MATH>::run() {
     dimA[CUDNN_SEQDATA_TIME_DIM]  = testCfg.seqLenQ;
     dimA[CUDNN_SEQDATA_VECT_DIM]  = testCfg.qSize;
 
+    cudnnSeqDataAxis_t dataAxes[CUDNN_SEQDATA_DIM_COUNT];
+    dataAxes[0] = CUDNN_SEQDATA_BEAM_DIM;
+    dataAxes[1] = CUDNN_SEQDATA_BATCH_DIM;
+    dataAxes[2] = CUDNN_SEQDATA_TIME_DIM;
+    dataAxes[3] = CUDNN_SEQDATA_VECT_DIM;
+
     CHECK_CUDNN_ERR(cudnnSetSeqDataDescriptor(
-        q_desc, testCfg.dataType, CUDNN_SEQDATA_DIM_COUNT, dimA, testCfg.dataAxes, qSeqArraySize, qSeqArray, NULL));
+        q_desc, testCfg.dataType, CUDNN_SEQDATA_DIM_COUNT, dimA, dataAxes, qSeqArraySize, qSeqArray, NULL));
 
     dimA[CUDNN_SEQDATA_BEAM_DIM]  = testCfg.beamSize;
     dimA[CUDNN_SEQDATA_BATCH_DIM] = testCfg.batchSize;
@@ -628,25 +570,25 @@ void MultiheadAttentionTest<IS_TRAINING, T_ELEM, T_MATH>::run() {
     dimA[CUDNN_SEQDATA_VECT_DIM]  = o_len;
 
     CHECK_CUDNN_ERR(cudnnSetSeqDataDescriptor(
-        o_desc, testCfg.dataType, CUDNN_SEQDATA_DIM_COUNT, dimA, testCfg.dataAxes, qSeqArraySize, qSeqArray, NULL));
+        o_desc, testCfg.dataType, CUDNN_SEQDATA_DIM_COUNT, dimA, dataAxes, qSeqArraySize, qSeqArray, NULL));
 
     // seq-k
-    dimA[CUDNN_SEQDATA_BEAM_DIM]  = testCfg.queryMap == CUDNN_ATTN_QUERYMAP_ONE_TO_ONE ? testCfg.beamSize : 1;
+    dimA[CUDNN_SEQDATA_BEAM_DIM]  = 1;
     dimA[CUDNN_SEQDATA_BATCH_DIM] = testCfg.batchSize;
     dimA[CUDNN_SEQDATA_TIME_DIM]  = testCfg.seqLenK;
     dimA[CUDNN_SEQDATA_VECT_DIM]  = testCfg.kSize;
 
     CHECK_CUDNN_ERR(cudnnSetSeqDataDescriptor(
-        k_desc, testCfg.dataType, CUDNN_SEQDATA_DIM_COUNT, dimA, testCfg.dataAxes, kSeqArraySize, kSeqArray, NULL));
+        k_desc, testCfg.dataType, CUDNN_SEQDATA_DIM_COUNT, dimA, dataAxes, kSeqArraySize, kSeqArray, NULL));
 
     // seq-v
-    dimA[CUDNN_SEQDATA_BEAM_DIM]  = testCfg.queryMap == CUDNN_ATTN_QUERYMAP_ONE_TO_ONE ? testCfg.beamSize : 1;
+    dimA[CUDNN_SEQDATA_BEAM_DIM]  = 1;
     dimA[CUDNN_SEQDATA_BATCH_DIM] = testCfg.batchSize;
     dimA[CUDNN_SEQDATA_TIME_DIM]  = testCfg.seqLenK;
     dimA[CUDNN_SEQDATA_VECT_DIM]  = testCfg.vSize;
 
     CHECK_CUDNN_ERR(cudnnSetSeqDataDescriptor(
-        v_desc, testCfg.dataType, CUDNN_SEQDATA_DIM_COUNT, dimA, testCfg.dataAxes, kSeqArraySize, kSeqArray, NULL));
+        v_desc, testCfg.dataType, CUDNN_SEQDATA_DIM_COUNT, dimA, dataAxes, kSeqArraySize, kSeqArray, NULL));
 
     size_t qNmbElem = testCfg.qAllData();
     size_t kNmbElem = testCfg.kAllData();

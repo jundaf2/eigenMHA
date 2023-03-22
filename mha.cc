@@ -231,14 +231,14 @@ public:
   }
 
   void run_cudnn_dnn(){
-    // for comparison, you have to set beamsize=1, randgeo=0, dropout=0
+    // beamsize=1, 
+    // for comparison, you have to set dropout=0
     testOpts opts;
 
     // Default test parameters to be overwritten by user cmd line options.
     opts.attnTrain       = 0;
     opts.attnDataType    = CUDNN_DATA_FLOAT;
     opts.attnCompPrec    = CUDNN_DATA_FLOAT;
-    opts.attnQueryMap    = 0;
     opts.attnNumHeads    = 2;
     opts.attnBeamSize    = 3;
     opts.attnSmScaler    = 1.0;
