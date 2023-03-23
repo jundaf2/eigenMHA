@@ -1,38 +1,6 @@
-#include <iostream>
-#include <fstream>
-#include "eigenDNN.h"
-#define CATCH_CONFIG_MAIN
-#include "catch.hpp"
-#include <cuda.h>
-#include <cudnn.h>
 
-// using namespace std;
+#include "util.h"
 
-inline void checkCudaError(cudaError_t code, const char *expr, const char *file, int line) {
-    if (code) {
-        fprintf(stderr, "ERROR: CUDA error at %s:%d, code=%d (%s) in '%s'\n\n",
-                file, line, (int)code, cudaGetErrorString(code), expr);
-        exit(1);
-    }
-}
-
-inline void checkCudnnError(cudnnStatus_t code, const char *expr, const char *file, int line) {
-    if (code) {
-        fprintf(stderr, "CUDNN error at %s:%d, code=%d (%s) in '%s'\n\n",
-                file, line, (int)code, cudnnGetErrorString(code), expr);
-        exit(1);
-    }
-}
-
-#define CHECK_CUDA_ERR(...)                                             \
-    do {                                                                \
-        checkCudaError(__VA_ARGS__, #__VA_ARGS__, __FILE__, __LINE__);  \
-    } while (0)
-
-#define CHECK_CUDNN_ERR(...)                                            \
-    do {                                                                \
-        checkCudnnError(__VA_ARGS__, #__VA_ARGS__, __FILE__, __LINE__); \
-    } while (0)
 
 
 /* mse loss kernel
@@ -149,7 +117,7 @@ public:
     unsigned int seed = 2023;
     float rand_range = 2;
 
-    h_weight_bank = std::vector<float>(weight_len1*3+weight_len2+4*bias_len);
+    h_weight_bank = std::vector<float>(weight_len1*3+weight_len2);
 
     h_q_in = std::vector<float>(in_data_len_q);
     h_k_in = std::vector<float>(in_data_len_k);
@@ -178,14 +146,15 @@ public:
     }
 
 
-    h_q_weight = std::vector<float>(h_weight_bank.begin(),h_weight_bank.begin()+in_data_len_q); 
-    h_q_bias = std::vector<float>(h_weight_bank.begin()+weight_len1, h_weight_bank.begin()+weight_len1+bias_len);
-    h_k_weight = std::vector<float>(h_weight_bank.begin()+weight_len1+bias_len,h_weight_bank.begin()+weight_len1*2+bias_len);
-    h_k_bias = std::vector<float>(h_weight_bank.begin()+weight_len1*2+bias_len,h_weight_bank.begin()+weight_len1*2+bias_len*2);
-    h_v_weight = std::vector<float>(h_weight_bank.begin()+weight_len1*2+bias_len*2,h_weight_bank.begin()+weight_len1*3+bias_len*2);
-    h_v_bias = std::vector<float>(h_weight_bank.begin()+weight_len1*3+bias_len*2,h_weight_bank.begin()+weight_len1*3+bias_len*3);
-    h_o_weight = std::vector<float>(h_weight_bank.begin()+weight_len1*3+bias_len*3,h_weight_bank.begin()+weight_len1*3+bias_len*3+weight_len2);
-    h_o_bias = std::vector<float>(h_weight_bank.begin()+weight_len1*3+bias_len*3+weight_len2,h_weight_bank.begin()+weight_len1*3+bias_len*4+weight_len2);
+    h_q_bias = std::vector<float>(bias_len,0);
+    h_k_bias = std::vector<float>(bias_len,0);
+    h_v_bias = std::vector<float>(bias_len,0);
+    h_o_bias = std::vector<float>(bias_len,0);
+
+    h_q_weight = std::vector<float>(h_weight_bank.begin(),h_weight_bank.begin()+weight_len1); 
+    h_k_weight = std::vector<float>(h_weight_bank.begin()+weight_len1,h_weight_bank.begin()+weight_len1*2);
+    h_v_weight = std::vector<float>(h_weight_bank.begin()+weight_len1*2,h_weight_bank.begin()+weight_len1*3);
+    h_o_weight = std::vector<float>(h_weight_bank.begin()+weight_len1*3,h_weight_bank.begin()+weight_len1*3+weight_len2);
 
   }
 
@@ -301,8 +270,10 @@ public:
     // Linear Layer for O, forward
     eigenDNN::eidnnLinearForward(handle, o_in, o_weight, o_bias, o_out);
 
+ 
+
     Eigen::Tensor<float, 3, Eigen::RowMajor> o_out_row = o_out.swap_layout().shuffle(Eigen::array<int, 3>({2,1,0}));
-    // this->register_raw_test_data(o_out_row.data(), batch_size*seq_len_q*hidden_size, "output"); 
+    h_o_out = std::vector<float>(o_out_row.data(),o_out_row.data()+batch_size*seq_len_q*hidden_size2);
 
     if(is_train)
     {
@@ -350,31 +321,30 @@ public:
       eigenDNN::eidnnLinearBackward(handle, k_out_grad, k_in, k_weight, k_in_grad, k_weight_grad, k_bias_grad);
       eigenDNN::eidnnLinearBackward(handle, v_out_grad, v_in, v_weight, v_in_grad, v_weight_grad, v_bias_grad);
 
+      Eigen::Tensor<float, 3, Eigen::RowMajor> q_in_grad_row = q_in_grad.swap_layout().shuffle(Eigen::array<int, 3>({2,1,0}));
+      Eigen::Tensor<float, 3, Eigen::RowMajor> k_in_grad_row = k_in_grad.swap_layout().shuffle(Eigen::array<int, 3>({2,1,0}));
+      Eigen::Tensor<float, 3, Eigen::RowMajor> v_in_grad_row = v_in_grad.swap_layout().shuffle(Eigen::array<int, 3>({2,1,0}));
+
       Eigen::Tensor<float, 2, Eigen::RowMajor> q_weight_grad_row = q_weight_grad.swap_layout().shuffle(Eigen::array<int, 2>({1,0}));
       Eigen::Tensor<float, 2, Eigen::RowMajor> k_weight_grad_row = k_weight_grad.swap_layout().shuffle(Eigen::array<int, 2>({1,0}));
       Eigen::Tensor<float, 2, Eigen::RowMajor> v_weight_grad_row = v_weight_grad.swap_layout().shuffle(Eigen::array<int, 2>({1,0}));
       Eigen::Tensor<float, 2, Eigen::RowMajor> o_weight_grad_row = o_weight_grad.swap_layout().shuffle(Eigen::array<int, 2>({1,0}));
 
-      // this->register_raw_test_data(q_weight_grad_row.data(), hidden_size2*hidden_size1, "q_weight_grad");
-      // this->register_raw_test_data(k_weight_grad_row.data(), hidden_size2*hidden_size1, "k_weight_grad");
-      // this->register_raw_test_data(v_weight_grad_row.data(), hidden_size2*hidden_size1, "v_weight_grad");
-      // this->register_raw_test_data(o_weight_grad_row.data(), hidden_size2*hidden_size2, "o_weight_grad");
+      h_q_in_grad = std::vector<float>(q_in_grad_row.data(),q_in_grad_row.data()+batch_size*seq_len_q*hidden_size1);
+      h_k_in_grad = std::vector<float>(k_in_grad_row.data(),k_in_grad_row.data()+batch_size*seq_len_k*hidden_size1);
+      h_v_in_grad = std::vector<float>(v_in_grad_row.data(),v_in_grad_row.data()+batch_size*seq_len_k*hidden_size1);
 
-      Eigen::Tensor<float, 1, Eigen::RowMajor> q_bias_grad_row = q_bias_grad.swap_layout().shuffle(Eigen::array<int, 1>({0}));
-      Eigen::Tensor<float, 1, Eigen::RowMajor> k_bias_grad_row = k_bias_grad.swap_layout().shuffle(Eigen::array<int, 1>({0}));
-      Eigen::Tensor<float, 1, Eigen::RowMajor> v_bias_grad_row = v_bias_grad.swap_layout().shuffle(Eigen::array<int, 1>({0}));
-      Eigen::Tensor<float, 1, Eigen::RowMajor> o_bias_grad_row = o_bias_grad.swap_layout().shuffle(Eigen::array<int, 1>({0}));
+        h_q_weight_grad = std::vector<float>(q_weight_grad_row.data(),q_weight_grad_row.data()+hidden_size2*hidden_size1);
+        h_k_weight_grad = std::vector<float>(k_weight_grad_row.data(),k_weight_grad_row.data()+hidden_size2*hidden_size1);
+        h_v_weight_grad = std::vector<float>(v_weight_grad_row.data(),v_weight_grad_row.data()+hidden_size2*hidden_size1);
+        h_o_weight_grad = std::vector<float>(o_weight_grad_row.data(),o_weight_grad_row.data()+hidden_size2*hidden_size2);
 
-      // this->register_raw_test_data(q_bias_grad_row.data(), hidden_size2, "q_bias_grad");
-      // this->register_raw_test_data(k_bias_grad_row.data(), hidden_size2, "k_bias_grad");
-      // this->register_raw_test_data(v_bias_grad_row.data(), hidden_size2, "v_bias_grad");
-      // this->register_raw_test_data(o_bias_grad_row.data(), hidden_size2, "o_bias_grad");
     }
   }
 
 
   void run_cudnn_dnn(){
-    // beamsize=1, 
+    // beamsize=1, bias=false
     // for comparison, you have to set dropout=0
     // Default test parameters to be overwritten by user cmd line options.
     int numHeads    = n_heads;
@@ -392,7 +362,7 @@ public:
     int seqLenK     = seq_len_k;
     int batchSize   = batch_size;
     bool resLink     = false;
-    bool projBias    = true;
+    bool projBias    = false;
 
 
     cudnnHandle_t handle;
@@ -506,6 +476,9 @@ public:
         CHECK_CUDNN_ERR(cudnnGetMultiHeadAttnBuffers(handle, attn_desc, &sizeWeights, &sizeWkspace, NULL));
     }
 
+    printf("@@@@@ sizeWeights: %d\n",sizeWeights);
+    printf("@@@@@ sizeWkspace: %d\n",sizeWkspace);
+    printf("@@@@@ sizeReserve: %d\n",sizeReserve);
 
     if (sizeWeights > 0) {
         CHECK_CUDA_ERR(cudaMalloc((void **)&devW, sizeWeights));
@@ -856,6 +829,58 @@ public:
   }
 
   void verify(){
+    size_t weight_len1 = hidden_size1*hidden_size2;
+    size_t weight_len2 = hidden_size2*hidden_size2;
+    size_t in_data_len_q = batch_size*seq_len_q*hidden_size1;
+    size_t in_data_len_k = batch_size*seq_len_k*hidden_size1;
+    size_t out_data_len = batch_size*seq_len_q*hidden_size2;
+
+    
+    if(!compareResults(hostO,h_o_out.data(),out_data_len))
+    {
+        print_vec(hostO,"cudnn O",0,64);
+        print_vec(h_o_out.data(),"eidnn O",0,64);
+    }
+
+    if (is_train) {
+        if(!compareResults(hostDQ,h_q_in_grad.data(),in_data_len_q))
+        {
+            print_vec(hostDQ,"cudnn dQ",0,64);
+            print_vec(h_q_in_grad.data(),"eidnn dQ",0,64);
+        }
+        if(!compareResults(hostDK,h_k_in_grad.data(),in_data_len_k))
+        {
+            print_vec(hostDK,"cudnn dK",0,64);
+            print_vec(h_k_in_grad.data(),"eidnn dK",0,64);
+        }
+        if(!compareResults(hostDV,h_v_in_grad.data(),in_data_len_k))
+        {
+            print_vec(hostDV,"cudnn dV",0,64);
+            print_vec(h_v_in_grad.data(),"eidnn dV",0,64);
+        }
+
+        if(!compareResults(hostDW+0,h_q_weight_grad.data(),weight_len1))
+        {
+            print_vec(hostDW+0,"cudnn dQW",0,64);
+            print_vec(h_q_weight_grad.data(),"eidnn dQW",0,64);
+        }
+
+        if(!compareResults(hostDW+weight_len1,h_k_weight_grad.data(),weight_len1))
+        {
+            print_vec(hostDW+weight_len1,"cudnn dKW",0,64);
+            print_vec(h_k_weight_grad.data(),"eidnn dKW",0,64);
+        }
+        if(!compareResults(hostDW+2*weight_len1,h_v_weight_grad.data(),weight_len1))
+        {
+            print_vec(hostDW+2*weight_len1,"cudnn dVW",0,64);
+            print_vec(h_v_weight_grad.data(),"eidnn dVW",0,64);
+        }
+        if(!compareResults(hostDW+3*weight_len1+weight_len2,h_o_weight_grad.data(),weight_len1))
+        {
+            print_vec(hostDW+3*weight_len1+weight_len2,"cudnn dOW",0,64);
+            print_vec(h_o_weight_grad.data(),"eidnn dOW",0,64);
+        }
+    }
 
   }
 
@@ -881,6 +906,7 @@ private:
   std::vector<float> h_target;
 
 
+
   float* devQ  = NULL;
   float* devK  = NULL;
   float* devV  = NULL;
@@ -896,6 +922,16 @@ private:
   float* devWkspace = NULL;
   float* devReserve = NULL;
 
+  
+    std::vector<float> h_o_out;
+    std::vector<float> h_q_in_grad;
+    std::vector<float> h_k_in_grad;
+    std::vector<float> h_v_in_grad;
+
+    std::vector<float> h_q_weight_grad;
+    std::vector<float> h_k_weight_grad;
+    std::vector<float> h_v_weight_grad;
+    std::vector<float> h_o_weight_grad;
 
     float* hostO  = NULL;
     float* hostDQ = NULL;
@@ -912,18 +948,14 @@ int eval_mha(unsigned batch_size,unsigned n_heads,unsigned seq_len_q,unsigned se
   test_mha.verify();
 }
 
-TEST_CASE("MHA", "[mha]") {
-  SECTION("[2,3,4,5,6,0.5]") {
+int main(){
     eval_mha(2,3,4,5,6,7,0,false);
-  }
-  SECTION("[2,3,4,5,6,0.5]") {
-    eval_mha(2,3,4,5,6,7,0,true);
-  }
-  SECTION("[4,5,6,7,8,0.5]") {
-    eval_mha(4,5,6,7,8,9,0,false);
-  }
-  SECTION("[4,5,6,7,8,0.5]") {
-    eval_mha(4,5,6,7,8,9,0,true);
-  }
 
+    eval_mha(2,3,4,5,6,7,0,true);
+
+    eval_mha(4,5,6,7,8,9,0,false);
+
+    eval_mha(4,5,6,7,8,9,0,true);
+
+    return 0;
 }
