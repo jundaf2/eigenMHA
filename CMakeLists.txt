@@ -41,7 +41,7 @@ SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -no-pie -lpthread")
 file(GLOB_RECURSE SOURCES "${SRC_FILES_DIR}/*")
 file(GLOB_RECURSE HEADERS "${HDR_FILES_DIR}/*")
 
-set(MAIN_FILE ${PROJECT_SOURCE_DIR}/mha.cc ${PROJECT_SOURCE_DIR}/multiHeadAttention.cpp)
+set(MAIN_FILE ${PROJECT_SOURCE_DIR}/mha.cu)
 
 # Declaring the files
 set(ALL_SRC ${HEADERS} ${MAIN_FILE} ${SOURCES} ${COMMON_FILES_DIR})
