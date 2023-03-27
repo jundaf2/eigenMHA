@@ -19,7 +19,7 @@ git clone https://gitlab.com/libeigen/eigen  # clone eigen if necessary
 3. a libtorch MHA in the `torch` branch as a comparison to the eigenMHA
 4. a cudnn MHA in the `cudnn` branch as a comparison to the eigenMHA
 
-### branch `torch` (default)
+### branch `torch`
 ```
 git checkout torch
 ```
