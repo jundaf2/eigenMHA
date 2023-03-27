@@ -118,7 +118,6 @@ public:
       h_target.at(i) = uf_distribution(generator); 
     }
 
-
     h_q_bias = std::vector<float>(bias_len,0);
     h_k_bias = std::vector<float>(bias_len,0);
     h_v_bias = std::vector<float>(bias_len,0);
@@ -129,6 +128,8 @@ public:
     h_v_weight = std::vector<float>(h_weight_bank.begin()+weight_len1*2,h_weight_bank.begin()+weight_len1*3);
     h_o_weight = std::vector<float>(h_weight_bank.begin()+weight_len1*3,h_weight_bank.begin()+weight_len1*3+weight_len2);
 
+    printf("##### sizeWeights: %d\n",h_weight_bank.size()*sizeof(float));
+
   }
 
   
@@ -137,21 +138,21 @@ public:
     eigenDNN::eidnnHandle_t handle;
     void* saved_states;
 
-    const Eigen::Tensor<float, 2> q_weight = Eigen::TensorMap<const Eigen::Tensor<float, 2, Eigen::RowMajor>>(h_q_weight.data(), {hidden_size2, hidden_size1}).swap_layout().shuffle(Eigen::array<int, 2>({1,0}));
-    const Eigen::Tensor<float, 2> k_weight = Eigen::TensorMap<const Eigen::Tensor<float, 2, Eigen::RowMajor>>(h_k_weight.data(), {hidden_size2, hidden_size1}).swap_layout().shuffle(Eigen::array<int, 2>({1,0}));
-    const Eigen::Tensor<float, 2> v_weight = Eigen::TensorMap<const Eigen::Tensor<float, 2, Eigen::RowMajor>>(h_v_weight.data(), {hidden_size2, hidden_size1}).swap_layout().shuffle(Eigen::array<int, 2>({1,0}));
-    const Eigen::Tensor<float, 2> o_weight = Eigen::TensorMap<const Eigen::Tensor<float, 2, Eigen::RowMajor>>(h_o_weight.data(), {hidden_size2, hidden_size2}).swap_layout().shuffle(Eigen::array<int, 2>({1,0}));
+    const Eigen::Tensor<float, 2> q_weight = Eigen::TensorMap<const Eigen::Tensor<float, 2>>(h_q_weight.data(), {hidden_size2, hidden_size1});
+    const Eigen::Tensor<float, 2> k_weight = Eigen::TensorMap<const Eigen::Tensor<float, 2>>(h_k_weight.data(), {hidden_size2, hidden_size1});
+    const Eigen::Tensor<float, 2> v_weight = Eigen::TensorMap<const Eigen::Tensor<float, 2>>(h_v_weight.data(), {hidden_size2, hidden_size1});
+    const Eigen::Tensor<float, 2> o_weight = Eigen::TensorMap<const Eigen::Tensor<float, 2>>(h_o_weight.data(), {hidden_size2, hidden_size2});
 
-    const Eigen::Tensor<float, 1> q_bias = Eigen::TensorMap<const Eigen::Tensor<float, 1, Eigen::RowMajor>>(h_q_bias.data(), {hidden_size2}).swap_layout();
-    const Eigen::Tensor<float, 1> k_bias = Eigen::TensorMap<const Eigen::Tensor<float, 1, Eigen::RowMajor>>(h_k_bias.data(), {hidden_size2}).swap_layout();
-    const Eigen::Tensor<float, 1> v_bias = Eigen::TensorMap<const Eigen::Tensor<float, 1, Eigen::RowMajor>>(h_v_bias.data(), {hidden_size2}).swap_layout();
-    const Eigen::Tensor<float, 1> o_bias = Eigen::TensorMap<const Eigen::Tensor<float, 1, Eigen::RowMajor>>(h_o_bias.data(), {hidden_size2}).swap_layout();
-    
-    const Eigen::Tensor<float, 3> q_in = Eigen::TensorMap<const Eigen::Tensor<float, 3, Eigen::RowMajor>>(h_q_in.data(), {batch_size, seq_len_q, hidden_size1}).swap_layout().shuffle(Eigen::array<int, 3>({2,1,0}));
-    const Eigen::Tensor<float, 3> k_in = Eigen::TensorMap<const Eigen::Tensor<float, 3, Eigen::RowMajor>>(h_k_in.data(), {batch_size, seq_len_k, hidden_size1}).swap_layout().shuffle(Eigen::array<int, 3>({2,1,0}));
-    const Eigen::Tensor<float, 3> v_in = Eigen::TensorMap<const Eigen::Tensor<float, 3, Eigen::RowMajor>>(h_v_in.data(), {batch_size, seq_len_k, hidden_size1}).swap_layout().shuffle(Eigen::array<int, 3>({2,1,0}));
+    const Eigen::Tensor<float, 1> q_bias = Eigen::TensorMap<const Eigen::Tensor<float, 1>>(h_q_bias.data(), {hidden_size2});
+    const Eigen::Tensor<float, 1> k_bias = Eigen::TensorMap<const Eigen::Tensor<float, 1>>(h_k_bias.data(), {hidden_size2});
+    const Eigen::Tensor<float, 1> v_bias = Eigen::TensorMap<const Eigen::Tensor<float, 1>>(h_v_bias.data(), {hidden_size2});
+    const Eigen::Tensor<float, 1> o_bias = Eigen::TensorMap<const Eigen::Tensor<float, 1>>(h_o_bias.data(), {hidden_size2});
 
-    const Eigen::Tensor<float, 3> target = Eigen::TensorMap<const Eigen::Tensor<float, 3, Eigen::RowMajor>>(h_target.data(), {batch_size, seq_len_q, hidden_size2}).swap_layout().shuffle(Eigen::array<int, 3>({2,1,0}));
+    const Eigen::Tensor<float, 3> q_in = Eigen::TensorMap<const Eigen::Tensor<float, 3>>(h_q_in.data(), {batch_size, seq_len_q, hidden_size1});
+    const Eigen::Tensor<float, 3> k_in = Eigen::TensorMap<const Eigen::Tensor<float, 3>>(h_k_in.data(), {batch_size, seq_len_k, hidden_size1});
+    const Eigen::Tensor<float, 3> v_in = Eigen::TensorMap<const Eigen::Tensor<float, 3>>(h_v_in.data(), {batch_size, seq_len_k, hidden_size1});
+
+    const Eigen::Tensor<float, 3> target = Eigen::TensorMap<const Eigen::Tensor<float, 3>>(h_target.data(), {batch_size, seq_len_q, hidden_size2});
 
 
     // no init
@@ -251,6 +252,8 @@ public:
     Eigen::Tensor<float, 3, Eigen::RowMajor> o_out_row = o_out.swap_layout().shuffle(Eigen::array<int, 3>({2,1,0}));
     h_o_out.assign(o_out_row.data(),o_out_row.data()+batch_size*seq_len_q*hidden_size2);
 
+    // h_o_out.assign(o_in_row.data(),o_in_row.data()+batch_size*seq_len_q*hidden_size2);
+
     if(is_train)
     {
       // MSE Loss
@@ -310,9 +313,9 @@ public:
 
     //   std::cout << "q_in_grad_row: " << q_in_grad_row << std::endl;
 
-      h_q_in_grad.assign(q_in_grad_row.data(),q_in_grad_row.data()+batch_size*seq_len_q*hidden_size1);
-      h_k_in_grad.assign(k_in_grad_row.data(),k_in_grad_row.data()+batch_size*seq_len_k*hidden_size1);
-      h_v_in_grad.assign(v_in_grad_row.data(),v_in_grad_row.data()+batch_size*seq_len_k*hidden_size1);
+        h_q_in_grad.assign(q_in_grad_row.data(),q_in_grad_row.data()+batch_size*seq_len_q*hidden_size1);
+        h_k_in_grad.assign(k_in_grad_row.data(),k_in_grad_row.data()+batch_size*seq_len_k*hidden_size1);
+        h_v_in_grad.assign(v_in_grad_row.data(),v_in_grad_row.data()+batch_size*seq_len_k*hidden_size1);
 
         h_q_weight_grad.assign(q_weight_grad_row.data(),q_weight_grad_row.data()+hidden_size2*hidden_size1);
         h_k_weight_grad.assign(k_weight_grad_row.data(),k_weight_grad_row.data()+hidden_size2*hidden_size1);
@@ -328,8 +331,8 @@ public:
     // Default test parameters to be overwritten by user cmd line options.
     int numHeads    = n_heads;
     int beamSize    = 1;
-    double smScaler    = 1.0;
-    float dropoutRate = 0.0;
+    double smScaler    = 1.0f/sqrtf(head_size2);
+    float dropoutRate = dropout_rate;
     int qSize       = hidden_size1;
     int kSize       = hidden_size1;
     int vSize       = hidden_size1;
@@ -342,6 +345,14 @@ public:
     int batchSize   = batch_size;
     bool resLink     = false;
     bool projBias    = false;
+
+    std::cout << "qSize" << qSize << std::endl;
+    std::cout << "kSize" << kSize << std::endl;
+    std::cout << "vSize" << vSize << std::endl;
+    std::cout << "qProjSize" << qProjSize << std::endl;
+    std::cout << "kProjSize" << kProjSize << std::endl;
+    std::cout << "vProjSize" << vProjSize << std::endl;
+    std::cout << "oProjSize" << oProjSize << std::endl;
 
 
     cudnnHandle_t handle;
@@ -372,7 +383,7 @@ public:
     int *loWinIdx = NULL;
     int *hiWinIdx = NULL;
 
-    unsigned attnMode;
+    unsigned attnMode = 0;
     if (projBias == 0) {
         attnMode = (attnMode | CUDNN_ATTN_DISABLE_PROJ_BIASES | CUDNN_ATTN_QUERYMAP_ALL_TO_ONE);
     } else if (projBias == 1) {
@@ -427,7 +438,9 @@ public:
 
     CHECK_CUDNN_ERR(cudnnSetDropoutDescriptor(drop_desc, handle, dropoutRate, dropoutBuf, dropoutBufSize, 0));
 
-    CHECK_CUDNN_ERR(cudnnSetAttnDescriptor(attn_desc,
+
+
+    CHECK_CUDNN_ERR(cudnnSetAttnDescriptor(attn_desc, // 
                                            attnMode,
                                            numHeads,
                                            smScaler,
@@ -447,6 +460,14 @@ public:
                                            seqLenK,
                                            batchSize,
                                            beamSize));
+
+    // get the Weight Info
+    cudnnTensorDescriptor_t weightDesc = NULL;
+    int nbDims, dimW[4], strideW[4];
+    cudnnDataType_t dataTypeUnsed;
+
+    CHECK_CUDNN_ERR(cudnnCreateTensorDescriptor(&weightDesc));
+
     
     size_t sizeWeights = 0, sizeWkspace = 0, sizeReserve = 0;
     if (is_train) {
@@ -458,6 +479,19 @@ public:
     printf("@@@@@ sizeWeights: %d\n",sizeWeights);
     printf("@@@@@ sizeWkspace: %d\n",sizeWkspace);
     printf("@@@@@ sizeReserve: %d\n",sizeReserve);
+        
+    float *weightAddr = NULL;
+    void *paramBuf;
+    cudnnMultiHeadAttnWeightKind_t wKind[4] = {CUDNN_MH_ATTN_Q_WEIGHTS, CUDNN_MH_ATTN_K_WEIGHTS, CUDNN_MH_ATTN_V_WEIGHTS, CUDNN_MH_ATTN_O_WEIGHTS};
+    std::vector<std::string> wKindNames({"CUDNN_MH_ATTN_Q_WEIGHTS", "CUDNN_MH_ATTN_K_WEIGHTS", "CUDNN_MH_ATTN_V_WEIGHTS", "CUDNN_MH_ATTN_O_WEIGHTS"});
+    for(int i=0; i<4; i++){
+        size_t paramSize = sizeWeights;
+        CHECK_CUDNN_ERR(cudnnGetMultiHeadAttnWeights(handle, attn_desc, wKind[i], paramSize, paramBuf, weightDesc, (void **)&weightAddr));
+        CHECK_CUDNN_ERR(cudnnGetTensorNdDescriptor(weightDesc, 4, &dataTypeUnsed, &nbDims, dimW, strideW));
+        printf("@@@@@ [%s] weightAddr %p\n", wKindNames[i].c_str(), (void *)weightAddr);
+        printf("@@@@@ [%s] dimW[0] %d  dimW[1] %d  dimW[2] %d  dimW[3] %d\n", wKindNames[i].c_str(), dimW[0], dimW[1], dimW[2], dimW[3]);
+        printf("@@@@@ [%s] strideW[0] %d  strideW[1] %d  strideW[2] %d  strideW[3] %d\n", wKindNames[i].c_str(), strideW[0], strideW[1], strideW[2], strideW[3]);
+    }
 
     if (sizeWeights > 0) {
         CHECK_CUDA_ERR(cudaMalloc((void **)&devW, sizeWeights));
@@ -576,48 +610,38 @@ public:
 
 
     int dimA[CUDNN_SEQDATA_DIM_COUNT];
-
-    dimA[CUDNN_SEQDATA_BEAM_DIM]  = beamSize;
-    dimA[CUDNN_SEQDATA_BATCH_DIM] = batchSize;
-    dimA[CUDNN_SEQDATA_TIME_DIM]  = seqLenQ;
-    dimA[CUDNN_SEQDATA_VECT_DIM]  = qSize;
-
+    
     cudnnSeqDataAxis_t dataAxes[CUDNN_SEQDATA_DIM_COUNT];
     dataAxes[0] = CUDNN_SEQDATA_BEAM_DIM;
     dataAxes[1] = CUDNN_SEQDATA_BATCH_DIM;
     dataAxes[2] = CUDNN_SEQDATA_TIME_DIM;
     dataAxes[3] = CUDNN_SEQDATA_VECT_DIM;
 
-    CHECK_CUDNN_ERR(cudnnSetSeqDataDescriptor(
-        q_desc, dataType, CUDNN_SEQDATA_DIM_COUNT, dimA, dataAxes, qSeqArraySize, qSeqArray, NULL));
+    dimA[CUDNN_SEQDATA_BEAM_DIM]  = beamSize;
+    dimA[CUDNN_SEQDATA_BATCH_DIM] = batchSize;
+    dimA[CUDNN_SEQDATA_TIME_DIM]  = seqLenQ;
+    dimA[CUDNN_SEQDATA_VECT_DIM]  = qSize;
+    CHECK_CUDNN_ERR(cudnnSetSeqDataDescriptor(q_desc, dataType, CUDNN_SEQDATA_DIM_COUNT, dimA, dataAxes, qSeqArraySize, qSeqArray, NULL));
 
     dimA[CUDNN_SEQDATA_BEAM_DIM]  = beamSize;
     dimA[CUDNN_SEQDATA_BATCH_DIM] = batchSize;
     dimA[CUDNN_SEQDATA_TIME_DIM]  = seqLenQ;
     dimA[CUDNN_SEQDATA_VECT_DIM]  = oSize;
-
-    CHECK_CUDNN_ERR(cudnnSetSeqDataDescriptor(
-        o_desc, dataType, CUDNN_SEQDATA_DIM_COUNT, dimA, dataAxes, qSeqArraySize, qSeqArray, NULL));
+    CHECK_CUDNN_ERR(cudnnSetSeqDataDescriptor(o_desc, dataType, CUDNN_SEQDATA_DIM_COUNT, dimA, dataAxes, qSeqArraySize, qSeqArray, NULL));
 
     // seq-k
     dimA[CUDNN_SEQDATA_BEAM_DIM]  = 1;
     dimA[CUDNN_SEQDATA_BATCH_DIM] = batchSize;
     dimA[CUDNN_SEQDATA_TIME_DIM]  = seqLenK;
     dimA[CUDNN_SEQDATA_VECT_DIM]  = kSize;
-
-    CHECK_CUDNN_ERR(cudnnSetSeqDataDescriptor(
-        k_desc, dataType, CUDNN_SEQDATA_DIM_COUNT, dimA, dataAxes, kSeqArraySize, kSeqArray, NULL));
+    CHECK_CUDNN_ERR(cudnnSetSeqDataDescriptor(k_desc, dataType, CUDNN_SEQDATA_DIM_COUNT, dimA, dataAxes, kSeqArraySize, kSeqArray, NULL));
 
     // seq-v
     dimA[CUDNN_SEQDATA_BEAM_DIM]  = 1;
     dimA[CUDNN_SEQDATA_BATCH_DIM] = batchSize;
     dimA[CUDNN_SEQDATA_TIME_DIM]  = seqLenK;
     dimA[CUDNN_SEQDATA_VECT_DIM]  = vSize;
-
-    CHECK_CUDNN_ERR(cudnnSetSeqDataDescriptor(
-        v_desc, dataType, CUDNN_SEQDATA_DIM_COUNT, dimA, dataAxes, kSeqArraySize, kSeqArray, NULL));
-
-
+    CHECK_CUDNN_ERR(cudnnSetSeqDataDescriptor(v_desc, dataType, CUDNN_SEQDATA_DIM_COUNT, dimA, dataAxes, kSeqArraySize, kSeqArray, NULL));
 
     // Fill output surface with NaN-s.
     CHECK_CUDA_ERR(cudaMemset(devO, 0xFF, oNmbElem * sizeof(float)));
@@ -634,11 +658,46 @@ public:
         CHECK_CUDA_ERR(cudaMemset(devDW, 0, sizeWeights));
     }
 
+    /* @junda: do not use the following lines for transposition */
+    // std::vector<float> h_q_weight = vector01(this->h_q_weight,hidden_size2,hidden_size1);
+    // std::vector<float> h_k_weight = vector01(this->h_k_weight,hidden_size2,hidden_size1);
+    // std::vector<float> h_v_weight = vector01(this->h_v_weight,hidden_size2,hidden_size1);
+    // std::vector<float> h_o_weight = vector01(this->h_o_weight,hidden_size2,hidden_size2);
+
+    std::vector<float> h_q_in = vector0132(this->h_q_in,1,batch_size,hidden_size1,seq_len_q);
+    std::vector<float> h_k_in = vector0132(this->h_k_in,1,batch_size,hidden_size1,seq_len_k);
+    std::vector<float> h_v_in = vector0132(this->h_v_in,1,batch_size,hidden_size1,seq_len_k);
+    
+
     // Copy the data from GPU (device) to CPU (host)
-    CHECK_CUDA_ERR(cudaMemcpy(devW, h_weight_bank.data(), sizeWeights, cudaMemcpyHostToDevice));
+    CHECK_CUDA_ERR(cudaMemcpy(devW, h_weight_bank.data(), sizeWeights, cudaMemcpyHostToDevice)); /* @junda: the following lines are equivalent to this line*/
+    // CHECK_CUDA_ERR(cudaMemcpy(devW, h_q_weight.data(), h_q_weight.size()*sizeof(float), cudaMemcpyHostToDevice));
+    // CHECK_CUDA_ERR(cudaMemcpy(devW + h_q_weight.size(), h_k_weight.data(), h_k_weight.size()*sizeof(float), cudaMemcpyHostToDevice));
+    // CHECK_CUDA_ERR(cudaMemcpy(devW + h_q_weight.size() + h_k_weight.size(), h_v_weight.data(), h_v_weight.size()*sizeof(float), cudaMemcpyHostToDevice));
+    // CHECK_CUDA_ERR(cudaMemcpy(devW + h_q_weight.size() + h_k_weight.size() + h_v_weight.size(), h_o_weight.data(), h_o_weight.size()*sizeof(float), cudaMemcpyHostToDevice));
+
     CHECK_CUDA_ERR(cudaMemcpy(devQ, h_q_in.data(), sizeof(float) * qNmbElem, cudaMemcpyHostToDevice));
     CHECK_CUDA_ERR(cudaMemcpy(devK, h_k_in.data(), sizeof(float) * kNmbElem, cudaMemcpyHostToDevice));
     CHECK_CUDA_ERR(cudaMemcpy(devV, h_v_in.data(), sizeof(float) * vNmbElem, cudaMemcpyHostToDevice));
+
+
+    cudnnSeqDataAxis_t ordA[CUDNN_SEQDATA_DIM_COUNT];
+    
+    CHECK_CUDNN_ERR(cudnnGetSeqDataDescriptor(q_desc, NULL, NULL, 4, dimW, ordA, NULL, 0, NULL, NULL));
+    printf("@@@@@ q_desc dimW[0] %d  dimW[1] %d  dimW[2] %d  dimW[3] %d\n", dimW[0], dimW[1], dimW[2], dimW[3]);
+    printf("@@@@@ q_desc ordA[0] %d  ordA[1] %d  ordA[2] %d  ordA[3] %d\n", ordA[0], ordA[1], ordA[2], ordA[3]);
+
+    CHECK_CUDNN_ERR(cudnnGetSeqDataDescriptor(k_desc, NULL, NULL, 4, dimW, ordA, NULL, 0, NULL, NULL));
+    printf("@@@@@ k_desc dimW[0] %d  dimW[1] %d  dimW[2] %d  dimW[3] %d\n", dimW[0], dimW[1], dimW[2], dimW[3]);
+    printf("@@@@@ k_desc ordA[0] %d  ordA[1] %d  ordA[2] %d  ordA[3] %d\n", ordA[0], ordA[1], ordA[2], ordA[3]);
+
+    CHECK_CUDNN_ERR(cudnnGetSeqDataDescriptor(v_desc, NULL, NULL, 4, dimW, ordA, NULL, 0, NULL, NULL));
+    printf("@@@@@ v_desc dimW[0] %d  dimW[1] %d  dimW[2] %d  dimW[3] %d\n", dimW[0], dimW[1], dimW[2], dimW[3]);
+    printf("@@@@@ v_desc ordA[0] %d  ordA[1] %d  ordA[2] %d  ordA[3] %d\n", ordA[0], ordA[1], ordA[2], ordA[3]);
+
+    CHECK_CUDNN_ERR(cudnnGetSeqDataDescriptor(o_desc, NULL, NULL, 4, dimW, ordA, NULL, 0, NULL, NULL));
+    printf("@@@@@ o_desc dimW[0] %d  dimW[1] %d  dimW[2] %d  dimW[3] %d\n", dimW[0], dimW[1], dimW[2], dimW[3]);
+    printf("@@@@@ o_desc ordA[0] %d  ordA[1] %d  ordA[2] %d  ordA[3] %d\n", ordA[0], ordA[1], ordA[2], ordA[3]);
 
     if (is_train) {
         if (sizeReserve == 0) {
@@ -817,8 +876,8 @@ public:
     
     if(!compareResults(hostO,h_o_out.data(),out_data_len))
     {
-        print_vec(hostO,"cudnn O",0,64);
-        print_vec(h_o_out.data(),"eidnn O",0,64);
+        print_vec(hostO,"cudnn O",0,h_o_out.size());
+        print_vec(h_o_out.data(),"eidnn O",0,h_o_out.size());
     }
 
     if (is_train) {
@@ -922,19 +981,13 @@ private:
 int eval_mha(unsigned batch_size,unsigned n_heads,unsigned seq_len_q,unsigned seq_len_k,unsigned head_size1,unsigned head_size2,float dropout_rate,bool is_train){
   test_MHA test_mha(batch_size,n_heads,seq_len_q,seq_len_k,head_size1,head_size2,dropout_rate,is_train);
   test_mha.init_data();
+  test_mha.run_eigen_dnn();   
   test_mha.run_cudnn_dnn();
-test_mha.run_eigen_dnn();   
   test_mha.verify();
 }
 
 int main(){
-    eval_mha(2,3,4,5,6,7,0,false);
-
-    eval_mha(2,3,4,5,6,7,0,true);
-
-    eval_mha(4,5,6,7,8,9,0,false);
-
-    eval_mha(4,5,6,7,8,9,0,true);
-
+    eval_mha(1,4,3,3,10,20,0,false);
+    // eval_mha(1,4,3,3,10,20,0,true);
     return 0;
 }

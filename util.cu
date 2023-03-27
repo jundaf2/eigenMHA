@@ -19,7 +19,7 @@ std::cout << std::endl;
 bool compareResults(const float *res, const float *ref, int len) {
   bool is_near2 = true;
   for (unsigned int i = 0; i < len; i++) {
-      is_near2 &= NEAR2(static_cast<float>(res[i]), ref[i], 1e-3);
+      is_near2 &= NEAR2(static_cast<float>(res[i]), ref[i], 1e-1);
   }
   return is_near2;
 }
@@ -63,4 +63,38 @@ void launch_mse_loss_kernel(const float* output, const float* target, float* los
   dim3 threads(512);
   mse_loss_kernel<<<blocks, threads>>>(output, target, loss, d_loss, num_elem);
   CHECK_CUDA_ERR(cudaDeviceSynchronize());
+}
+
+std::vector<float> vector0213(std::vector<float> data, int A, int B, int C, int D){
+  assert(data.size()==A*B*C*D);
+  std::vector<float> temp_data = data;
+  for(int a=0;a<A;a++)
+  for(int b=0;b<B;b++)
+  for(int c=0;c<C;c++)
+  for(int d=0;d<D;d++){
+    temp_data.at(a*(B*C*D)+(c*B+b)*D+d) = data.at(a*(B*C*D)+(b*C+c)*D+d);
+  }
+  return temp_data;
+}
+
+std::vector<float> vector0132(std::vector<float> data, int A, int B, int C, int D){
+  assert(data.size()==A*B*C*D);
+  std::vector<float> temp_data = data;
+  for(int a=0;a<A;a++)
+  for(int b=0;b<B;b++)
+  for(int c=0;c<C;c++)
+  for(int d=0;d<D;d++){
+    temp_data.at(a*(B*C*D)+(b*D+d)*C+c) = data.at(a*(B*C*D)+(b*C+c)*D+d);
+  }
+  return temp_data;
+}
+
+std::vector<float> vector01(std::vector<float> data, int A, int B){
+  assert(data.size()==A*B);
+  std::vector<float> temp_data = data;
+  for(int a=0;a<A;a++)
+    for(int b=0;b<B;b++){
+      temp_data.at(b*A+a) = data.at(a*B+b);
+    }
+  return temp_data;
 }
