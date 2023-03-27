@@ -300,27 +300,14 @@ public:
       eigenDNN::eidnnLinearBackward(handle, k_out_grad, k_in, k_weight, k_in_grad, k_weight_grad, k_bias_grad);
       eigenDNN::eidnnLinearBackward(handle, v_out_grad, v_in, v_weight, v_in_grad, v_weight_grad, v_bias_grad);
 
-        //   std::cout << "q_in_grad: " << q_in_grad << std::endl;
+        h_q_in_grad.assign(q_in_grad.data(),q_in_grad.data()+batch_size*seq_len_q*hidden_size1);
+        h_k_in_grad.assign(k_in_grad.data(),k_in_grad.data()+batch_size*seq_len_k*hidden_size1);
+        h_v_in_grad.assign(v_in_grad.data(),v_in_grad.data()+batch_size*seq_len_k*hidden_size1);
 
-      Eigen::Tensor<float, 3, Eigen::RowMajor> q_in_grad_row = q_in_grad.swap_layout().shuffle(Eigen::array<int, 3>({2,1,0}));
-      Eigen::Tensor<float, 3, Eigen::RowMajor> k_in_grad_row = k_in_grad.swap_layout().shuffle(Eigen::array<int, 3>({2,1,0}));
-      Eigen::Tensor<float, 3, Eigen::RowMajor> v_in_grad_row = v_in_grad.swap_layout().shuffle(Eigen::array<int, 3>({2,1,0}));
-
-      Eigen::Tensor<float, 2, Eigen::RowMajor> q_weight_grad_row = q_weight_grad.swap_layout().shuffle(Eigen::array<int, 2>({1,0}));
-      Eigen::Tensor<float, 2, Eigen::RowMajor> k_weight_grad_row = k_weight_grad.swap_layout().shuffle(Eigen::array<int, 2>({1,0}));
-      Eigen::Tensor<float, 2, Eigen::RowMajor> v_weight_grad_row = v_weight_grad.swap_layout().shuffle(Eigen::array<int, 2>({1,0}));
-      Eigen::Tensor<float, 2, Eigen::RowMajor> o_weight_grad_row = o_weight_grad.swap_layout().shuffle(Eigen::array<int, 2>({1,0}));
-
-    //   std::cout << "q_in_grad_row: " << q_in_grad_row << std::endl;
-
-        h_q_in_grad.assign(q_in_grad_row.data(),q_in_grad_row.data()+batch_size*seq_len_q*hidden_size1);
-        h_k_in_grad.assign(k_in_grad_row.data(),k_in_grad_row.data()+batch_size*seq_len_k*hidden_size1);
-        h_v_in_grad.assign(v_in_grad_row.data(),v_in_grad_row.data()+batch_size*seq_len_k*hidden_size1);
-
-        h_q_weight_grad.assign(q_weight_grad_row.data(),q_weight_grad_row.data()+hidden_size2*hidden_size1);
-        h_k_weight_grad.assign(k_weight_grad_row.data(),k_weight_grad_row.data()+hidden_size2*hidden_size1);
-        h_v_weight_grad.assign(v_weight_grad_row.data(),v_weight_grad_row.data()+hidden_size2*hidden_size1);
-        h_o_weight_grad.assign(o_weight_grad_row.data(),o_weight_grad_row.data()+hidden_size2*hidden_size2);
+        h_q_weight_grad.assign(q_weight_grad.data(),q_weight_grad.data()+hidden_size2*hidden_size1);
+        h_k_weight_grad.assign(k_weight_grad.data(),k_weight_grad.data()+hidden_size2*hidden_size1);
+        h_v_weight_grad.assign(v_weight_grad.data(),v_weight_grad.data()+hidden_size2*hidden_size1);
+        h_o_weight_grad.assign(o_weight_grad.data(),o_weight_grad.data()+hidden_size2*hidden_size2);
     }
   }
 
@@ -670,7 +657,7 @@ public:
     
 
     // Copy the data from GPU (device) to CPU (host)
-    CHECK_CUDA_ERR(cudaMemcpy(devW, h_weight_bank.data(), sizeWeights, cudaMemcpyHostToDevice)); /* @junda: the following lines are equivalent to this line*/
+    CHECK_CUDA_ERR(cudaMemcpy(devW, h_weight_bank.data(), sizeWeights, cudaMemcpyHostToDevice)); /* @junda: the following lines are equivalent to this line */
     // CHECK_CUDA_ERR(cudaMemcpy(devW, h_q_weight.data(), h_q_weight.size()*sizeof(float), cudaMemcpyHostToDevice));
     // CHECK_CUDA_ERR(cudaMemcpy(devW + h_q_weight.size(), h_k_weight.data(), h_k_weight.size()*sizeof(float), cudaMemcpyHostToDevice));
     // CHECK_CUDA_ERR(cudaMemcpy(devW + h_q_weight.size() + h_k_weight.size(), h_v_weight.data(), h_v_weight.size()*sizeof(float), cudaMemcpyHostToDevice));
@@ -821,6 +808,18 @@ public:
         CHECK_CUDA_ERR(cudaMemcpy(hostDK, devDK, sizeof(float) * kNmbElem, cudaMemcpyDeviceToHost));
         CHECK_CUDA_ERR(cudaMemcpy(hostDV, devDV, sizeof(float) * vNmbElem, cudaMemcpyDeviceToHost));
 
+        std::vector<float> vec_hostDQ(hostDQ,hostDQ+qNmbElem);
+        std::vector<float> vec_hostDQ_trans = vector0132(vec_hostDQ,1,batch_size,seq_len_q,hidden_size1);
+        CHECK_CUDA_ERR(cudaMemcpy(hostDQ, vec_hostDQ_trans.data(), sizeof(float) * qNmbElem, cudaMemcpyHostToHost));
+
+        std::vector<float> vec_hostDK(hostDK,hostDK+kNmbElem);
+        std::vector<float> vec_hostDK_trans = vector0132(vec_hostDK,1,batch_size,seq_len_k,hidden_size1);
+        CHECK_CUDA_ERR(cudaMemcpy(hostDK, vec_hostDK_trans.data(), sizeof(float) * kNmbElem, cudaMemcpyHostToHost));
+
+        std::vector<float> vec_hostDV(hostDV,hostDV+vNmbElem);
+        std::vector<float> vec_hostDV_trans = vector0132(vec_hostDV,1,batch_size,seq_len_k,hidden_size1);
+        CHECK_CUDA_ERR(cudaMemcpy(hostDV, vec_hostDV_trans.data(), sizeof(float) * vNmbElem, cudaMemcpyHostToHost));
+
         // Copy wgrad results to host
         if (sizeWeights > 0) {
             CHECK_CUDA_ERR(cudaMemcpy(hostDW, devDW, sizeWeights, cudaMemcpyDeviceToHost));
@@ -915,9 +914,9 @@ public:
             print_vec(hostDW+2*weight_len1,"cudnn dVW",0,64);
             print_vec(h_v_weight_grad.data(),"eidnn dVW",0,64);
         }
-        if(!compareResults(hostDW+3*weight_len1+weight_len2,h_o_weight_grad.data(),weight_len1))
+        if(!compareResults(hostDW+3*weight_len1,h_o_weight_grad.data(),weight_len2))
         {
-            print_vec(hostDW+3*weight_len1+weight_len2,"cudnn dOW",0,64);
+            print_vec(hostDW+3*weight_len1,"cudnn dOW",0,64);
             print_vec(h_o_weight_grad.data(),"eidnn dOW",0,64);
         }
     }
