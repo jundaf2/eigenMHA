@@ -704,6 +704,8 @@ public:
             fprintf(stderr, "ERROR: zero reserve buffer size in training mode\n\n");
             exit(-1);
         }
+
+        std::vector<float> h_target = vector0132(this->h_target,1,batch_size,hidden_size2,seq_len_q);
         CHECK_CUDA_ERR(cudaMemcpy(devTarget, h_target.data(), oNmbElem * sizeof(float), cudaMemcpyHostToDevice));
 
         printf("Calling cudnnMultiHeadAttnForward(currIdx = -1)\n");
@@ -988,6 +990,6 @@ int eval_mha(unsigned batch_size,unsigned n_heads,unsigned seq_len_q,unsigned se
 
 int main(){
     eval_mha(1,4,3,3,10,20,0,false);
-    // eval_mha(1,4,3,3,10,20,0,true);
+    eval_mha(1,4,3,3,10,20,0,true);
     return 0;
 }
