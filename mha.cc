@@ -448,14 +448,6 @@ public:
                                            batchSize,
                                            beamSize));
 
-    // get the Weight Info
-    cudnnTensorDescriptor_t weightDesc = NULL;
-    int nbDims, dimW[4], strideW[4];
-    cudnnDataType_t dataTypeUnsed;
-
-    CHECK_CUDNN_ERR(cudnnCreateTensorDescriptor(&weightDesc));
-
-    
     size_t sizeWeights = 0, sizeWkspace = 0, sizeReserve = 0;
     if (is_train) {
         CHECK_CUDNN_ERR(cudnnGetMultiHeadAttnBuffers(handle, attn_desc, &sizeWeights, &sizeWkspace, &sizeReserve));
@@ -466,19 +458,7 @@ public:
     printf("@@@@@ sizeWeights: %d\n",sizeWeights);
     printf("@@@@@ sizeWkspace: %d\n",sizeWkspace);
     printf("@@@@@ sizeReserve: %d\n",sizeReserve);
-        
-    float *weightAddr = NULL;
-    void *paramBuf;
-    cudnnMultiHeadAttnWeightKind_t wKind[4] = {CUDNN_MH_ATTN_Q_WEIGHTS, CUDNN_MH_ATTN_K_WEIGHTS, CUDNN_MH_ATTN_V_WEIGHTS, CUDNN_MH_ATTN_O_WEIGHTS};
-    std::vector<std::string> wKindNames({"CUDNN_MH_ATTN_Q_WEIGHTS", "CUDNN_MH_ATTN_K_WEIGHTS", "CUDNN_MH_ATTN_V_WEIGHTS", "CUDNN_MH_ATTN_O_WEIGHTS"});
-    for(int i=0; i<4; i++){
-        size_t paramSize = sizeWeights;
-        CHECK_CUDNN_ERR(cudnnGetMultiHeadAttnWeights(handle, attn_desc, wKind[i], paramSize, paramBuf, weightDesc, (void **)&weightAddr));
-        CHECK_CUDNN_ERR(cudnnGetTensorNdDescriptor(weightDesc, 4, &dataTypeUnsed, &nbDims, dimW, strideW));
-        printf("@@@@@ [%s] weightAddr %p\n", wKindNames[i].c_str(), (void *)weightAddr);
-        printf("@@@@@ [%s] dimW[0] %d  dimW[1] %d  dimW[2] %d  dimW[3] %d\n", wKindNames[i].c_str(), dimW[0], dimW[1], dimW[2], dimW[3]);
-        printf("@@@@@ [%s] strideW[0] %d  strideW[1] %d  strideW[2] %d  strideW[3] %d\n", wKindNames[i].c_str(), strideW[0], strideW[1], strideW[2], strideW[3]);
-    }
+    
 
     if (sizeWeights > 0) {
         CHECK_CUDA_ERR(cudaMalloc((void **)&devW, sizeWeights));
@@ -494,6 +474,27 @@ public:
 
         // Fill with -NaN to deterct incorrect segment write for debugging.
         CHECK_CUDA_ERR(cudaMemset(devReserve, 0xff, sizeReserve));
+    }
+
+
+    // get the Weight Info
+    cudnnTensorDescriptor_t weightDesc = NULL;
+    int nbDims, dimW[4], strideW[4];
+    cudnnDataType_t dataTypeUnsed;
+
+    CHECK_CUDNN_ERR(cudnnCreateTensorDescriptor(&weightDesc));
+        
+    float *weightAddr = NULL;
+    void *paramBuf;
+    cudnnMultiHeadAttnWeightKind_t wKind[4] = {CUDNN_MH_ATTN_Q_WEIGHTS, CUDNN_MH_ATTN_K_WEIGHTS, CUDNN_MH_ATTN_V_WEIGHTS, CUDNN_MH_ATTN_O_WEIGHTS};
+    std::vector<std::string> wKindNames({"CUDNN_MH_ATTN_Q_WEIGHTS", "CUDNN_MH_ATTN_K_WEIGHTS", "CUDNN_MH_ATTN_V_WEIGHTS", "CUDNN_MH_ATTN_O_WEIGHTS"});
+    for(int i=0; i<4; i++){
+        size_t paramSize = sizeWeights;
+        CHECK_CUDNN_ERR(cudnnGetMultiHeadAttnWeights(handle, attn_desc, wKind[i], paramSize, paramBuf, weightDesc, (void **)&weightAddr));
+        CHECK_CUDNN_ERR(cudnnGetTensorNdDescriptor(weightDesc, 4, &dataTypeUnsed, &nbDims, dimW, strideW));
+        printf("@@@@@ [%s] weightAddr %p\n", wKindNames[i].c_str(), (void *)weightAddr);
+        printf("@@@@@ [%s] dimW[0] %d  dimW[1] %d  dimW[2] %d  dimW[3] %d\n", wKindNames[i].c_str(), dimW[0], dimW[1], dimW[2], dimW[3]);
+        printf("@@@@@ [%s] strideW[0] %d  strideW[1] %d  strideW[2] %d  strideW[3] %d\n", wKindNames[i].c_str(), strideW[0], strideW[1], strideW[2], strideW[3]);
     }
 
     qSeqArray = (int *)calloc(batchSize * beamSize, sizeof(int));
@@ -988,7 +989,7 @@ int eval_mha(unsigned batch_size,unsigned n_heads,unsigned seq_len_q,unsigned se
 }
 
 int main(){
-    eval_mha(1,4,3,3,10,20,0,false);
-    eval_mha(1,4,3,3,10,20,0,true);
+    eval_mha(1,4,2,3,10,20,0,false);
+    eval_mha(1,4,2,3,10,20,0,true);
     return 0;
 }
