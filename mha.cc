@@ -459,6 +459,12 @@ public:
     printf("@@@@@ sizeWkspace: %d\n",sizeWkspace);
     printf("@@@@@ sizeReserve: %d\n",sizeReserve);
     
+    int mysizeWeights = (qProjSize*numHeads*qSize+kProjSize*numHeads*kSize+vProjSize*numHeads*vSize+oProjSize*oSize)*4;
+    printf("@@@@@ my sizeWeights: %d\n", mysizeWeights);
+    int mysizeWkspace = batchSize*(qProjSize*numHeads*seqLenQ+kProjSize*numHeads*seqLenK+vProjSize*numHeads*seqLenK+oProjSize*seqLenQ+seqLenQ*seqLenK*numHeads*2)*4;
+    printf("@@@@@ my sizeWkspace: %d\n", mysizeWkspace);
+    
+    
 
     if (sizeWeights > 0) {
         CHECK_CUDA_ERR(cudaMalloc((void **)&devW, sizeWeights));
@@ -604,7 +610,7 @@ public:
     dataAxes[1] = CUDNN_SEQDATA_BATCH_DIM;
     dataAxes[2] = CUDNN_SEQDATA_TIME_DIM;
     dataAxes[3] = CUDNN_SEQDATA_VECT_DIM;
-
+        
     dimA[CUDNN_SEQDATA_BEAM_DIM]  = beamSize;
     dimA[CUDNN_SEQDATA_BATCH_DIM] = batchSize;
     dimA[CUDNN_SEQDATA_TIME_DIM]  = seqLenQ;
@@ -878,8 +884,8 @@ public:
     
     if(!compareResults(hostO,h_o_out.data(),out_data_len))
     {
-        print_vec(hostO,"cudnn O",0,h_o_out.size());
-        print_vec(h_o_out.data(),"eidnn O",0,h_o_out.size());
+        print_vec(hostO,"cudnn O",0,64);
+        print_vec(h_o_out.data(),"eidnn O",0,64);
     }
 
     if (is_train) {
@@ -989,7 +995,10 @@ int eval_mha(unsigned batch_size,unsigned n_heads,unsigned seq_len_q,unsigned se
 }
 
 int main(){
-    eval_mha(1,4,2,3,10,20,0,false);
-    eval_mha(1,4,2,3,10,20,0,true);
+    // eval_mha(1,4,2,3,10,20,0,false);
+    // eval_mha(1,4,2,3,10,20,0,true);
+    eval_mha(1,1,1,1,1,1,0,false);
+    // eval_mha(2,8,128,128,64,64,0,false);
+    // eval_mha(2,8,128,128,64,64,0,true);
     return 0;
 }
