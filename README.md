@@ -1,20 +1,14 @@
-# eigenMHA (eigenDNN) -- Multi-head Attention Inference and Training implemented by Eigen.
+
+<center><img src="./figures/MHA.png" ...></center>
+<center>Which part will we implement in the transformer model.</center>
+
+# eigenMHA (eigenDNN vs cuDNN) -- Multi-head Attention Inference and Training implemented by Eigen.
 To clone this repo, 
 ```
 git clone --recursive https://github.com/jundaf2/eigenMHA
 cd eigenMHA
 git clone https://gitlab.com/libeigen/eigen  # clone eigen if necessary
 ```
-To make and run the project, first install LibTorch for necessary verification, see https://github.com/jundaf2/dnn-test-framework  [nnTest mainly focuses on providing a testing framework to train and inference Deep Neural Networks using YOUR OWN LIBRARY]. And then,
-```
-mkdir build && cd build
-cmake ..
-make -j4
-./mha
-```
-
-<center><img src="./figures/MHA.png" ...></center>
-<center>Which part will we implement in the transformer model.</center>
 
 ## Introduction
  In this repo, we use Eigen3 to implement the forward and backward of Multi-head Attention in Transformer models. Basically, this repo has two branches -- `torch` and `cudnn`. 
@@ -25,18 +19,35 @@ make -j4
 3. a libtorch MHA in the `torch` branch as a comparison to the eigenMHA
 4. a cudnn MHA in the `cudnn` branch as a comparison to the eigenMHA
 
-### branch `torch`
+### branch `torch` (default)
 ```
 git checkout torch
 ```
+
+In this branch, the eigenDNN is compared with the CPU libtorch. To make and run the project, first install LibTorch for necessary verification, see https://github.com/jundaf2/dnn-test-framework  [nnTest mainly focuses on providing a testing framework to train and inference Deep Neural Networks using YOUR OWN LIBRARY]. And then,
+```
+mkdir build && cd build
+cmake ..
+make -j4
+./mha
+```
+
+
 ### branch `cudnn`
 ```
 git checkout cudnn
 ```
+In this branch, the eigenDNN is compared with the Multi-head Attention APIs provided by cuDNN V8 (`cudnn_samples_v8/multiHeadAttention`). 
 
-To install cuDNN, see https://developer.nvidia.com/rdp/cudnn-download and https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html#installlinux-tar
+To install cuDNN, see https://developer.nvidia.com/rdp/cudnn-download and https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html#installlinux-tar . After copying the corresponding libraries and headers to the correct location, 
+```
+mkdir build && cd build
+cmake ..
+make -j4
+./mha
+```
 
-To be more specific, this eigenMHA (eigenDNN) does what the cuDNN does in the following APIs for MHA operations.
+To be more specific, this eigenDNN does what the cuDNN does in the following APIs for MHA operations.
 * [cudnnCreateAttnDescriptor()](https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnCreateAttnDescriptor)
 * [cudnnSetAttnDescriptor()](https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnSetAttnDescriptor)
 * [cudnnGetAttnDescriptor()](https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnGetAttnDescriptor)
