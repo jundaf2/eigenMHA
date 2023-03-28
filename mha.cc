@@ -461,7 +461,7 @@ public:
     
     int mysizeWeights = (qProjSize*numHeads*qSize+kProjSize*numHeads*kSize+vProjSize*numHeads*vSize+oProjSize*oSize)*4;
     printf("@@@@@ my sizeWeights: %d\n", mysizeWeights);
-    int mysizeWkspace = batchSize*(qProjSize*numHeads*seqLenQ+kProjSize*numHeads*seqLenK+vProjSize*numHeads*seqLenK+oProjSize*seqLenQ+seqLenQ*seqLenK*numHeads*2)*4;
+    int mysizeWkspace = batchSize*(qProjSize*numHeads*seqLenQ+kProjSize*numHeads*seqLenK+vProjSize*numHeads*seqLenK+oProjSize*seqLenQ+seqLenQ*seqLenK*numHeads*2)*4; //  + numHeads*64+batchSize*64;
     printf("@@@@@ my sizeWkspace: %d\n", mysizeWkspace);
     
     
@@ -997,7 +997,59 @@ int eval_mha(unsigned batch_size,unsigned n_heads,unsigned seq_len_q,unsigned se
 int main(){
     // eval_mha(1,4,2,3,10,20,0,false);
     // eval_mha(1,4,2,3,10,20,0,true);
-    eval_mha(1,1,1,1,1,1,0,false);
+
+    eval_mha(1,1,1,1,1,1,0,false);// 544
+    eval_mha(2,1,1,1,1,1,0,false);// 608
+    eval_mha(1,2,1,1,1,1,0,false);// 608
+
+    eval_mha(2,2,1,1,1,1,0,false);
+
+    eval_mha(3,1,1,1,1,1,0,false); // 672
+    eval_mha(1,3,1,1,1,1,0,false); // 672
+    
+    eval_mha(3,2,1,1,1,1,0,false);
+    eval_mha(2,3,1,1,1,1,0,false);
+    eval_mha(3,3,1,1,1,1,0,false);
+
+    eval_mha(4,4,1,1,1,1,0,false);
+    eval_mha(4,3,1,1,1,1,0,false);
+    eval_mha(4,2,1,1,1,1,0,false);
+    eval_mha(4,1,1,1,1,1,0,false);
+
+    eval_mha(3,4,1,1,1,1,0,false);
+    eval_mha(2,4,1,1,1,1,0,false);
+    eval_mha(1,4,1,1,1,1,0,false);
+
+    eval_mha(5,5,1,1,1,1,0,false);
+    eval_mha(5,4,1,1,1,1,0,false);
+    eval_mha(5,3,1,1,1,1,0,false);
+    eval_mha(5,2,1,1,1,1,0,false);
+    eval_mha(5,1,1,1,1,1,0,false);
+
+    eval_mha(6,6,1,1,1,1,0,false);
+    eval_mha(6,5,1,1,1,1,0,false);
+    eval_mha(6,4,1,1,1,1,0,false);
+    eval_mha(6,3,1,1,1,1,0,false);
+    eval_mha(6,2,1,1,1,1,0,false);
+    eval_mha(6,1,1,1,1,1,0,false);
+
+    eval_mha(7,7,1,1,1,1,0,false);
+    eval_mha(7,6,1,1,1,1,0,false);
+    eval_mha(7,5,1,1,1,1,0,false);
+    eval_mha(7,4,1,1,1,1,0,false);
+    eval_mha(7,3,1,1,1,1,0,false);
+    eval_mha(7,2,1,1,1,1,0,false);
+    eval_mha(7,1,1,1,1,1,0,false);
+
+    eval_mha(8,8,1,1,1,1,0,false);
+    eval_mha(8,7,1,1,1,1,0,false);
+    eval_mha(8,6,1,1,1,1,0,false);
+    eval_mha(8,5,1,1,1,1,0,false);
+    eval_mha(8,4,1,1,1,1,0,false);
+    eval_mha(8,3,1,1,1,1,0,false);
+    eval_mha(8,2,1,1,1,1,0,false);
+    eval_mha(8,1,1,1,1,1,0,false);
+
     // eval_mha(2,8,128,128,64,64,0,false);
     // eval_mha(2,8,128,128,64,64,0,true);
     return 0;
