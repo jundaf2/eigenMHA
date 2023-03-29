@@ -28,4 +28,6 @@ std::vector<float> vector0213(std::vector<float> data, int A, int B, int C, int 
 
 std::vector<float> vector0132(std::vector<float> data, int A, int B, int C, int D);
 
+std::vector<float> vector3210(std::vector<float> data, int A, int B, int C, int D);
+
 std::vector<float> vector01(std::vector<float> data, int A, int B);

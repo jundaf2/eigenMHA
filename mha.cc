@@ -128,7 +128,6 @@ public:
     h_v_weight = std::vector<float>(h_weight_bank.begin()+weight_len1*2,h_weight_bank.begin()+weight_len1*3);
     h_o_weight = std::vector<float>(h_weight_bank.begin()+weight_len1*3,h_weight_bank.begin()+weight_len1*3+weight_len2);
 
-    printf("##### sizeWeights: %d\n",h_weight_bank.size()*sizeof(float));
 
   }
 
@@ -333,15 +332,6 @@ public:
     bool resLink     = false;
     bool projBias    = false;
 
-    std::cout << "qSize" << qSize << std::endl;
-    std::cout << "kSize" << kSize << std::endl;
-    std::cout << "vSize" << vSize << std::endl;
-    std::cout << "qProjSize" << qProjSize << std::endl;
-    std::cout << "kProjSize" << kProjSize << std::endl;
-    std::cout << "vProjSize" << vProjSize << std::endl;
-    std::cout << "oProjSize" << oProjSize << std::endl;
-
-
     cudnnHandle_t handle;
     cudnnAttnDescriptor_t attn_desc;
     cudnnDropoutDescriptor_t drop_desc;
@@ -461,8 +451,15 @@ public:
     
     int mysizeWeights = (qProjSize*numHeads*qSize+kProjSize*numHeads*kSize+vProjSize*numHeads*vSize+oProjSize*oSize)*4;
     printf("@@@@@ my sizeWeights: %d\n", mysizeWeights);
+
     int mysizeWkspace = batchSize*(qProjSize*numHeads*seqLenQ+kProjSize*numHeads*seqLenK+vProjSize*numHeads*seqLenK+oProjSize*seqLenQ+seqLenQ*seqLenK*numHeads*2)*4; //  + numHeads*64+batchSize*64;
     printf("@@@@@ my sizeWkspace: %d\n", mysizeWkspace);
+
+    int mysizeReserve = batchSize*(qProjSize*numHeads*seqLenQ*1+kProjSize*numHeads*seqLenK*1+vProjSize*numHeads*seqLenK*1+oProjSize*seqLenQ*1+std::max(vProjSize*numHeads*seqLenK,kProjSize*numHeads*seqLenK*1)+std::max(qProjSize*numHeads*seqLenQ,oProjSize*seqLenQ)+seqLenQ*seqLenK*numHeads*3)*4; //  + numHeads*64+batchSize*64;
+    printf("@@@@@ my mysizeReserve: %d\n", mysizeReserve);
+
+    int mysizeReserve1 = batchSize*(qProjSize*numHeads*seqLenQ*2+kProjSize*numHeads*seqLenK*2+vProjSize*numHeads*seqLenK*2+oProjSize*seqLenQ*2+seqLenQ*seqLenK*numHeads*1)*4; //  + numHeads*64+batchSize*64;
+    printf("@@@@@ my mysizeReserve1: %d\n", mysizeReserve1);
     
     
 
@@ -491,12 +488,10 @@ public:
     CHECK_CUDNN_ERR(cudnnCreateTensorDescriptor(&weightDesc));
         
     float *weightAddr = NULL;
-    void *paramBuf;
     cudnnMultiHeadAttnWeightKind_t wKind[4] = {CUDNN_MH_ATTN_Q_WEIGHTS, CUDNN_MH_ATTN_K_WEIGHTS, CUDNN_MH_ATTN_V_WEIGHTS, CUDNN_MH_ATTN_O_WEIGHTS};
     std::vector<std::string> wKindNames({"CUDNN_MH_ATTN_Q_WEIGHTS", "CUDNN_MH_ATTN_K_WEIGHTS", "CUDNN_MH_ATTN_V_WEIGHTS", "CUDNN_MH_ATTN_O_WEIGHTS"});
     for(int i=0; i<4; i++){
-        size_t paramSize = sizeWeights;
-        CHECK_CUDNN_ERR(cudnnGetMultiHeadAttnWeights(handle, attn_desc, wKind[i], paramSize, paramBuf, weightDesc, (void **)&weightAddr));
+        CHECK_CUDNN_ERR(cudnnGetMultiHeadAttnWeights(handle, attn_desc, wKind[i], sizeWeights, devW, weightDesc, (void **)&weightAddr));
         CHECK_CUDNN_ERR(cudnnGetTensorNdDescriptor(weightDesc, 4, &dataTypeUnsed, &nbDims, dimW, strideW));
         printf("@@@@@ [%s] weightAddr %p\n", wKindNames[i].c_str(), (void *)weightAddr);
         printf("@@@@@ [%s] dimW[0] %d  dimW[1] %d  dimW[2] %d  dimW[3] %d\n", wKindNames[i].c_str(), dimW[0], dimW[1], dimW[2], dimW[3]);
@@ -658,9 +653,10 @@ public:
     // std::vector<float> h_v_weight = vector01(this->h_v_weight,hidden_size2,hidden_size1);
     // std::vector<float> h_o_weight = vector01(this->h_o_weight,hidden_size2,hidden_size2);
 
-    std::vector<float> h_q_in = vector0132(this->h_q_in,1,batch_size,hidden_size1,seq_len_q);
-    std::vector<float> h_k_in = vector0132(this->h_k_in,1,batch_size,hidden_size1,seq_len_k);
-    std::vector<float> h_v_in = vector0132(this->h_v_in,1,batch_size,hidden_size1,seq_len_k);
+    /* @junda: eigen col-major to cudnn row-major */
+    std::vector<float> h_q_in = vector3210(this->h_q_in,hidden_size1,seq_len_q,batch_size,1);
+    std::vector<float> h_k_in = vector3210(this->h_k_in,hidden_size1,seq_len_k,batch_size,1);
+    std::vector<float> h_v_in = vector3210(this->h_v_in,hidden_size1,seq_len_k,batch_size,1);
     
 
     // Copy the data from GPU (device) to CPU (host)
@@ -699,7 +695,7 @@ public:
             exit(-1);
         }
 
-        std::vector<float> h_target = vector0132(this->h_target,1,batch_size,hidden_size2,seq_len_q);
+        std::vector<float> h_target = vector3210(this->h_target,hidden_size2,seq_len_q,batch_size,1);
         CHECK_CUDA_ERR(cudaMemcpy(devTarget, h_target.data(), oNmbElem * sizeof(float), cudaMemcpyHostToDevice));
 
         printf("Calling cudnnMultiHeadAttnForward(currIdx = -1)\n");
@@ -815,16 +811,17 @@ public:
         CHECK_CUDA_ERR(cudaMemcpy(hostDK, devDK, sizeof(float) * kNmbElem, cudaMemcpyDeviceToHost));
         CHECK_CUDA_ERR(cudaMemcpy(hostDV, devDV, sizeof(float) * vNmbElem, cudaMemcpyDeviceToHost));
 
+        /* @junda: transpose back to eigen col-major format from row-major format*/
         std::vector<float> vec_hostDQ(hostDQ,hostDQ+qNmbElem);
-        std::vector<float> vec_hostDQ_trans = vector0132(vec_hostDQ,1,batch_size,seq_len_q,hidden_size1);
+        std::vector<float> vec_hostDQ_trans = vector3210(vec_hostDQ,1,batch_size,seq_len_q,hidden_size1);
         CHECK_CUDA_ERR(cudaMemcpy(hostDQ, vec_hostDQ_trans.data(), sizeof(float) * qNmbElem, cudaMemcpyHostToHost));
 
         std::vector<float> vec_hostDK(hostDK,hostDK+kNmbElem);
-        std::vector<float> vec_hostDK_trans = vector0132(vec_hostDK,1,batch_size,seq_len_k,hidden_size1);
+        std::vector<float> vec_hostDK_trans = vector3210(vec_hostDK,1,batch_size,seq_len_k,hidden_size1);
         CHECK_CUDA_ERR(cudaMemcpy(hostDK, vec_hostDK_trans.data(), sizeof(float) * kNmbElem, cudaMemcpyHostToHost));
 
         std::vector<float> vec_hostDV(hostDV,hostDV+vNmbElem);
-        std::vector<float> vec_hostDV_trans = vector0132(vec_hostDV,1,batch_size,seq_len_k,hidden_size1);
+        std::vector<float> vec_hostDV_trans = vector3210(vec_hostDV,1,batch_size,seq_len_k,hidden_size1);
         CHECK_CUDA_ERR(cudaMemcpy(hostDV, vec_hostDV_trans.data(), sizeof(float) * vNmbElem, cudaMemcpyHostToHost));
 
         // Copy wgrad results to host
@@ -995,10 +992,13 @@ int eval_mha(unsigned batch_size,unsigned n_heads,unsigned seq_len_q,unsigned se
 }
 
 int main(){
-    // eval_mha(1,4,2,3,10,20,0,false);
-    // eval_mha(1,4,2,3,10,20,0,true);
+    eval_mha(1,4,2,3,10,20,0,false);
+    eval_mha(1,4,2,3,10,20,0,true);
 
-    eval_mha(2,8,128,128,64,64,0,false);
-    eval_mha(2,8,128,128,64,64,0,true);
+    eval_mha(8,4,12,12,16,16,0,false);
+    eval_mha(8,4,12,12,16,16,0,true);
+
+    // eval_mha(2,8,128,128,64,64,0,false);
+    // eval_mha(2,8,128,128,64,64,0,true);
     return 0;
 }

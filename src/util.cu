@@ -19,6 +19,9 @@ std::cout << std::endl;
 bool compareResults(const float *res, const float *ref, int len) {
   bool is_near2 = true;
   for (unsigned int i = 0; i < len; i++) {
+    // if(!NEAR2(static_cast<float>(res[i]), ref[i], 1e-1)){
+    //   std::cout << i << ": " << res[i] << " " << ref[i] << std::endl;
+    // }
       is_near2 &= NEAR2(static_cast<float>(res[i]), ref[i], 1e-1);
   }
   return is_near2;
@@ -98,3 +101,17 @@ std::vector<float> vector01(std::vector<float> data, int A, int B){
     }
   return temp_data;
 }
+
+
+std::vector<float> vector3210(std::vector<float> data, int A, int B, int C, int D){
+  assert(data.size()==A*B*C*D);
+  std::vector<float> temp_data = data;
+  for(int a=0;a<A;a++)
+  for(int b=0;b<B;b++)
+  for(int c=0;c<C;c++)
+  for(int d=0;d<D;d++){
+    temp_data.at(d*(A*B*C)+(c*B+b)*A+a) = data.at(a*(B*C*D)+(b*C+c)*D+d);
+  }
+  return temp_data;
+}
+
