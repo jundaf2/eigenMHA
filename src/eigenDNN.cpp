@@ -63,6 +63,34 @@ eidnnStatus_t eidnnSoftmaxForward(eidnnHandle_t handle,
   return EIDNN_STATUS_SUCCESS;
 }
 
+eidnnStatus_t eidnnMaskedSoftmaxForward(eidnnHandle_t handle,
+                    eidnnSoftmaxAlgorithm_t algo,
+                    eidnnSoftmaxMode_t mode,
+                    const Tensor<float, 4>& x,
+                    const Tensor<int, 1>& loWin,
+                    const Tensor<int, 1>& hiWin,
+                    Tensor<float, 4>& y)
+{
+  int s_len = y.dimension(3);
+  for(int b=0; b<y.dimension(0); b++){
+    for(int h=0; h<y.dimension(1); h++){
+      for(int s=0; s<y.dimension(2); s++){
+        const Tensor<float, 1> x_ten = x.chip(b,0).chip(h,0).chip(s,0);
+        Tensor<float, 1> x_ten_masked(s_len);
+        for(int i=0; i<s_len; i++)
+        {
+          x_ten_masked(i) = (i>=loWin(s)&&i<hiWin(s)) ? x_ten(i):-100000.f;
+        }
+        const Tensor<float, 1> x_exp_max = (x_ten_masked - x_ten_masked.maximum().reshape(Eigen::array<Index, 1>({1})).broadcast(Eigen::array<Index, 1>({s_len}))).exp();
+        
+        const Tensor<float, 1> y_ten = x_exp_max / x_exp_max.sum().reshape(Eigen::array<Index, 1>({1})).broadcast(Eigen::array<Index, 1>({s_len}));
+        y.chip(b,0).chip(h,0).chip(s,0) = y_ten;
+      }
+    }
+  }
+  return EIDNN_STATUS_SUCCESS;
+}
+
 eidnnStatus_t eidnnSoftmaxBackward(eidnnHandle_t handle,
                      eidnnSoftmaxAlgorithm_t algo,
                      eidnnSoftmaxMode_t mode,

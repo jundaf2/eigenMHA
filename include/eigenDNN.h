@@ -115,7 +115,13 @@ eidnnStatus_t eidnnSoftmaxForward(eidnnHandle_t handle,
                     eidnnSoftmaxMode_t mode,
                     const Tensor<float, 4>& x,
                     Tensor<float, 4>& y);
-
+eidnnStatus_t eidnnMaskedSoftmaxForward(eidnnHandle_t handle,
+                    eidnnSoftmaxAlgorithm_t algo,
+                    eidnnSoftmaxMode_t mode,
+                    const Tensor<float, 4>& x,
+                    const Tensor<int, 1>& loWin,
+                    const Tensor<int, 1>& hiWin,
+                    Tensor<float, 4>& y);
 eidnnStatus_t eidnnSoftmaxBackward(eidnnHandle_t handle,
                      eidnnSoftmaxAlgorithm_t algo,
                      eidnnSoftmaxMode_t mode,

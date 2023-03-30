@@ -101,6 +101,9 @@ public:
     const unsigned long random_seed = 2023;
     std::mt19937 generator(static_cast<unsigned int>(random_seed));
     std::uniform_real_distribution<float> uf_distribution(-1.0f, 1.0f);
+    std::uniform_int_distribution<int> ui_distribution_l(0,seq_len_k/2);
+    std::uniform_int_distribution<int> ui_distribution_h(seq_len_k/2+1,seq_len_k);
+
     
     for (int i = 0; i < h_weight_bank.size(); i++) {
       h_weight_bank.at(i) = uf_distribution(generator); 
@@ -128,7 +131,13 @@ public:
     h_v_weight = std::vector<float>(h_weight_bank.begin()+weight_len1*2,h_weight_bank.begin()+weight_len1*3);
     h_o_weight = std::vector<float>(h_weight_bank.begin()+weight_len1*3,h_weight_bank.begin()+weight_len1*3+weight_len2);
 
+    h_loWinIdx = std::vector<int>(seq_len_q, 0);
+    h_hiWinIdx = std::vector<int>(seq_len_q, seq_len_k);
 
+    for(int i=0; i<seq_len_q;i++){
+        h_loWinIdx[i] = ui_distribution_l(generator);
+        h_hiWinIdx[i] = ui_distribution_h(generator);
+    }
   }
 
   
@@ -152,6 +161,9 @@ public:
     const Eigen::Tensor<float, 3> v_in = Eigen::TensorMap<const Eigen::Tensor<float, 3>>(h_v_in.data(), {batch_size, seq_len_k, hidden_size1});
 
     const Eigen::Tensor<float, 3> target = Eigen::TensorMap<const Eigen::Tensor<float, 3>>(h_target.data(), {batch_size, seq_len_q, hidden_size2});
+
+    const Eigen::Tensor<int, 1> loWin = Eigen::TensorMap<const Eigen::Tensor<int, 1>>(h_loWinIdx.data(), {seq_len_q});
+    const Eigen::Tensor<int, 1> hiWin = Eigen::TensorMap<const Eigen::Tensor<int, 1>>(h_hiWinIdx.data(), {seq_len_q});
 
 
     // no init
@@ -227,7 +239,8 @@ public:
     // std::cout << "s: " << s << std::endl;
 
     // P = softmax(S), forward
-    eigenDNN::eidnnSoftmaxForward(handle, eigenDNN::eidnnSoftmaxAlgorithm_t::EIDNN_SOFTMAX_ACCURATE, eigenDNN::eidnnSoftmaxMode_t::EIDNN_SOFTMAX_MODE_INSTANCE, s, p);
+    // eigenDNN::eidnnSoftmaxForward(handle, eigenDNN::eidnnSoftmaxAlgorithm_t::EIDNN_SOFTMAX_ACCURATE, eigenDNN::eidnnSoftmaxMode_t::EIDNN_SOFTMAX_MODE_INSTANCE, s, p);
+    eigenDNN::eidnnMaskedSoftmaxForward(handle, eigenDNN::eidnnSoftmaxAlgorithm_t::EIDNN_SOFTMAX_ACCURATE, eigenDNN::eidnnSoftmaxMode_t::EIDNN_SOFTMAX_MODE_INSTANCE, s, loWin, hiWin, p);
 
     // P = dropout(P), forward
     eigenDNN::eidnnDropoutDescriptor_t dropoutDesc = std::make_tuple(dropout_rate,saved_states,0,2023);
@@ -523,7 +536,7 @@ public:
 
 
 
-    /*********************/
+    /***********            **********/
 
     // Initialize qSeqArray and kSeqArray values and attention window
     size_t qBatches = batchSize * beamSize;
@@ -540,8 +553,8 @@ public:
 
     // Set the maximum attention window in all time-steps.
     for (int i = 0; i < seqLenQ; ++i) {
-        loWinIdx[i] = 0;
-        hiWinIdx[i] = seqLenK;
+        loWinIdx[i] = h_loWinIdx[i];
+        hiWinIdx[i] = h_hiWinIdx[i];
     }
     
 
@@ -867,7 +880,6 @@ public:
     free(hiWinIdx);
     hiWinIdx = NULL;
 
-    printf("\nTest DONE\n\n");
     fflush(stdout);
   }
 
@@ -923,8 +935,9 @@ public:
             print_vec(hostDW+3*weight_len1,"cudnn dOW",0,64);
             print_vec(h_o_weight_grad.data(),"eidnn dOW",0,64);
         }
-    }
 
+    }
+    printf("\nTest DONE\n\n");
   }
 
 private:
@@ -948,7 +961,8 @@ private:
   std::vector<float> h_v_in;
   std::vector<float> h_target;
 
-
+  std::vector<int> h_loWinIdx;    
+  std::vector<int> h_hiWinIdx;    
 
   float* devQ  = NULL;
   float* devK  = NULL;
@@ -992,8 +1006,8 @@ int eval_mha(unsigned batch_size,unsigned n_heads,unsigned seq_len_q,unsigned se
 }
 
 int main(){
-    eval_mha(1,4,2,3,10,20,0,false);
-    eval_mha(1,4,2,3,10,20,0,true);
+    eval_mha(1,4,10,15,10,20,0,false);
+    eval_mha(1,4,10,15,10,20,0,true);
 
     eval_mha(8,4,12,12,16,16,0,false);
     eval_mha(8,4,12,12,16,16,0,true);
