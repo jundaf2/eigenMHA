@@ -59,6 +59,7 @@ To be more specific, this eigenDNN does what the cuDNN does in the following API
 * [cudnnMultiHeadAttnBackwardData()](https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnMultiHeadAttnBackwardData)
 * [cudnnMultiHeadAttnBackwardWeights()](https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnMultiHeadAttnBackwardWeights)
 
+For more details of the Attention APIs in cuDNN v8, see this [中文CSDN链接](http://t.csdn.cn/Hw0Qi).
 
 ## What are the variables of MHA in a Training Library?
 
