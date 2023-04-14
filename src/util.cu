@@ -80,6 +80,18 @@ std::vector<float> vector0213(std::vector<float> data, int A, int B, int C, int 
   return temp_data;
 }
 
+std::vector<float> vector2013(std::vector<float> data, int A, int B, int C, int D){
+  assert(data.size()==A*B*C*D);
+  std::vector<float> temp_data = data;
+  for(int a=0;a<A;a++)
+  for(int b=0;b<B;b++)
+  for(int c=0;c<C;c++)
+  for(int d=0;d<D;d++){
+    temp_data.at(c*(A*B*D)+(a*B+b)*D+d) = data.at(a*(B*C*D)+(b*C+c)*D+d);
+  }
+  return temp_data;
+}
+
 std::vector<float> vector0132(std::vector<float> data, int A, int B, int C, int D){
   assert(data.size()==A*B*C*D);
   std::vector<float> temp_data = data;
@@ -109,7 +121,8 @@ std::vector<float> vector3210(std::vector<float> data, int A, int B, int C, int 
   for(int a=0;a<A;a++)
   for(int b=0;b<B;b++)
   for(int c=0;c<C;c++)
-  for(int d=0;d<D;d++){
+  for(int d=0;d<D;d++)
+  {
     temp_data.at(d*(A*B*C)+(c*B+b)*A+a) = data.at(a*(B*C*D)+(b*C+c)*D+d);
   }
   return temp_data;

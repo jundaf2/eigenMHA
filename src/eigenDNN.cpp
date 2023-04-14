@@ -249,5 +249,18 @@ eidnnStatus_t eidnnMSELoss(
   return EIDNN_STATUS_SUCCESS;
 }
 
+eidnnStatus_t eidnnMSELoss(
+    eidnnHandle_t handle,
+    const Tensor<float, 4> &output, 
+    const Tensor<float, 4> &target,
+    Tensor<float, 0> &loss,
+    Tensor<float, 4> &d_loss)
+{
+  const Tensor<float, 4> mean_square_error = (output-target)*(output-target)*(1.0f/output.size());
+  loss = mean_square_error.sum();
+  d_loss = 2*(output-target)*(1.0f/output.size());
+  return EIDNN_STATUS_SUCCESS;
+}
+
 
 }

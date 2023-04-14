@@ -26,6 +26,8 @@ void launch_mse_loss_kernel(const float* output, const float* target, float* los
 
 std::vector<float> vector0213(std::vector<float> data, int A, int B, int C, int D);
 
+std::vector<float> vector2013(std::vector<float> data, int A, int B, int C, int D);
+
 std::vector<float> vector0132(std::vector<float> data, int A, int B, int C, int D);
 
 std::vector<float> vector3210(std::vector<float> data, int A, int B, int C, int D);

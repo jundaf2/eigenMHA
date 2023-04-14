@@ -220,5 +220,12 @@ eidnnStatus_t eidnnMSELoss(
     const Tensor<float, 3> &target,
     Tensor<float, 0> &loss,
     Tensor<float, 3> &d_loss);
-
+    
+eidnnStatus_t eidnnMSELoss(
+    eidnnHandle_t handle,
+    const Tensor<float, 4> &output, 
+    const Tensor<float, 4> &target,
+    Tensor<float, 0> &loss,
+    Tensor<float, 4> &d_loss);
 }
+

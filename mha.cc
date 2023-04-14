@@ -7,7 +7,7 @@ class test_MHA {
  
 
 public:
-  test_MHA(int batch_size, int n_heads, int seq_len_q, int seq_len_k, int head_size1, int head_size2, float dropout_rate, bool is_train){
+  test_MHA(int batch_size, int n_heads, int seq_len_q, int seq_len_k, int head_size1, int head_size2, float dropout_rate,bool proj_q, bool proj_k, bool proj_v, bool proj_o, bool is_train){
     this->hidden_size1 = head_size1*n_heads;
     this->hidden_size2 = head_size2*n_heads;
     this->batch_size=batch_size;
@@ -17,6 +17,10 @@ public:
     this->head_size1=head_size1;
     this->head_size2=head_size2;
     this->dropout_rate=dropout_rate;
+    this->proj_q=proj_q;
+    this->proj_k=proj_k;
+    this->proj_v=proj_v;
+    this->proj_o=proj_o;
     this->is_train = is_train;
   }
 
@@ -84,8 +88,9 @@ public:
     size_t weight_len1 = hidden_size1*hidden_size2;
     size_t weight_len2 = hidden_size2*hidden_size2;
     size_t bias_len = hidden_size2;
-    size_t in_data_len_q = batch_size*seq_len_q*hidden_size1;
-    size_t in_data_len_k = batch_size*seq_len_k*hidden_size1;
+    size_t in_data_len_q = batch_size*seq_len_q*(proj_q?hidden_size1:hidden_size2);
+    size_t in_data_len_k = batch_size*seq_len_k*(proj_k?hidden_size1:hidden_size2);
+    size_t in_data_len_v = batch_size*seq_len_k*(proj_v?hidden_size1:hidden_size2);
     size_t out_data_len = batch_size*seq_len_q*hidden_size2;
     unsigned int seed = 2023;
     float rand_range = 2;
@@ -94,7 +99,7 @@ public:
 
     h_q_in = std::vector<float>(in_data_len_q);
     h_k_in = std::vector<float>(in_data_len_k);
-    h_v_in = std::vector<float>(in_data_len_k);
+    h_v_in = std::vector<float>(in_data_len_v);
     h_target = std::vector<float>(out_data_len);
 
     // init from init_data
@@ -126,10 +131,30 @@ public:
     h_v_bias = std::vector<float>(bias_len,0);
     h_o_bias = std::vector<float>(bias_len,0);
 
-    h_q_weight = std::vector<float>(h_weight_bank.begin(),h_weight_bank.begin()+weight_len1); 
-    h_k_weight = std::vector<float>(h_weight_bank.begin()+weight_len1,h_weight_bank.begin()+weight_len1*2);
-    h_v_weight = std::vector<float>(h_weight_bank.begin()+weight_len1*2,h_weight_bank.begin()+weight_len1*3);
-    h_o_weight = std::vector<float>(h_weight_bank.begin()+weight_len1*3,h_weight_bank.begin()+weight_len1*3+weight_len2);
+    int offset_begin = 0;
+    int offset_end = 0;
+    if(proj_q){
+      offset_begin = 0;
+      offset_end = weight_len1;
+      h_q_weight = std::vector<float>(h_weight_bank.begin()+offset_begin,h_weight_bank.begin()+offset_end); 
+      offset_begin += weight_len1;
+    }
+    if(proj_k){
+      offset_end = offset_begin + weight_len1;
+      h_k_weight = std::vector<float>(h_weight_bank.begin()+offset_begin,h_weight_bank.begin()+offset_end); 
+      offset_begin += weight_len1;
+    }
+    if(proj_v){
+      offset_end = offset_begin + weight_len1;
+      h_v_weight = std::vector<float>(h_weight_bank.begin()+offset_begin,h_weight_bank.begin()+offset_end); 
+      offset_begin += weight_len1;
+    }
+    if(proj_o){
+      offset_end = offset_begin + weight_len2;
+      h_o_weight = std::vector<float>(h_weight_bank.begin()+offset_begin,h_weight_bank.begin()+offset_end); 
+      offset_begin += weight_len2;
+    }
+
 
     h_loWinIdx = std::vector<int>(seq_len_q, 0);
     h_hiWinIdx = std::vector<int>(seq_len_q, seq_len_k);
@@ -146,24 +171,19 @@ public:
     eigenDNN::eidnnHandle_t handle;
     void* saved_states;
 
-    const Eigen::Tensor<float, 2> q_weight = Eigen::TensorMap<const Eigen::Tensor<float, 2>>(h_q_weight.data(), {hidden_size2, hidden_size1});
-    const Eigen::Tensor<float, 2> k_weight = Eigen::TensorMap<const Eigen::Tensor<float, 2>>(h_k_weight.data(), {hidden_size2, hidden_size1});
-    const Eigen::Tensor<float, 2> v_weight = Eigen::TensorMap<const Eigen::Tensor<float, 2>>(h_v_weight.data(), {hidden_size2, hidden_size1});
-    const Eigen::Tensor<float, 2> o_weight = Eigen::TensorMap<const Eigen::Tensor<float, 2>>(h_o_weight.data(), {hidden_size2, hidden_size2});
+    Eigen::Tensor<float, 2> q_weight; if(proj_q) q_weight = Eigen::TensorMap<const Eigen::Tensor<float, 2>>(h_q_weight.data(), {hidden_size2, hidden_size1});
+    Eigen::Tensor<float, 2> k_weight; if(proj_q) k_weight = Eigen::TensorMap<const Eigen::Tensor<float, 2>>(h_k_weight.data(), {hidden_size2, hidden_size1});
+    Eigen::Tensor<float, 2> v_weight; if(proj_v) v_weight = Eigen::TensorMap<const Eigen::Tensor<float, 2>>(h_v_weight.data(), {hidden_size2, hidden_size1});
+    Eigen::Tensor<float, 2> o_weight; if(proj_o) o_weight = Eigen::TensorMap<const Eigen::Tensor<float, 2>>(h_o_weight.data(), {hidden_size2, hidden_size2});
 
     const Eigen::Tensor<float, 1> q_bias = Eigen::TensorMap<const Eigen::Tensor<float, 1>>(h_q_bias.data(), {hidden_size2});
     const Eigen::Tensor<float, 1> k_bias = Eigen::TensorMap<const Eigen::Tensor<float, 1>>(h_k_bias.data(), {hidden_size2});
     const Eigen::Tensor<float, 1> v_bias = Eigen::TensorMap<const Eigen::Tensor<float, 1>>(h_v_bias.data(), {hidden_size2});
     const Eigen::Tensor<float, 1> o_bias = Eigen::TensorMap<const Eigen::Tensor<float, 1>>(h_o_bias.data(), {hidden_size2});
 
-    const Eigen::Tensor<float, 3> q_in = Eigen::TensorMap<const Eigen::Tensor<float, 3>>(h_q_in.data(), {batch_size, seq_len_q, hidden_size1});
-    const Eigen::Tensor<float, 3> k_in = Eigen::TensorMap<const Eigen::Tensor<float, 3>>(h_k_in.data(), {batch_size, seq_len_k, hidden_size1});
-    const Eigen::Tensor<float, 3> v_in = Eigen::TensorMap<const Eigen::Tensor<float, 3>>(h_v_in.data(), {batch_size, seq_len_k, hidden_size1});
-
-    const Eigen::Tensor<float, 3> target = Eigen::TensorMap<const Eigen::Tensor<float, 3>>(h_target.data(), {batch_size, seq_len_q, hidden_size2});
-
     const Eigen::Tensor<int, 1> loWin = Eigen::TensorMap<const Eigen::Tensor<int, 1>>(h_loWinIdx.data(), {seq_len_q});
     const Eigen::Tensor<int, 1> hiWin = Eigen::TensorMap<const Eigen::Tensor<int, 1>>(h_hiWinIdx.data(), {seq_len_q});
+
 
 
     // no init
@@ -172,11 +192,6 @@ public:
     Eigen::Tensor<float, 3> v_out(batch_size, seq_len_k, hidden_size2);
     Eigen::Tensor<float, 3> o_out(batch_size, seq_len_q, hidden_size2);
     Eigen::Tensor<float, 3> o_in(batch_size, seq_len_q, hidden_size2);
-
-    
-    Eigen::Tensor<float, 4> q(batch_size, n_heads, seq_len_q, head_size2); 
-    Eigen::Tensor<float, 4> k(batch_size, n_heads, seq_len_k, head_size2);
-    Eigen::Tensor<float, 4> v(batch_size, n_heads, seq_len_k, head_size2);
     
     Eigen::Tensor<float, 4> s(batch_size, n_heads, seq_len_q, seq_len_k);
     Eigen::Tensor<float, 4> p(batch_size, n_heads, seq_len_q, seq_len_k);
@@ -187,10 +202,6 @@ public:
     Eigen::Tensor<float, 3> v_out_grad(batch_size, seq_len_k, hidden_size2);
     Eigen::Tensor<float, 3> o_out_grad(batch_size, seq_len_q, hidden_size2);
 
-    Eigen::Tensor<float, 3> q_in_grad(batch_size, seq_len_q, hidden_size1);
-    Eigen::Tensor<float, 3> k_in_grad(batch_size, seq_len_k, hidden_size1);
-    Eigen::Tensor<float, 3> v_in_grad(batch_size, seq_len_k, hidden_size1);
-    Eigen::Tensor<float, 3> o_in_grad(batch_size, seq_len_q, hidden_size2);
     
     Eigen::Tensor<float, 2> q_weight_grad(hidden_size2, hidden_size1); 
     Eigen::Tensor<float, 2> k_weight_grad(hidden_size2, hidden_size1); 
@@ -208,30 +219,54 @@ public:
     Eigen::Tensor<float, 4> s_grad(batch_size, n_heads, seq_len_q, seq_len_k); 
     Eigen::Tensor<float, 4> p_grad(batch_size, n_heads, seq_len_q, seq_len_k);
     Eigen::Tensor<float, 4> o_grad(batch_size, n_heads, seq_len_q, head_size2); 
+
+
     
-    Eigen::Tensor<float, 0> loss;
-    Eigen::Tensor<float, 3> d_loss(batch_size, seq_len_q, hidden_size2);
-
+    
+    Eigen::Tensor<float, 4> q(batch_size, n_heads, seq_len_q, head_size2); 
+    Eigen::Tensor<float, 4> k(batch_size, n_heads, seq_len_k, head_size2);
+    Eigen::Tensor<float, 4> v(batch_size, n_heads, seq_len_k, head_size2);
     // Linear Layer for Q, K and V, forward
-    eigenDNN::eidnnLinearForward(handle, q_in, q_weight, q_bias, q_out);
-    eigenDNN::eidnnLinearForward(handle, k_in, k_weight, k_bias, k_out);
-    eigenDNN::eidnnLinearForward(handle, v_in, v_weight, v_bias, v_out);
+    if(proj_q){
+        const Eigen::Tensor<float, 3> q_in = Eigen::TensorMap<const Eigen::Tensor<float, 3>>(h_q_in.data(), {batch_size, seq_len_q, hidden_size1});
+        eigenDNN::eidnnLinearForward(handle, q_in, q_weight, q_bias, q_out);
+        // reshape Q [batch_size, seq_len, hidden_size] -> [batch_size, n_heads, seq_len, head_size]
+        Eigen::Tensor<float, 3, Eigen::RowMajor> q_out_row = q_out.swap_layout().shuffle(Eigen::array<int, 3>({2,1,0}));
+        Eigen::TensorMap<Eigen::Tensor<float, 4, Eigen::RowMajor>> q_0123_row(q_out_row.data(), {batch_size, seq_len_q, n_heads, head_size2});
+        Eigen::Tensor<float, 4> q_0123 = q_0123_row.swap_layout().shuffle(Eigen::array<int, 4>({3,2,1,0}));
+        q = q_0123.shuffle(Eigen::array<int, 4>({0,2,1,3}));
+    }
+    else{
+        q = Eigen::TensorMap<const Eigen::Tensor<float, 4>>(h_q_in.data(), {batch_size, n_heads, seq_len_q, head_size2});
+    }
 
+    if(proj_k){
+        const Eigen::Tensor<float, 3> k_in = Eigen::TensorMap<const Eigen::Tensor<float, 3>>(h_k_in.data(), {batch_size, seq_len_k, hidden_size1});
+        eigenDNN::eidnnLinearForward(handle, k_in, k_weight, k_bias, k_out);
+        // reshape K [batch_size, seq_len, hidden_size] -> [batch_size, n_heads, seq_len, head_size]
+        Eigen::Tensor<float, 3, Eigen::RowMajor> k_out_row = k_out.swap_layout().shuffle(Eigen::array<int, 3>({2,1,0}));
+        Eigen::TensorMap<Eigen::Tensor<float, 4, Eigen::RowMajor>> k_0123_row(k_out_row.data(), {batch_size, seq_len_k, n_heads, head_size2});
+        Eigen::Tensor<float, 4> k_0123 = k_0123_row.swap_layout().shuffle(Eigen::array<int, 4>({3,2,1,0}));
+        k = k_0123.shuffle(Eigen::array<int, 4>({0,2,1,3}));
+    }
+    else{
+        k = Eigen::TensorMap<const Eigen::Tensor<float, 4>>(h_k_in.data(), {batch_size, n_heads, seq_len_k, head_size2});
+    }
 
+    if(proj_v){
+        const Eigen::Tensor<float, 3> v_in = Eigen::TensorMap<const Eigen::Tensor<float, 3>>(h_v_in.data(), {batch_size, seq_len_k, hidden_size1});
+        eigenDNN::eidnnLinearForward(handle, v_in, v_weight, v_bias, v_out);
+        // reshape V [batch_size, seq_len, hidden_size] -> [batch_size, n_heads, seq_len, head_size]
+        Eigen::Tensor<float, 3, Eigen::RowMajor> v_out_row = v_out.swap_layout().shuffle(Eigen::array<int, 3>({2,1,0}));
+        Eigen::TensorMap<Eigen::Tensor<float, 4, Eigen::RowMajor>> v_0123_row(v_out_row.data(), {batch_size, seq_len_k, n_heads, head_size2});
+        Eigen::Tensor<float, 4> v_0123 = v_0123_row.swap_layout().shuffle(Eigen::array<int, 4>({3,2,1,0}));
+        v = v_0123.shuffle(Eigen::array<int, 4>({0,2,1,3}));
+    }
+    else{
+        Eigen::Tensor<float, 4> v_0123 = Eigen::TensorMap<const Eigen::Tensor<float, 4>>(h_v_in.data(), {batch_size, seq_len_k, n_heads, head_size2});
+        v_0123.shuffle(Eigen::array<int, 4>({0,2,1,3}));
+    }
 
-    // reshape Q, K and V, [batch_size, seq_len, hidden_size] -> [batch_size, n_heads, seq_len, head_size]
-    Eigen::Tensor<float, 3, Eigen::RowMajor> q_out_row = q_out.swap_layout().shuffle(Eigen::array<int, 3>({2,1,0}));
-    Eigen::Tensor<float, 3, Eigen::RowMajor> k_out_row = k_out.swap_layout().shuffle(Eigen::array<int, 3>({2,1,0}));
-    Eigen::Tensor<float, 3, Eigen::RowMajor> v_out_row = v_out.swap_layout().shuffle(Eigen::array<int, 3>({2,1,0}));
-    Eigen::TensorMap<Eigen::Tensor<float, 4, Eigen::RowMajor>> q_0123_row(q_out_row.data(), {batch_size, seq_len_q, n_heads, head_size2});
-    Eigen::TensorMap<Eigen::Tensor<float, 4, Eigen::RowMajor>> k_0123_row(k_out_row.data(), {batch_size, seq_len_k, n_heads, head_size2});
-    Eigen::TensorMap<Eigen::Tensor<float, 4, Eigen::RowMajor>> v_0123_row(v_out_row.data(), {batch_size, seq_len_k, n_heads, head_size2});
-    Eigen::Tensor<float, 4> q_0123 = q_0123_row.swap_layout().shuffle(Eigen::array<int, 4>({3,2,1,0}));
-    Eigen::Tensor<float, 4> k_0123 = k_0123_row.swap_layout().shuffle(Eigen::array<int, 4>({3,2,1,0}));
-    Eigen::Tensor<float, 4> v_0123 = v_0123_row.swap_layout().shuffle(Eigen::array<int, 4>({3,2,1,0}));
-    q = q_0123.shuffle(Eigen::array<int, 4>({0,2,1,3}));
-    k = k_0123.shuffle(Eigen::array<int, 4>({0,2,1,3}));
-    v = v_0123.shuffle(Eigen::array<int, 4>({0,2,1,3}));
 
     // S = Q*K^T, forward
     eigenDNN::eidnnStridedBatchedGemmForward(handle, 1.0f/sqrtf(head_size2), 0, false, true, false, q, k, s); 
@@ -249,77 +284,132 @@ public:
     // O=P*V, forward
     eigenDNN::eidnnStridedBatchedGemmForward(handle, 1, 0, false, false, false, p, v, o);
 
-    // reshape O, [batch_size, n_heads, seq_len, head_size] -> [batch_size, seq_len, hidden_size]
-    Eigen::Tensor<float, 4> o_0213 = o.shuffle(Eigen::array<int, 4>({0,2,1,3}));
-    Eigen::Tensor<float, 4, Eigen::RowMajor> o_0213_row = o_0213.swap_layout().shuffle(Eigen::array<int, 4>({3,2,1,0}));
-    Eigen::TensorMap<Eigen::Tensor<float, 3, Eigen::RowMajor>> o_in_row(o_0213_row.data(), {batch_size, seq_len_q, hidden_size2});
-    o_in = o_in_row.swap_layout().shuffle(Eigen::array<int, 3>({2,1,0}));
-
-
     // Linear Layer for O, forward
-    eigenDNN::eidnnLinearForward(handle, o_in, o_weight, o_bias, o_out);
+    if(proj_o){
+        // reshape O, [batch_size, n_heads, seq_len, head_size] -> [batch_size, seq_len, hidden_size]
+        Eigen::Tensor<float, 4> o_0213 = o.shuffle(Eigen::array<int, 4>({0,2,1,3}));
+        Eigen::Tensor<float, 4, Eigen::RowMajor> o_0213_row = o_0213.swap_layout().shuffle(Eigen::array<int, 4>({3,2,1,0}));
+        Eigen::TensorMap<Eigen::Tensor<float, 3, Eigen::RowMajor>> o_in_row(o_0213_row.data(), {batch_size, seq_len_q, hidden_size2});
+        o_in = o_in_row.swap_layout().shuffle(Eigen::array<int, 3>({2,1,0}));
+        eigenDNN::eidnnLinearForward(handle, o_in, o_weight, o_bias, o_out);
+        Eigen::Tensor<float, 3, Eigen::RowMajor> o_out_row = o_out.swap_layout().shuffle(Eigen::array<int, 3>({2,1,0}));
+        h_o_out.assign(o_out_row.data(),o_out_row.data()+batch_size*seq_len_q*hidden_size2);
+    }
+    else{
+        // reshape O, [batch_size, n_heads, seq_len, head_size] -> [batch_size, seq_len, n_heads, head_size]
+        Eigen::Tensor<float, 4> o_0213 = o.shuffle(Eigen::array<int, 4>({0,2,1,3}));
+        Eigen::Tensor<float, 4, Eigen::RowMajor> o_row = o_0213.swap_layout().shuffle(Eigen::array<int, 4>({3,2,1,0}));
+        h_o_out.assign(o_row.data(),o_row.data()+batch_size*seq_len_q*hidden_size2);
+    }
 
  
-
-    Eigen::Tensor<float, 3, Eigen::RowMajor> o_out_row = o_out.swap_layout().shuffle(Eigen::array<int, 3>({2,1,0}));
-    h_o_out.assign(o_out_row.data(),o_out_row.data()+batch_size*seq_len_q*hidden_size2);
-
-    // h_o_out.assign(o_in_row.data(),o_in_row.data()+batch_size*seq_len_q*hidden_size2);
-
     if(is_train)
     {
-      // MSE Loss
-      eigenDNN::eidnnMSELoss(handle, o_out, target, loss, d_loss);
+        
+        if(proj_o)
+        {
+            Eigen::Tensor<float, 0> loss;
+            Eigen::Tensor<float, 3> d_loss(batch_size, seq_len_q, hidden_size2);
+            const Eigen::Tensor<float, 3> target = Eigen::TensorMap<const Eigen::Tensor<float, 3>>(h_target.data(), {batch_size, seq_len_q, hidden_size2});
+            // MSE Loss
+            eigenDNN::eidnnMSELoss(handle, o_out, target, loss, d_loss);
+            // Linear Layer for O, backward
+            o_out_grad = d_loss;
+            
+            Eigen::Tensor<float, 3> o_in_grad(batch_size, seq_len_q, hidden_size2);
 
-      // Linear Layer for O, backward
-      o_out_grad = d_loss;
-      eigenDNN::eidnnLinearBackward(handle, o_out_grad, o_in, o_weight, o_in_grad, o_weight_grad, o_bias_grad);
+            eigenDNN::eidnnLinearBackward(handle, o_out_grad, o_in, o_weight, o_in_grad, o_weight_grad, o_bias_grad);
+            h_o_weight_grad.assign(o_weight_grad.data(),o_weight_grad.data()+hidden_size2*hidden_size2);
 
-      // reshape O, [batch_size, seq_len, hidden_size] -> [batch_size, n_heads, seq_len, head_size]
-      Eigen::Tensor<float, 3, Eigen::RowMajor> o_in_grad_row = o_in_grad.swap_layout().shuffle(Eigen::array<int, 3>({2,1,0}));
-      Eigen::TensorMap<Eigen::Tensor<float, 4, Eigen::RowMajor>> o_in_grad_0123_row(o_in_grad_row.data(), {batch_size, seq_len_q, n_heads, head_size2});
-      Eigen::Tensor<float, 4> o_in_grad_0123 = o_in_grad_0123_row.swap_layout().shuffle(Eigen::array<int, 4>({3,2,1,0}));
-      o_grad = o_in_grad_0123.shuffle(Eigen::array<int, 4>({0,2,1,3}));
+            // reshape O, [batch_size, seq_len, hidden_size] -> [batch_size, n_heads, seq_len, head_size]
+            Eigen::Tensor<float, 3, Eigen::RowMajor> o_in_grad_row = o_in_grad.swap_layout().shuffle(Eigen::array<int, 3>({2,1,0}));
+            Eigen::TensorMap<Eigen::Tensor<float, 4, Eigen::RowMajor>> o_in_grad_0123_row(o_in_grad_row.data(), {batch_size, seq_len_q, n_heads, head_size2});
+            Eigen::Tensor<float, 4> o_in_grad_0123 = o_in_grad_0123_row.swap_layout().shuffle(Eigen::array<int, 4>({3,2,1,0}));
+            o_grad = o_in_grad_0123.shuffle(Eigen::array<int, 4>({0,2,1,3}));
+        }
+        else
+        {
+            printf("1 \n");
+            Eigen::Tensor<float, 0> loss;
+            Eigen::Tensor<float, 4> d_loss(batch_size, n_heads, seq_len_q, head_size2);
+            const Eigen::Tensor<float, 4> target = Eigen::TensorMap<const Eigen::Tensor<float, 4>>(h_target.data(), {batch_size, n_heads, seq_len_q, head_size2});
+            // MSE Loss
+            eigenDNN::eidnnMSELoss(handle, o, target, loss, d_loss);
+            o_grad = d_loss;
+            printf("2 \n");
+        }
 
-      // O=P*V backward
-      eigenDNN::eidnnStridedBatchedGemmBackward(handle,  1, 0, false, false, false, p, v, o_grad, p_grad, v_grad);
 
-      // P = dropout(P), backward
-      eigenDNN::eidnnDropoutBackward(handle, dropoutDesc, p_grad, p_grad);
+        // O=P*V backward
+        eigenDNN::eidnnStridedBatchedGemmBackward(handle,  1, 0, false, false, false, p, v, o_grad, p_grad, v_grad);
 
-      // P = softmax(S), backward
-      eigenDNN::eidnnSoftmaxBackward(handle, eigenDNN::eidnnSoftmaxAlgorithm_t::EIDNN_SOFTMAX_ACCURATE, eigenDNN::eidnnSoftmaxMode_t::EIDNN_SOFTMAX_MODE_INSTANCE, p, p_grad, s_grad);
+        // P = dropout(P), backward
+        eigenDNN::eidnnDropoutBackward(handle, dropoutDesc, p_grad, p_grad);
 
-      // S = Q*K^T, backward
-      eigenDNN::eidnnStridedBatchedGemmBackward(handle,  1.0f/sqrtf(head_size2), 0, false, true, false, q, k, s_grad, q_grad, k_grad); 
+        // P = softmax(S), backward
+        eigenDNN::eidnnSoftmaxBackward(handle, eigenDNN::eidnnSoftmaxAlgorithm_t::EIDNN_SOFTMAX_ACCURATE, eigenDNN::eidnnSoftmaxMode_t::EIDNN_SOFTMAX_MODE_INSTANCE, p, p_grad, s_grad);
 
-      // reshape Q, K and V, [batch_size, n_heads, seq_len, head_size] -> [batch_size, seq_len, hidden_size] 
-      Eigen::Tensor<float, 4> q_grad_0213 = q_grad.shuffle(Eigen::array<int, 4>({0,2,1,3}));
-      Eigen::Tensor<float, 4> k_grad_0213 = k_grad.shuffle(Eigen::array<int, 4>({0,2,1,3}));
-      Eigen::Tensor<float, 4> v_grad_0213 = v_grad.shuffle(Eigen::array<int, 4>({0,2,1,3}));
-      Eigen::Tensor<float, 4, Eigen::RowMajor> q_grad_0213_row = q_grad_0213.swap_layout().shuffle(Eigen::array<int, 4>({3,2,1,0}));
-      Eigen::Tensor<float, 4, Eigen::RowMajor> k_grad_0213_row = k_grad_0213.swap_layout().shuffle(Eigen::array<int, 4>({3,2,1,0}));
-      Eigen::Tensor<float, 4, Eigen::RowMajor> v_grad_0213_row = v_grad_0213.swap_layout().shuffle(Eigen::array<int, 4>({3,2,1,0}));
-      Eigen::TensorMap<Eigen::Tensor<float, 3, Eigen::RowMajor>> q_out_grad_row(q_grad_0213_row.data(), {batch_size, seq_len_q, hidden_size2});
-      Eigen::TensorMap<Eigen::Tensor<float, 3, Eigen::RowMajor>> k_out_grad_row(k_grad_0213_row.data(), {batch_size, seq_len_k, hidden_size2});
-      Eigen::TensorMap<Eigen::Tensor<float, 3, Eigen::RowMajor>> v_out_grad_row(v_grad_0213_row.data(), {batch_size, seq_len_k, hidden_size2});
-      q_out_grad = q_out_grad_row.swap_layout().shuffle(Eigen::array<int, 3>({2,1,0}));
-      k_out_grad = k_out_grad_row.swap_layout().shuffle(Eigen::array<int, 3>({2,1,0}));
-      v_out_grad = v_out_grad_row.swap_layout().shuffle(Eigen::array<int, 3>({2,1,0}));
+        // S = Q*K^T, backward
+        eigenDNN::eidnnStridedBatchedGemmBackward(handle,  1.0f/sqrtf(head_size2), 0, false, true, false, q, k, s_grad, q_grad, k_grad); 
 
-      // Linear Layer for Q, K and V, backward
-      eigenDNN::eidnnLinearBackward(handle, q_out_grad, q_in, q_weight, q_in_grad, q_weight_grad, q_bias_grad);
-      eigenDNN::eidnnLinearBackward(handle, k_out_grad, k_in, k_weight, k_in_grad, k_weight_grad, k_bias_grad);
-      eigenDNN::eidnnLinearBackward(handle, v_out_grad, v_in, v_weight, v_in_grad, v_weight_grad, v_bias_grad);
+        // Linear Layer for Q, K and V, backward
+        if(proj_q)
+        {
+            const Eigen::Tensor<float, 3> q_in = Eigen::TensorMap<const Eigen::Tensor<float, 3>>(h_q_in.data(), {batch_size, seq_len_q, hidden_size1});
+            Eigen::Tensor<float, 3> q_in_grad(batch_size, seq_len_q, hidden_size1);
+            // reshape Q [batch_size, n_heads, seq_len, head_size] -> [batch_size, seq_len, hidden_size] 
+            Eigen::Tensor<float, 4> q_grad_0213 = q_grad.shuffle(Eigen::array<int, 4>({0,2,1,3}));
+            Eigen::Tensor<float, 4, Eigen::RowMajor> q_grad_0213_row = q_grad_0213.swap_layout().shuffle(Eigen::array<int, 4>({3,2,1,0}));
+            Eigen::TensorMap<Eigen::Tensor<float, 3, Eigen::RowMajor>> q_out_grad_row(q_grad_0213_row.data(), {batch_size, seq_len_q, hidden_size2});
+            q_out_grad = q_out_grad_row.swap_layout().shuffle(Eigen::array<int, 3>({2,1,0}));
 
-        h_q_in_grad.assign(q_in_grad.data(),q_in_grad.data()+batch_size*seq_len_q*hidden_size1);
-        h_k_in_grad.assign(k_in_grad.data(),k_in_grad.data()+batch_size*seq_len_k*hidden_size1);
-        h_v_in_grad.assign(v_in_grad.data(),v_in_grad.data()+batch_size*seq_len_k*hidden_size1);
+            eigenDNN::eidnnLinearBackward(handle, q_out_grad, q_in, q_weight, q_in_grad, q_weight_grad, q_bias_grad);
+            h_q_weight_grad.assign(q_weight_grad.data(),q_weight_grad.data()+hidden_size2*hidden_size1);
+            h_q_in_grad.assign(q_in_grad.data(),q_in_grad.data()+batch_size*seq_len_q*hidden_size1);
+        }
+        else
+        {
+            h_q_in_grad.assign(q_grad.data(),q_grad.data()+batch_size*seq_len_q*hidden_size2);
+        }    
 
-        h_q_weight_grad.assign(q_weight_grad.data(),q_weight_grad.data()+hidden_size2*hidden_size1);
-        h_k_weight_grad.assign(k_weight_grad.data(),k_weight_grad.data()+hidden_size2*hidden_size1);
-        h_v_weight_grad.assign(v_weight_grad.data(),v_weight_grad.data()+hidden_size2*hidden_size1);
-        h_o_weight_grad.assign(o_weight_grad.data(),o_weight_grad.data()+hidden_size2*hidden_size2);
+        if(proj_k)
+        {
+            const Eigen::Tensor<float, 3> k_in = Eigen::TensorMap<const Eigen::Tensor<float, 3>>(h_k_in.data(), {batch_size, seq_len_k, hidden_size1});
+            Eigen::Tensor<float, 3> k_in_grad(batch_size, seq_len_k, hidden_size1);
+            // reshape K [batch_size, n_heads, seq_len, head_size] -> [batch_size, seq_len, hidden_size]
+            Eigen::Tensor<float, 4> k_grad_0213 = k_grad.shuffle(Eigen::array<int, 4>({0,2,1,3}));
+            Eigen::Tensor<float, 4, Eigen::RowMajor> k_grad_0213_row = k_grad_0213.swap_layout().shuffle(Eigen::array<int, 4>({3,2,1,0}));
+            Eigen::TensorMap<Eigen::Tensor<float, 3, Eigen::RowMajor>> k_out_grad_row(k_grad_0213_row.data(), {batch_size, seq_len_k, hidden_size2});
+            k_out_grad = k_out_grad_row.swap_layout().shuffle(Eigen::array<int, 3>({2,1,0}));
+
+            eigenDNN::eidnnLinearBackward(handle, k_out_grad, k_in, k_weight, k_in_grad, k_weight_grad, k_bias_grad);
+            h_k_weight_grad.assign(k_weight_grad.data(),k_weight_grad.data()+hidden_size2*hidden_size1);
+            h_k_in_grad.assign(k_in_grad.data(),k_in_grad.data()+batch_size*seq_len_k*hidden_size1);
+        }
+        else
+        {
+            h_k_in_grad.assign(k_grad.data(),k_grad.data()+batch_size*seq_len_k*hidden_size2);
+        }
+        if(proj_v)
+        {
+            const Eigen::Tensor<float, 3> v_in = Eigen::TensorMap<const Eigen::Tensor<float, 3>>(h_v_in.data(), {batch_size, seq_len_k, hidden_size1});
+            Eigen::Tensor<float, 3> v_in_grad(batch_size, seq_len_k, hidden_size1);
+            // reshape V [batch_size, n_heads, seq_len, head_size] -> [batch_size, seq_len, hidden_size]
+            Eigen::Tensor<float, 4> v_grad_0213 = v_grad.shuffle(Eigen::array<int, 4>({0,2,1,3}));
+            Eigen::Tensor<float, 4, Eigen::RowMajor> v_grad_0213_row = v_grad_0213.swap_layout().shuffle(Eigen::array<int, 4>({3,2,1,0}));
+            Eigen::TensorMap<Eigen::Tensor<float, 3, Eigen::RowMajor>> v_out_grad_row(v_grad_0213_row.data(), {batch_size, seq_len_k, hidden_size2});
+            v_out_grad = v_out_grad_row.swap_layout().shuffle(Eigen::array<int, 3>({2,1,0}));
+
+            eigenDNN::eidnnLinearBackward(handle, v_out_grad, v_in, v_weight, v_in_grad, v_weight_grad, v_bias_grad);
+            h_v_weight_grad.assign(v_weight_grad.data(),v_weight_grad.data()+hidden_size2*hidden_size1);
+            h_v_in_grad.assign(v_in_grad.data(),v_in_grad.data()+batch_size*seq_len_k*hidden_size1);
+        }
+        else
+        {
+            h_v_in_grad.assign(v_grad.data(),v_grad.data()+batch_size*seq_len_k*hidden_size2);
+        }
+
+
     }
   }
 
@@ -332,18 +422,41 @@ public:
     int beamSize    = 1;
     double smScaler    = 1.0f/sqrtf(head_size2);
     float dropoutRate = dropout_rate;
-    int qSize       = hidden_size1;
-    int kSize       = hidden_size1;
-    int vSize       = hidden_size1;
-    int qProjSize   = head_size2;
-    int kProjSize   = head_size2;
-    int vProjSize   = head_size2;
-    int oProjSize   = hidden_size2;
+    int qSize       = proj_q ? hidden_size1 : hidden_size2;
+    int kSize       = proj_k ? hidden_size1 : hidden_size2;
+    int vSize       = proj_v ? hidden_size1 : hidden_size2;
+    int qProjSize   = proj_q ? head_size2 : 0;
+    int kProjSize   = proj_k ? head_size2 : 0;
+    int vProjSize   = proj_v ? head_size2 : 0;
+    int oProjSize   = proj_o ? hidden_size2 : 0;
     int seqLenQ     = seq_len_q;
     int seqLenK     = seq_len_k;
     int batchSize   = batch_size;
     bool resLink     = false;
     bool projBias    = false;
+
+    int oSize = oProjSize > 0 ? oProjSize : ((vProjSize > 0 ? vProjSize : vSize) * numHeads); // ; vProjSize > 0 ? vProjSize * numHeads : vSize;
+
+    
+    printf("Test parameters:\n\n");
+    printf("#### attnTrain       = %d (%s)\n", is_train, is_train ? "training" : "inference");
+    printf("#### attnNumHeads    = %d\n", numHeads);
+    printf("#### attnBatchSize   = %d\n", batchSize);
+    printf("#### attnBeamSize    = %d\n", beamSize);
+    printf("#### attnSmScaler    = %.4e\n", smScaler);
+    printf("#### attnDropoutRate = %.4f\n", dropoutRate);
+    printf("#### attnQsize       = %d\n", qSize);
+    printf("#### attnKsize       = %d\n", kSize);
+    printf("#### attnVsize       = %d\n", vSize);
+    printf("#### attnProjQsize   = %d%s\n", qProjSize, qProjSize ? "" : " (no Q weights)");
+    printf("#### attnProjKsize   = %d%s\n", kProjSize, kProjSize ? "" : " (no K weights)");
+    printf("#### attnProjVsize   = %d%s\n", vProjSize, vProjSize ? "" : " (no V weights)");
+    printf("#### attnProjOsize   = %d%s\n", oProjSize, oProjSize ? "" : " (no O weights)");
+    printf("#### attnSeqLenQ     = %d\n", seqLenQ);
+    printf("#### attnSeqLenK     = %d\n", seqLenK);
+    printf("#### attnResLink     = %d\n", resLink);
+    printf("#### attnProjBias    = %d\n", projBias);
+
 
     cudnnHandle_t handle;
     cudnnAttnDescriptor_t attn_desc;
@@ -387,8 +500,6 @@ public:
         fprintf(stderr, "ERROR: wrong attention NumHeads/BatchSize/BeamSize arguments\n\n");
         exit(-1);
     }
-
-    int oSize = vProjSize > 0 ? vProjSize * numHeads : vSize;
 
     size_t qoTokens = size_t(seqLenQ) * batchSize * beamSize;
     size_t kvTokens = size_t(seqLenK) * batchSize;
@@ -534,10 +645,6 @@ public:
         hostDV = (float *)malloc(vNmbElem * sizeof(float));
     }
 
-
-
-    /***********            **********/
-
     // Initialize qSeqArray and kSeqArray values and attention window
     size_t qBatches = batchSize * beamSize;
     size_t kBatches = batchSize * 1;
@@ -557,27 +664,6 @@ public:
         hiWinIdx[i] = h_hiWinIdx[i];
     }
     
-
-    printf("Test parameters:\n\n");
-    printf("#### attnTrain       = %d (%s)\n", is_train, is_train ? "training" : "inference");
-    printf("#### attnDataType    = %d (FP%d)\n", dataType, int(8*sizeof(float)));
-    printf("#### attnCompPrec    = %d (FP%d)\n", compPrec, int(8*sizeof(float)));
-    printf("#### attnNumHeads    = %d\n", numHeads);
-    printf("#### attnBatchSize   = %d\n", batchSize);
-    printf("#### attnBeamSize    = %d\n", beamSize);
-    printf("#### attnSmScaler    = %.4e\n", smScaler);
-    printf("#### attnDropoutRate = %.4f\n", dropoutRate);
-    printf("#### attnQsize       = %d\n", qSize);
-    printf("#### attnKsize       = %d\n", kSize);
-    printf("#### attnVsize       = %d\n", vSize);
-    printf("#### attnProjQsize   = %d%s\n", qProjSize, qProjSize ? "" : " (no Q weights)");
-    printf("#### attnProjKsize   = %d%s\n", kProjSize, kProjSize ? "" : " (no K weights)");
-    printf("#### attnProjVsize   = %d%s\n", vProjSize, vProjSize ? "" : " (no V weights)");
-    printf("#### attnProjOsize   = %d%s\n", oProjSize, oProjSize ? "" : " (no O weights)");
-    printf("#### attnSeqLenQ     = %d\n", seqLenQ);
-    printf("#### attnSeqLenK     = %d\n", seqLenK);
-    printf("#### attnResLink     = %d\n", resLink);
-    printf("#### attnProjBias    = %d\n", projBias);
 
     for (size_t i = 0; i < qBatches; ++i) {
         printf("sequence_length_q[idx=%lu]=%d\n", i, qSeqArray[i]);
@@ -669,7 +755,15 @@ public:
     /* @junda: eigen col-major to cudnn row-major */
     std::vector<float> h_q_in = vector3210(this->h_q_in,hidden_size1,seq_len_q,batch_size,1);
     std::vector<float> h_k_in = vector3210(this->h_k_in,hidden_size1,seq_len_k,batch_size,1);
-    std::vector<float> h_v_in = vector3210(this->h_v_in,hidden_size1,seq_len_k,batch_size,1);
+
+    std::vector<float> host_v_in;
+    if(proj_v) {
+        host_v_in = vector3210(this->h_v_in,hidden_size1,seq_len_k,batch_size,1);
+    }
+    else {
+        host_v_in = vector3210(this->h_v_in, head_size2, n_heads, seq_len_k, batch_size);
+        host_v_in = vector2013(host_v_in, batch_size, seq_len_k, n_heads, head_size2); // vector2013
+    }
     
 
     // Copy the data from GPU (device) to CPU (host)
@@ -681,7 +775,7 @@ public:
 
     CHECK_CUDA_ERR(cudaMemcpy(devQ, h_q_in.data(), sizeof(float) * qNmbElem, cudaMemcpyHostToDevice));
     CHECK_CUDA_ERR(cudaMemcpy(devK, h_k_in.data(), sizeof(float) * kNmbElem, cudaMemcpyHostToDevice));
-    CHECK_CUDA_ERR(cudaMemcpy(devV, h_v_in.data(), sizeof(float) * vNmbElem, cudaMemcpyHostToDevice));
+    CHECK_CUDA_ERR(cudaMemcpy(devV, host_v_in.data(), sizeof(float) * vNmbElem, cudaMemcpyHostToDevice));
 
 
     cudnnSeqDataAxis_t ordA[CUDNN_SEQDATA_DIM_COUNT];
@@ -914,26 +1008,41 @@ public:
             print_vec(h_v_in_grad.data(),"eidnn dV",0,64);
         }
 
-        if(!compareResults(hostDW+0,h_q_weight_grad.data(),weight_len1))
+        int offset_begin = 0;
+        if(proj_q)
         {
-            print_vec(hostDW+0,"cudnn dQW",0,64);
-            print_vec(h_q_weight_grad.data(),"eidnn dQW",0,64);
+            if(!compareResults(hostDW+offset_begin,h_q_weight_grad.data(),weight_len1)){
+                print_vec(hostDW+offset_begin,"cudnn dQW",0,64);
+                print_vec(h_q_weight_grad.data(),"eidnn dQW",0,64);
+            }
+            offset_begin += weight_len1;
         }
 
-        if(!compareResults(hostDW+weight_len1,h_k_weight_grad.data(),weight_len1))
+        if(proj_k)
         {
-            print_vec(hostDW+weight_len1,"cudnn dKW",0,64);
-            print_vec(h_k_weight_grad.data(),"eidnn dKW",0,64);
+            if(!compareResults(hostDW+offset_begin,h_k_weight_grad.data(),weight_len1)){
+                print_vec(hostDW+offset_begin,"cudnn dKW",0,64);
+                print_vec(h_k_weight_grad.data(),"eidnn dKW",0,64);
+            }
+            offset_begin += weight_len1;
         }
-        if(!compareResults(hostDW+2*weight_len1,h_v_weight_grad.data(),weight_len1))
+
+        if(proj_v)
         {
-            print_vec(hostDW+2*weight_len1,"cudnn dVW",0,64);
-            print_vec(h_v_weight_grad.data(),"eidnn dVW",0,64);
+            if(!compareResults(hostDW+offset_begin,h_v_weight_grad.data(),weight_len1)){
+                print_vec(hostDW+offset_begin,"cudnn dVW",0,64);
+                print_vec(h_v_weight_grad.data(),"eidnn dVW",0,64);
+            }
+            offset_begin += weight_len1;
         }
-        if(!compareResults(hostDW+3*weight_len1,h_o_weight_grad.data(),weight_len2))
+
+        if(proj_o)
         {
-            print_vec(hostDW+3*weight_len1,"cudnn dOW",0,64);
-            print_vec(h_o_weight_grad.data(),"eidnn dOW",0,64);
+            if(!compareResults(hostDW+offset_begin,h_o_weight_grad.data(),weight_len2)){
+                print_vec(hostDW+offset_begin,"cudnn dOW",0,64);
+                print_vec(h_o_weight_grad.data(),"eidnn dOW",0,64);
+            }
+            offset_begin += weight_len2;
         }
 
     }
@@ -944,6 +1053,7 @@ private:
   bool is_train;
   int batch_size, n_heads, seq_len_q, seq_len_k, head_size1, head_size2, hidden_size1, hidden_size2;
   float dropout_rate;
+  bool proj_q, proj_k, proj_v, proj_o;
 
   std::vector<float> h_weight_bank;
   std::vector<float> h_q_weight;
@@ -997,8 +1107,8 @@ private:
     float* hostDW = NULL;
 };
 
-int eval_mha(unsigned batch_size,unsigned n_heads,unsigned seq_len_q,unsigned seq_len_k,unsigned head_size1,unsigned head_size2,float dropout_rate,bool is_train){
-  test_MHA test_mha(batch_size,n_heads,seq_len_q,seq_len_k,head_size1,head_size2,dropout_rate,is_train);
+int eval_mha(unsigned batch_size,unsigned n_heads,unsigned seq_len_q,unsigned seq_len_k,unsigned head_size1,unsigned head_size2,float dropout_rate, bool proj_q, bool proj_k, bool proj_v, bool proj_o, bool is_train){
+  test_MHA test_mha(batch_size,n_heads,seq_len_q,seq_len_k,head_size1,head_size2,dropout_rate,proj_q, proj_k, proj_v, proj_o,is_train);
   test_mha.init_data();
   test_mha.run_eigen_dnn();   
   test_mha.run_cudnn_dnn();
@@ -1006,11 +1116,38 @@ int eval_mha(unsigned batch_size,unsigned n_heads,unsigned seq_len_q,unsigned se
 }
 
 int main(){
-    eval_mha(1,4,10,15,10,20,0,false);
-    eval_mha(1,4,10,15,10,20,0,true);
+    eval_mha(8,4,12,12,16,16,0,true,true,true,true,false);
+    eval_mha(8,4,12,12,16,16,0,true,true,true,true,true);
+    eval_mha(8,4,12,12,16,16,0,true,true,true,false,false);
+    eval_mha(8,4,12,12,16,16,0,true,true,true,false,true);
+    // eval_mha(2,2,4,4,6,6,0,true,true,false,true,false);
+    // eval_mha(8,4,12,12,16,16,0,true,false,true,true,false);
+    // eval_mha(8,4,12,12,16,16,0,false,true,true,true,false);
+    // eval_mha(8,4,12,12,16,16,0,true,true,false,false,false);
+    // eval_mha(8,4,12,12,16,16,0,true,false,false,true,false);
+    // eval_mha(8,4,12,12,16,16,0,false,true,false,true,false);
+    // eval_mha(8,4,12,12,16,16,0,false,false,false,true,false);
+    
 
-    eval_mha(8,4,12,12,16,16,0,false);
-    eval_mha(8,4,12,12,16,16,0,true);
+
+    // eval_mha(8,4,12,12,16,16,0,true,true,true,true,false);
+    // eval_mha(8,4,12,12,16,16,0,true,true,true,true,true);
+    // eval_mha(8,4,12,12,16,16,0,true,true,true,false,false);
+    // eval_mha(8,4,12,12,16,16,0,true,true,true,false,true);
+    // eval_mha(8,4,12,12,16,16,0,true,true,false,true,false);
+    // eval_mha(8,4,12,12,16,16,0,true,true,false,true,true);
+    // eval_mha(8,4,12,12,16,16,0,true,false,true,true,false);
+    // eval_mha(8,4,12,12,16,16,0,true,false,true,true,true);
+    // eval_mha(8,4,12,12,16,16,0,false,true,true,true,false);
+    // eval_mha(8,4,12,12,16,16,0,false,true,true,true,true);
+    // eval_mha(8,4,12,12,16,16,0,false,false,true,true,false);
+    // eval_mha(8,4,12,12,16,16,0,false,false,true,true,true);
+    // eval_mha(8,4,12,12,16,16,0,false,true,false,true,false);
+    // eval_mha(8,4,12,12,16,16,0,false,true,false,true,true);
+    // eval_mha(8,4,12,12,16,16,0,false,true,true,false,false);
+    // eval_mha(8,4,12,12,16,16,0,false,true,true,false,true);
+    // eval_mha(8,4,12,12,16,16,0,false,false,false,false,false);
+    // eval_mha(8,4,12,12,16,16,0,false,false,false,false,true);
 
     // eval_mha(2,8,128,128,64,64,0,false);
     // eval_mha(2,8,128,128,64,64,0,true);
