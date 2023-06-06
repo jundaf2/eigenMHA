@@ -105,7 +105,7 @@ public:
     // init from init_data
     const unsigned long random_seed = 2023;
     std::mt19937 generator(static_cast<unsigned int>(random_seed));
-    std::uniform_real_distribution<float> uf_distribution(-1.0f, 1.0f);
+    std::uniform_real_distribution<float> uf_distribution(-5.0f, 5.0f);
     std::uniform_int_distribution<int> ui_distribution_l(0,seq_len_k/2);
     std::uniform_int_distribution<int> ui_distribution_h(seq_len_k/2+1,seq_len_k);
 
@@ -159,10 +159,10 @@ public:
     h_loWinIdx = std::vector<int>(seq_len_q, 0);
     h_hiWinIdx = std::vector<int>(seq_len_q, seq_len_k);
 
-    for(int i=0; i<seq_len_q;i++){
-        h_loWinIdx[i] = ui_distribution_l(generator);
-        h_hiWinIdx[i] = ui_distribution_h(generator);
-    }
+    // for(int i=0; i<seq_len_q;i++){
+    //     h_loWinIdx[i] = ui_distribution_l(generator);
+    //     h_hiWinIdx[i] = ui_distribution_h(generator);
+    // }
   }
 
   
@@ -1008,6 +1008,17 @@ public:
             print_vec(h_v_in_grad.data(),"eidnn dV",0,64);
         }
 
+        print_vec(hostDQ,"cudnn dQ",0,64);
+        print_vec(h_q_in_grad.data(),"eidnn dQ",0,64);
+
+        print_vec(hostDK,"cudnn dK",0,64);
+        print_vec(h_k_in_grad.data(),"eidnn dK",0,64);
+
+        print_vec(hostDV,"cudnn dV",0,64);
+        print_vec(h_v_in_grad.data(),"eidnn dV",0,64);
+
+
+
         int offset_begin = 0;
         if(proj_q)
         {
@@ -1116,10 +1127,11 @@ int eval_mha(unsigned batch_size,unsigned n_heads,unsigned seq_len_q,unsigned se
 }
 
 int main(){
-    eval_mha(8,4,12,12,16,16,0,true,true,true,true,false);
-    eval_mha(8,4,12,12,16,16,0,true,true,true,true,true);
-    eval_mha(8,4,12,12,16,16,0,true,true,true,false,false);
-    eval_mha(8,4,12,12,16,16,0,true,true,true,false,true);
+    // eval_mha(8,4,12,12,16,16,0,true,true,true,true,false);
+    // eval_mha(8,4,12,12,16,16,0,true,true,true,true,true);
+    // eval_mha(8,4,12,12,16,16,0,true,true,true,false,false);
+    // eval_mha(8,4,12,12,16,16,0,true,true,true,false,true);
+
     // eval_mha(2,2,4,4,6,6,0,true,true,false,true,false);
     // eval_mha(8,4,12,12,16,16,0,true,false,true,true,false);
     // eval_mha(8,4,12,12,16,16,0,false,true,true,true,false);
@@ -1149,7 +1161,7 @@ int main(){
     // eval_mha(8,4,12,12,16,16,0,false,false,false,false,false);
     // eval_mha(8,4,12,12,16,16,0,false,false,false,false,true);
 
-    // eval_mha(2,8,128,128,64,64,0,false);
-    // eval_mha(2,8,128,128,64,64,0,true);
+    eval_mha(8,4,128,128,64,64,0,false,false,false,false,true);
+    eval_mha(8,4,128,128,64,64,0,true,true,true,true,true);
     return 0;
 }

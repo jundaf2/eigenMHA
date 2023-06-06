@@ -218,11 +218,11 @@ $$
 $$
 
 $$
-\mathbf{grad\\_Q}_{in} = \mathbf{grad\\_Q}*\mathbf{W}_{Q}
+\mathbf{grad\\_Q}_{in} = \mathbf{grad\\_Q}*\mathbf{W}_{Q}^T
 $$
 
 $$
-\mathbf{grad\\_W}_{Q} = \mathbf{grad\\_Q}^T*\mathbf{Q}_{in}
+\mathbf{grad\\_W}_{Q} = \mathbf{Q}_{in}^T*\mathbf{grad\\_Q}
 $$
 
 $$
@@ -230,11 +230,11 @@ $$
 $$
 
 $$
-\mathbf{grad\\_K}_{in} = \mathbf{grad\\_K}*\mathbf{W}_{K}
+\mathbf{grad\\_K}_{in} = \mathbf{grad\\_K}*\mathbf{W}_{K}^T
 $$
 
 $$
-\mathbf{grad\\_W}_{K} = \mathbf{grad\\_K}^T*\mathbf{K}_{in}
+\mathbf{grad\\_W}_{K} = \mathbf{K}_{in}^T*\mathbf{grad\\_K}
 $$
 
 $$
@@ -242,11 +242,11 @@ $$
 $$
 
 $$
-\mathbf{grad\\_V}_{in} = \mathbf{grad\\_V}*\mathbf{W}_{V}
+\mathbf{grad\\_V}_{in} = \mathbf{grad\\_V}*\mathbf{W}_{V}^T
 $$
 
 $$
-\mathbf{grad\\_W}_{V} = \mathbf{grad\\_V}^T*\mathbf{V}_{in}
+\mathbf{grad\\_W}_{V} = \mathbf{V}_{in}^T*\mathbf{grad\\_V}
 $$
 
 $$
